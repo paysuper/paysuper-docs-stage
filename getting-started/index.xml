@@ -2,32 +2,34 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Integration Overview on PaySuper</title>
-    <link>https://docs.stg.pay.super.com/getting-started/</link>
+    <link>https://docs.pay.super.com/getting-started/</link>
     <description>Recent content in Integration Overview on PaySuper</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 01 Feb 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://docs.stg.pay.super.com/getting-started/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://docs.pay.super.com/getting-started/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Quick Start</title>
-      <link>https://docs.stg.pay.super.com/getting-started/quick-start/</link>
-      <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
+      <title>External Reports</title>
+      <link>https://docs.pay.super.com/getting-started/external-reports/</link>
+      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://docs.stg.pay.super.com/getting-started/quick-start/</guid>
-      <description>PaySuper payment solution can be either used in combination with other Protocol One components, or integrated into any third-party storefront or web page that must accept payments.
-Pay One is an SaaS solution operated by Protocol One. A similar payment solution can be deployed on your own servers or in the cloud using the Pay One open source code.
-To get started  You need to register on the Pay One website.</description>
+      <guid>https://docs.pay.super.com/getting-started/external-reports/</guid>
+      <description>When internal reports are not enough, you can connect an external analytics tool (for example, tableau or slemma) or your own data visualization tool.
+You can access the data or, using the API, upload data to your storage. We adhere to the OLAP cube structure.
+Dimensions:
+ Project Product Geography Payment currency Payment method Payment date Return date User agent  Measures:
+ The sum in payment currency The sum in payout currency Number of transactions  </description>
     </item>
     
     <item>
       <title>PaySuper Integration</title>
-      <link>https://docs.stg.pay.super.com/getting-started/integration/</link>
+      <link>https://docs.pay.super.com/getting-started/integration/</link>
       <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://docs.stg.pay.super.com/getting-started/integration/</guid>
+      <guid>https://docs.pay.super.com/getting-started/integration/</guid>
       <description>In the case of basic payment acceptance, the integration process takes just a few minutes.
 Steps of the integration process:
 PaySuper website signup To begin, we need only basic information about your company:
@@ -37,47 +39,45 @@ Along with the next steps, you’ll need to go through the KYC procedure and sig
     </item>
     
     <item>
-      <title>Project and Products</title>
-      <link>https://docs.stg.pay.super.com/getting-started/project-products/</link>
-      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://docs.stg.pay.super.com/getting-started/project-products/</guid>
-      <description>The project-level management approach It allows you to independently configure PaySuper for use in various contexts:
- different games sites with different payment logic specialized solutions for a particular region or a specific cohort of users.  Any information about payments in this configuration can be reflected in the reports and analytics both cumulatively and separately.
-Modes of operation in project Simple checkout In this mode, you transfer the payment sum for each specific transaction to Pay One.</description>
-    </item>
-    
-    <item>
       <title>Personal Account</title>
-      <link>https://docs.stg.pay.super.com/getting-started/personal-account/</link>
+      <link>https://docs.pay.super.com/getting-started/personal-account/</link>
       <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://docs.stg.pay.super.com/getting-started/personal-account/</guid>
-      <description> An account with Pay One is the main point of interaction with Pay One for all your employees.
+      <guid>https://docs.pay.super.com/getting-started/personal-account/</guid>
+      <description> An account with PaySuper is the main point of interaction with PaySuper for all your employees.
 The account contains tools for:  Account settings Project settings, including the launch of integration tests and product management Webhook configuration Transaction search, including full-text search for all attributes Returns management Dispute management Viewing reports and statistics Viewing and managing payouts Managing the rights of account users  The account supports:  Two-factor user authentication Real-time data updates Exporting all reports in CSV and XLSX formats  </description>
     </item>
     
     <item>
-      <title>Reports Dashboard</title>
-      <link>https://docs.stg.pay.super.com/getting-started/reports/</link>
+      <title>Project and Products</title>
+      <link>https://docs.pay.super.com/getting-started/project-products/</link>
       <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://docs.stg.pay.super.com/getting-started/reports/</guid>
+      <guid>https://docs.pay.super.com/getting-started/project-products/</guid>
+      <description>The project-level management approach It allows you to independently configure PaySuper for use in various contexts:
+ different games sites with different payment logic specialized solutions for a particular region or a specific cohort of users.  Any information about payments in this configuration can be reflected in the reports and analytics both cumulatively and separately.
+Modes of operation in project Simple checkout In this mode, you transfer the payment sum for each specific transaction to PaySuper.</description>
+    </item>
+    
+    <item>
+      <title>Reports Dashboard</title>
+      <link>https://docs.pay.super.com/getting-started/reports/</link>
+      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.pay.super.com/getting-started/reports/</guid>
       <description>Examples of reports available on the dashboard and in the Reports section:
  Recent transactions. Revenue dynamics that can be broken down by project or product, with different levels of detail (day, week, month, year). Country statistics in the form of a table or heat map, where you can choose a period, projects and products. Returns report. Payouts report and a transactional report on a specific payout. Payment methods report, where you can choose a period, projects and products.</description>
     </item>
     
     <item>
-      <title>External Reports</title>
-      <link>https://docs.stg.pay.super.com/getting-started/external-reports/</link>
-      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
+      <title>Quick Start</title>
+      <link>https://docs.pay.super.com/getting-started/quick-start/</link>
+      <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://docs.stg.pay.super.com/getting-started/external-reports/</guid>
-      <description>When internal reports are not enough, you can connect an external analytics tool (for example, tableau or slemma) or your own data visualization tool.
-You can access the data or, using the API, upload data to your storage. We adhere to the OLAP cube structure.
-Dimensions:
- Project Product Geography Payment currency Payment method Payment date Return date User agent  Measures:
- The sum in payment currency The sum in payout currency Number of transactions  </description>
+      <guid>https://docs.pay.super.com/getting-started/quick-start/</guid>
+      <description>PaySuper payment solution can be either used in combination with other Protocol One components, or integrated into any third-party storefront or web page that must accept payments.
+PaySuper is an SaaS solution operated by Protocol One. A similar payment solution can be deployed on your own servers or in the cloud using the PaySuper open source code.
+To get started  You need to register on the PaySuper website. Go through the KYC procedure and sign a contract (you can use an e-signature).</description>
     </item>
     
   </channel>
