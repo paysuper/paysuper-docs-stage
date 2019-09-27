@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Overview on PaySuper</title>
-    <link>https://docs.pay.super.com/about/</link>
+    <link>https://docs.stg.pay.super.com/about/</link>
     <description>Recent content in Overview on PaySuper</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 01 Feb 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://docs.pay.super.com/about/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://docs.stg.pay.super.com/about/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Features</title>
-      <link>https://docs.pay.super.com/about/features/</link>
+      <link>https://docs.stg.pay.super.com/about/features/</link>
       <pubDate>Mon, 16 Sep 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://docs.pay.super.com/about/features/</guid>
+      <guid>https://docs.stg.pay.super.com/about/features/</guid>
       <description>Integration Integrating payment acceptance through PaySuper into your website is really easy. To install the widget on the page you only have to insert a single line of code. Integration tests are automated. KYC procedure and signing of a standard-form contract on payment acceptance occur within a few days. Electronic signature can be used.
 Operation speed We believe that fast loading of the payment form is one of the most important factors for a good paying conversion.</description>
     </item>
     
     <item>
       <title>Open Source Code</title>
-      <link>https://docs.pay.super.com/about/license/</link>
+      <link>https://docs.stg.pay.super.com/about/license/</link>
       <pubDate>Mon, 16 Sep 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://docs.pay.super.com/about/license/</guid>
+      <guid>https://docs.stg.pay.super.com/about/license/</guid>
       <description>Anyone can use the PaySuper toolkit to create their own payment solution.
 This will require you to:
  Download and deploy the necessary PaySuper elements in your infrastructure. Sign a contract for accepting payments with a bank (or banks). Pass PCI DSS certification.  Open source allows us to implement best practices developed by the community in our SaaS-solution in the shortest possible time. The best versions of customized forms, which take into account the specifics of use and legislation in different regions, are constantly added to the PaySuper payment form template library.</description>
@@ -34,10 +34,10 @@ This will require you to:
     
     <item>
       <title>Localization</title>
-      <link>https://docs.pay.super.com/about/localization/</link>
+      <link>https://docs.stg.pay.super.com/about/localization/</link>
       <pubDate>Mon, 16 Sep 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://docs.pay.super.com/about/localization/</guid>
+      <guid>https://docs.stg.pay.super.com/about/localization/</guid>
       <description>We do not identify them based solely on IP. We recognize a USA user who came to Germany and opened the payment interface there, so as not to make the mistake of showing them the form in German and with German payment methods.
 Most of the project settings can be configured separately for each region or language:
  The list of available payment methods and their order in the payment form.</description>
@@ -45,10 +45,10 @@ Most of the project settings can be configured separately for each region or lan
     
     <item>
       <title>Retention of Users with Unfinished Transactions</title>
-      <link>https://docs.pay.super.com/about/retentions/</link>
+      <link>https://docs.stg.pay.super.com/about/retentions/</link>
       <pubDate>Mon, 16 Sep 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://docs.pay.super.com/about/retentions/</guid>
+      <guid>https://docs.stg.pay.super.com/about/retentions/</guid>
       <description>When PaySuper has enough data to communicate with the user and it is not prohibited by local laws, the user is prompted to finish the transaction: via email, a push-notification or instant messenger.
 If integrated with Uttu, you can also set up a channel for delivering such notifications through banners or other ad placements.
  This approach allows you to return about 5% of users who have not completed the payment.</description>
@@ -56,10 +56,10 @@ If integrated with Uttu, you can also set up a channel for delivering such notif
     
     <item>
       <title>Settlement of Disputes</title>
-      <link>https://docs.pay.super.com/about/settlement-disputes/</link>
+      <link>https://docs.stg.pay.super.com/about/settlement-disputes/</link>
       <pubDate>Mon, 16 Sep 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://docs.pay.super.com/about/settlement-disputes/</guid>
+      <guid>https://docs.stg.pay.super.com/about/settlement-disputes/</guid>
       <description>The rules for handling such situations differ depending on the payment method and territory.
  In all cases, PaySuper consistently notifies you via the API and in your account.
  As a rule, you have about 30 days to dispute a chargeback on a specific transaction by providing proof that the buyer has received the product. PaySuper controls the timings and takes on the transfer of your proof to a specific payment operator.</description>
@@ -67,10 +67,10 @@ If integrated with Uttu, you can also set up a channel for delivering such notif
     
     <item>
       <title>What is PaySuper</title>
-      <link>https://docs.pay.super.com/about/what-is-paysuper/</link>
+      <link>https://docs.stg.pay.super.com/about/what-is-paysuper/</link>
       <pubDate>Mon, 16 Sep 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://docs.pay.super.com/about/what-is-paysuper/</guid>
+      <guid>https://docs.stg.pay.super.com/about/what-is-paysuper/</guid>
       <description>PaySuper is an open source service for accepting payments, which includes: a flexibly customizable payment form, a set of integration protocols, a management interface, and statistics tools.
 What does PaySuper do? Our mission is to give developers, publishers, platforms and stores an opportunity to accept payments with minimal losses and costs due to high conversion, low commission and minimization of labor costs related to integration and maintenance.
 Our solution is a part of Protocol One IaaS, it is actively used in Storefront constructor.</description>

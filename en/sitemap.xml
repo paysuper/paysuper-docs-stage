@@ -3,221 +3,221 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://docs.pay.super.com/documentation/</loc>
+    <loc>https://docs.stg.pay.super.com/documentation/</loc>
     <lastmod>2017-02-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://docs.pay.super.com/example/</loc>
+    <loc>https://docs.stg.pay.super.com/example/</loc>
   </url>
   
   <url>
-    <loc>https://docs.pay.super.com/</loc>
+    <loc>https://docs.stg.pay.super.com/</loc>
     <lastmod>2019-09-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="https://docs.pay.super.com/ru/"
+                href="https://docs.stg.pay.super.com/ru/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://docs.pay.super.com/"
+                href="https://docs.stg.pay.super.com/"
                 />
   </url>
   
   <url>
-    <loc>https://docs.pay.super.com/about/features/</loc>
+    <loc>https://docs.stg.pay.super.com/about/features/</loc>
     <lastmod>2019-09-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://docs.pay.super.com/about/license/</loc>
+    <loc>https://docs.stg.pay.super.com/about/license/</loc>
     <lastmod>2019-09-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://docs.pay.super.com/about/localization/</loc>
+    <loc>https://docs.stg.pay.super.com/about/localization/</loc>
     <lastmod>2019-09-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://docs.pay.super.com/about/retentions/</loc>
+    <loc>https://docs.stg.pay.super.com/about/retentions/</loc>
     <lastmod>2019-09-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://docs.pay.super.com/about/settlement-disputes/</loc>
+    <loc>https://docs.stg.pay.super.com/about/settlement-disputes/</loc>
     <lastmod>2019-09-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://docs.pay.super.com/about/what-is-paysuper/</loc>
+    <loc>https://docs.stg.pay.super.com/about/what-is-paysuper/</loc>
     <lastmod>2019-09-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://docs.pay.super.com/payments/accepting-payment/</loc>
+    <loc>https://docs.stg.pay.super.com/payments/accepting-payment/</loc>
     <lastmod>2017-02-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://docs.pay.super.com/getting-started/external-reports/</loc>
+    <loc>https://docs.stg.pay.super.com/getting-started/external-reports/</loc>
     <lastmod>2017-02-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://docs.pay.super.com/troubleshooting/faq/</loc>
+    <loc>https://docs.stg.pay.super.com/troubleshooting/faq/</loc>
     <lastmod>2017-02-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://docs.pay.super.com/getting-started/</loc>
+    <loc>https://docs.stg.pay.super.com/getting-started/</loc>
     <lastmod>2017-02-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://docs.pay.super.com/api-reference/</loc>
+    <loc>https://docs.stg.pay.super.com/api-reference/</loc>
     <lastmod>2017-02-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://docs.pay.super.com/about/</loc>
+    <loc>https://docs.stg.pay.super.com/about/</loc>
     <lastmod>2017-02-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://docs.pay.super.com/payments/payment-form/</loc>
+    <loc>https://docs.stg.pay.super.com/payments/payment-form/</loc>
     <lastmod>2017-02-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://docs.pay.super.com/payments/payment-methods/</loc>
+    <loc>https://docs.stg.pay.super.com/payments/payment-methods/</loc>
     <lastmod>2017-02-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://docs.pay.super.com/payments/payment-processing/</loc>
+    <loc>https://docs.stg.pay.super.com/payments/payment-processing/</loc>
     <lastmod>2017-02-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://docs.pay.super.com/payments/</loc>
+    <loc>https://docs.stg.pay.super.com/payments/</loc>
     <lastmod>2017-02-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://docs.pay.super.com/getting-started/integration/</loc>
+    <loc>https://docs.stg.pay.super.com/getting-started/integration/</loc>
     <lastmod>2017-02-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://docs.pay.super.com/getting-started/personal-account/</loc>
+    <loc>https://docs.stg.pay.super.com/getting-started/personal-account/</loc>
     <lastmod>2017-02-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://docs.pay.super.com/getting-started/project-products/</loc>
+    <loc>https://docs.stg.pay.super.com/getting-started/project-products/</loc>
     <lastmod>2017-02-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://docs.pay.super.com/getting-started/reports/</loc>
+    <loc>https://docs.stg.pay.super.com/getting-started/reports/</loc>
     <lastmod>2017-02-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://docs.pay.super.com/troubleshooting/</loc>
+    <loc>https://docs.stg.pay.super.com/troubleshooting/</loc>
     <lastmod>2017-02-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://docs.pay.super.com/api-reference/key-products/</loc>
+    <loc>https://docs.stg.pay.super.com/api-reference/key-products/</loc>
     <lastmod>2016-03-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://docs.pay.super.com/api-reference/keys/</loc>
+    <loc>https://docs.stg.pay.super.com/api-reference/keys/</loc>
     <lastmod>2016-03-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://docs.pay.super.com/api-reference/notifications/</loc>
+    <loc>https://docs.stg.pay.super.com/api-reference/notifications/</loc>
     <lastmod>2016-03-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://docs.pay.super.com/api-reference/orders/</loc>
+    <loc>https://docs.stg.pay.super.com/api-reference/orders/</loc>
     <lastmod>2016-03-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://docs.pay.super.com/api-reference/pagination/</loc>
+    <loc>https://docs.stg.pay.super.com/api-reference/pagination/</loc>
     <lastmod>2016-03-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://docs.pay.super.com/api-reference/payment-method/</loc>
+    <loc>https://docs.stg.pay.super.com/api-reference/payment-method/</loc>
     <lastmod>2016-03-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://docs.pay.super.com/api-reference/payouts/</loc>
+    <loc>https://docs.stg.pay.super.com/api-reference/payouts/</loc>
     <lastmod>2016-03-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://docs.pay.super.com/api-reference/paysuper-api/</loc>
+    <loc>https://docs.stg.pay.super.com/api-reference/paysuper-api/</loc>
     <lastmod>2016-03-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://docs.pay.super.com/api-reference/platforms/</loc>
+    <loc>https://docs.stg.pay.super.com/api-reference/platforms/</loc>
     <lastmod>2016-03-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://docs.pay.super.com/api-reference/price-counrty/</loc>
+    <loc>https://docs.stg.pay.super.com/api-reference/price-counrty/</loc>
     <lastmod>2016-03-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://docs.pay.super.com/api-reference/products/</loc>
+    <loc>https://docs.stg.pay.super.com/api-reference/products/</loc>
     <lastmod>2016-03-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://docs.pay.super.com/api-reference/report/</loc>
+    <loc>https://docs.stg.pay.super.com/api-reference/report/</loc>
     <lastmod>2016-03-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://docs.pay.super.com/api-reference/token/</loc>
+    <loc>https://docs.stg.pay.super.com/api-reference/token/</loc>
     <lastmod>2016-03-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://docs.pay.super.com/api-reference/users/</loc>
+    <loc>https://docs.stg.pay.super.com/api-reference/users/</loc>
     <lastmod>2016-03-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://docs.pay.super.com/getting-started/quick-start/</loc>
+    <loc>https://docs.stg.pay.super.com/getting-started/quick-start/</loc>
     <lastmod>2017-02-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://docs.pay.super.com/categories/</loc>
+    <loc>https://docs.stg.pay.super.com/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="https://docs.pay.super.com/ru/categories/"
+                href="https://docs.stg.pay.super.com/ru/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://docs.pay.super.com/categories/"
+                href="https://docs.stg.pay.super.com/categories/"
                 />
   </url>
   

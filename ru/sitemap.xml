@@ -3,30 +3,30 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://docs.pay.super.com/ru/categories/</loc>
+    <loc>https://docs.stg.pay.super.com/ru/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://docs.pay.super.com/categories/"
+                href="https://docs.stg.pay.super.com/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="https://docs.pay.super.com/ru/categories/"
+                href="https://docs.stg.pay.super.com/ru/categories/"
                 />
   </url>
   
   <url>
-    <loc>https://docs.pay.super.com/ru/</loc>
+    <loc>https://docs.stg.pay.super.com/ru/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://docs.pay.super.com/"
+                href="https://docs.stg.pay.super.com/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="https://docs.pay.super.com/ru/"
+                href="https://docs.stg.pay.super.com/ru/"
                 />
   </url>
   
