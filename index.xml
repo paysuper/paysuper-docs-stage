@@ -231,7 +231,7 @@ Modes of operation in project Simple checkout In this mode, you transfer the pay
       <pubDate>Mon, 01 Feb 2016 00:00:00 +0000</pubDate>
       
       <guid>https://docs.pay.super.com/api-reference/notifications/</guid>
-      <description>The PaySuper system can send younotifications for a set of events during the flow, such as creating new accounts or transaction flow, making payouts, and so on.
+      <description>The PaySuper system can send you notifications for a set of events during the flow, such as creating new accounts or transaction flow, making payouts, and so on.
 These notifications are sent as webhooks to the corresponding URLs configured on your server.
 In most cases, webhooks are triggered by user actions on your website or back-end related events like refund a payment, notification about dispute and other.
 Notification types    Type Payload Description     payment.</description>
