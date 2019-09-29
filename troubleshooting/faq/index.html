@@ -180,14 +180,14 @@
 	</div>
 	
 	
-	<div class="admonition-content"><p><strong>Note:</strong> The answers/solutions presented below are short, and may not be note be enough to solve your problem. Visit <a href="https://discourse.gohugo.io/">Hugo Discourse</a> and use the search. It that does not help, start a new topic and ask your questions.</p>
+	<div class="admonition-content"><p><strong>Note:</strong> The answers/solutions presented below are short, and may not be note be enough to solve your problem. Visit <a href="https://discourse.gohugo.io/" target="_blank">Hugo Discourse</a> and use the search. It that does not help, start a new topic and ask your questions.</p>
 </div>
 </aside>
 
 
 <h2 id="i-can-t-see-my-content">I can&rsquo;t see my content!</h2>
 
-<p>Is your markdown file <a href="https://gohugo.io/content-management/front-matter/#front-matter-variables">in draft mode</a>? When testing, run <code>hugo server</code> with the <code>-D</code> or <code>--buildDrafts</code> <a href="https://gohugo.io/getting-started/usage/#draft-future-and-expired-content">switch</a>.</p>
+<p>Is your markdown file <a href="https://gohugo.io/content-management/front-matter/#front-matter-variables" target="_blank">in draft mode</a>? When testing, run <code>hugo server</code> with the <code>-D</code> or <code>--buildDrafts</code> <a href="https://gohugo.io/getting-started/usage/#draft-future-and-expired-content" target="_blank">switch</a>.</p>
 
 <h2 id="can-i-set-configuration-variables-via-os-environment">Can I set configuration variables via OS environment?</h2>
 
@@ -203,8 +203,8 @@
 <p>How to automate the &ldquo;publish at intervals&rdquo; part depends on your situation:</p>
 
 <ul>
-<li>If you deploy from your own PC/server, you can automate with <a href="https://en.wikipedia.org/wiki/Cron">Cron</a> or similar.</li>
-<li>If your site is hosted on a service similar to <a href="https://www.netlify.com/">Netlify</a> you can use a service such as <a href="https://ifttt.com/date_and_time">ifttt</a> to schedule the updates.</li>
+<li>If you deploy from your own PC/server, you can automate with <a href="https://en.wikipedia.org/wiki/Cron" target="_blank">Cron</a> or similar.</li>
+<li>If your site is hosted on a service similar to <a href="https://www.netlify.com/" target="_blank">Netlify</a> you can use a service such as <a href="https://ifttt.com/date_and_time" target="_blank">ifttt</a> to schedule the updates.</li>
 </ul>
 
 <p>Also see this Twitter thread:</p>
@@ -221,7 +221,7 @@
 
 <p>If you process <code>SCSS</code> or <code>SASS</code> to <code>CSS</code> in your Hugo project, you need the Hugo <code>extended</code> version, or else you may see this error message:</p>
 <div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">error: failed to transform resource: TOCSS: failed to transform <span style="color:#4070a0">&#34;scss/main.scss&#34;</span> <span style="color:#666">(</span>text/x-scss<span style="color:#666">)</span>: this feature is not available in your current Hugo version</code></pre></div>
-<p>We release two set of binaries for technical reasons. The extended version is not what you get by default for some installation methods. On the <a href="https://github.com/gohugoio/hugo/releases">release page</a>, look for archives with <code>extended</code> in the name. To build <code>hugo-extended</code>, use <code>go install --tags extended</code></p>
+<p>We release two set of binaries for technical reasons. The extended version is not what you get by default for some installation methods. On the <a href="https://github.com/gohugoio/hugo/releases" target="_blank">release page</a>, look for archives with <code>extended</code> in the name. To build <code>hugo-extended</code>, use <code>go install --tags extended</code></p>
 
 <p>To confirm, run <code>hugo version</code> and look for the word <code>extended</code>.</p>
 

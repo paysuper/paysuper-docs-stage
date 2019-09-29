@@ -50,7 +50,7 @@
 
 <meta itemprop="datePublished" content="2016-02-01T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2016-03-02T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="413">
+<meta itemprop="wordCount" content="442">
 
 
 
@@ -329,13 +329,13 @@
 <tr>
 <td><strong>created_at</strong></td>
 <td><strong>DateTime</strong></td>
-<td>The date and time in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> when an event has been created.</td>
+<td>The date and time in <a href="https://www.iso.org/iso-8601-date-and-time-format.html" target="_blank">ISO 8601</a> when an event has been created.</td>
 </tr>
 
 <tr>
 <td><strong>expires_at</strong></td>
 <td><strong>DateTime</strong></td>
-<td>The date and time in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> when the event stops trying to deliver.</td>
+<td>The date and time in <a href="https://www.iso.org/iso-8601-date-and-time-format.html" target="_blank">ISO 8601</a> when the event stops trying to deliver.</td>
 </tr>
 
 <tr>
@@ -351,6 +351,19 @@
 </tr>
 </tbody>
 </table>
+
+<p>The base object representing the webhook event <code>&quot;payment.success&quot;</code> from PaySuper system.</p>
+
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#062873;font-weight:bold">&#34;id&#34;</span>: <span style="color:#4070a0">&#34;22d6d597-000f-5000-9000-145f6df21d6f&#34;</span>,
+  <span style="color:#062873;font-weight:bold">&#34;type&#34;</span>: <span style="color:#4070a0">&#34;notification&#34;</span>,
+  <span style="color:#062873;font-weight:bold">&#34;event&#34;</span>: <span style="color:#4070a0">&#34;payment.success&#34;</span>,
+  <span style="color:#062873;font-weight:bold">&#34;live&#34;</span>: <span style="color:#007020;font-weight:bold">true</span>,
+  <span style="color:#062873;font-weight:bold">&#34;created_at&#34;</span>: <span style="color:#4070a0">&#34;2018-07-10T1454.691Z&#34;</span>,
+  <span style="color:#062873;font-weight:bold">&#34;expires_at&#34;</span>: <span style="color:#007020;font-weight:bold">null</span>,
+  <span style="color:#062873;font-weight:bold">&#34;delivery_try&#34;</span>: <span style="color:#40a070">1</span>,
+  <span style="color:#062873;font-weight:bold">&#34;object&#34;</span>: {}
+}</code></pre></div>
 
 <h2 id="check-notification-request">Check notification request</h2>
 
