@@ -6,7 +6,7 @@
     <description>Recent content on PaySuper</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 16 Sep 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 07 Oct 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://docs.stg.pay.super.com/index.xml" rel="self" type="application/rss+xml" />
     
@@ -28,8 +28,33 @@ It includes a flexibly customizable payment form, a set of integration protocols
       
       <guid>https://docs.stg.pay.super.com/example/</guid>
       <description>Example text.
- Note with padding example.
- </description>
+h1 Heading h2 Heading h3 Heading h4 Heading h5 Heading h6 Heading  The note.
+   A tip disclaimer
+   The note with padding example.
+ { &amp;#34;id&amp;#34;: &amp;#34;5ca5124868add448289e432e&amp;#34;, &amp;#34;project_id&amp;#34;: &amp;#34;5be2e16701d96d00012d26c3&amp;#34;, &amp;#34;description&amp;#34;: { &amp;#34;en&amp;#34;: &amp;#34;GTA 3 description&amp;#34; } } iframe{width:100%}   iFrameResize({ log : true, checkOrigin : false, sizeWidth : true, widthCalculationMethod : &#39;rightMostElement&#39; }); var shortcode_url = &#34;\/api\/v1\/key-products-swagger.yaml&#34;;     Option Description     data path to data files to supply the data that will be passed into templates.</description>
+    </item>
+    
+    <item>
+      <title>Quick Start</title>
+      <link>https://docs.stg.pay.super.com/getting-started/quick-start/</link>
+      <pubDate>Mon, 07 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.stg.pay.super.com/getting-started/quick-start/</guid>
+      <description>PaySuper is an open-source payment toolkit that has significant features:
+ Payment methods  Supports all payment methods necessary to accept payments from users anywhere in the world.
+   Operation speed  Fast loading for a good paying conversion.
+   Localization  The look of the payment form and the selection of final payment methods can be independently configured for each country or region.
+    All you need to get started: 1.</description>
+    </item>
+    
+    <item>
+      <title>Tokens</title>
+      <link>https://docs.stg.pay.super.com/api-reference/token/</link>
+      <pubDate>Mon, 07 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.stg.pay.super.com/api-reference/token/</guid>
+      <description> It identifies a game, user, and purchase parameters, thus you can determine your customers’ purchases on your side.
+Endpoints iframe{width:100%}   iFrameResize({ log : true, checkOrigin : false, sizeWidth : true, widthCalculationMethod : &#39;rightMostElement&#39; }); var shortcode_url = &#34;\/api\/v1\/token-swagger.yaml&#34;;  </description>
     </item>
     
     <item>
@@ -232,9 +257,8 @@ Modes of operation in project Simple checkout In this mode, you transfer the pay
       
       <guid>https://docs.stg.pay.super.com/api-reference/notifications/</guid>
       <description>The PaySuper system can send you notifications for a set of events during the flow, such as creating new accounts or transaction flow, making payouts, and so on.
-These notifications are sent as webhooks to the corresponding URLs configured on your server.
-In most cases, webhooks are triggered by user actions on your website or back-end related events like refund a payment, notification about dispute and other.
-Notification types    Type Payload Description     payment.</description>
+These notifications are sent as webhooks to the corresponding URLs configured on your Project Settings page.
+In most cases, webhooks are triggered by user actions on your website or back-end related events like refund a payment, notification about dispute and other.</description>
     </item>
     
     <item>
@@ -326,15 +350,6 @@ Authentication Authentication to the API occurs via HTTP Basic Auth. Provide you
     </item>
     
     <item>
-      <title>Tokens</title>
-      <link>https://docs.stg.pay.super.com/api-reference/token/</link>
-      <pubDate>Mon, 01 Feb 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://docs.stg.pay.super.com/api-reference/token/</guid>
-      <description> Endpoints iframe{width:100%}   iFrameResize({ log : true, checkOrigin : false, sizeWidth : true, widthCalculationMethod : &#39;rightMostElement&#39; }); var shortcode_url = &#34;\/api\/v1\/token-swagger.yaml&#34;;  </description>
-    </item>
-    
-    <item>
       <title>Users</title>
       <link>https://docs.stg.pay.super.com/api-reference/users/</link>
       <pubDate>Mon, 01 Feb 2016 00:00:00 +0000</pubDate>
@@ -342,17 +357,6 @@ Authentication Authentication to the API occurs via HTTP Basic Auth. Provide you
       <guid>https://docs.stg.pay.super.com/api-reference/users/</guid>
       <description> We will generate unique identity for each customer and update user profile with any information we got from each payment. User profile also used as part of fraud protection in PaySuper.
 Endpoints iframe{width:100%}   iFrameResize({ log : true, checkOrigin : false, sizeWidth : true, widthCalculationMethod : &#39;rightMostElement&#39; }); var shortcode_url = &#34;\/api\/v1\/user-swagger.yaml&#34;;  </description>
-    </item>
-    
-    <item>
-      <title>Quick Start</title>
-      <link>https://docs.stg.pay.super.com/getting-started/quick-start/</link>
-      <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://docs.stg.pay.super.com/getting-started/quick-start/</guid>
-      <description>PaySuper payment solution can be either used in combination with other Protocol One components, or integrated into any third-party storefront or web page that must accept payments.
-PaySuper is an SaaS solution operated by Protocol One. A similar payment solution can be deployed on your own servers or in the cloud using the PaySuper open source code.
-To get started  You need to register on the PaySuper website. Go through the KYC procedure and sign a contract (you can use an e-signature).</description>
     </item>
     
   </channel>

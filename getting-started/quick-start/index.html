@@ -39,25 +39,25 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0594cb">
 <meta name="theme-color" content="#ffffff"><meta property="og:title" content="Quick Start" />
-<meta property="og:description" content="How to provide end-users with a way to pay for games and other digital products." />
+<meta property="og:description" content="PaySuper is a payment service with a customizable payment form that allows accepting online payments on the web and mobile devices." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://docs.stg.pay.super.com/getting-started/quick-start/" />
-<meta property="article:published_time" content="2013-07-01T00:00:00+00:00" />
-<meta property="article:modified_time" content="2017-02-01T00:00:00+00:00" />
+<meta property="article:published_time" content="2019-10-07T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-10-07T00:00:00+00:00" />
 <meta itemprop="name" content="Quick Start">
-<meta itemprop="description" content="How to provide end-users with a way to pay for games and other digital products.">
+<meta itemprop="description" content="PaySuper is a payment service with a customizable payment form that allows accepting online payments on the web and mobile devices.">
 
 
-<meta itemprop="datePublished" content="2013-07-01T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2017-02-01T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="150">
+<meta itemprop="datePublished" content="2019-10-07T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2019-10-07T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="972">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Quick Start"/>
-<meta name="twitter:description" content="How to provide end-users with a way to pay for games and other digital products."/>
+<meta name="twitter:description" content="PaySuper is a payment service with a customizable payment form that allows accepting online payments on the web and mobile devices."/>
 
 
 
@@ -150,7 +150,31 @@
 <ul>
 <li>
 <ul>
-<li><a href="#to-get-started">To get started</a></li>
+<li><a href="#all-you-need-to-get-started">All you need to get started:</a>
+<ul>
+<li>
+<ul>
+<li><a href="#1-go-through-the-paysuper-onboarding">1. Go through the PaySuper Onboarding</a></li>
+<li><a href="#2-set-up-your-project-and-products-set-up-your-project-and-products">2. <a href="#set-up-your-project-and-products">Set up your project and products</a></a></li>
+<li><a href="#3-integrate-the-paysuper-payment-form">3. Integrate the PaySuper payment form</a></li>
+<li><a href="#4-receive-information-about-transaction">4. Receive information about transaction</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#set-up-your-project-and-products">Set up your project and products</a></li>
+<li><a href="#integrate-a-payment-form">Integrate a payment form</a>
+<ul>
+<li><a href="#js-sdk-integration">JS SDK INTEGRATION</a></li>
+<li><a href="#manual-integration">MANUAL INTEGRATION</a></li>
+</ul></li>
+<li><a href="#webhooks">Webhooks</a></li>
+<li><a href="#customization">Customization</a>
+<ul>
+<li>
+<ul>
+<li><a href="#change-the-theme">Change the theme</a></li>
+<li><a href="#change-the-colors">Change the colors</a></li>
+</ul></li>
+</ul></li>
 </ul></li>
 </ul>
 </nav>
@@ -158,15 +182,15 @@
 
 	<div date-pref>
 		
-			<a href="https://docs.stg.pay.super.com/getting-started/reports/" class="dib f6 pl1 hover-bg-light-gray br-100" title="Reports Dashboard ">
-				<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
-    <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+
+		
+			<a href="https://docs.stg.pay.super.com/getting-started/external-reports/" class="dib f6 pr1 hover-bg-light-gray br-100" title="External Reports">
+			<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
+    <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
     <path d="M0 0h24v24H0z" fill="none"/>
 </svg>
 
 			</a>
-		
-
 		
 	</div>
 
@@ -185,7 +209,7 @@
 <aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
   
     <div class="f4 fw4 lh-copy">
-      How to provide end-users with a way to pay for games and other digital products.
+      PaySuper is a payment service with a customizable payment form that allows accepting online payments on the web and mobile devices.
     </div>
   
 
@@ -198,33 +222,639 @@
 
 
 
-<p>PaySuper payment solution can be either used in combination with other Protocol One components, or integrated into any third-party storefront or web page that must accept payments.</p>
-
-<p>PaySuper is an SaaS solution operated by Protocol One. A similar payment solution can be deployed on your own servers or in the cloud using the PaySuper open source code.</p>
-
-<h2 id="to-get-started">To get started</h2>
+<p><strong><a href="https://github.com/paysuper/paysuper-management-api" target="_blank">PaySuper is an open-source payment toolkit</a></strong> that has significant features:</p>
 
 <ul>
-<li>You need to register on the PaySuper website.</li>
-<li>Go through the KYC procedure and sign a contract (you can use an e-signature).</li>
-<li>Set up a project and perform technical integration on the side of your website or service.</li>
-</ul>
+<li><p><strong>Payment methods</strong>
 
-<p>This will be enough to provide end users with a way to pay for games and other digital products.</p>
-
-
-<aside class="admonition warning">
-	<div class="admonition-icon">
+<aside class="admonition tip">
+	<div class="tip-icon">
 		
 	</div>
 	
 	
-	<div class="admonition-content"><p>PaySuper payouts are made on a weekly basis. In most cases, the first money will be transferred to your current account within 7 days after signing the contract and accepting the first payment.</p>
+	<div class="admonition-content"><p>Supports all payment methods necessary to accept payments from users anywhere in the world.</p>
 </div>
 </aside>
+</p></li>
 
+<li><p><strong>Operation speed</strong>
 
-<p><img src="/images/quick-start-schema.png" alt="PaySuper quick start schema" /></p>
+<aside class="admonition tip">
+	<div class="tip-icon">
+		
+	</div>
+	
+	
+	<div class="admonition-content"><p>Fast loading for a good paying conversion.</p>
+</div>
+</aside>
+</p></li>
+
+<li><p><strong>Localization</strong>
+
+<aside class="admonition tip">
+	<div class="tip-icon">
+		
+	</div>
+	
+	
+	<div class="admonition-content"><p>The look of the payment form and the selection of final payment methods can be independently configured for each country or region.</p>
+</div>
+</aside>
+</p></li>
+</ul>
+
+<h2 id="all-you-need-to-get-started">All you need to get started:</h2>
+
+<h4 id="1-go-through-the-paysuper-onboarding">1. Go through the PaySuper Onboarding</h4>
+
+<h4 id="2-set-up-your-project-and-products-set-up-your-project-and-products">2. <a href="#set-up-your-project-and-products">Set up your project and products</a></h4>
+
+<p>Easily add the necessary information about your products for payment.</p>
+
+<blockquote>
+<p>Game keys</p>
+
+<p>Virtual items</p>
+
+<p>Virtual currency</p>
+</blockquote>
+
+<p>Then associate created IDs with goods on your platform.</p>
+
+<h4 id="3-integrate-the-paysuper-payment-form">3. Integrate the PaySuper payment form</h4>
+
+<p>Embed the PaySuper payment form on all your available platforms.</p>
+
+<p>Flexible UI form integration on your site or game:</p>
+
+<blockquote>
+<p>Modal window</p>
+
+<p>iframe</p>
+
+<p>New window</p>
+</blockquote>
+
+<h4 id="4-receive-information-about-transaction">4. Receive information about transaction</h4>
+
+<p>Webhooks allows you to get the information about all payment statuses. Thus you can notify a customer about a successful purchase.</p>
+
+<h2 id="set-up-your-project-and-products">Set up your project and products</h2>
+
+<ol>
+<li>Navigate to <a href="https://link" target="_blank">the Project section</a> in the PaySuper Admin.</li>
+<li>Create a New Project.</li>
+<li>Add Products in the created Project with all the applicable information.</li>
+
+<li><p>Reference the created products by IDs with the goods on your client-side.</p>
+
+<p><a href="https://" target="_blank">See the example and the code on GitHub.</a></p></li>
+</ol>
+
+<h2 id="integrate-a-payment-form">Integrate a payment form</h2>
+
+<p>When your customer wants to pay for something you need to create a payment order.
+You can send a request manually to create an order or use the <a href="https://github.com/paysuper/paysuper-js-sdk" target="_blank">PaySuper JS SDK</a>.</p>
+
+<p>The order parameters can include all available information about a customer, project and products in a payment token generated by <a href="https://docs.stg.pay.super.com/api-reference/token/#endpoints" target="_blank">Tokens API</a>. Also, it’s possible to create an order without a customer information.</p>
+
+<p>The payment form can be displayed by the JS SDK methods as a modal window or an iframe. With manual integration you can redirect a user to payment page in a new window or display it as an iframe.</p>
+
+<p><strong>Set up <a href="#manual-integration">integration manual</a> or with <a href="#js-sdk-integration">JS SDK</a>.</strong></p>
+
+<h3 id="js-sdk-integration">JS SDK INTEGRATION</h3>
+
+<ol>
+<li><p>Include a link to the external javascript file from <a href="https://github.com/paysuper/paysuper-js-sdk" target="_blank">PaySuper JS SDK</a>:</p>
+
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">    <span style="color:#666">&lt;</span>script src<span style="color:#666">=</span><span style="color:#4070a0">&#34;https://static.protocol.one/payone/sdk/latest/p1payone.js&#34;</span><span style="color:#666">&gt;&lt;</span><span style="">/script&gt;</span>
+    
+</code></pre></div></li>
+
+<li><p>Add a code snippet to your site to prepare the PaySuper form parameters of an order:</p>
+
+<p><strong>Example of an order by token:</strong>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">    <span style="color:#666">&lt;</span>script<span style="color:#666">&gt;</span>
+    <span style="color:#007020;font-weight:bold">function</span> buyItems() {
+      <span style="color:#007020;font-weight:bold">const</span> paySuper <span style="color:#666">=</span> <span style="color:#007020;font-weight:bold">new</span> PaySuper({
+        token<span style="color:#666">:</span> <span style="color:#4070a0">&#39;5cd5620f06ae110001509185&#39;</span>
+      });
+    }
+    <span style="color:#666">&lt;</span><span style="">/script&gt;</span>
+    
+</code></pre></div></p>
+
+<p><strong>Example of an order for Virtual items:</strong>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">    <span style="color:#666">&lt;</span>script<span style="color:#666">&gt;</span>
+    <span style="color:#007020;font-weight:bold">function</span> buyItems() {
+      <span style="color:#007020;font-weight:bold">const</span> paySuper <span style="color:#666">=</span> <span style="color:#007020;font-weight:bold">new</span> PaySuper({
+        project<span style="color:#666">:</span> <span style="color:#4070a0">&#39;5cd5620f06ae110001509185&#39;</span>,
+        products<span style="color:#666">:</span> [<span style="color:#4070a0">&#39;5d848f484dd6a50001970479&#39;</span>, <span style="color:#4070a0">&#39;6g848f484dd6a50001976528&#39;</span>],
+        type<span style="color:#666">:</span> <span style="color:#4070a0">&#39;product&#39;</span>
+      });
+    }
+    <span style="color:#666">&lt;</span><span style="">/script&gt;</span>
+    
+</code></pre></div></p>
+
+<p><strong><a href="https://github.com/paysuper/paysuper-js-sdk#paysuper-options" target="_blank">The full list of an order parameters</a></strong></p></li>
+
+<li><p>Display the payment form in a modal window:</p>
+
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">    paySuper.renderModal();
+    
+</code></pre></div>
+
+<p>Likewise, you can display a payment form as an iframe on your site:</p>
+
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">    paySuper.renderPage();
+    
+</code></pre></div>
+
+<p><strong><a href="https://github.com/paysuper/paysuper-js-sdk#paysuper-form-methods" target="_blank">Learn more about the form methods</a></strong></p></li>
+
+<li><p>Set up handlers for transaction states:</p>
+
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">    paySuper.on(<span style="color:#4070a0">&#39;paymentCompleted&#39;</span>, <span style="color:#007020;font-weight:bold">function</span>() {
+    <span style="color:#60a0b0;font-style:italic">// You can show a message about payment is completed;
+</span><span style="color:#60a0b0;font-style:italic"></span>    });
+    
+</code></pre></div>
+
+<p><strong><a href="https://github.com/paysuper/paysuper-js-sdk#paysuper-events" target="_blank">Full events list in the expected order of execution</a></strong></p></li>
+</ol>
+
+<p><strong>Full code snippet for a payment form with a token parameter and a handler for a completed payment:</strong></p>
+
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#666">&lt;</span>script<span style="color:#666">&gt;</span>
+<span style="color:#007020;font-weight:bold">function</span> buyItems() {
+  <span style="color:#007020;font-weight:bold">const</span> paySuper <span style="color:#666">=</span> <span style="color:#007020;font-weight:bold">new</span> PaySuper({
+      project<span style="color:#666">:</span> <span style="color:#4070a0">&#39;5cd5620f06ae110001509185&#39;</span>,
+      products<span style="color:#666">:</span> [<span style="color:#4070a0">&#39;5d848f484dd6a50001970479&#39;</span>, <span style="color:#4070a0">&#39;6g848f484dd6a50001976528&#39;</span>],
+      type<span style="color:#666">:</span> <span style="color:#4070a0">&#39;product&#39;</span>
+  });
+paySuper.renderModal();
+paySuper.on(<span style="color:#4070a0">&#39;paymentCompleted&#39;</span>, <span style="color:#007020;font-weight:bold">function</span>() {
+    <span style="color:#60a0b0;font-style:italic">// You can show a message about payment is completed;
+</span><span style="color:#60a0b0;font-style:italic"></span>});
+}
+<span style="color:#666">&lt;</span><span style="">/script&gt;</span>
+<span style="color:#666">&lt;</span>button onclick<span style="color:#666">=</span><span style="color:#4070a0">&#34;buyItems()&#34;</span><span style="color:#666">&gt;</span>BUY<span style="color:#666">&lt;</span><span style="">/button&gt;</span>
+</code></pre></div>
+
+<h3 id="manual-integration">MANUAL INTEGRATION</h3>
+
+<ol>
+<li><p>Add to your site a method to initiate a payment <a href="https://docs.stg.pay.super.com/api-reference/token/#endpoints" target="_blank">Tokens API</a>.</p>
+
+<p>More than that, you can send a request to initiate a payment with only known parameters about your project and products without a user data <a href="https://docs.stg.pay.super.com/api-reference/orders/#endpoints" target="_blank">Order API</a>.</p></li>
+
+<li><p>After a customer initiates a payment you have to retrieve the response parameter payment_form_url - the payment form URL.</p></li>
+
+<li><p>Open a payment form in a new browser window by URL payment_form_url.</p>
+
+<p>Likewise, you can integrate a payment form as an iframe on your site:</p></li>
+</ol>
+
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#666">&lt;</span>iframe src<span style="color:#666">=</span><span style="color:#4070a0">&#34;{payment_form_url}&#34;</span><span style="color:#666">&gt;&lt;</span><span style="">/iframe&gt;</span>
+</code></pre></div>
+
+<!-- 4. Webhook code example -->
+
+<h2 id="webhooks">Webhooks</h2>
+
+<p>The PaySuper system can send webhooks to your server for a set of events about transactions and user actions. Types of events described in the list notification types.</p>
+
+<p>Set up webhooks for your project for all event types.</p>
+
+<h2 id="customization">Customization</h2>
+
+<p>PaySuper payment form is optimized for display on a wide range of mobile devices (tablets and smartphones). The display logic takes into account the device-specific touch controls and the use of an on-screen keyboard.</p>
+
+<p>You can customize the payment form created by <a href="https://github.com/paysuper/paysuper-js-sdk" target="_blank">PaySuper JS SDK</a> for all devices:</p>
+
+<h4 id="change-the-theme">Change the theme</h4>
+
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#007020;font-weight:bold">const</span> paySuper <span style="color:#666">=</span> <span style="color:#007020;font-weight:bold">new</span> PaySuper({
+    viewScheme<span style="color:#666">:</span> <span style="color:#4070a0">&#39;light&#39;</span>
+  });
+</code></pre></div>
+
+<table>
+<thead>
+<tr>
+<th>Parameters</th>
+<th>Values</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>viewScheme</td>
+<td>&lsquo;dark&rsquo; (default), &lsquo;light&rsquo;</td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="change-the-colors">Change the colors</h4>
+
+<p><code>headerTextColor</code> overrides the default value of the viewSchemeConfig object:</p>
+
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#007020;font-weight:bold">const</span> paySuper <span style="color:#666">=</span> <span style="color:#007020;font-weight:bold">new</span> PaySuper({
+    token<span style="color:#666">:</span> <span style="color:#4070a0">&#39;5cd5620f06ae110001509185&#39;</span>,
+    viewSchemeConfig<span style="color:#666">:</span> { 
+        headerTextColor<span style="color:#666">:</span> <span style="color:#4070a0">&#39;#333333&#39;</span>
+    }
+  });
+</code></pre></div>
+
+<table>
+<thead>
+<tr>
+<th>Parameters</th>
+<th>Default values</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>headerTextColor</td>
+<td>&lsquo;rgba(255, 255, 255, 0.7)&rsquo;</td>
+</tr>
+
+<tr>
+<td>headerProjectTitleColor</td>
+<td>&rsquo;#fff&rsquo;</td>
+</tr>
+
+<tr>
+<td>headerServiceTitleColor</td>
+<td>&rsquo;#fff&rsquo;</td>
+</tr>
+
+<tr>
+<td>cartBackgroundColor</td>
+<td>&rsquo;#333b50&rsquo;</td>
+</tr>
+
+<tr>
+<td>cartBoxShadowColor</td>
+<td>&lsquo;rgba(51, 59, 80, 0.8)&rsquo;</td>
+</tr>
+
+<tr>
+<td>cartHoverTextColor</td>
+<td>&rsquo;#06eaa7&rsquo;</td>
+</tr>
+
+<tr>
+<td>cartOldPriceColor</td>
+<td>&lsquo;rgba(255, 255, 255, 0.3)&rsquo;</td>
+</tr>
+
+<tr>
+<td>cartTextColor</td>
+<td>&lsquo;rgba(255, 255, 255, 0.7)&rsquo;</td>
+</tr>
+
+<tr>
+<td>cartTotalStrokeColor</td>
+<td>&lsquo;rgba(255, 255, 255, 0.2)&rsquo;</td>
+</tr>
+
+<tr>
+<td>cartTotalTextColor</td>
+<td>&rsquo;#06eaa7&rsquo;</td>
+</tr>
+
+<tr>
+<td>formBackgroundColor</td>
+<td>&rsquo;#424c66&rsquo;</td>
+</tr>
+
+<tr>
+<td>localeChangerModalBorderColor</td>
+<td>&lsquo;rgba(255, 255, 255, 0.2)&rsquo;</td>
+</tr>
+
+<tr>
+<td>localeChangerModalBoxColor</td>
+<td>&rsquo;#333b50&rsquo;</td>
+</tr>
+
+<tr>
+<td>localeChangerModalColor</td>
+<td>&lsquo;rgba(255, 255, 255, 0.7)&rsquo;</td>
+</tr>
+
+<tr>
+<td>localeChangerModalCurrentColor</td>
+<td>&rsquo;#06eaa7&rsquo;</td>
+</tr>
+
+<tr>
+<td>localeChangerModalHoverBorderColor</td>
+<td>&lsquo;rgba(255, 255, 255, 0.5)&rsquo;</td>
+</tr>
+
+<tr>
+<td>localeChangerModalHoverColor</td>
+<td>&rsquo;#06eaa7&rsquo;</td>
+</tr>
+
+<tr>
+<td>localeChangerPageBorderColor</td>
+<td>&lsquo;rgba(255, 255, 255, 0.2)&rsquo;</td>
+</tr>
+
+<tr>
+<td>localeChangerPageBoxColor</td>
+<td>&rsquo;#333b50&rsquo;</td>
+</tr>
+
+<tr>
+<td>localeChangerPageColor</td>
+<td>&lsquo;rgba(255, 255, 255, 0.7)&rsquo;</td>
+</tr>
+
+<tr>
+<td>localeChangerPageCurrentColor</td>
+<td>&rsquo;#06eaa7&rsquo;</td>
+</tr>
+
+<tr>
+<td>localeChangerPageHoverBorderColor</td>
+<td>&lsquo;rgba(255, 255, 255, 0.5)&rsquo;</td>
+</tr>
+
+<tr>
+<td>localeChangerPageHoverColor</td>
+<td>&rsquo;#06eaa7&rsquo;</td>
+</tr>
+
+<tr>
+<td>buttonAlign</td>
+<td>&lsquo;center&rsquo;</td>
+</tr>
+
+<tr>
+<td>buttonColor</td>
+<td>&rsquo;#fff&rsquo;</td>
+</tr>
+
+<tr>
+<td>buttonBoxColor</td>
+<td>&rsquo;#5b88de&rsquo;</td>
+</tr>
+
+<tr>
+<td>buttonActiveBoxColor</td>
+<td>&rsquo;#4e7fdb&rsquo;</td>
+</tr>
+
+<tr>
+<td>buttonHoverBoxColor</td>
+<td>&rsquo;#6891e1&rsquo;</td>
+</tr>
+
+<tr>
+<td>buttonDisabledOpacity</td>
+<td>&lsquo;0.7&rsquo;</td>
+</tr>
+
+<tr>
+<td>buttonBeforeColor</td>
+<td>&rsquo;#fff&rsquo;</td>
+</tr>
+
+<tr>
+<td>buttonAfterColor</td>
+<td>&rsquo;#fff&rsquo;</td>
+</tr>
+
+<tr>
+<td>checkboxColor</td>
+<td>&rsquo;#fff&rsquo;</td>
+</tr>
+
+<tr>
+<td>checkboxIconColor</td>
+<td>&rsquo;#fff&rsquo;</td>
+</tr>
+
+<tr>
+<td>checkboxHoverColor</td>
+<td>&rsquo;#06eaa7&rsquo;</td>
+</tr>
+
+<tr>
+<td>checkboxHoverIconColor</td>
+<td>&rsquo;#06eaa7&rsquo;</td>
+</tr>
+
+<tr>
+<td>checkboxCheckedColor</td>
+<td>&rsquo;#fff&rsquo;</td>
+</tr>
+
+<tr>
+<td>checkboxCheckedIconColor</td>
+<td>&rsquo;#06eaa7&rsquo;</td>
+</tr>
+
+<tr>
+<td>checkboxDisabledOpacity</td>
+<td>&lsquo;0.7&rsquo;</td>
+</tr>
+
+<tr>
+<td>preloaderColor</td>
+<td>&lsquo;rgba(255, 255, 255, 0.1)&rsquo;</td>
+</tr>
+
+<tr>
+<td>preloaderSpinColor</td>
+<td>&rsquo;#06eaa7&rsquo;</td>
+</tr>
+
+<tr>
+<td>inputBorderColor</td>
+<td>&lsquo;rgba(255, 255, 255, 0.2)&rsquo;</td>
+</tr>
+
+<tr>
+<td>inputBoxColor</td>
+<td>&lsquo;transparent&rsquo;</td>
+</tr>
+
+<tr>
+<td>inputColor</td>
+<td>&rsquo;#fff&rsquo;</td>
+</tr>
+
+<tr>
+<td>inputDisabledOpacity</td>
+<td>&lsquo;0.5&rsquo;</td>
+</tr>
+
+<tr>
+<td>inputErrorBorderColor</td>
+<td>&rsquo;#fc7e57&rsquo;</td>
+</tr>
+
+<tr>
+<td>inputErrorBoxColor</td>
+<td>&rsquo;#fc7e57&rsquo;</td>
+</tr>
+
+<tr>
+<td>inputErrorColor</td>
+<td>&rsquo;#fff&rsquo;</td>
+</tr>
+
+<tr>
+<td>inputFocusBorderColor</td>
+<td>&rsquo;#06eaa7&rsquo;</td>
+</tr>
+
+<tr>
+<td>inputFocusLabelColor</td>
+<td>&lsquo;rgba(255, 255, 255, 0.3)&rsquo;</td>
+</tr>
+
+<tr>
+<td>inputHoverBorderColor</td>
+<td>&lsquo;rgba(255, 255, 255, 0.5)&rsquo;</td>
+</tr>
+
+<tr>
+<td>inputLabelColor</td>
+<td>&lsquo;rgba(255, 255, 255, 0.5)&rsquo;</td>
+</tr>
+
+<tr>
+<td>selectBorderColor</td>
+<td>&lsquo;rgba(255, 255, 255, 0.2)&rsquo;</td>
+</tr>
+
+<tr>
+<td>selectBoxColor</td>
+<td>&lsquo;transparent&rsquo;</td>
+</tr>
+
+<tr>
+<td>selectColor</td>
+<td>&rsquo;#fff&rsquo;</td>
+</tr>
+
+<tr>
+<td>selectPlaceholderColor</td>
+<td>&lsquo;rgba(255, 255, 255, 0.5)&rsquo;</td>
+</tr>
+
+<tr>
+<td>selectDisabledOpacity</td>
+<td>&lsquo;0.5&rsquo;</td>
+</tr>
+
+<tr>
+<td>selectFocusBorderColor</td>
+<td>&rsquo;#06eaa7&rsquo;</td>
+</tr>
+
+<tr>
+<td>selectHoverBorderColor</td>
+<td>&lsquo;rgba(255, 255, 255, 0.5)&rsquo;</td>
+</tr>
+
+<tr>
+<td>selectOptionsBoxColor</td>
+<td>&rsquo;#424c66&rsquo;</td>
+</tr>
+
+<tr>
+<td>selectRemoveColor</td>
+<td>&rsquo;#fc7e57&rsquo;</td>
+</tr>
+
+<tr>
+<td>cardSelectAddCardColor</td>
+<td>&rsquo;#fff&rsquo;</td>
+</tr>
+
+<tr>
+<td>cardSelectAddCardHoverColor</td>
+<td>&rsquo;#06eaa7&rsquo;</td>
+</tr>
+
+<tr>
+<td>tipCartBoxColor</td>
+<td>&rsquo;#424c66&rsquo;,</td>
+</tr>
+
+<tr>
+<td>tipContentColor</td>
+<td>&lsquo;rgba(255, 255, 255, 0.5)&rsquo;</td>
+</tr>
+
+<tr>
+<td>tipFormBoxColor</td>
+<td>&rsquo;#333B50&rsquo;</td>
+</tr>
+
+<tr>
+<td>tipHeaderColor</td>
+<td>&rsquo;#fff&rsquo;</td>
+</tr>
+
+<tr>
+<td>tipLinkHoverColor</td>
+<td>&rsquo;#06eaa7&rsquo;</td>
+</tr>
+
+<tr>
+<td>iconInfoColor</td>
+<td>&lsquo;rgba(255, 255, 255, 0.3)&rsquo;</td>
+</tr>
+
+<tr>
+<td>iconInfoHoverColor</td>
+<td>&rsquo;#06eaa7&rsquo;</td>
+</tr>
+
+<tr>
+<td>stubContentColorPrimary</td>
+<td>&lsquo;rgba(255, 255, 255, 0.2)&rsquo;</td>
+</tr>
+
+<tr>
+<td>stubSpinContentColorPrimary</td>
+<td>&lsquo;rgba(255, 255, 255, 0.15)&rsquo;</td>
+</tr>
+
+<tr>
+<td>stubContentColorSecondary</td>
+<td>&lsquo;rgba(255, 255, 255, 0.1)&rsquo;,</td>
+</tr>
+
+<tr>
+<td>stubSpinContentColorSecondary</td>
+<td>&lsquo;rgba(255, 255, 255, 0.1)&rsquo;</td>
+</tr>
+
+<tr>
+<td>stubTotalColor</td>
+<td>&lsquo;rgba(6, 234, 167, 0.3)&rsquo;</td>
+</tr>
+
+<tr>
+<td>stubSpinTotalColor</td>
+<td>&lsquo;rgba(6, 234, 167, 0.2)&rsquo;</td>
+</tr>
+</tbody>
+</table>
 
 </div>
  

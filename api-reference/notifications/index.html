@@ -50,7 +50,7 @@
 
 <meta itemprop="datePublished" content="2016-02-01T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2016-03-02T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="432">
+<meta itemprop="wordCount" content="507">
 
 
 
@@ -150,6 +150,7 @@
 <ul>
 <li>
 <ul>
+<li><a href="#set-up-webhooks">Set up webhooks</a></li>
 <li><a href="#notification-types">Notification types</a></li>
 <li><a href="#the-notification-object">The Notification object</a></li>
 <li><a href="#check-notification-request">Check notification request</a>
@@ -216,9 +217,17 @@
 
 <p>The PaySuper system can send you notifications for a set of events during the flow, such as creating new accounts or transaction flow, making payouts, and so on.</p>
 
-<p>These notifications are sent as webhooks to the corresponding URLs configured on your server.</p>
+<p>These notifications are sent as webhooks to the corresponding URLs configured on your Project Settings page.</p>
 
 <p>In most cases, webhooks are triggered by user actions on your website or back-end related events like refund a payment, notification about dispute and other.</p>
+
+<h2 id="set-up-webhooks">Set up webhooks</h2>
+
+<ol>
+<li>Configure URLs on your Project settings page for all notification types.</li>
+<li>PaySuper signs the webhook events it sends to your endpoint, allowing you to validate that they were not sent by a third-party and prevent hacker attacks. <a href="#to-check-the-digital-signatures-you-should">To verify a webhook request</a>, generate a signature and compare that to the value of the Authorization header.</li>
+<li>Respond with HTTP code 200 without a message body to acknowledge the receipt a webhook.</li>
+</ol>
 
 <h2 id="notification-types">Notification types</h2>
 
