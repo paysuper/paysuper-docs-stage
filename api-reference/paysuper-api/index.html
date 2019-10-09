@@ -50,7 +50,7 @@
 
 <meta itemprop="datePublished" content="2016-02-01T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2016-03-02T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="499">
+<meta itemprop="wordCount" content="519">
 
 
 
@@ -161,6 +161,7 @@
 </ul></li>
 <li><a href="#versioning">Versioning</a></li>
 <li><a href="#compression">Compression</a></li>
+<li><a href="#endpoints">Endpoints</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -355,6 +356,24 @@
 <p>Endpoints that send HTTP 1.1 messages are required to send gzip-compressed data by specifying the appropriate value in the HTTP <a href="https://tools.ietf.org/html/rfc7231#section-5.3.4" target="_blank">Accept-Encoding header</a>.</p>
 
 <p>Receiving hosts are required to support gzip and respond to requests by passing an HTTP <a href="https://tools.ietf.org/html/rfc7231#section-3.1.2.2" target="_blank">Content-Encoding header</a>.</p>
+
+<h2 id="endpoints">Endpoints</h2>
+
+<style>iframe{width:100%}</style>
+<iframe id="swagger-ui" frameBorder="0" scrolling="no" src="https://docs.stg.pay.super.com/swagger-ui/index.html" >
+</iframe>
+
+<script type="text/javascript" src="https://docs.stg.pay.super.com/scripts/iframeResizer.min.js"></script>
+<script type="text/javascript">
+  iFrameResize({
+    log         : true,                  
+    checkOrigin : false,
+    sizeWidth   : true,
+    widthCalculationMethod : 'rightMostElement'
+  });
+  var shortcode_url = "\/api\/v1\/api.yaml";
+  
+</script>
 
 </div>
  
