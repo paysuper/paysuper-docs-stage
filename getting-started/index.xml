@@ -12,6 +12,37 @@
     
     
     <item>
+      <title>Draft - Quick Start</title>
+      <link>https://docs.stg.pay.super.com/getting-started/draft-quick-start/</link>
+      <pubDate>Thu, 10 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.stg.pay.super.com/getting-started/draft-quick-start/</guid>
+      <description>Our mission is to maximize profits for developers, publishers, and platforms. We’re focused on keeping conversion rates high and costs low – including those related to integration and maintenance.
+PaySuper makes a payment process simple:
+ Supports all payment methods necessary to accept payments from users anywhere in the world. PaySuper Form loads near instantly and designed to boost your paying conversion rate. PaySuper service can be integrated into different platforms like a site, online store or game.</description>
+    </item>
+    
+    <item>
+      <title>Manual Integration</title>
+      <link>https://docs.stg.pay.super.com/getting-started/integration/</link>
+      <pubDate>Thu, 10 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.stg.pay.super.com/getting-started/integration/</guid>
+      <description>In the case of basic payment acceptance, the integration process takes just a few minutes.
+Steps of the integration process:  To initiate a payment you can send a request with a secure string of an order parameters by POST /api/v1/tokens or key-value parameters about your Project and Products without a user information by POST /api/v1/order.
+ After a customer initiates a payment retreive from a response a parameter payment_form_url - the payment form URL.</description>
+    </item>
+    
+    <item>
+      <title>Testing</title>
+      <link>https://docs.stg.pay.super.com/getting-started/testing/</link>
+      <pubDate>Thu, 10 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.stg.pay.super.com/getting-started/testing/</guid>
+      <description>Payment form integration should be tested in the PaySuper Sandbox before going live. PaySuper Sandbox provides full functionality but it only emulates processing, no actual bank transactions are made.</description>
+    </item>
+    
+    <item>
       <title>Quick Start</title>
       <link>https://docs.stg.pay.super.com/getting-started/quick-start/</link>
       <pubDate>Mon, 07 Oct 2019 00:00:00 +0000</pubDate>
@@ -38,17 +69,12 @@ Dimensions:
     </item>
     
     <item>
-      <title>PaySuper Integration</title>
-      <link>https://docs.stg.pay.super.com/getting-started/integration/</link>
+      <title>Onboarding</title>
+      <link>https://docs.stg.pay.super.com/getting-started/onboarding/</link>
       <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://docs.stg.pay.super.com/getting-started/integration/</guid>
-      <description>In the case of basic payment acceptance, the integration process takes just a few minutes.
-Steps of the integration process:
-PaySuper website signup To begin, we need only basic information about your company:
- name jurisdiction, website address.  You can get started immediately and use PaySuper in test mode.
-API access keys will be generated automatically and can be changed later.
-Along with the next steps, you’ll need to go through the KYC procedure and sign the contract with an e-signature.</description>
+      <guid>https://docs.stg.pay.super.com/getting-started/onboarding/</guid>
+      <description></description>
     </item>
     
     <item>

@@ -6,7 +6,7 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
      
-    <title>PaySuper Integration | PaySuper</title>
+    <title>Manual Integration | PaySuper</title>
 
     <meta name="viewport" content="width=device-width,minimum-scale=1">
      <meta name="generator" content="Hugo 0.58.3" />
@@ -38,25 +38,25 @@
 <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
 <link rel="manifest" href="/manifest.json">
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0594cb">
-<meta name="theme-color" content="#ffffff"><meta property="og:title" content="PaySuper Integration" />
+<meta name="theme-color" content="#ffffff"><meta property="og:title" content="Manual Integration" />
 <meta property="og:description" content="You can start accepting payments through PaySuper on your website after a few simple steps." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://docs.stg.pay.super.com/getting-started/integration/" />
-<meta property="article:published_time" content="2017-02-01T00:00:00+00:00" />
-<meta property="article:modified_time" content="2017-02-01T00:00:00+00:00" />
-<meta itemprop="name" content="PaySuper Integration">
+<meta property="article:published_time" content="2019-10-10T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-10-10T00:00:00+00:00" />
+<meta itemprop="name" content="Manual Integration">
 <meta itemprop="description" content="You can start accepting payments through PaySuper on your website after a few simple steps.">
 
 
-<meta itemprop="datePublished" content="2017-02-01T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2017-02-01T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="269">
+<meta itemprop="datePublished" content="2019-10-10T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2019-10-10T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="116">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="PaySuper Integration"/>
+<meta name="twitter:title" content="Manual Integration"/>
 <meta name="twitter:description" content="You can start accepting payments through PaySuper on your website after a few simple steps."/>
 
 
@@ -150,12 +150,7 @@
 <ul>
 <li>
 <ul>
-<li><a href="#paysuper-website-signup">PaySuper website signup</a></li>
-<li><a href="#project-configuration">Project configuration</a></li>
-<li><a href="#payment-interface-integration">Payment interface integration</a></li>
-<li><a href="#webhook-settings">Webhook settings</a></li>
-<li><a href="#testing">Testing</a></li>
-<li><a href="#launch">Launch</a></li>
+<li><a href="#steps-of-the-integration-process">Steps of the integration process:</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -163,7 +158,7 @@
 
 	<div date-pref>
 		
-			<a href="https://docs.stg.pay.super.com/getting-started/external-reports/" class="dib f6 pl1 hover-bg-light-gray br-100" title="External Reports ">
+			<a href="https://docs.stg.pay.super.com/getting-started/draft-quick-start/" class="dib f6 pl1 hover-bg-light-gray br-100" title="Draft - Quick Start ">
 				<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
     <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
     <path d="M0 0h24v24H0z" fill="none"/>
@@ -173,7 +168,7 @@
 		
 
 		
-			<a href="https://docs.stg.pay.super.com/getting-started/personal-account/" class="dib f6 pr1 hover-bg-light-gray br-100" title="Personal Account">
+			<a href="https://docs.stg.pay.super.com/getting-started/testing/" class="dib f6 pr1 hover-bg-light-gray br-100" title="Testing">
 			<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
     <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
     <path d="M0 0h24v24H0z" fill="none"/>
@@ -192,7 +187,7 @@
                 </div>
                 <header class="flex-none w-100">
   
-  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark">PaySuper Integration</h1>
+  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark">Manual Integration</h1>
 </header>
 
 <aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
@@ -213,49 +208,25 @@
 
 <p>In the case of basic payment acceptance, the integration process takes just a few minutes.</p>
 
-<p>Steps of the integration process:</p>
+<h2 id="steps-of-the-integration-process">Steps of the integration process:</h2>
 
-<p><img src="/images/integration.png" alt="PaySuper integration schema" /></p>
+<ol>
+<li><p>To initiate a payment you can send a request with a secure string of an order parameters by <strong><a href="https://docs.stg.pay.super.com/api-reference/token/#endpoints" target="_blank">POST /api/v1/tokens</a></strong> or key-value parameters about your Project and Products without a user information by <strong><a href="https://docs.stg.pay.super.com/api-reference/orders/#endpoints" target="_blank">POST /api/v1/order</a></strong>.</p></li>
 
-<h2 id="paysuper-website-signup">PaySuper website signup</h2>
+<li><p>After a customer initiates a payment retreive from a response a parameter <strong><code>payment_form_url</code></strong> - the payment form URL.</p></li>
 
-<p>To begin, we need only basic information about your company:</p>
+<li><p>Now you need to display a Payment Form.</p>
 
-<ul>
-<li>name</li>
-<li>jurisdiction,</li>
-<li>website address.</li>
-</ul>
+<p>You can open a payment form in a new browser window by URL payment_form_url.</p>
 
-<p>You can get started immediately and use PaySuper in test mode.</p>
+<p>Likewise, you can integrate a payment form as an iframe on your site:</p>
 
-<p><strong>API access keys</strong> will be generated automatically and can be changed later.</p>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">    <span style="color:#666">&lt;</span>iframe src<span style="color:#666">=</span><span style="color:#4070a0">&#34;{payment_form_url}&#34;</span><span style="color:#666">&gt;&lt;</span><span style="">/iframe&gt;</span>
+    
+</code></pre></div></li>
 
-<p>Along with the next steps, you’ll need to go through the KYC procedure and sign the contract with an e-signature.</p>
-
-<h2 id="project-configuration">Project configuration</h2>
-
-<p>This includes configuring technical parameters of the payment interface integration and choosing one of the payment acceptance options.</p>
-
-<p>Further on we will examine in detail what PaySuper projects are and why they are necessary, as well as talk about advanced project settings, such as product management.</p>
-
-<h2 id="payment-interface-integration">Payment interface integration</h2>
-
-<p>You can choose one of the integration methods, depending on the technologies you use and your preferences.</p>
-
-<p>In the basic version, you will need to add only one line to the page code. To integrate server interaction with PaySuper, you can use one of the PaySuper SDKs available on GitHub.</p>
-
-<h2 id="webhook-settings">Webhook settings</h2>
-
-<p>PaySuper can send client and server notifications about the transaction progress and user actions in the form. You can configure non-standard events, as well as the processing of such events on your side, if necessary.</p>
-
-<h2 id="testing">Testing</h2>
-
-<p>Technical integration testing is fully automatic. In a special interface, you can run a set of integration tests and get detailed results for each: description, expected result, passed or not, query text, answer text.</p>
-
-<h2 id="launch">Launch</h2>
-
-<p>If all tests are passed, then you only need to press one button to start.</p>
+<li><p>Пример кода как обработать получение вебхука</p></li>
+</ol>
 
 </div>
  
@@ -318,18 +289,23 @@
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/getting-started/quick-start/" class="db link hover-bg-moon-gray pl3 pr2 pv2 black ">
-              Quick Start
+            <a href="/getting-started/draft-quick-start/" class="db link hover-bg-moon-gray pl3 pr2 pv2 black ">
+              Draft - Quick Start
             </a>
           </li>
           <li class="f6 fw4">
-            <a href="/getting-started/integration/" class="db link hover-bg-moon-gray pl3 pr2 pv2 primary-color ">
-              PaySuper Integration
+            <a href="/getting-started/onboarding/" class="db link hover-bg-moon-gray pl3 pr2 pv2 black ">
+              Onboarding
             </a>
           </li>
           <li class="f6 fw4">
             <a href="/getting-started/project-products/" class="db link hover-bg-moon-gray pl3 pr2 pv2 black ">
               Project and Products
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/getting-started/integration/" class="db link hover-bg-moon-gray pl3 pr2 pv2 primary-color ">
+              Manual Integration
             </a>
           </li>
           <li class="f6 fw4">
@@ -345,6 +321,16 @@
           <li class="f6 fw4">
             <a href="/getting-started/external-reports/" class="db link hover-bg-moon-gray pl3 pr2 pv2 black ">
               External Reports
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/getting-started/testing/" class="db link hover-bg-moon-gray pl3 pr2 pv2 black ">
+              Testing
+            </a>
+          </li>
+          <li class="f6 fw4">
+            <a href="/getting-started/quick-start/" class="db link hover-bg-moon-gray pl3 pr2 pv2 black ">
+              Quick Start
             </a>
           </li>
         </ul>
