@@ -22,6 +22,15 @@ Endpoints iframe{width:100%}   iFrameResize({ log : true, checkOrigin : false, s
     </item>
     
     <item>
+      <title>API</title>
+      <link>https://docs.stg.pay.super.com/api-reference/api-swagger/</link>
+      <pubDate>Mon, 01 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.stg.pay.super.com/api-reference/api-swagger/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Key Products</title>
       <link>https://docs.stg.pay.super.com/api-reference/key-products/</link>
       <pubDate>Mon, 01 Feb 2016 00:00:00 +0000</pubDate>
