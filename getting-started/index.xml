@@ -12,17 +12,6 @@
     
     
     <item>
-      <title>Draft - Quick Start</title>
-      <link>https://docs.stg.pay.super.com/getting-started/draft-quick-start/</link>
-      <pubDate>Thu, 10 Oct 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://docs.stg.pay.super.com/getting-started/draft-quick-start/</guid>
-      <description>Our mission is to maximize profits for developers, publishers, and platforms. We’re focused on keeping conversion rates high and costs low – including those related to integration and maintenance.
-PaySuper was designed with developers in mind:
- The source code is available on the PaySuper GitHub, so you can follow the development process and see how everything actually works. PaySuper can be integrated into different platforms like a website, an online store or a game.</description>
-    </item>
-    
-    <item>
       <title>Manual Integration</title>
       <link>https://docs.stg.pay.super.com/getting-started/integration/</link>
       <pubDate>Thu, 10 Oct 2019 00:00:00 +0000</pubDate>
@@ -34,25 +23,23 @@ Steps of the integration process:  To initiate a payment you can send a request 
     </item>
     
     <item>
+      <title>Quick Start</title>
+      <link>https://docs.stg.pay.super.com/getting-started/quick-start/</link>
+      <pubDate>Thu, 10 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.stg.pay.super.com/getting-started/quick-start/</guid>
+      <description>Our mission is to maximize profits for developers, publishers, and platforms. We’re focused on keeping conversion rates high and costs low – including those related to integration and maintenance.
+PaySuper was designed with developers in mind:
+ The source code is available on the PaySuper GitHub, so you can follow the development process and see how everything actually works. PaySuper can be integrated into different platforms like a website, an online store or a game.</description>
+    </item>
+    
+    <item>
       <title>Testing</title>
       <link>https://docs.stg.pay.super.com/getting-started/testing/</link>
       <pubDate>Thu, 10 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>https://docs.stg.pay.super.com/getting-started/testing/</guid>
       <description>Payment form integration should be tested in the PaySuper Sandbox before going live. PaySuper Sandbox provides full functionality but it only emulates processing, no actual bank transactions are made.</description>
-    </item>
-    
-    <item>
-      <title>Quick Start</title>
-      <link>https://docs.stg.pay.super.com/getting-started/quick-start/</link>
-      <pubDate>Mon, 07 Oct 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://docs.stg.pay.super.com/getting-started/quick-start/</guid>
-      <description>PaySuper is an open-source payment toolkit that has significant features:
- Payment methods  Supports all payment methods necessary to accept payments from users anywhere in the world.
-   Operation speed  Fast loading for a good paying conversion.
-   Localization  The look of the payment form and the selection of final payment methods can be independently configured for each country or region.
-    All you need to get started: 1.</description>
     </item>
     
     <item>
