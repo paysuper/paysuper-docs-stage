@@ -12,6 +12,17 @@
     
     
     <item>
+      <title>Glossary</title>
+      <link>https://docs.stg.pay.super.com/getting-started/glossary/</link>
+      <pubDate>Thu, 10 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.stg.pay.super.com/getting-started/glossary/</guid>
+      <description>PaySuper PaySuper is a payment service with a multifunctional toolkit that provides secure and immediate transactions online for games industry. Our mission is to maximize profits for developers, publishers, and platforms. We’re focused on keeping conversion rates high and costs low – including those related to integration and maintenance.
+PaySuper JS SDK PaySuper’s JavaScript library is designed to integrate a PaySuper Payment Form on your site.
+PaySuper API PaySuper public REST API server for a payment form and dashboards.</description>
+    </item>
+    
+    <item>
       <title>Manual Integration</title>
       <link>https://docs.stg.pay.super.com/getting-started/integration/</link>
       <pubDate>Thu, 10 Oct 2019 00:00:00 +0000</pubDate>
