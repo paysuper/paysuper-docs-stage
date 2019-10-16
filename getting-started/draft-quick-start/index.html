@@ -39,25 +39,25 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0594cb">
 <meta name="theme-color" content="#ffffff"><meta property="og:title" content="Draft - Quick Start" />
-<meta property="og:description" content="PaySuper is an open-source payment toolkit that allows securely accepting online payments on the web and mobile devices in a gaming industry." />
+<meta property="og:description" content="PaySuper is an open-source payment toolkit that enables secure online payments on the web and mobile devices." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://docs.stg.pay.super.com/getting-started/draft-quick-start/" />
 <meta property="article:published_time" content="2019-10-10T00:00:00+00:00" />
 <meta property="article:modified_time" content="2019-10-10T00:00:00+00:00" />
 <meta itemprop="name" content="Draft - Quick Start">
-<meta itemprop="description" content="PaySuper is an open-source payment toolkit that allows securely accepting online payments on the web and mobile devices in a gaming industry.">
+<meta itemprop="description" content="PaySuper is an open-source payment toolkit that enables secure online payments on the web and mobile devices.">
 
 
 <meta itemprop="datePublished" content="2019-10-10T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2019-10-10T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="289">
+<meta itemprop="wordCount" content="429">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Draft - Quick Start"/>
-<meta name="twitter:description" content="PaySuper is an open-source payment toolkit that allows securely accepting online payments on the web and mobile devices in a gaming industry."/>
+<meta name="twitter:description" content="PaySuper is an open-source payment toolkit that enables secure online payments on the web and mobile devices."/>
 
 
 
@@ -150,10 +150,12 @@
 <ul>
 <li>
 <ul>
-<li><a href="#getting-started">Getting started</a></li>
-<li><a href="#adding-your-project-with-products">Adding your Project with Products</a></li>
-<li><a href="#integrating-a-payment-form">Integrating a Payment Form</a></li>
-<li><a href="#receiving-payment-statuses">Receiving payment statuses</a></li>
+<li><a href="#1-complete-the-onboarding-first">1. Complete the onboarding first</a></li>
+<li><a href="#2-add-your-projects-and-products">2. Add your Projects and Products</a></li>
+<li><a href="#3-create-a-payment-form-instance">3. Create a Payment Form instance</a></li>
+<li><a href="#4-test-the-payment">4. Test the payment</a></li>
+<li><a href="#5-process-payment-status-or-other-events">5. Process payment status or other events</a></li>
+<li><a href="#feel-free-to-send-us-feedback-or-request-a-feature">Feel free to send us feedback or request a feature</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -188,7 +190,7 @@
 <aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
   
     <div class="f4 fw4 lh-copy">
-      PaySuper is an open-source payment toolkit that allows securely accepting online payments on the web and mobile devices in a gaming industry.
+      PaySuper is an open-source payment toolkit that enables secure online payments on the web and mobile devices.
     </div>
   
 
@@ -203,39 +205,64 @@
 
 <p>Our mission is to maximize profits for developers, publishers, and platforms. We’re focused on keeping conversion rates high and costs low – including those related to integration and maintenance.</p>
 
-<p><strong>PaySuper makes a payment process simple:</strong></p>
+<p><strong>PaySuper was designed with developers in mind:</strong></p>
 
 <ul>
-<li>Supports all payment methods necessary to accept payments from users anywhere in the world.</li>
-<li>PaySuper Form loads near instantly and designed to boost your paying conversion rate.</li>
-<li>PaySuper service can be integrated into different platforms like a site, online store or game.</li>
-<li>All of our code is available on <a href="https://github.com/paysuper" target="_blank">PaySuper GitHub</a>, so you can follow our development process, enjoy the beauty of our technical solutions, and see how everything actually works.</li>
+<li>The source code is available on the <a href="https://github.com/paysuper" target="_blank">PaySuper GitHub</a>, so you can follow the development process and see how everything actually works.</li>
+<li>PaySuper can be integrated into different platforms like a website, an online store or a game.</li>
+<li>[The PaySuper Form]() loads near instantly and designed to boost your paying conversion rate.</li>
+<li>PaySuper supports all popular payment methods necessary to accept payments from users anywhere in the world.</li>
 </ul>
 
-<h2 id="getting-started">Getting started</h2>
+<h2 id="1-complete-the-onboarding-first">1. Complete the onboarding first</h2>
 
-<p>Before a Payment Form integration, it assumes you have completed the <a href="/getting-started/onboarding/">PaySuper Onboarding</a>.</p>
+<p><a href="/getting-started/onboarding/">The PaySuper Onboarding</a> is necessary for a [Payment Form]() and PaySuper itself to work with your data. Be sure to complete the onboarding before you can make use of this guide.</p>
 
-<h2 id="adding-your-project-with-products">Adding your Project with Products</h2>
+<h2 id="2-add-your-projects-and-products">2. Add your Projects and Products</h2>
 
-<p>Easily add the required information for a payment about your <a href="/getting-started/project-products/#set-up-your-project-and-products">Project and Products</a> (Game keys, Virtual items or Virtual currency) in the PaySuper Admin.</p>
+<p>Fill in all applicable information for your <a href="/getting-started/project-products/#set-up-your-project-and-products">Projects and Products</a> (Game keys, Virtual items or Virtual currency) in [PaySuper Admin](). Having a single Project and a single Product is enough to start.</p>
 
-<h2 id="integrating-a-payment-form">Integrating a Payment Form</h2>
+<h2 id="3-create-a-payment-form-instance">3. Create a Payment Form instance</h2>
 
-<p>All you need to receive payments is to add <a href="https://github.com/paysuper/paysuper-js-sdk#usage" target="_blank">PaySuper JS SDK</a> a code snippet into your service including order parameters as a secure string generated with <a href="https://docs.stg.pay.super.com/api-reference/token/#endpoints" target="_blank">Tokens API</a> or just as a key-value parameters.
-We recommend you to test a payment in <a href="/getting-started/testing/">Paysuper Sandbox</a> before going live.</p>
+<p>You can use PaySuper JavaScript SDK to ceate an instance of a [Payment Form]() with just a few lines of code. <a href="https://github.com/paysuper/paysuper-js-sdk" target="_blank">PaySuper SJ SDK</a> is open source with the source code available on github.</p>
 
-<p><a href="https://github.com/paysuper/paysuper-js-sdk#paysuper-options" target="_blank">Learn about a Payment Form customization.</a></p>
+<blockquote>
+<p>Check out the <a href="https://github.com/paysuper/paysuper-js-sdk#usage" target="_blank">example code snippet</a> to get started with PaySuper JS SDK.</p>
+</blockquote>
 
-<p>If you need to integrate a Payment Form in a gaming process without our Javascript library follow our <a href="/getting-started/integration/">development quickstart integration</a> with <a href="https://docs.stg.pay.super.com/api-reference/paysuper-api/" target="_blank">PaySuper API</a>.</p>
+<p>Be sure to include your own order parameters. Notice that some parameters are of strings type. You should generate secure strings with <a href="/api-reference/token/#endpoints">Tokens API</a>.</p>
 
-<h2 id="receiving-payment-statuses">Receiving payment statuses</h2>
+<p><a href="https://github.com/paysuper/paysuper-js-sdk#paysuper-options" target="_blank">The Payment Form has a wide range of customization options</a> that you may use to customize the looks and feels.</p>
 
-<p>PaySuper system sends <a href="https://docs.stg.pay.super.com/api-reference/notifications/#set-up-webhooks" target="_blank">Webhooks</a> to your server for a set of events about transactions and user actions. Thus you can notify a customer about a successful purchase.</p>
 
-<p>You can configure Webhooks endpoints on the Project Settings page for all <a href="https://docs.stg.pay.super.com/api-reference/notifications/#notification-types" target="_blank">event types</a>.</p>
+<aside class="admonition tip">
+	<div class="tip-icon">
+		
+	</div>
+	
+	
+	<div class="admonition-content"><p>You can follow our <a href="/getting-started/integration/">PaySuper API quickstart guide</a> if you want to integrate a [Payment Form]() in a game client or cannot use PaySuper SJ SDK for other reasons,.</p>
+</div>
+</aside>
 
-<p><strong>We are always happy to help with code or any questions you have.</strong></p>
+
+<h2 id="4-test-the-payment">4. Test the payment</h2>
+
+<p>We recommend you test the payment experience in <a href="/getting-started/testing/">Paysuper Sandbox</a> before going live.</p>
+
+<h2 id="5-process-payment-status-or-other-events">5. Process payment status or other events</h2>
+
+<p>PaySuper system sends <a href="/api-reference/notifications/#set-up-webhooks">Webhooks</a> to your server for a set of events about transactions and user actions. Thus you can notify a customer about a successful purchase.</p>
+
+<p>You can configure Webhooks endpoints on the [Project Settings page]() for all <a href="/api-reference/notifications/#notification-types">event types</a>.</p>
+
+<h2 id="feel-free-to-send-us-feedback-or-request-a-feature">Feel free to send us feedback or request a feature</h2>
+
+<p>We are always happy to help with code, improve the guide or consider a feature that you this is may be missing. You&rsquo;re welcome to raise an issue on a corresponding repo on our GitHub:
+* <a href="https://github.com/paysuper/paysuper-js-sdk" target="_blank">PaySuper JS SDK</a>
+* <a href="https://github.com/paysuper/paysuper-payment-form" target="_blank">PaySuper Payment Form</a>
+* <a href="https://github.com/paysuper/paysuper-management-api" target="_blank">PaySuper REST API</a>
+* <a href="https://github.com/paysuper/paysuper-docs" target="_blank">PaySuper Documentation</a></p>
 
 </div>
  
