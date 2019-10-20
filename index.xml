@@ -40,9 +40,9 @@ h1 Heading h2 Heading h3 Heading h4 Heading h5 Heading h6 Heading  The note.
       <pubDate>Thu, 10 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>https://docs.stg.pay.super.com/getting-started/glossary/</guid>
-      <description>PaySuper PaySuper is a payment service with a multifunctional toolkit that provides secure and immediate transactions online for games industry. Our mission is to maximize profits for developers, publishers, and platforms. We’re focused on keeping conversion rates high and costs low – including those related to integration and maintenance.
-PaySuper JS SDK PaySuper’s JavaScript library is designed to integrate a PaySuper Payment Form on your website.
-PaySuper API PaySuper public REST API server for a payment form and dashboards.</description>
+      <description>PaySuper PaySuper is a payment service with an open source multifunctional toolkit that provides secure and immediate online payment transactions for the games industry.
+Our mission is to maximize profits for developers, publishers, and platforms. We’re focused on keeping conversion rates high and costs low – including those related to integration and maintenance.
+PaySuper JS SDK PaySuper’s JavaScript SDK is designed to integrate a PaySuper Payment Form on your website.</description>
     </item>
     
     <item>

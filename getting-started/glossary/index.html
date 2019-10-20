@@ -39,25 +39,25 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0594cb">
 <meta name="theme-color" content="#ffffff"><meta property="og:title" content="Glossary" />
-<meta property="og:description" content="This topic lists words and abbreviations that are commonly used in the PaySuper documentation and community." />
+<meta property="og:description" content="This topic lists terms and abbreviations that are commonly used in the PaySuper documentation and community." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://docs.stg.pay.super.com/getting-started/glossary/" />
 <meta property="article:published_time" content="2019-10-10T00:00:00+00:00" />
 <meta property="article:modified_time" content="2019-10-10T00:00:00+00:00" />
 <meta itemprop="name" content="Glossary">
-<meta itemprop="description" content="This topic lists words and abbreviations that are commonly used in the PaySuper documentation and community.">
+<meta itemprop="description" content="This topic lists terms and abbreviations that are commonly used in the PaySuper documentation and community.">
 
 
 <meta itemprop="datePublished" content="2019-10-10T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2019-10-10T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="246">
+<meta itemprop="wordCount" content="303">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Glossary"/>
-<meta name="twitter:description" content="This topic lists words and abbreviations that are commonly used in the PaySuper documentation and community."/>
+<meta name="twitter:description" content="This topic lists terms and abbreviations that are commonly used in the PaySuper documentation and community."/>
 
 
 
@@ -162,9 +162,9 @@
 <li><a href="#payment">Payment</a></li>
 <li><a href="#order">Order</a></li>
 <li><a href="#payment-form">Payment Form</a></li>
-<li><a href="#virtual-currency">Virtual currency</a></li>
-<li><a href="#game-keys">Game keys</a></li>
-<li><a href="#virtual-items">Virtual items</a></li>
+<li><a href="#virtual-currency">Virtual Currency</a></li>
+<li><a href="#game-keys">Game Keys</a></li>
+<li><a href="#virtual-items">Virtual Items</a></li>
 <li><a href="#sandbox">Sandbox</a></li>
 <li><a href="#webhooks">Webhooks</a></li>
 <li><a href="#sku">SKU</a></li>
@@ -203,7 +203,7 @@
 <aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
   
     <div class="f4 fw4 lh-copy">
-      This topic lists words and abbreviations that are commonly used in the PaySuper documentation and community.
+      This topic lists terms and abbreviations that are commonly used in the PaySuper documentation and community.
     </div>
   
 
@@ -218,16 +218,19 @@
 
 <h2 id="paysuper">PaySuper</h2>
 
-<p>PaySuper is a payment service with a <a href="https://github.com/paysuper" target="_blank">multifunctional toolkit</a> that provides secure and immediate transactions online for games industry.
-Our mission is to maximize profits for developers, publishers, and platforms. We’re focused on keeping conversion rates high and costs low – including those related to integration and maintenance.</p>
+<p>PaySuper is a payment service with <a href="https://github.com/paysuper" target="_blank">an open source multifunctional toolkit</a> that provides secure and immediate online payment transactions for the games industry.</p>
+
+<p>Our mission is to maximize profits for developers, publishers, and platforms. We’re focused on keeping conversion rates high and costs low – including those related to integration and maintenance.</p>
 
 <h2 id="paysuper-js-sdk">PaySuper JS SDK</h2>
 
-<p><a href="https://github.com/paysuper/paysuper-js-sdk" target="_blank">PaySuper’s JavaScript library</a> is designed to integrate a PaySuper Payment Form on your website.</p>
+<p><a href="https://github.com/paysuper/paysuper-js-sdk" target="_blank">PaySuper’s JavaScript SDK</a> is designed to integrate a PaySuper Payment Form on your website.</p>
 
 <h2 id="paysuper-api">PaySuper API</h2>
 
-<p><a href="https://github.com/paysuper/paysuper-management-api" target="_blank">PaySuper public REST API server</a> for a payment form and dashboards.</p>
+<p><a href="https://github.com/paysuper/paysuper-management-api" target="_blank">PaySuper public REST API server</a> is used for a payment form and dashboards.</p>
+
+<p><a href="/api-reference/api-swagger/">PaySuper API</a> is designed to have predictable, resource-oriented URLs and to use HTTP response codes to indicate API errors. The PaySuper API is organized around REST. We use built-in HTTP features, like HTTP verbs, which can be understood by off-the-shelf HTTP clients.</p>
 
 <h2 id="paysuper-admin">PaySuper Admin</h2>
 
@@ -247,21 +250,26 @@ Our mission is to maximize profits for developers, publishers, and platforms. We
 
 <h2 id="payment-form">Payment Form</h2>
 
-<p>The payment form implements the complete logic of interaction with the user during the payment process. This process includes displaying all the order information the user needs, collecting information about the selected payment method and required user account details, and displaying the final purchase status.</p>
+<p>The payment form implements a complete functionality for user interaction during the payment process.</p>
 
-<p><a href="/payments/payment-form/">You can get the detailed information about a Payment Form process.</a></p>
+<ul>
+<li>Displays a complete order information for the user</li>
+<li>Collects data about the selected payment method</li>
+<li>Collects user account data</li>
+<li>Displays a purchase status</li>
+</ul>
 
-<h2 id="virtual-currency">Virtual currency</h2>
+<h2 id="virtual-currency">Virtual Currency</h2>
 
-<p>Virtual Currency is an option to sell your in-game currency — gold, coins, etc. This method allows you to sell customisable quantity of your currency. Integration webhook testing is obligatory requirement for this sales option.</p>
+<p>Virtual Currency is an option to sell your in-game currency — gold, coins, etc. It allows you to sell customisable quantity of your currency. The built in webhook testing is an obligatory requirement for this sales option.</p>
 
-<h2 id="game-keys">Game keys</h2>
+<h2 id="game-keys">Game Keys</h2>
 
-<p>This sales method is intended to sell game keys for specific DRM platforms, sending your customers email with a key. Key distribution allows you to sell not only games, but any key activated products.</p>
+<p>This sales option allows you to sell game keys for specific DRM platforms. The customers would get an email with a key for the purchased Product. This feature allows you to sell any key activated products such as DLC, expansion packs, etc. which are supported by DRM platforms: Steam, GOG, Uplay, Origin, PSN, XBOX Store, Nintendo Store, Itch.io, Epic Games Store.</p>
 
-<h2 id="virtual-items">Virtual items</h2>
+<h2 id="virtual-items">Virtual Items</h2>
 
-<p>This sales option will allow you to sell your Virtual Items, like swords, guns, helmets and virtual currency packs.</p>
+<p>This sales option enables you to sell your Virtual Items, like swords, guns, helmets and virtual currency packs.</p>
 
 <h2 id="sandbox">Sandbox</h2>
 
