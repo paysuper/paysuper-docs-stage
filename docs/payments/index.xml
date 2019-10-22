@@ -38,21 +38,14 @@
     </item>
     
     <item>
-      <title>Integration Flow</title>
-      <link>https://docs.stg.pay.super.com/docs/payments/integration-flow/</link>
+      <title>Quick start</title>
+      <link>https://docs.stg.pay.super.com/docs/payments/quick-start/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://docs.stg.pay.super.com/docs/payments/integration-flow/</guid>
-      <description>PaySuper</description>
-    </item>
-    
-    <item>
-      <title>Keys Checkout</title>
-      <link>https://docs.stg.pay.super.com/docs/payments/keys/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://docs.stg.pay.super.com/docs/payments/keys/</guid>
-      <description>PaySuper</description>
+      <guid>https://docs.stg.pay.super.com/docs/payments/quick-start/</guid>
+      <description>Payments Flow User Flow   Integration Flow   Quick start 1. Register a PaySuper Merchant account. 2. Set up your Project in PaySuper Admin Having a single project is enough to start selling.
+ Create a project &amp;gt;    To create a project:
+ Click on the Projects page     If you want to sell products something like Game keys, Virtual items, Virtual currency, than easily add the necessary sales information about your products.</description>
     </item>
     
     <item>
@@ -70,6 +63,15 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://docs.stg.pay.super.com/docs/payments/sandbox/</guid>
+      <description>PaySuper</description>
+    </item>
+    
+    <item>
+      <title>Typed Checkout</title>
+      <link>https://docs.stg.pay.super.com/docs/payments/typed/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.stg.pay.super.com/docs/payments/typed/</guid>
       <description>PaySuper</description>
     </item>
     

@@ -27,14 +27,6 @@
   </url>
   
   <url>
-    <loc>https://docs.stg.pay.super.com/docs/payments/integration-flow/</loc>
-  </url>
-  
-  <url>
-    <loc>https://docs.stg.pay.super.com/docs/payments/keys/</loc>
-  </url>
-  
-  <url>
     <loc>https://docs.stg.pay.super.com/docs/api/v1/</loc>
   </url>
   
@@ -67,11 +59,19 @@
   </url>
   
   <url>
+    <loc>https://docs.stg.pay.super.com/docs/payments/quick-start/</loc>
+  </url>
+  
+  <url>
     <loc>https://docs.stg.pay.super.com/docs/payments/simple/</loc>
   </url>
   
   <url>
     <loc>https://docs.stg.pay.super.com/docs/payments/sandbox/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.stg.pay.super.com/docs/payments/typed/</loc>
   </url>
   
 </urlset>

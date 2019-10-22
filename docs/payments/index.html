@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="/book.min.1b994bd28c6ce2255f069b6bf6837b4d396307637fc48d61dcb2a6caac26e031.css" integrity="sha256-G5lL0oxs4iVfBptr9oN7TTljB2N/xI1h3LKmyqwm4DE=">
 
 
-<script defer src="/search.min.9352baade33aab407e454e17e9e175b6da28cc80aa54e93fb95a922812a14c04.js" integrity="sha256-k1K6reM6q0B&#43;RU4X6eF1ttoozICqVOk/uVqSKBKhTAQ="></script>
+<script defer src="/search.min.797790ecc4a01bac293c1e679c38e0e12f0b34f186ee2a6901f12419b14333a2.js" integrity="sha256-eXeQ7MSgG6wpPB5nnDjg4S8LNPGG7ippAfEkGbFDM6I="></script>
 
 <link rel="alternate" type="application/rss+xml" href="https://docs.stg.pay.super.com/docs/payments/index.xml" title="PaySuper docs" />
 <!--
@@ -55,9 +55,9 @@ https://github.com/alex-shpak/hugo-book
 
 <ul>
 <li><a href="/docs/payments/"class=active>Checkout Overview</a></li>
-<li><a href="/docs/payments/integration-flow/">Integration Flow</a></li>
-<li><a href="/docs/payments/simple/">Simple checkout</a></li>
-<li><a href="/docs/payments/keys/">Keys checkout</a></li>
+<li><a href="/docs/payments/quick-start/">Quick Start</a></li>
+<li><a href="/docs/payments/simple/">Simple Checkout</a></li>
+<li><a href="/docs/payments/typed/">Typed Checkout</a></li>
 <li><a href="/docs/payments/fulfillment/">After the payment</a></li>
 <li><a href="/docs/payments/customization/">Customizing Checkout</a></li>
 <li><a href="/docs/payments/sandbox/">Testing</a></li>
@@ -107,119 +107,55 @@ https://github.com/alex-shpak/hugo-book
 
 <h1 id="paysuper-checkout">PaySuper Checkout</h1>
 
-<p>Checkout creates a secure PaySuper-hosted form that lets you collect payments with just a few lines of code. The PaySuper Form loads near instantly and designed to boost your paying conversion rate.</p>
+<p>PaySuper Checkout creates a secure PaySuper-hosted form that lets you collect payments with just a few lines of code. The Checkout Form loads near instantly and is designed to boost your paying conversion rate.</p>
 
 <hr />
 
+<figure>
+    <img src="/images/products-dark-form.png"/> 
+</figure>
 
 
-  
-
-
-<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
-<script src="/js/load-photoswipe.js"></script>
-
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.css" integrity="sha256-sCl5PUOGMLfFYctzDW3MtRib0ctyUvI9Qsmq2wXOeBY=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/default-skin/default-skin.min.css" integrity="sha256-BFeI1V+Vh1Rk37wswuOYn5lsTcaU96hGaI7OUVCLjPc=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.js" integrity="sha256-UplRCs9v4KXVJvVY+p+RSo5Q4ilAUXh7kpjyIP5odyc=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe-ui-default.min.js" integrity="sha256-PWHOlUzc96pMc8ThwRIXPn8yH4NOLu42RQ0b9SpnpFk=" crossorigin="anonymous"></script>
-
-
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-
-<div class="pswp__bg"></div>
-
-<div class="pswp__scroll-wrap">
-    
-    <div class="pswp__container">
-      <div class="pswp__item"></div>
-      <div class="pswp__item"></div>
-      <div class="pswp__item"></div>
-    </div>
-    
-    <div class="pswp__ui pswp__ui--hidden">
-    <div class="pswp__top-bar">
-      
-      <div class="pswp__counter"></div>
-      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-      <button class="pswp__button pswp__button--share" title="Share"></button>
-      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-      
-      
-      <div class="pswp__preloader">
-        <div class="pswp__preloader__icn">
-          <div class="pswp__preloader__cut">
-            <div class="pswp__preloader__donut"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-      <div class="pswp__share-tooltip"></div>
-    </div>
-    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-    </button>
-    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-    </button>
-    <div class="pswp__caption">
-      <div class="pswp__caption__center"></div>
-    </div>
-    </div>
-    </div>
-</div>
-
-
-<link rel="stylesheet" href="/css/hugo-easy-gallery.css" />
-<div class="box" >
-  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <div class="img">
-      <img itemprop="thumbnail" src="/images/products-dark-form.png" />
-    </div>
-    <a href="/images/products-dark-form.png" itemprop="contentUrl"></a>
-  </figure>
-</div>
-
-<p><strong>PaySuper Checkout features:</strong></p>
+<h2 id="paysuper-checkout-features">PaySuper Checkout features</h2>
 
 <ul>
-<li><strong>Payment methods:</strong> Credit cards, JCB, China UnionPay, Bitcoin payments, Alipay, QIWI, Bank Wire Transfers.</li>
-<li><strong>Payment types:</strong> Simple Checkout, Keys Checkout.</li>
+<li><strong>Payment methods:</strong> VISA, Master Card, AMEX, JCB, China UnionPay, Bitcoin payments, Alipay, QIWI, Bank Wire Transfers.</li>
+<li><strong>Payment types:</strong> Simple Checkout, Items Checkout.</li>
 <li><strong>Authentication:</strong> Dynamic 3D Secure (ready for Strong Customer Authentication).</li>
 <li><strong>Localization:</strong> Localized for 2 languages with 10 more translations coming soon.</li>
-<li><strong>Email receipts:</strong> Automatic email receipts to your customers.</li>
+<li><strong>Email receipts:</strong> Automatic email receipts right to your customers&rsquo; inbox.</li>
 <li><strong>Automated calculations:</strong> Automatically calculates the taxes and VAT due on your orders.</li>
-<li><strong>Conversion-optimized:</strong> Provides a single-page layout so the user focused to enter private information and an order on that one page.</li>
+<li><strong>Conversion-optimized:</strong> The payment form loads instantly with a single-page layout.</li>
 </ul>
 
 <hr />
 
-<h2 id="see-it-performs">See it performs</h2>
+<h2 id="try-now">Try now</h2>
 
 <div class="book-columns flex flex-wrap">
   
   <div class="flex-even markdown-inner">
-    <h3 id="let-s-try-out-checkout-now">Let&rsquo;s try out Checkout now!</h3>
+    <h3 id="see-how-checkout-form-looks-and-feels">See how Checkout Form looks and feels</h3>
 
-<p>Choose a card payment method and enter one of test cards to checkout in a test mode:</p>
+<p>Choose a card payment method and enter one of the test cards to checkout in a test mode:</p>
 
 <p>Default card: <strong><code>4000 0000 0000 0002</code></strong></p>
 
 <p>3D Secure: <strong><code>4000 0000 0000 0077</code></strong></p>
 
-<p>Enter any cardholder name, expiry date and CVV2/CVC2/CAV2 (Secure code) with these PANs.</p>
+<p>Enter arbitrary cardholder name, expiry date and CVV2/CVC2/CAV2 (Secure code) with these PANs.</p>
 
-<p><a  href="https://%d0%a1%d0%a1%d0%ab%d0%9b%d0%9a%d0%90-%d0%9d%d0%90-%d0%a2%d0%95%d0%a1%d0%a2%d0%9e%d0%92%d0%a3%d0%ae-%d0%a4%d0%9e%d0%a0%d0%9c%d0%a3"   target="_blank"  class="book-btn">
+<p><a  href="https://paysupermgmt.tst.protocol.one/form-demo"   target="_blank"  class="book-btn">
   Test Payment
 </a></p>
 
   </div>
   
   <div class="flex-even markdown-inner">
-    <h3 id="how-it-works">How it works?</h3>
+    <p><strong>HOW IT WORKS</strong></p>
 
-<p>Try out <a href="ССЫЛКА НА ПРИМЕР ФОРМЫ, та же что выше">the payment sample</a> or see <a href="ПРИМЕР КОДА и КАК ЕГО ЗАПУСКАТЬ">the code on GitHub</a>.
+<p>Try out <a href="ССЫЛКА НА ПРИМЕР ФОРМЫ, та же что выше">the payment sample</a> or see <a href="ПРИМЕР КОДА и КАК ЕГО ЗАПУСКАТЬ">the code on GitHub</a>.</p>
+
   </div>
   
 </div>
@@ -231,15 +167,34 @@ https://github.com/alex-shpak/hugo-book
 
 <p>To get started with PaySuper, choose your business model:</p>
 
-<ul>
-<li><p><strong><a href="/docs/payments/simple">Simple Checkout</a></strong></p>
+<h3 id="simple-checkout-docs-payments-simple"><a href="/docs/payments/simple">Simple Checkout</a></h3>
 
-<p>This sales option is best suited for a quick integration for payment orders with dynamical pricing, for example, stores that use its e-commerce engine for product management. Likewise, this option is more appropriate for non-products payments such as donations and others. In this mode, you specify the currency and price, and the payment amount for the end-user will be calculated according to its exchange rate if it differs from the specified order currency.</p></li>
+<p>Simple Checkout is designed for payment orders with dynamical pricing, for example, stores that use its e-commerce engine for product management. Likewise, this option works well with non-product payments such as donations. In this mode, you specify the currency and the price, while the payment amount due for the end-user is calculated accordingly to the exchange rate if it differs from the specified order currency.</p>
 
-<li><p><strong><a href="/docs/payments/keys">Keys Checkout</a></strong></p>
+<h3 id="typed-checkout-docs-payments-keys"><a href="/docs/payments/keys">Typed Checkout</a></h3>
 
-<p>With this option you can conveniently sell game keys for various DRM platforms, products (such as games), in-game items and virtual currency. It assumes you have added a Project and Product in PaySuper Admin with all applicable information. This feature allows you to sell any key activated products such as DLC, expansion packs, etc. which are supported by DRM platforms: Steam, GOG, Uplay, Origin, PSN, XBOX Store, Nintendo Store, Itch.io, Epic Games Store.</p></li>
-</ul>
+<p>PaySuper Checkout provides several types of products which you specify in an order as a parameter <code>type</code>:</p>
+
+<p><strong>Game Keys</strong></p>
+
+<p>This sales option is best suited to sale game keys for DRM platforms such as Steam, GOG, Uplay, Origin, PSN, XBOX Store, Nintendo Store, Itch.io, Epic Games Store. This feature allows you to sell any key-activated products (such as DLCs and expansion packs) that the target DRM platforms support.</p>
+
+<p><strong>Virtual Items</strong></p>
+
+<p>This sales option enables you to sell your Virtual Items, like swords, guns, helmets and virtual currency packs.</p>
+
+<p><strong>Virtual Currency</strong></p>
+
+<p>Virtual Currency is an option to sell your in-game currency — gold, coins, etc. It allows you to sell customisable quantity of your currency.</p>
+
+<hr />
+
+<h2 id="next-steps">Next steps</h2>
+
+<blockquote class="book-hint info">
+  Continue with the <a href="/docs/payments/quick-start/"><strong>Quick Start guide</strong></a>.
+</blockquote>
+
 
 <hr />
 
@@ -248,21 +203,21 @@ https://github.com/alex-shpak/hugo-book
 <div class="book-columns flex flex-wrap">
   
   <div class="flex-even markdown-inner">
-    <h4 id="github-https-github-com-paysuper"><a href="https://github.com/paysuper">GitHub</a></h4>
-
-<p>We are always happy to help with code, improve the guide or consider a feature that you this is may be missing.
-  </div>
-  
-  <div class="flex-even markdown-inner">
     <h4 id="sales-https-docs-google-com-forms-d-e-1faipqlscqpu83wkpkjeui-wvxgdoxwldl4vyd8gswnqf9-ccwdg3dew-viewform"><a href="https://docs.google.com/forms/d/e/1FAIpQLScQPU83wKPkJeui_WvxGDoXWLDL4vyD8GsWNqf9-ccwDg3dEw/viewform">Sales</a></h4>
 
-<p>We&rsquo;re here to help with sales questions you might have.
+<p>Our salespeople are pleasant and friendly. Leave your contact details, and we&rsquo;ll be back to you in no time.
   </div>
   
   <div class="flex-even markdown-inner">
-    <h4 id="support">[Support]()</h4>
+    <h4 id="support-https-docs-google-com-forms-d-e-1faipqlscqpu83wkpkjeui-wvxgdoxwldl4vyd8gswnqf9-ccwdg3dew-viewform"><a href="https://docs.google.com/forms/d/e/1FAIpQLScQPU83wKPkJeui_WvxGDoXWLDL4vyD8GsWNqf9-ccwDg3dEw/viewform">Support</a></h4>
 
-<p>You&rsquo;re welcome to contact our support.
+<p>We are always happy to help with a code, improve a guide or consider a feature.
+  </div>
+  
+  <div class="flex-even markdown-inner">
+    <h4 id="github-https-github-com-paysuper"><a href="https://github.com/paysuper">GitHub</a></h4>
+
+<p>The PaySuper Checkout Form, the JS SDK and even the server are available as a source code on our GitHub. You&rsquo;re welcome to explore the code and help us make PaySuper even better.
   </div>
   
 </div>
@@ -282,8 +237,14 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li><a href="#paysuper-checkout">PaySuper Checkout</a>
 <ul>
-<li><a href="#see-it-performs">See it performs</a></li>
-<li><a href="#getting-started">Getting Started</a></li>
+<li><a href="#paysuper-checkout-features">PaySuper Checkout features</a></li>
+<li><a href="#try-now">Try now</a></li>
+<li><a href="#getting-started">Getting Started</a>
+<ul>
+<li><a href="#simple-checkout-docs-payments-simple"><a href="/docs/payments/simple">Simple Checkout</a></a></li>
+<li><a href="#typed-checkout-docs-payments-keys"><a href="/docs/payments/keys">Typed Checkout</a></a></li>
+</ul></li>
+<li><a href="#next-steps">Next steps</a></li>
 <li><a href="#questions">Questions?</a></li>
 </ul></li>
 </ul>
