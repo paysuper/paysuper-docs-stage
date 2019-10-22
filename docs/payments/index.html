@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="/book.min.1b994bd28c6ce2255f069b6bf6837b4d396307637fc48d61dcb2a6caac26e031.css" integrity="sha256-G5lL0oxs4iVfBptr9oN7TTljB2N/xI1h3LKmyqwm4DE=">
 
 
-<script defer src="/search.min.e19e4d90f0028d883484051eaad7f9a0faaffd697739828959e576941c1d7cff.js" integrity="sha256-4Z5NkPACjYg0hAUeqtf5oPqv/Wl3OYKJWeV2lBwdfP8="></script>
+<script defer src="/search.min.0578994707cefdd1c788c3aeb5373890ed89d8b399fa6ab72ecc2b393ee2e30b.js" integrity="sha256-BXiZRwfO/dHHiMOutTc4kO2J2LOZ&#43;mq3LswrOT7i4ws="></script>
 
 <link rel="alternate" type="application/rss+xml" href="https://docs.stg.pay.super.com/docs/payments/index.xml" title="PaySuper docs" />
 <!--
@@ -180,16 +180,16 @@ https://github.com/alex-shpak/hugo-book
   </figure>
 </div>
 
-<p><strong>PaySuper Checkout supports:</strong></p>
+<p><strong>PaySuper Checkout features:</strong></p>
 
 <ul>
-<li>Payment methods: Credit cards, JCB, China UnionPay, Bitcoin payments, Alipay, QIWI, Bank Wire Transfers.</li>
-<li>Payment types: Simple Checkout, Keys Checkout.</li>
-<li>Authentication: Dynamic 3D Secure (ready for Strong Customer Authentication).</li>
-<li>Localization: Localized for 2 languages with 10 more translations coming soon.</li>
-<li>Email receipts: Automatic email receipts to your customers.</li>
-<li>Automated Calculations: Automatically calculates the taxes and VAT due on your orders.</li>
-<li>Conversion-optimized: Provides a single-page layout so the user focused to enter private information and an order on that one page.</li>
+<li><strong>Payment methods:</strong> Credit cards, JCB, China UnionPay, Bitcoin payments, Alipay, QIWI, Bank Wire Transfers.</li>
+<li><strong>Payment types:</strong> Simple Checkout, Keys Checkout.</li>
+<li><strong>Authentication:</strong> Dynamic 3D Secure (ready for Strong Customer Authentication).</li>
+<li><strong>Localization:</strong> Localized for 2 languages with 10 more translations coming soon.</li>
+<li><strong>Email receipts:</strong> Automatic email receipts to your customers.</li>
+<li><strong>Automated calculations:</strong> Automatically calculates the taxes and VAT due on your orders.</li>
+<li><strong>Conversion-optimized:</strong> Provides a single-page layout so the user focused to enter private information and an order on that one page.</li>
 </ul>
 
 <hr />
@@ -201,9 +201,15 @@ https://github.com/alex-shpak/hugo-book
   <div class="flex-even markdown-inner">
     <h3 id="let-s-try-out-checkout-now">Let&rsquo;s try out Checkout now!</h3>
 
-<p>Use one of <a href="/docs/payments/sandbox">test card numbers</a> to view different payment statuses in a test mode.</p>
+<p>Choose a card payment method and enter one of test cards to checkout in a test mode:</p>
 
-<p><a  href="https://checkout.stripe.com/pay/ppage_1FWAeUFKnpzPB0MXOh6LxId1#fidkdWxOYHwnPyd1blpxYHZxWm9CPHY2XUhhVm9fQzxOYWgwYjA8f2lcYScpJ3dgY2B3d2B3SndsYmxrJz8nbXFxdXY%2FKip2cXdsdWArZmpoJyknaWpmZGlgJz9rcGlpKSdobGF2Jz9%2BJ2JwbGEnPycxNGQyYD0wZyhgMTAzKDEwZjQoPTNnYSg3ZjBmNmNhYTcyNTAnKSdocGxhJz8nMzM9ZjIyZzAoYzA2MygxZj03KDxhMjUoZjw9Mj0yZDA1MmNnJykndmxhJz8nMDdjZ2QyPWEoMjRjYygxPWM2KD09YGEoNDBnNmAzZjY1MWBnJ3gpJ2dgcWR2Jz9eWHgl"   target="_blank"  class="book-btn">
+<p>Default card: <strong><code>4000 0000 0000 0002</code></strong></p>
+
+<p>3D Secure: <strong><code>4000 0000 0000 0077</code></strong></p>
+
+<p>Enter any cardholder name, expiry date and CVV2/CVC2/CAV2 (Secure code) with these PANs.</p>
+
+<p><a  href="https://%d0%a1%d0%a1%d0%ab%d0%9b%d0%9a%d0%90-%d0%9d%d0%90-%d0%a2%d0%95%d0%a1%d0%a2%d0%9e%d0%92%d0%a3%d0%ae-%d0%a4%d0%9e%d0%a0%d0%9c%d0%a3"   target="_blank"  class="book-btn">
   Test Payment
 </a></p>
 
@@ -212,7 +218,7 @@ https://github.com/alex-shpak/hugo-book
   <div class="flex-even markdown-inner">
     <h3 id="how-it-works">How it works?</h3>
 
-<p>Try out the payments samples or see the code on GitHub.
+<p>Try out <a href="ССЫЛКА НА ПРИМЕР ФОРМЫ, та же что выше">the payment sample</a> or see <a href="ПРИМЕР КОДА и КАК ЕГО ЗАПУСКАТЬ">the code on GitHub</a>.
   </div>
   
 </div>
@@ -231,7 +237,7 @@ https://github.com/alex-shpak/hugo-book
 
 <li><p><strong><a href="/docs/payments/keys">Keys Checkout</a></strong></p>
 
-<p>With this option you can conveniently sell game keys for various DRM platforms, products (such as games), in-game items and virtual currency. It assumes you have added a Project and Product in PaySuper Admin with all applicable information.</p></li>
+<p>With this option you can conveniently sell game keys for various DRM platforms, products (such as games), in-game items and virtual currency. It assumes you have added a Project and Product in PaySuper Admin with all applicable information. This feature allows you to sell any key activated products such as DLC, expansion packs, etc. which are supported by DRM platforms: Steam, GOG, Uplay, Origin, PSN, XBOX Store, Nintendo Store, Itch.io, Epic Games Store.</p></li>
 </ul>
 
 <hr />
