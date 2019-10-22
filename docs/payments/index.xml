@@ -43,9 +43,9 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://docs.stg.pay.super.com/docs/payments/quick-start/</guid>
-      <description>Payments Flow User Flow   Integration Flow   Quick start 1. Register a PaySuper Merchant account. 2. Set up your Project in PaySuper Admin Having a single project is enough to start selling.
+      <description>Payments Flow User Flow   Integration Flow   Quick start Step 1. Register a PaySuper Merchant account. Step 2. Set up a Project Having a single project is enough to start selling.
  Create a project &amp;gt;    To create a project:
- Click on the Projects page     If you want to sell products something like Game keys, Virtual items, Virtual currency, than easily add the necessary sales information about your products.</description>
+ Open the Projects List page Click the Create Project button. Enter a Project Name. Click Create to redirect to the Project Settings page.</description>
     </item>
     
     <item>
