@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><meta property="og:title" content="Checkout Overview" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://docs.stg.pay.super.com/docs/payments/" />
+
+<title>Checkout Overview | PaySuper docs</title>
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<link rel="stylesheet" href="/book.min.1b994bd28c6ce2255f069b6bf6837b4d396307637fc48d61dcb2a6caac26e031.css" integrity="sha256-G5lL0oxs4iVfBptr9oN7TTljB2N/xI1h3LKmyqwm4DE=">
+
+
+<script defer src="/search.min.9239ecc9365d1153c58e23e3a0e773b7b46aee14fbd8f7a171668ecc631fd1bb.js" integrity="sha256-kjnsyTZdEVPFjiPjoOdzt7Rq7hT72PehcWaOzGMf0bs="></script>
+
+<link rel="alternate" type="application/rss+xml" href="https://docs.stg.pay.super.com/docs/payments/index.xml" title="PaySuper docs" />
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+  <script src="https://cdn.pay.super.com/paysdk/latest/paysuper.js"></script>
+</head>
+
+<body>
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav>
+<h2 class="book-brand">
+  <a href="https://docs.stg.pay.super.com/"><span>PaySuper docs</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+    <ul>
+<li><strong>Payments</strong>
+
+<ul>
+<li><a href="/docs/payments/"class=active>Checkout Overview</a></li>
+<li><a href="/docs/payments/integration-flow/">Integration Flow</a></li>
+<li><a href="/docs/payments/simple/">Simple checkout</a></li>
+<li><a href="/docs/payments/keys/">Keys checkout</a></li>
+<li><a href="/docs/payments/fulfillment/">After the payment</a></li>
+<li><a href="/docs/payments/customization/">Customizing Checkout</a></li>
+<li><a href="/docs/payments/sandbox/">Testing</a></li>
+<li><a href="/docs/payments/live/">Going Live</a></li>
+</ul></li>
+<li><a href="/docs/api/"><strong>API Reference</strong></a>
+
+<ul>
+<li><a href="/docs/api/v1/authentication/">Authentication</a></li>
+<li><a href="/docs/api/v1/versioning/">Versioning</a></li>
+<li><a href="/docs/api/v1/errors/">Errors List</a></li>
+<li><a href="/docs/api/v1/compression/">Compression</a></li>
+<li><a href="/docs/api/v1/pagination/">Pagination</a></li>
+<li><a href="/docs/api/v1/">PaySuper API</a></li>
+</ul></li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+<script>
+(function() {
+  var menu = document.querySelector("aside.book-menu nav");
+  addEventListener("beforeunload", function(event) {
+    localStorage.setItem("menu.scrollTop", menu.scrollTop);
+  });
+  menu.scrollTop = localStorage.getItem("menu.scrollTop");
+})();
+</script>
+
+    </aside>
+
+    <div class="book-page">
+      <header class="flex align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>Checkout Overview</strong>
+</header>
+
+      
+<article class="markdown">
+
+<h1 id="paysuper-checkout">PaySuper Checkout</h1>
+
+<p>Checkout creates a secure PaySuper-hosted form that lets you collect payments with just a few lines of code. The PaySuper Form loads near instantly and designed to boost your paying conversion rate.</p>
+
+<hr />
+
+
+
+  
+
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="/js/load-photoswipe.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.css" integrity="sha256-sCl5PUOGMLfFYctzDW3MtRib0ctyUvI9Qsmq2wXOeBY=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/default-skin/default-skin.min.css" integrity="sha256-BFeI1V+Vh1Rk37wswuOYn5lsTcaU96hGaI7OUVCLjPc=" crossorigin="anonymous" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.js" integrity="sha256-UplRCs9v4KXVJvVY+p+RSo5Q4ilAUXh7kpjyIP5odyc=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe-ui-default.min.js" integrity="sha256-PWHOlUzc96pMc8ThwRIXPn8yH4NOLu42RQ0b9SpnpFk=" crossorigin="anonymous"></script>
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+<link rel="stylesheet" href="/css/hugo-easy-gallery.css" />
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/images/products-dark-form.png" />
+    </div>
+    <a href="/images/products-dark-form.png" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
+<h2 id="paysuper-checkout-supports">PaySuper Checkout supports:</h2>
+
+<ul>
+<li>Payment methods: Credit cards, JCB, China UnionPay, Bitcoin payments, Alipay, QIWI, Bank Wire Transfers.</li>
+<li>Payment types: Simple Checkout, Keys Checkout.</li>
+<li>Authentication: Dynamic 3D Secure (ready for Strong Customer Authentication).</li>
+<li>Localization: Localized for 2 languages with 10 more translations coming soon.</li>
+<li>Email receipts: Automatic email receipts to your customers.</li>
+<li>Automated Calculations: Automatically calculates the taxes and VAT due on your orders.</li>
+<li>Conversion-optimized: Provide a single-page layout so the user focused to enter private information and about an order on that one page.</li>
+</ul>
+
+<hr />
+
+<h2 id="see-it-performs">See it performs</h2>
+
+<div class="book-columns flex flex-wrap">
+  
+  <div class="flex-even markdown-inner">
+    <h3 id="let-s-try-out-checkout-now">Let&rsquo;s try out Checkout now!</h3>
+
+<p>Use one of <a href="/docs/payments/sandbox">test card numbers</a> to view different payment statuses in a test mode.</p>
+
+<p><a  href="https://checkout.stripe.com/pay/ppage_1FWAeUFKnpzPB0MXOh6LxId1#fidkdWxOYHwnPyd1blpxYHZxWm9CPHY2XUhhVm9fQzxOYWgwYjA8f2lcYScpJ3dgY2B3d2B3SndsYmxrJz8nbXFxdXY%2FKip2cXdsdWArZmpoJyknaWpmZGlgJz9rcGlpKSdobGF2Jz9%2BJ2JwbGEnPycxNGQyYD0wZyhgMTAzKDEwZjQoPTNnYSg3ZjBmNmNhYTcyNTAnKSdocGxhJz8nMzM9ZjIyZzAoYzA2MygxZj03KDxhMjUoZjw9Mj0yZDA1MmNnJykndmxhJz8nMDdjZ2QyPWEoMjRjYygxPWM2KD09YGEoNDBnNmAzZjY1MWBnJ3gpJ2dgcWR2Jz9eWHgl"   target="_blank"  class="book-btn">
+  Test Payment
+</a></p>
+
+  </div>
+  
+  <div class="flex-even markdown-inner">
+    <h3 id="how-it-works">How it works?</h3>
+
+<p>Try out the payments samples or see the code on GitHub.
+  </div>
+  
+</div>
+
+
+<hr />
+
+<h2 id="getting-started">Getting Started</h2>
+
+<p>To get started with PaySuper, choose your business model:</p>
+
+<ul>
+<li><p><strong><a href="/docs/payments/simple">Simple Checkout</a></strong></p>
+
+<p>This sales option is best suited for a quick integration for payment orders with dynamical pricing, for example, stores that use its e-commerce engine for product management. Likewise, this option is more appropriate for non-products payments such as donations and others. In this mode, you specify the currency and price, and the payment amount for the end-user will be calculated according to its exchange rate if it differs from the specified order currency.</p></li>
+
+<li><p><strong><a href="/docs/payments/keys">Keys Checkout</a></strong></p>
+
+<p>With this option you can conveniently sell game keys for various DRM platforms, products (such as games), in-game items and virtual currency. It assumes you have added a Project and Product in PaySuper Admin with all applicable information.</p></li>
+</ul>
+
+<hr />
+
+<h2 id="questions">Questions?</h2>
+
+<div class="book-columns flex flex-wrap">
+  
+  <div class="flex-even markdown-inner">
+    <h4 id="github-https-github-com-paysuper"><a href="https://github.com/paysuper">GitHub</a></h4>
+
+<p>We are always happy to help with code, improve the guide or consider a feature that you this is may be missing.
+  </div>
+  
+  <div class="flex-even markdown-inner">
+    <h4 id="sales-https-docs-google-com-forms-d-e-1faipqlscqpu83wkpkjeui-wvxgdoxwldl4vyd8gswnqf9-ccwdg3dew-viewform"><a href="https://docs.google.com/forms/d/e/1FAIpQLScQPU83wKPkJeui_WvxGDoXWLDL4vyD8GsWNqf9-ccwDg3dEw/viewform">Sales</a></h4>
+
+<p>We&rsquo;re here to help with sales questions you might have.
+  </div>
+  
+  <div class="flex-even markdown-inner">
+    <h4 id="support">[Support]()</h4>
+
+<p>You&rsquo;re welcome to contact our support.
+  </div>
+  
+</div>
+
+</article>
+
+      
+
+      
+    </div>
+
+    
+  
+
+  <aside class="book-toc level-true fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#paysuper-checkout">PaySuper Checkout</a>
+<ul>
+<li><a href="#paysuper-checkout-supports">PaySuper Checkout supports:</a></li>
+<li><a href="#see-it-performs">See it performs</a></li>
+<li><a href="#getting-started">Getting Started</a></li>
+<li><a href="#questions">Questions?</a></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
+
+
+  </main>
+
+  
+
+</body>
+
+</html>

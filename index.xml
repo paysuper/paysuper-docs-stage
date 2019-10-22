@@ -1,395 +1,131 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>PaySuper</title>
+    <title>PaySuper Documentation on PaySuper docs</title>
     <link>https://docs.stg.pay.super.com/</link>
-    <description>Recent content on PaySuper</description>
+    <description>Recent content in PaySuper Documentation on PaySuper docs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 10 Oct 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://docs.stg.pay.super.com/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>PaySuper Documentation</title>
-      <link>https://docs.stg.pay.super.com/documentation/</link>
-      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://docs.stg.pay.super.com/documentation/</guid>
-      <description>PaySuper is an open source service for accepting payments.
-It includes a flexibly customizable payment form, a set of integration protocols, a management interface, and statistics tools.</description>
-    </item>
-    
-    <item>
       <title>Example markdown</title>
-      <link>https://docs.stg.pay.super.com/example/</link>
+      <link>https://docs.stg.pay.super.com/docs/markdown/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://docs.stg.pay.super.com/example/</guid>
-      <description>Example text.
-h1 Heading h2 Heading h3 Heading h4 Heading h5 Heading h6 Heading  The note.
-   A tip disclaimer
-   The note with padding example.
- { &amp;#34;id&amp;#34;: &amp;#34;5ca5124868add448289e432e&amp;#34;, &amp;#34;project_id&amp;#34;: &amp;#34;5be2e16701d96d00012d26c3&amp;#34;, &amp;#34;description&amp;#34;: { &amp;#34;en&amp;#34;: &amp;#34;GTA 3 description&amp;#34; } } iframe{width:100%}   iFrameResize({ log : true, checkOrigin : false, sizeWidth : true, widthCalculationMethod : &#39;rightMostElement&#39; }); var shortcode_url = &#34;\/api\/v1\/key-products-swagger.yaml&#34;;     Option Description     data path to data files to supply the data that will be passed into templates.</description>
+      <guid>https://docs.stg.pay.super.com/docs/markdown/</guid>
+      <description>Title with a line Lorem markdownum pavent auras, surgit nunc cingentibus libet Laomedonque que est. Pastor An arbor filia foedat, ne fugit aliter, per. Helicona illas et callida neptem est Oresitrophos caput, dentibus est venit. Tenet reddite famuli praesentem fortibus, quaeque vis foret si frondes gelidos gravidae circumtulit inpulit armenta nativum.
+Headings h1 Heading h2 Heading h3 Heading h4 Heading h5 Heading h6 Heading Notes  The note with padding example.</description>
     </item>
     
     <item>
-      <title>Glossary</title>
-      <link>https://docs.stg.pay.super.com/getting-started/glossary/</link>
-      <pubDate>Thu, 10 Oct 2019 00:00:00 +0000</pubDate>
+      <title>After the payment</title>
+      <link>https://docs.stg.pay.super.com/docs/payments/fulfillment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://docs.stg.pay.super.com/getting-started/glossary/</guid>
-      <description>PaySuper PaySuper is a payment service with an open source multifunctional toolkit that provides secure and immediate online payment transactions for the games industry.
-Our mission is to maximize profits for developers, publishers, and platforms. We’re focused on keeping conversion rates high and costs low – including those related to integration and maintenance.
-PaySuper JS SDK PaySuper’s JavaScript SDK is designed to integrate a PaySuper Payment Form on your website.</description>
+      <guid>https://docs.stg.pay.super.com/docs/payments/fulfillment/</guid>
+      <description>PaySuper</description>
     </item>
     
     <item>
-      <title>Manual Integration</title>
-      <link>https://docs.stg.pay.super.com/getting-started/integration/</link>
-      <pubDate>Thu, 10 Oct 2019 00:00:00 +0000</pubDate>
+      <title>Customizing Checkout</title>
+      <link>https://docs.stg.pay.super.com/docs/payments/customization/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://docs.stg.pay.super.com/getting-started/integration/</guid>
-      <description>In the case of basic payment acceptance, the integration process takes just a few minutes.
-Steps of the integration process:  To initiate a payment you can send a request with a secure string of an order parameters by POST /api/v1/tokens or key-value parameters about your Project and Products without a user information by POST /api/v1/order.
- After a customer initiates a payment retreive from a response a parameter payment_form_url - the payment form URL.</description>
+      <guid>https://docs.stg.pay.super.com/docs/payments/customization/</guid>
+      <description>PaySuper</description>
     </item>
     
     <item>
-      <title>Quick Start</title>
-      <link>https://docs.stg.pay.super.com/getting-started/quick-start/</link>
-      <pubDate>Thu, 10 Oct 2019 00:00:00 +0000</pubDate>
+      <title>Going Live</title>
+      <link>https://docs.stg.pay.super.com/docs/payments/live/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://docs.stg.pay.super.com/getting-started/quick-start/</guid>
-      <description>Our mission is to maximize profits for developers, publishers, and platforms. We’re focused on keeping conversion rates high and costs low – including those related to integration and maintenance.
-PaySuper was designed with developers in mind:
- The source code is available on the PaySuper GitHub, so you can follow the development process and see how everything actually works. PaySuper can be integrated into different platforms like a website, an online store or a game.</description>
+      <guid>https://docs.stg.pay.super.com/docs/payments/live/</guid>
+      <description>PaySuper</description>
     </item>
     
     <item>
-      <title>Testing</title>
-      <link>https://docs.stg.pay.super.com/getting-started/testing/</link>
-      <pubDate>Thu, 10 Oct 2019 00:00:00 +0000</pubDate>
+      <title>Integration Flow</title>
+      <link>https://docs.stg.pay.super.com/docs/payments/integration-flow/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://docs.stg.pay.super.com/getting-started/testing/</guid>
-      <description>Payment form integration should be tested in the PaySuper Sandbox before going live. PaySuper Sandbox provides full functionality but it only emulates processing, no actual bank transactions are made.</description>
+      <guid>https://docs.stg.pay.super.com/docs/payments/integration-flow/</guid>
+      <description>PaySuper</description>
     </item>
     
     <item>
-      <title>Tokens</title>
-      <link>https://docs.stg.pay.super.com/api-reference/token/</link>
-      <pubDate>Mon, 07 Oct 2019 00:00:00 +0000</pubDate>
+      <title>Keys Checkout</title>
+      <link>https://docs.stg.pay.super.com/docs/payments/keys/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://docs.stg.pay.super.com/api-reference/token/</guid>
-      <description> It identifies a game, user, and purchase parameters, thus you can determine your customers’ purchases on your side.
-Endpoints iframe{width:100%}   iFrameResize({ log : true, checkOrigin : false, sizeWidth : true, widthCalculationMethod : &#39;rightMostElement&#39; }); var shortcode_url = &#34;\/api\/v1\/token-swagger.yaml&#34;;  </description>
+      <guid>https://docs.stg.pay.super.com/docs/payments/keys/</guid>
+      <description>PaySuper</description>
     </item>
     
     <item>
-      <title>Features</title>
-      <link>https://docs.stg.pay.super.com/about/features/</link>
-      <pubDate>Mon, 16 Sep 2019 00:00:00 +0000</pubDate>
+      <title>PaySuper API Authentication</title>
+      <link>https://docs.stg.pay.super.com/docs/api/v1/authentication/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://docs.stg.pay.super.com/about/features/</guid>
-      <description>Integration Integrating payment acceptance through PaySuper into your website is really easy. To install the widget on the page you only have to insert a single line of code. Integration tests are automated. KYC procedure and signing of a standard-form contract on payment acceptance occur within a few days. Electronic signature can be used.
-Operation speed We believe that fast loading of the payment form is one of the most important factors for a good paying conversion.</description>
+      <guid>https://docs.stg.pay.super.com/docs/api/v1/authentication/</guid>
+      <description>PaySuper</description>
     </item>
     
     <item>
-      <title>Open Source Code</title>
-      <link>https://docs.stg.pay.super.com/about/license/</link>
-      <pubDate>Mon, 16 Sep 2019 00:00:00 +0000</pubDate>
+      <title>PaySuper API Compression</title>
+      <link>https://docs.stg.pay.super.com/docs/api/v1/compression/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://docs.stg.pay.super.com/about/license/</guid>
-      <description>Anyone can use the PaySuper toolkit to create their own payment solution.
-This will require you to:
- Download and deploy the necessary PaySuper elements in your infrastructure. Sign a contract for accepting payments with a bank (or banks). Pass PCI DSS certification.  Open source allows us to implement best practices developed by the community in our SaaS-solution in the shortest possible time. The best versions of customized forms, which take into account the specifics of use and legislation in different regions, are constantly added to the PaySuper payment form template library.</description>
+      <guid>https://docs.stg.pay.super.com/docs/api/v1/compression/</guid>
+      <description>PaySuper</description>
     </item>
     
     <item>
-      <title>Localization</title>
-      <link>https://docs.stg.pay.super.com/about/localization/</link>
-      <pubDate>Mon, 16 Sep 2019 00:00:00 +0000</pubDate>
+      <title>PaySuper API Errors List</title>
+      <link>https://docs.stg.pay.super.com/docs/api/v1/errors/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://docs.stg.pay.super.com/about/localization/</guid>
-      <description>We do not identify them based solely on IP. We recognize a USA user who came to Germany and opened the payment interface there, so as not to make the mistake of showing them the form in German and with German payment methods.
-Most of the project settings can be configured separately for each region or language:
- The list of available payment methods and their order in the payment form.</description>
+      <guid>https://docs.stg.pay.super.com/docs/api/v1/errors/</guid>
+      <description>PaySuper</description>
     </item>
     
     <item>
-      <title>Retention of Users with Unfinished Transactions</title>
-      <link>https://docs.stg.pay.super.com/about/retentions/</link>
-      <pubDate>Mon, 16 Sep 2019 00:00:00 +0000</pubDate>
+      <title>PaySuper API Pagination</title>
+      <link>https://docs.stg.pay.super.com/docs/api/v1/pagination/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://docs.stg.pay.super.com/about/retentions/</guid>
-      <description>When PaySuper has enough data to communicate with the user and it is not prohibited by local laws, the user is prompted to finish the transaction: via email, a push-notification or instant messenger.
-If integrated with Uttu, you can also set up a channel for delivering such notifications through banners or other ad placements.
- This approach allows you to return about 5% of users who have not completed the payment.</description>
+      <guid>https://docs.stg.pay.super.com/docs/api/v1/pagination/</guid>
+      <description>PaySuper</description>
     </item>
     
     <item>
-      <title>Settlement of Disputes</title>
-      <link>https://docs.stg.pay.super.com/about/settlement-disputes/</link>
-      <pubDate>Mon, 16 Sep 2019 00:00:00 +0000</pubDate>
+      <title>PaySuper API Versioning</title>
+      <link>https://docs.stg.pay.super.com/docs/api/v1/versioning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://docs.stg.pay.super.com/about/settlement-disputes/</guid>
-      <description>The rules for handling such situations differ depending on the payment method and territory.
- In all cases, PaySuper consistently notifies you via the API and in your account.
- As a rule, you have about 30 days to dispute a chargeback on a specific transaction by providing proof that the buyer has received the product. PaySuper controls the timings and takes on the transfer of your proof to a specific payment operator.</description>
+      <guid>https://docs.stg.pay.super.com/docs/api/v1/versioning/</guid>
+      <description>PaySuper</description>
     </item>
     
     <item>
-      <title>What is PaySuper</title>
-      <link>https://docs.stg.pay.super.com/about/what-is-paysuper/</link>
-      <pubDate>Mon, 16 Sep 2019 00:00:00 +0000</pubDate>
+      <title>Simple Checkout</title>
+      <link>https://docs.stg.pay.super.com/docs/payments/simple/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://docs.stg.pay.super.com/about/what-is-paysuper/</guid>
-      <description>PaySuper is an open source service for accepting payments, which includes: a flexibly customizable payment form, a set of integration protocols, a management interface, and statistics tools.
-What does PaySuper do? Our mission is to give developers, publishers, platforms and stores an opportunity to accept payments with minimal losses and costs due to high conversion, low commission and minimization of labor costs related to integration and maintenance.
-Our solution is a part of Protocol One IaaS, it is actively used in Storefront constructor.</description>
+      <guid>https://docs.stg.pay.super.com/docs/payments/simple/</guid>
+      <description>PaySuper</description>
     </item>
     
     <item>
-      <title>Accepting a Payment</title>
-      <link>https://docs.stg.pay.super.com/payments/accepting-payment/</link>
-      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
+      <title>Testing Checkout</title>
+      <link>https://docs.stg.pay.super.com/docs/payments/sandbox/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://docs.stg.pay.super.com/payments/accepting-payment/</guid>
-      <description>Steps of the accepting a payment process:
-Interaction with the payment interface  The user begins their interaction with the payment form by clicking on an interface element on the website. The form is displayed in accordance with regional features and project settings. The form responds to user actions with minimal user interface delays. In the interface, the user selects a payment method (when possible), enters plastic card information or credentials for another means of payment, passes KYC elements if necessary or fills in data required for product delivery (for example, an email or instant messenger contact to receive the key).</description>
-    </item>
-    
-    <item>
-      <title>External Reports</title>
-      <link>https://docs.stg.pay.super.com/getting-started/external-reports/</link>
-      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://docs.stg.pay.super.com/getting-started/external-reports/</guid>
-      <description>When internal reports are not enough, you can connect an external analytics tool (for example, tableau or slemma) or your own data visualization tool.
-You can access the data or, using the API, upload data to your storage. We adhere to the OLAP cube structure.
-Dimensions:
- Project Product Geography Payment currency Payment method Payment date Return date User agent  Measures:
- The sum in payment currency The sum in payout currency Number of transactions  </description>
-    </item>
-    
-    <item>
-      <title>Frequently Asked Questions</title>
-      <link>https://docs.stg.pay.super.com/troubleshooting/faq/</link>
-      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://docs.stg.pay.super.com/troubleshooting/faq/</guid>
-      <description>Note: The answers/solutions presented below are short, and may not be note be enough to solve your problem. Visit Hugo Discourse and use the search. It that does not help, start a new topic and ask your questions.
-  I can&amp;rsquo;t see my content! Is your markdown file in draft mode? When testing, run hugo server with the -D or --buildDrafts switch.
-Can I set configuration variables via OS environment?</description>
-    </item>
-    
-    <item>
-      <title>Onboarding</title>
-      <link>https://docs.stg.pay.super.com/getting-started/onboarding/</link>
-      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://docs.stg.pay.super.com/getting-started/onboarding/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Payment Form</title>
-      <link>https://docs.stg.pay.super.com/payments/payment-form/</link>
-      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://docs.stg.pay.super.com/payments/payment-form/</guid>
-      <description>Payment forms are optimized for display on a wide range of mobile devices (tablets and smartphones). The display logic takes into account the device-specific touch controls and the use of an on-screen keyboard.
-You can customize the form yourself, setting up both general properties and regional features. PaySuper offers a variety of pre-made templates. The solution provides personalized recommendations for using templates based on user conversions in stores similar to yours.</description>
-    </item>
-    
-    <item>
-      <title>Payment Methods</title>
-      <link>https://docs.stg.pay.super.com/payments/payment-methods/</link>
-      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://docs.stg.pay.super.com/payments/payment-methods/</guid>
-      <description>At this point we can process:
- Plactic cards, with or without 3D-Secure China Union Pay Neteller A number of cryptocurrencies: Bitcoin, Litecoin, Ethereum Qiwi Alipay WeChat Webmoney Bank transfers Payment methods of Latin America Payment methods of South Asia Payment methods of Africa  </description>
-    </item>
-    
-    <item>
-      <title>Payment Processing</title>
-      <link>https://docs.stg.pay.super.com/payments/payment-processing/</link>
-      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://docs.stg.pay.super.com/payments/payment-processing/</guid>
-      <description>Simple HTML Form This method allows you to create an invoice by transferring a simple HTML form to the side of the payment system and is the easiest way to invoice the customer for payment. System requests for checking order data and notifications about successful payment of an order are received routinely in accordance with the system protocol.
-Basic algorithm of payment processing:
- The buyer initiates a transaction by pressing &amp;ldquo;Buy&amp;rdquo;.</description>
-    </item>
-    
-    <item>
-      <title>Personal Account</title>
-      <link>https://docs.stg.pay.super.com/getting-started/personal-account/</link>
-      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://docs.stg.pay.super.com/getting-started/personal-account/</guid>
-      <description> An account with PaySuper is the main point of interaction with PaySuper for all your employees.
-The account contains tools for:  Account settings Project settings, including the launch of integration tests and product management Webhook configuration Transaction search, including full-text search for all attributes Returns management Dispute management Viewing reports and statistics Viewing and managing payouts Managing the rights of account users  The account supports:  Two-factor user authentication Real-time data updates Exporting all reports in CSV and XLSX formats  </description>
-    </item>
-    
-    <item>
-      <title>Project and Products</title>
-      <link>https://docs.stg.pay.super.com/getting-started/project-products/</link>
-      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://docs.stg.pay.super.com/getting-started/project-products/</guid>
-      <description>The project-level management approach It allows you to independently configure PaySuper for use in various contexts:
- different games sites with different payment logic specialized solutions for a particular region or a specific cohort of users.  Any information about payments in this configuration can be reflected in the reports and analytics both cumulatively and separately.
-Modes of operation in project Simple checkout In this mode, you transfer the payment sum for each specific transaction to PaySuper.</description>
-    </item>
-    
-    <item>
-      <title>Reports Dashboard</title>
-      <link>https://docs.stg.pay.super.com/getting-started/reports/</link>
-      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://docs.stg.pay.super.com/getting-started/reports/</guid>
-      <description>Examples of reports available on the dashboard and in the Reports section:
- Recent transactions. Revenue dynamics that can be broken down by project or product, with different levels of detail (day, week, month, year). Country statistics in the form of a table or heat map, where you can choose a period, projects and products. Returns report. Payouts report and a transactional report on a specific payout. Payment methods report, where you can choose a period, projects and products.</description>
-    </item>
-    
-    <item>
-      <title>API</title>
-      <link>https://docs.stg.pay.super.com/api-reference/api-swagger/</link>
-      <pubDate>Mon, 01 Feb 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://docs.stg.pay.super.com/api-reference/api-swagger/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Key Products</title>
-      <link>https://docs.stg.pay.super.com/api-reference/key-products/</link>
-      <pubDate>Mon, 01 Feb 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://docs.stg.pay.super.com/api-reference/key-products/</guid>
-      <description>The Key Product object    Attribute Type Description     id string Unique identifier for the object.   object string String representing the object’s type. Objects of the same type share the same value.   project_id string Identifier of project, with which the product is associated.   sku string String representing the stock keeping unit.   name map[string]string An map object, where keys are locales, and values is product name in key&amp;rsquo;s locale.</description>
-    </item>
-    
-    <item>
-      <title>Keys</title>
-      <link>https://docs.stg.pay.super.com/api-reference/keys/</link>
-      <pubDate>Mon, 01 Feb 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://docs.stg.pay.super.com/api-reference/keys/</guid>
-      <description>iframe{width:100%}   iFrameResize({ log : true, checkOrigin : false, sizeWidth : true, widthCalculationMethod : &#39;rightMostElement&#39; }); var shortcode_url = &#34;\/api\/v1\/api-keys.json&#34;;  </description>
-    </item>
-    
-    <item>
-      <title>Notifications</title>
-      <link>https://docs.stg.pay.super.com/api-reference/notifications/</link>
-      <pubDate>Mon, 01 Feb 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://docs.stg.pay.super.com/api-reference/notifications/</guid>
-      <description>The PaySuper system can send you notifications for a set of events during the flow, such as creating new accounts or transaction flow, making payouts, and so on.
-These notifications are sent as webhooks to the corresponding URLs configured on your Project Settings page.
-In most cases, webhooks are triggered by user actions on your website or back-end related events like refund a payment, notification about dispute and other.</description>
-    </item>
-    
-    <item>
-      <title>Orders</title>
-      <link>https://docs.stg.pay.super.com/api-reference/orders/</link>
-      <pubDate>Mon, 01 Feb 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://docs.stg.pay.super.com/api-reference/orders/</guid>
-      <description>You can create, retrieve, and pay individual orders, as well as list all orders. Orders are identified by a unique, random ID.
-Statuses    Name Description     created The order created but not processed yet.   canceled The order was canceled and money refunded to user.   rejected The order was rejected by payment system with any reasons.   processed The order was processed in payment system.</description>
-    </item>
-    
-    <item>
-      <title>Pagination</title>
-      <link>https://docs.stg.pay.super.com/api-reference/pagination/</link>
-      <pubDate>Mon, 01 Feb 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://docs.stg.pay.super.com/api-reference/pagination/</guid>
-      <description>For instance, you can list users, list orders.
-Like Stripe, PaySuper uses cursor-based pagination using the parameter starting_after. Pass starting_after parameter at the previous page last object id value to determine where to start in the list.
-Attributes    Attribute Type Description     limit integer optional A limit on the number of objects to be returned. Must be included between 1 and 100   starting_after string optional A cursor for use in pagination.</description>
-    </item>
-    
-    <item>
-      <title>Payment Method</title>
-      <link>https://docs.stg.pay.super.com/api-reference/payment-method/</link>
-      <pubDate>Mon, 01 Feb 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://docs.stg.pay.super.com/api-reference/payment-method/</guid>
-      <description> Endpoints iframe{width:100%}   iFrameResize({ log : true, checkOrigin : false, sizeWidth : true, widthCalculationMethod : &#39;rightMostElement&#39; }); var shortcode_url = &#34;\/api\/v1\/payment-method-swagger.yaml&#34;;  </description>
-    </item>
-    
-    <item>
-      <title>Payouts</title>
-      <link>https://docs.stg.pay.super.com/api-reference/payouts/</link>
-      <pubDate>Mon, 01 Feb 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://docs.stg.pay.super.com/api-reference/payouts/</guid>
-      <description>Failure codes Payouts can fail for a variety of reasons. The reason a given payout failed is available in a Payout object&amp;rsquo;s failure_code attribute.
-   Name Description     account_closed The bank account has been closed.   account_frozen The bank account has been frozen.   could_not_process The bank could not process this payout.   declined The bank has declined this transfer. Please contact the bank before retrying.</description>
-    </item>
-    
-    <item>
-      <title>PaySuper API</title>
-      <link>https://docs.stg.pay.super.com/api-reference/paysuper-api/</link>
-      <pubDate>Mon, 01 Feb 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://docs.stg.pay.super.com/api-reference/paysuper-api/</guid>
-      <description>API Endpoint https://api.paysuper.io
-Authentication Authentication to the API occurs via HTTP Basic Auth. Provide your API secret key as the basic auth username. You do not need to provide a password.
- Credentials can be found on your PaySuper project dashboard, in the &amp;ldquo;API Keys&amp;rdquo; section.
-  You must authenticate for all requests. You can manage your API keys from your account. Your API keys carry many privileges, so be sure to keep them secret!</description>
-    </item>
-    
-    <item>
-      <title>Platforms</title>
-      <link>https://docs.stg.pay.super.com/api-reference/platforms/</link>
-      <pubDate>Mon, 01 Feb 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://docs.stg.pay.super.com/api-reference/platforms/</guid>
-      <description>iframe{width:100%}   iFrameResize({ log : true, checkOrigin : false, sizeWidth : true, widthCalculationMethod : &#39;rightMostElement&#39; }); var shortcode_url = &#34;\/api\/v1\/api-platforms.json&#34;;  </description>
-    </item>
-    
-    <item>
-      <title>Price and country</title>
-      <link>https://docs.stg.pay.super.com/api-reference/price-counrty/</link>
-      <pubDate>Mon, 01 Feb 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://docs.stg.pay.super.com/api-reference/price-counrty/</guid>
-      <description> Endpoints iframe{width:100%}   iFrameResize({ log : true, checkOrigin : false, sizeWidth : true, widthCalculationMethod : &#39;rightMostElement&#39; }); var shortcode_url = &#34;\/api\/v1\/price-country-swagger.yaml&#34;;  </description>
-    </item>
-    
-    <item>
-      <title>Products</title>
-      <link>https://docs.stg.pay.super.com/api-reference/products/</link>
-      <pubDate>Mon, 01 Feb 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://docs.stg.pay.super.com/api-reference/products/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Report file</title>
-      <link>https://docs.stg.pay.super.com/api-reference/report/</link>
-      <pubDate>Mon, 01 Feb 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://docs.stg.pay.super.com/api-reference/report/</guid>
-      <description> Endpoints iframe{width:100%}   iFrameResize({ log : true, checkOrigin : false, sizeWidth : true, widthCalculationMethod : &#39;rightMostElement&#39; }); var shortcode_url = &#34;\/api\/v1\/report-swagger.yaml&#34;;  </description>
-    </item>
-    
-    <item>
-      <title>Users</title>
-      <link>https://docs.stg.pay.super.com/api-reference/users/</link>
-      <pubDate>Mon, 01 Feb 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://docs.stg.pay.super.com/api-reference/users/</guid>
-      <description> We will generate unique identity for each customer and update user profile with any information we got from each payment. User profile also used as part of fraud protection in PaySuper.
-Endpoints iframe{width:100%}   iFrameResize({ log : true, checkOrigin : false, sizeWidth : true, widthCalculationMethod : &#39;rightMostElement&#39; }); var shortcode_url = &#34;\/api\/v1\/user-swagger.yaml&#34;;  </description>
+      <guid>https://docs.stg.pay.super.com/docs/payments/sandbox/</guid>
+      <description>PaySuper</description>
     </item>
     
   </channel>

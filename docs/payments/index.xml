@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Checkout Overview on PaySuper docs</title>
+    <link>https://docs.stg.pay.super.com/docs/payments/</link>
+    <description>Recent content in Checkout Overview on PaySuper docs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://docs.stg.pay.super.com/docs/payments/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>After the payment</title>
+      <link>https://docs.stg.pay.super.com/docs/payments/fulfillment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.stg.pay.super.com/docs/payments/fulfillment/</guid>
+      <description>PaySuper</description>
+    </item>
+    
+    <item>
+      <title>Customizing Checkout</title>
+      <link>https://docs.stg.pay.super.com/docs/payments/customization/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.stg.pay.super.com/docs/payments/customization/</guid>
+      <description>PaySuper</description>
+    </item>
+    
+    <item>
+      <title>Going Live</title>
+      <link>https://docs.stg.pay.super.com/docs/payments/live/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.stg.pay.super.com/docs/payments/live/</guid>
+      <description>PaySuper</description>
+    </item>
+    
+    <item>
+      <title>Integration Flow</title>
+      <link>https://docs.stg.pay.super.com/docs/payments/integration-flow/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.stg.pay.super.com/docs/payments/integration-flow/</guid>
+      <description>PaySuper</description>
+    </item>
+    
+    <item>
+      <title>Keys Checkout</title>
+      <link>https://docs.stg.pay.super.com/docs/payments/keys/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.stg.pay.super.com/docs/payments/keys/</guid>
+      <description>PaySuper</description>
+    </item>
+    
+    <item>
+      <title>Simple Checkout</title>
+      <link>https://docs.stg.pay.super.com/docs/payments/simple/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.stg.pay.super.com/docs/payments/simple/</guid>
+      <description>PaySuper</description>
+    </item>
+    
+    <item>
+      <title>Testing Checkout</title>
+      <link>https://docs.stg.pay.super.com/docs/payments/sandbox/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.stg.pay.super.com/docs/payments/sandbox/</guid>
+      <description>PaySuper</description>
+    </item>
+    
+  </channel>
+</rss>

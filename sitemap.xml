@@ -1,16 +1,77 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-	
-	<sitemap>
-	   	<loc>https://docs.stg.pay.super.com/en/sitemap.xml</loc>
-		
-	   	<lastmod>2019-10-10T00:00:00+00:00</lastmod>
-		
-	</sitemap>
-	
-	<sitemap>
-	   	<loc>https://docs.stg.pay.super.com/ru/sitemap.xml</loc>
-		
-	</sitemap>
-	
-</sitemapindex>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://docs.stg.pay.super.com/docs/markdown/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.stg.pay.super.com/docs/payments/fulfillment/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.stg.pay.super.com/docs/payments/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.stg.pay.super.com/docs/payments/customization/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.stg.pay.super.com/docs/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.stg.pay.super.com/docs/payments/live/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.stg.pay.super.com/docs/payments/integration-flow/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.stg.pay.super.com/docs/payments/keys/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.stg.pay.super.com/docs/api/v1/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.stg.pay.super.com/docs/api/v1/authentication/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.stg.pay.super.com/docs/api/v1/compression/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.stg.pay.super.com/docs/api/v1/errors/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.stg.pay.super.com/docs/api/v1/pagination/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.stg.pay.super.com/docs/api/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.stg.pay.super.com/docs/api/v1/versioning/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.stg.pay.super.com/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.stg.pay.super.com/docs/payments/simple/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.stg.pay.super.com/docs/payments/sandbox/</loc>
+  </url>
+  
+</urlset>
