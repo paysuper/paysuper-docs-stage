@@ -18,7 +18,7 @@ Step 2. Set up a Project Having a single project is enough to start selling.
 <link rel="stylesheet" href="/book.min.1b994bd28c6ce2255f069b6bf6837b4d396307637fc48d61dcb2a6caac26e031.css" integrity="sha256-G5lL0oxs4iVfBptr9oN7TTljB2N/xI1h3LKmyqwm4DE=">
 
 
-<script defer src="/search.min.d5b954e96d4efbbccaba80c31218ea00cea57f325cfc90471b96ef7052e73a39.js" integrity="sha256-1blU6W1O&#43;7zKuoDDEhjqAM6lfzJc/JBHG5bvcFLnOjk="></script>
+<script defer src="/search.min.3efe7e1d57fec99fdb7f8930922eab028f4510a7729e4bc002164792b2e3d04a.js" integrity="sha256-Pv5&#43;HVf&#43;yZ/bf4kwki6rAo9FEKdynkvAAhZHkrLj0Eo="></script>
 
 <!--
 Made with Book Theme
@@ -62,7 +62,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="/docs/payments/typed/">Typed Checkout</a></li>
 <li><a href="/docs/payments/fulfillment/">After the payment</a></li>
 <li><a href="/docs/payments/customization/">Customizing Checkout</a></li>
-<li><a href="/docs/payments/sandbox/">Testing</a></li>
+<li><a href="/docs/payments/testing/">Testing</a></li>
 <li><a href="/docs/payments/live/">Going Live</a></li>
 </ul></li>
 <li><a href="/docs/api/"><strong>API Reference</strong></a>
@@ -373,12 +373,12 @@ To verify a webhook request, generate a signature and compare that to the value 
 <h2 id="next-steps">Next steps</h2>
 
 <blockquote class="book-hint info">
-  <a href="/docs/payments/sandbox/"><strong>Testig the Checkout in the Sandbox</strong></a>.
+  <a href="/docs/payments/testing/"><strong>Testig the Checkout</strong></a>
 </blockquote>
 
 
 <blockquote class="book-hint info">
-  <a href="/docs/payments/live/"><strong>After the payment</strong></a>.
+  <a href="/docs/payments/live/"><strong>After the payment</strong></a>
 </blockquote>
 
 
@@ -454,6 +454,18 @@ To verify a webhook request, generate a signature and compare that to the value 
 
   
 
+  <script>
+    function buyItems() {
+      const paySuper = new PaySuper({
+        project: '5cd5620f06ae110001509185',
+        products: ['5d80ec2b40a1200001387ec6'],
+        type: 'key',
+        formUrl: 'https://paysupermgmt.tst.protocol.one/payform-page'
+      });
+    
+        paySuper.renderModal();
+    }
+    </script>
 </body>
 
 </html>

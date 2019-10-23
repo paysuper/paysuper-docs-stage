@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="/book.min.1b994bd28c6ce2255f069b6bf6837b4d396307637fc48d61dcb2a6caac26e031.css" integrity="sha256-G5lL0oxs4iVfBptr9oN7TTljB2N/xI1h3LKmyqwm4DE=">
 
 
-<script defer src="/search.min.d5b954e96d4efbbccaba80c31218ea00cea57f325cfc90471b96ef7052e73a39.js" integrity="sha256-1blU6W1O&#43;7zKuoDDEhjqAM6lfzJc/JBHG5bvcFLnOjk="></script>
+<script defer src="/search.min.3efe7e1d57fec99fdb7f8930922eab028f4510a7729e4bc002164792b2e3d04a.js" integrity="sha256-Pv5&#43;HVf&#43;yZ/bf4kwki6rAo9FEKdynkvAAhZHkrLj0Eo="></script>
 
 <link rel="alternate" type="application/rss+xml" href="https://docs.stg.pay.super.com/docs/payments/index.xml" title="PaySuper docs" />
 <!--
@@ -60,7 +60,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="/docs/payments/typed/">Typed Checkout</a></li>
 <li><a href="/docs/payments/fulfillment/">After the payment</a></li>
 <li><a href="/docs/payments/customization/">Customizing Checkout</a></li>
-<li><a href="/docs/payments/sandbox/">Testing</a></li>
+<li><a href="/docs/payments/testing/">Testing</a></li>
 <li><a href="/docs/payments/live/">Going Live</a></li>
 </ul></li>
 <li><a href="/docs/api/"><strong>API Reference</strong></a>
@@ -145,7 +145,7 @@ https://github.com/alex-shpak/hugo-book
 
 <p>Enter arbitrary cardholder name, expiry date and CVV2/CVC2/CAV2 (Secure code) with these PANs.</p>
 
-<p><a  href="https://paysupermgmt.tst.protocol.one/form-demo"   target="_blank"  class="book-btn">
+<p><a   onclick="buyItems()" class="book-btn">
   Test Payment
 </a></p>
 
@@ -192,7 +192,7 @@ https://github.com/alex-shpak/hugo-book
 <h2 id="next-steps">Next steps</h2>
 
 <blockquote class="book-hint info">
-  Continue with the <a href="/docs/payments/quick-start/"><strong>Quick Start guide</strong></a>.
+  Continue with the <a href="/docs/payments/quick-start/"><strong>Quick Start guide</strong></a>
 </blockquote>
 
 
@@ -256,6 +256,18 @@ https://github.com/alex-shpak/hugo-book
 
   
 
+  <script>
+    function buyItems() {
+      const paySuper = new PaySuper({
+        project: '5cd5620f06ae110001509185',
+        products: ['5d80ec2b40a1200001387ec6'],
+        type: 'key',
+        formUrl: 'https://paysupermgmt.tst.protocol.one/payform-page'
+      });
+    
+        paySuper.renderModal();
+    }
+    </script>
 </body>
 
 </html>
