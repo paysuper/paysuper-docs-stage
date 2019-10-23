@@ -18,7 +18,7 @@ Step 2. Set up a Project Having a single project is enough to start selling.
 <link rel="stylesheet" href="/book.min.1b994bd28c6ce2255f069b6bf6837b4d396307637fc48d61dcb2a6caac26e031.css" integrity="sha256-G5lL0oxs4iVfBptr9oN7TTljB2N/xI1h3LKmyqwm4DE=">
 
 
-<script defer src="/search.min.f4875e11d7201e137479b136aafae7c1836e9c081bbe380963d3509344315d48.js" integrity="sha256-9IdeEdcgHhN0ebE2qvrnwYNunAgbvjgJY9NQk0QxXUg="></script>
+<script defer src="/search.min.fb06a95c19b603923bec9a99aafe9139da0bfeb7993488349b7a088afc4055dc.js" integrity="sha256-&#43;wapXBm2A5I77JqZqv6ROdoL/reZNIg0m3oIivxAVdw="></script>
 
 <!--
 Made with Book Theme
@@ -246,8 +246,8 @@ https://github.com/alex-shpak/hugo-book
 <p><strong>Token-based features:</strong></p>
 
 <ul>
-<li><strong>Instantly redirect from anywhere of your game application</strong>: You can create a token after a user registered or logged in your game and instantly redirect the user to Checkout form when the user intent a payment.</li>
-<li><strong>The pre-filled information in a payment form</strong>: Token can encrypt all required information about your user intent to pay. Checkout form is pre-filled in this case.</li>
+<li><strong>Instantly redirect from anywhere of your game application</strong>: You can create a token after a user registered or logged in your game and instantly redirect the user to the Checkout Form when the user intent a payment.</li>
+<li><strong>The pre-filled information in a payment form</strong>: Token can encrypt all required information about your user intent to pay. The Checkout Form is pre-filled in this case.</li>
 </ul>
 
 <p><strong>To create a Token:</strong></p>
@@ -275,7 +275,7 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li><strong>Embedded as iframe</strong></li>
 <li><strong>Modal window</strong> (only for a client integration with <a href="https://github.com/paysuper/paysuper-js-sdk">PaySuper JS SDK</a>)</li>
-<li><strong>New window</strong> (only for a integration with <a href="/docs/api/">PaySuper API</a>)</li>
+<li><strong>New window</strong> (only for an integration with <a href="/docs/api/">PaySuper API</a>)</li>
 </ul>
 
 <h3 id="client-integration-with-js-sdk">Client integration with JS SDK</h3>
@@ -306,7 +306,7 @@ https://github.com/alex-shpak/hugo-book
 
 <ul>
 <li><a href="/docs/payments/simple/#client-integration-with-js-sdk">Simple Checkout form parameters</a></li>
-<li><a href="/docs/payments/typed/#client-integration-with-js-sdk">Types Checkout form parameters</a></li>
+<li><a href="/docs/payments/typed/#client-integration-with-js-sdk">Typed Checkout form parameters</a></li>
 </ul>
 
 <p><strong>Step 3.</strong> Display the form in a modal window or iframe:</p>
@@ -323,9 +323,9 @@ https://github.com/alex-shpak/hugo-book
 
 <p><strong>Step 4.</strong> Handle the purchase events</p>
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">paySuper</span>.<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#39;inited&#39;</span>, <span style="color:#66d9ef">function</span>() {
-  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;PaySuper is initialized&#39;</span>)
-})
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">paySuper</span>.<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#39;paymentCompleted&#39;</span>, <span style="color:#66d9ef">function</span>() {
+      <span style="color:#75715e">// You can show a message about payment is completed
+</span><span style="color:#75715e"></span>})
 <span style="color:#a6e22e">paySuper</span>.<span style="color:#a6e22e">renderModal</span>();
 </code></pre></div>
 
@@ -354,7 +354,7 @@ https://github.com/alex-shpak/hugo-book
 
 <h2 id="span-style-color-2e00a8-step-5-span-set-up-a-webhook-handling"><span style="color:#2e00a8;">Step 5.</span> Set up a webhook handling</h2>
 
-<p>The PaySuper system can send webhooks to your server for a set of events about transactions and user actions. Types of events described in the list notification types.</p>
+<p>The PaySuper system can send webhooks to your server for a set of events about transactions and user actions. Types of events described in <a href="ССЫлка на апи вебхуков">the list notification types</a>.</p>
 
 <p><strong>Set up webhooks for your project:</strong></p>
 
