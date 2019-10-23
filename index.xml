@@ -112,7 +112,8 @@ Prefilling user data Boost your paying conversion rate with pre-filled payment f
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://docs.stg.pay.super.com/docs/payments/simple/</guid>
-      <description>PaySuper</description>
+      <description>Simple Checkout  Client integration with JS SDK Server integration with PaySuper API  Client integration You can create an instance of a PaySuper Form on your website using this sample code.
+ Use your IDs for the Project and Products found in your merchant account in the PaySuper Admin. To get the Project and Product IDs click on the Product from the Products list page and copy the ID from an opened page URL.</description>
     </item>
     
     <item>
