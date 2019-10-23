@@ -35,7 +35,10 @@ Headings h1 Heading h2 Heading h3 Heading h4 Heading h5 Heading h6 Heading Notes
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://docs.stg.pay.super.com/docs/payments/customization/</guid>
-      <description>PaySuper</description>
+      <description>Customizing Checkout Learn about the different ways you can customize your Checkout integration.
+Localization PaySuper Checkout Form is localized for 2 languages with 10 more translations coming soon.
+You can choose the complete set of supported languages for the project and products descriptions on the Project Settings page.
+Prefilling user data Boost your paying conversion rate with pre-filled payment form with user&amp;rsquo;s name and email. Generate a Token to encrypt all required information about the user intent to pay.</description>
     </item>
     
     <item>

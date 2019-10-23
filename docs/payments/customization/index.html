@@ -4,7 +4,10 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta property="og:title" content="Customizing Checkout" />
-<meta property="og:description" content="PaySuper" />
+<meta property="og:description" content="Customizing Checkout Learn about the different ways you can customize your Checkout integration.
+Localization PaySuper Checkout Form is localized for 2 languages with 10 more translations coming soon.
+You can choose the complete set of supported languages for the project and products descriptions on the Project Settings page.
+Prefilling user data Boost your paying conversion rate with pre-filled payment form with user&rsquo;s name and email. Generate a Token to encrypt all required information about the user intent to pay." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://docs.stg.pay.super.com/docs/payments/customization/" />
 
@@ -15,7 +18,7 @@
 <link rel="stylesheet" href="/book.min.1b994bd28c6ce2255f069b6bf6837b4d396307637fc48d61dcb2a6caac26e031.css" integrity="sha256-G5lL0oxs4iVfBptr9oN7TTljB2N/xI1h3LKmyqwm4DE=">
 
 
-<script defer src="/search.min.7b45dbc08d5d6c4707d79e7212830a1e4ca177d2e85f22251ba396669c2cfe68.js" integrity="sha256-e0XbwI1dbEcH155yEoMKHkyhd9LoXyIlG6OWZpws/mg="></script>
+<script defer src="/search.min.d8694a1d8bcc35b5bcde8db1ab39d5675b82173ae6888144b702b64002f1d0e1.js" integrity="sha256-2GlKHYvMNbW83o2xqznVZ1uCFzrmiIFEtwK2QALx0OE="></script>
 
 <!--
 Made with Book Theme
@@ -102,7 +105,91 @@ https://github.com/alex-shpak/hugo-book
 </header>
 
       
-<article class="markdown"><p>PaySuper</p>
+<article class="markdown">
+
+<h1 id="customizing-checkout">Customizing Checkout</h1>
+
+<hr />
+
+<p>Learn about the different ways you can customize your Checkout integration.</p>
+
+<h2 id="localization">Localization</h2>
+
+<p>PaySuper Checkout Form is localized for 2 languages with 10 more translations coming soon.</p>
+
+<p>You can choose the complete set of supported languages for the project and products descriptions on the Project Settings page.</p>
+
+<h2 id="prefilling-user-data">Prefilling user data</h2>
+
+<p>Boost your paying conversion rate with pre-filled payment form with user&rsquo;s name and email. Generate a Token to encrypt all required information about the user intent to pay.</p>
+
+<h2 id="saving-payment-methods-for-future">Saving payment methods for future</h2>
+
+<p>Store in PaySuper a user&rsquo;s billing address and a payment method data to prefill once the Checkout Form opened.</p>
+
+<h2 id="customizing-theme">Customizing theme</h2>
+
+<pre><code>const paySuper = new PaySuper({
+    token: '5cd5620f06ae110001509185',
+    viewScheme: 'light'
+});
+</code></pre>
+
+<p>Available options: <strong><code>dark</code></strong> (default), <strong><code>light</code></strong>.</p>
+
+<h2 id="customizing-the-colors">Customizing the colors</h2>
+
+<pre><code>const paySuper = new PaySuper({
+    token: '5cd5620f06ae110001509185',
+    viewSchemeConfig: { 
+        &lt;!-- headerTextColor overrides the default value of the viewSchemeConfig object --&gt;
+        headerTextColor: '#333333'
+    }
+});
+</code></pre>
+
+<p><a href="https://github.com/paysuper/paysuper-js-sdk/blob/192153-quickstart/docs/CUSTOMIZATION.md#available-parameters-of-viewschemeconfig">Available parameters of <strong><code>viewSchemeConfig</code></strong></a></p>
+
+<hr />
+
+<h2 id="next-steps">Next steps</h2>
+
+<blockquote class="book-hint info">
+  <a href="/docs/payments/sandbox/"><strong>Testig the Checkout in the Sandbox</strong></a>.
+</blockquote>
+
+
+<blockquote class="book-hint info">
+  <a href="/docs/payments/live/"><strong>Going live checklist</strong></a>.
+</blockquote>
+
+
+<hr />
+
+<h2 id="questions">Questions?</h2>
+
+<div class="book-columns flex flex-wrap">
+  
+  <div class="flex-even markdown-inner">
+    <h4 id="sales-https-docs-google-com-forms-d-e-1faipqlscqpu83wkpkjeui-wvxgdoxwldl4vyd8gswnqf9-ccwdg3dew-viewform"><a href="https://docs.google.com/forms/d/e/1FAIpQLScQPU83wKPkJeui_WvxGDoXWLDL4vyD8GsWNqf9-ccwDg3dEw/viewform">Sales</a></h4>
+
+<p>Our salespeople are pleasant and friendly. Leave your contact details, and we&rsquo;ll be back to you in no time.
+  </div>
+  
+  <div class="flex-even markdown-inner">
+    <h4 id="support-https-docs-google-com-forms-d-e-1faipqlscqpu83wkpkjeui-wvxgdoxwldl4vyd8gswnqf9-ccwdg3dew-viewform"><a href="https://docs.google.com/forms/d/e/1FAIpQLScQPU83wKPkJeui_WvxGDoXWLDL4vyD8GsWNqf9-ccwDg3dEw/viewform">Support</a></h4>
+
+<p>We are always happy to help with a code, improve a guide or consider a feature.
+  </div>
+  
+  <div class="flex-even markdown-inner">
+    <h4 id="github-https-github-com-paysuper"><a href="https://github.com/paysuper">GitHub</a></h4>
+
+<p>The PaySuper Checkout Form, the JS SDK and even the server are available as a source code on our GitHub. You&rsquo;re welcome to explore the code and help us make PaySuper even better.
+  </div>
+  
+</div>
+
 </article>
 
       
@@ -112,6 +199,23 @@ https://github.com/alex-shpak/hugo-book
 
     
   
+
+  <aside class="book-toc level-true fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#customizing-checkout">Customizing Checkout</a>
+<ul>
+<li><a href="#localization">Localization</a></li>
+<li><a href="#prefilling-user-data">Prefilling user data</a></li>
+<li><a href="#saving-payment-methods-for-future">Saving payment methods for future</a></li>
+<li><a href="#customizing-theme">Customizing theme</a></li>
+<li><a href="#customizing-the-colors">Customizing the colors</a></li>
+<li><a href="#next-steps">Next steps</a></li>
+<li><a href="#questions">Questions?</a></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
 
 
   </main>
