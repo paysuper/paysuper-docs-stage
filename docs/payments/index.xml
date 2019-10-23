@@ -58,7 +58,7 @@ Step 2. Set up a Project Having a single project is enough to start selling.
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://docs.stg.pay.super.com/docs/payments/simple/</guid>
-      <description>Simple Checkout Client integration with JS SDK You can create an instance of a PaySuper Form on your website using this sample code.
+      <description>Simple Checkout Integration with PaySuper JS SDK You can create an instance of a PaySuper Form on your website using this sample code.
  Use your IDs for the Project and Products found in your merchant account in the PaySuper Admin. To get the Project and Product IDs click on the Product from the Products list page and copy the ID from an opened page URL.
  Sample code of the Payment form with Token &amp;lt;script&amp;gt; function buyItems() { const paySuper = new PaySuper({ token: &amp;#39;5cd5620f06ae110001509185&amp;#39; }); paySuper.</description>
     </item>
