@@ -46,9 +46,10 @@ Prefilling user data Boost your paying conversion rate with pre-filled payment f
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://docs.stg.pay.super.com/docs/payments/quick-start/</guid>
-      <description>Payments Flow User Flow   Integration Flow   Quick start Step 1. Register a PaySuper Merchant account. Step 2. Set up a Project Having a single project is enough to start selling.
+      <description>Payments Flow User Flow   Integration Flow   Quick start Step 1. Register a PaySuper account Sign up and complete The PaySuper Onboarding is necessary for a new PaySuper Merchant account.
+Step 2. Set up a Project Having a single project is enough to start selling.
  Create a project &amp;gt;    To create a project:
- Open the Projects List page Click the Create Project button. Enter a Project Name. Click Create to redirect to the Project Settings page.</description>
+ Open the Projects List page Click the Create Project button.</description>
     </item>
     
     <item>
@@ -57,8 +58,9 @@ Prefilling user data Boost your paying conversion rate with pre-filled payment f
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://docs.stg.pay.super.com/docs/payments/simple/</guid>
-      <description>Simple Checkout  Client integration with JS SDK Server integration with PaySuper API  Client integration You can create an instance of a PaySuper Form on your website using this sample code.
- Use your IDs for the Project and Products found in your merchant account in the PaySuper Admin. To get the Project and Product IDs click on the Product from the Products list page and copy the ID from an opened page URL.</description>
+      <description>Simple Checkout Client integration with JS SDK You can create an instance of a PaySuper Form on your website using this sample code.
+ Use your IDs for the Project and Products found in your merchant account in the PaySuper Admin. To get the Project and Product IDs click on the Product from the Products list page and copy the ID from an opened page URL.
+ Sample code of the Payment form with Token &amp;lt;script&amp;gt; function buyItems() { const paySuper = new PaySuper({ token: &amp;#39;5cd5620f06ae110001509185&amp;#39; }); paySuper.</description>
     </item>
     
     <item>

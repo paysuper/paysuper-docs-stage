@@ -4,9 +4,10 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta property="og:title" content="Quick start" />
-<meta property="og:description" content="Payments Flow User Flow   Integration Flow   Quick start Step 1. Register a PaySuper Merchant account. Step 2. Set up a Project Having a single project is enough to start selling.
+<meta property="og:description" content="Payments Flow User Flow   Integration Flow   Quick start Step 1. Register a PaySuper account Sign up and complete The PaySuper Onboarding is necessary for a new PaySuper Merchant account.
+Step 2. Set up a Project Having a single project is enough to start selling.
  Create a project &gt;    To create a project:
- Open the Projects List page Click the Create Project button. Enter a Project Name. Click Create to redirect to the Project Settings page." />
+ Open the Projects List page Click the Create Project button." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://docs.stg.pay.super.com/docs/payments/quick-start/" />
 
@@ -17,7 +18,7 @@
 <link rel="stylesheet" href="/book.min.1b994bd28c6ce2255f069b6bf6837b4d396307637fc48d61dcb2a6caac26e031.css" integrity="sha256-G5lL0oxs4iVfBptr9oN7TTljB2N/xI1h3LKmyqwm4DE=">
 
 
-<script defer src="/search.min.e3c9c277a7413f7b6ec7847da8d38f4d273f3555100ec9349ad9fd3f999802d0.js" integrity="sha256-48nCd6dBP3tux4R9qNOPTSc/NVUQDsk0mtn9P5mYAtA="></script>
+<script defer src="/search.min.088c8de4b2158a57e4ea5ea0b03fc0e41e956992f95603121949c55f1ce05989.js" integrity="sha256-CIyN5LIVilfk6l6gsD/A5B6VaZL5VgMSGUnFXxzgWYk="></script>
 
 <!--
 Made with Book Theme
@@ -124,13 +125,15 @@ https://github.com/alex-shpak/hugo-book
 </figure>
 
 
+<h1 id="quick-start">Quick start</h1>
+
 <hr />
 
-<h2 id="quick-start">Quick start</h2>
+<h2 id="span-style-color-2e00a8-step-1-span-register-a-paysuper-account"><span style="color:#2e00a8;">Step 1.</span> Register a PaySuper account</h2>
 
-<h3 id="span-style-color-2e00a8-step-1-span-register-https-docs-google-com-forms-d-e-1faipqlscqpu83wkpkjeui-wvxgdoxwldl4vyd8gswnqf9-ccwdg3dew-viewform-a-paysuper-merchant-account"><span style="color:#2e00a8;">Step 1.</span> <a href="https://docs.google.com/forms/d/e/1FAIpQLScQPU83wKPkJeui_WvxGDoXWLDL4vyD8GsWNqf9-ccwDg3dEw/viewform">Register</a> a PaySuper Merchant account.</h3>
+<p><a href="https://docs.google.com/forms/d/e/1FAIpQLScQPU83wKPkJeui_WvxGDoXWLDL4vyD8GsWNqf9-ccwDg3dEw/viewform">Sign up</a> and complete <a href="/getting-started/onboarding/">The PaySuper Onboarding</a> is necessary for a new PaySuper Merchant account.</p>
 
-<h3 id="span-style-color-2e00a8-step-2-span-set-up-a-project-https-paysupermgmt-tst-protocol-one-projects"><span style="color:#2e00a8;">Step 2.</span> <a href="https://paysupermgmt.tst.protocol.one/projects/">Set up a Project</a></h3>
+<h2 id="span-style-color-2e00a8-step-2-span-set-up-a-project"><span style="color:#2e00a8;">Step 2.</span> Set up a Project</h2>
 
 <p>Having a single project is enough to start selling.</p>
 
@@ -236,7 +239,7 @@ https://github.com/alex-shpak/hugo-book
 </div>
 
 
-<h3 id="span-style-color-2e00a8-step-3-span-create-a-token-or-order-id"><span style="color:#2e00a8;">Step 3.</span> Create a Token or Order ID</h3>
+<h2 id="span-style-color-2e00a8-step-3-span-create-a-token-or-order-id"><span style="color:#2e00a8;">Step 3.</span> Create a Token or Order ID</h2>
 
 <p>You can obtain a Token to integrate with the Checkout Form. The Token is a secure string that encrypts all order parameters which identifies a user and project.</p>
 
@@ -247,7 +250,7 @@ https://github.com/alex-shpak/hugo-book
 <li><strong>The pre-filled information in a payment form</strong>: Token can encrypt all required information about your user intent to pay. Checkout form is pre-filled in this case.</li>
 </ul>
 
-<h3 id="to-create-a-token">To create a Token:</h3>
+<p><strong>To create a Token:</strong></p>
 
 <p>Send the request <strong><code>POST /api/v1/tokens</code></strong>. Both the request and the response are in JSON format.</p>
 
@@ -259,60 +262,85 @@ https://github.com/alex-shpak/hugo-book
 <li><strong>Request a payment order on-demand:</strong>  It is best suited for e-store where a user creates a product cart.</li>
 </ul>
 
-<h3 id="to-create-a-payment-order-id">To create a payment Order ID:</h3>
+<p><strong>To create a payment Order ID:</strong></p>
 
 <p>Send the request <strong><code>POST /api/v1/order</code></strong>. Both the request and the response are in JSON format.</p>
 
 <p>ПОКАЗАТЬ ПРИМЕР С ПАРАМЕТРАМИ для type=key</p>
 
-<pre><code>curl -X POST &quot;https://p1payapi.tst.protocol.one/api/v1/order&quot; \
--H &quot;accept: application/json&quot; \
--H &quot;Content-Type: application/json&quot; \
--d &quot;{ \&quot;account\&quot;: \&quot;string\&quot;, \&quot;amount\&quot;: 10, \&quot;currency\&quot;: \&quot;USD\&quot;, \&quot;description\&quot;: \&quot;string\&quot;, \&quot;order_id\&quot;: \&quot;string\&quot;, \&quot;other\&quot;: {}, \&quot;payer_email\&quot;: \&quot;string\&quot;, \&quot;payer_ip\&quot;: \&quot;string\&quot;, \&quot;payer_phone\&quot;: \&quot;string\&quot;, \&quot;payment_method\&quot;: \&quot;string\&quot;, \&quot;project\&quot;: \&quot;5daf6b125c8256000117d86f\&quot;, \&quot;region\&quot;: \&quot;string\&quot;, \&quot;signature\&quot;: \&quot;string\&quot;, \&quot;url_fail\&quot;: \&quot;string\&quot;, \&quot;url_notify\&quot;: \&quot;string\&quot;, \&quot;url_success\&quot;: \&quot;string\&quot;, \&quot;url_verify\&quot;: \&quot;string\&quot;}&quot;
-</code></pre>
+<h2 id="span-style-color-2e00a8-step-4-span-set-up-a-checkout-form"><span style="color:#2e00a8;">Step 4.</span> Set up a Checkout Form</h2>
 
-<h3 id="span-style-color-2e00a8-step-4-span-set-up-the-payment-form"><span style="color:#2e00a8;">Step 4.</span> Set up the payment form</h3>
-
-<p>Checkout Form has a flexible integration on all your available platforms.</p>
+<p>Checkout Form has a flexible integration on all your available platforms:</p>
 
 <ul>
 <li><strong>Embedded as iframe</strong></li>
 <li><strong>Modal window</strong> (only for a client integration with <a href="https://github.com/paysuper/paysuper-js-sdk">PaySuper JS SDK</a>)</li>
-<li><strong>New window</strong> (only for a server integration)</li>
+<li><strong>New window</strong> (only for a integration with <a href="/docs/api/">PaySuper API</a>)</li>
 </ul>
 
-<h4 id="client-integration">Client integration</h4>
+<h3 id="client-integration-with-js-sdk">Client integration with JS SDK</h3>
 
 <p>You can use PaySuper JavaScript SDK to create an instance of a Payment Form with just a few lines of code..</p>
 
-<ol>
-<li>To get started, include the following script tag on your website - always load it directly from <code>https://cdn.pay.super.com</code>:</li>
-</ol>
+<p><strong>Step 1.</strong> To get started, include the following script tag on your website - always load it directly from <code>https://cdn.pay.super.com</code>:</p>
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.pay.super.com/paysdk/latest/paysuper.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;</code></pre></div>
 
-<ol>
-<li>
-ССЫЛКА НА страницу simple.md
-ССЫЛКА НА страницу typed.md</li>
-</ol>
+<p><strong>Step 2.</strong> Create an instance of the PaySuper form to initiate the payment process:</p>
 
-<h4 id="server-integration">Server integration</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">script</span>&gt;
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">buyItems</span>() {
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">paySuper</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">PaySuper</span>({
+        <span style="color:#a6e22e">token</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;5cd5620f06ae110001509185&#39;</span>
+    });
 
-<ol>
-<li><p>Send a HTTP request to initiate a payment <a href="ССЫЛКА НА API метод в redoc">POST /api/v1/order</a> and retrieve a response parameter <strong><code>payment_form_url</code></strong> - the URL of PaySuper Checkout form.</p></li>
+    <span style="color:#a6e22e">paySuper</span>.<span style="color:#a6e22e">renderModal</span>();
+}
+&lt;/<span style="color:#f92672">script</span>&gt;
 
-<li><p>Embed an iframe with or open received URL in a new window.</p></li>
-</ol>
+&lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">onclick</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;buyItems()&#34;</span>&gt;BUY&lt;/<span style="color:#f92672">button</span>&gt;</code></pre></div>
+
+<p><a href="https://github.com/paysuper/paysuper-js-sdk/tree/master#paysuper-options">Full list of PaySuper parameters</a></p>
+
+<p>See the sample codes of the Checkout Form for a Simple Checkout or products:</p>
+
+<ul>
+<li><a href="/docs/payments/simple/#client-integration-with-js-sdk">Simple Checkout form parameters</a></li>
+<li><a href="/docs/payments/typed/#client-integration-with-js-sdk">Types Checkout form parameters</a></li>
+</ul>
+
+<p><strong>Step 3.</strong> Display the form in a modal window or iframe:</p>
+
+<p><strong>Display the Checkout form in a modal window anywhere of your platform</strong></p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">paySuper.renderModal();</code></pre></div>
+
+<p><strong>Display the Checkout form in an iframe</strong></p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">paySuper.renderPage();</code></pre></div>
+
+<p><strong>Step 4.</strong> Handle the purchase events</p>
+
+<p>[](<a href="https://github.com/paysuper/paysuper-js-sdk#paysuper-events">https://github.com/paysuper/paysuper-js-sdk#paysuper-events</a>)</p>
+
+<h3 id="integration-with-paysuper-api">Integration with PaySuper API</h3>
+
+<p><strong>Step 1.</strong> Send a HTTP request to initiate a payment <a href="ССЫЛКА НА API метод в redoc">POST /api/v1/order</a> and retrieve a response parameter <strong><code>payment_form_url</code></strong> - URL of PaySuper Checkout form.</p>
+
+<p>See the sample codes of the Checkout Form for a Simple Checkout or products:</p>
+
+<ul>
+<li><a href="/docs/payments/simple/#server-integration-with-paysuper-api">Simple Checkout form parameters</a></li>
+<li><a href="/docs/payments/typed/#server-integration-with-paysuper-api">Types Checkout form parameters</a></li>
+</ul>
+
+<p><strong>Step 2.</strong> Embed an iframe or open received URL in a new window.</p>
 
 <p>Sample code of embedded form:</p>
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">iframe</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{payment_form_url}&#34;</span>&gt;&lt;/<span style="color:#f92672">iframe</span>&gt;</code></pre></div>
 
-<p>ССЫЛКА НА страницу simple.md
-ССЫЛКА НА страницу typed.md</p>
-
-<h3 id="span-style-color-2e00a8-step-5-span-set-up-webhook-handling"><span style="color:#2e00a8;">Step 5.</span> Set up webhook handling</h3>
+<h2 id="span-style-color-2e00a8-step-5-span-set-up-webhook-handling"><span style="color:#2e00a8;">Step 5.</span> Set up webhook handling</h2>
 
 <p>Handle actions and transaction states after the payment.</p>
 
@@ -351,6 +379,31 @@ https://github.com/alex-shpak/hugo-book
 
     
   
+
+  <aside class="book-toc level-true fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#payments-flow">Payments Flow</a>
+<ul>
+<li><a href="#user-flow">User Flow</a></li>
+<li><a href="#integration-flow">Integration Flow</a></li>
+</ul></li>
+<li><a href="#quick-start">Quick start</a>
+<ul>
+<li><a href="#span-style-color-2e00a8-step-1-span-register-a-paysuper-account"><span style="color:#2e00a8;">Step 1.</span> Register a PaySuper account</a></li>
+<li><a href="#span-style-color-2e00a8-step-2-span-set-up-a-project"><span style="color:#2e00a8;">Step 2.</span> Set up a Project</a></li>
+<li><a href="#span-style-color-2e00a8-step-3-span-create-a-token-or-order-id"><span style="color:#2e00a8;">Step 3.</span> Create a Token or Order ID</a></li>
+<li><a href="#span-style-color-2e00a8-step-4-span-set-up-a-checkout-form"><span style="color:#2e00a8;">Step 4.</span> Set up a Checkout Form</a>
+<ul>
+<li><a href="#client-integration-with-js-sdk">Client integration with JS SDK</a></li>
+<li><a href="#integration-with-paysuper-api">Integration with PaySuper API</a></li>
+</ul></li>
+<li><a href="#span-style-color-2e00a8-step-5-span-set-up-webhook-handling"><span style="color:#2e00a8;">Step 5.</span> Set up webhook handling</a></li>
+<li><a href="#questions">Questions?</a></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
 
 
   </main>
