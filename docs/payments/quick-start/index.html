@@ -18,7 +18,7 @@ Step 2. Set up a Project Having a single project is enough to start selling.
 <link rel="stylesheet" href="/book.min.1b994bd28c6ce2255f069b6bf6837b4d396307637fc48d61dcb2a6caac26e031.css" integrity="sha256-G5lL0oxs4iVfBptr9oN7TTljB2N/xI1h3LKmyqwm4DE=">
 
 
-<script defer src="/search.min.088c8de4b2158a57e4ea5ea0b03fc0e41e956992f95603121949c55f1ce05989.js" integrity="sha256-CIyN5LIVilfk6l6gsD/A5B6VaZL5VgMSGUnFXxzgWYk="></script>
+<script defer src="/search.min.33f0cf93a507a93a2be2b902e27e85bd3f7992fb257d94971742f72ca9cfde6e.js" integrity="sha256-M/DPk6UHqTor4rkC4n6FvT95kvslfZSXF0L3LKnP3m4="></script>
 
 <!--
 Made with Book Theme
@@ -280,7 +280,7 @@ https://github.com/alex-shpak/hugo-book
 
 <h3 id="client-integration-with-js-sdk">Client integration with JS SDK</h3>
 
-<p>You can use PaySuper JavaScript SDK to create an instance of a Payment Form with just a few lines of code..</p>
+<p>You can use PaySuper JavaScript SDK to create an instance of a Payment Form with just a few lines of code.</p>
 
 <p><strong>Step 1.</strong> To get started, include the following script tag on your website - always load it directly from <code>https://cdn.pay.super.com</code>:</p>
 
@@ -313,17 +313,29 @@ https://github.com/alex-shpak/hugo-book
 
 <p><strong>Display the Checkout form in a modal window anywhere of your platform</strong></p>
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">paySuper.renderModal();</code></pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">paySuper</span>.<span style="color:#a6e22e">renderModal</span>();
+</code></pre></div>
 
 <p><strong>Display the Checkout form in an iframe</strong></p>
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">paySuper.renderPage();</code></pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">paySuper</span>.<span style="color:#a6e22e">renderPage</span>();
+</code></pre></div>
 
 <p><strong>Step 4.</strong> Handle the purchase events</p>
 
-<p>[](<a href="https://github.com/paysuper/paysuper-js-sdk#paysuper-events">https://github.com/paysuper/paysuper-js-sdk#paysuper-events</a>)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">paySuper</span>.<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#39;inited&#39;</span>, <span style="color:#66d9ef">function</span>() {
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;PaySuper is initialized&#39;</span>)
+})
+<span style="color:#a6e22e">paySuper</span>.<span style="color:#a6e22e">renderModal</span>();
+</code></pre></div>
+
+<p><a href="https://github.com/paysuper/paysuper-js-sdk#paysuper-events">Full events list in the expected order of execution</a></p>
+
+<hr />
 
 <h3 id="integration-with-paysuper-api">Integration with PaySuper API</h3>
+
+<p>You can follow these steps if you want to integrate the Checkout Form without PaySuper SJ SDK for other reasons.</p>
 
 <p><strong>Step 1.</strong> Send a HTTP request to initiate a payment <a href="ССЫЛКА НА API метод в redoc">POST /api/v1/order</a> and retrieve a response parameter <strong><code>payment_form_url</code></strong> - URL of PaySuper Checkout form.</p>
 
@@ -334,15 +346,30 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="/docs/payments/typed/#server-integration-with-paysuper-api">Types Checkout form parameters</a></li>
 </ul>
 
-<p><strong>Step 2.</strong> Embed an iframe or open received URL in a new window.</p>
+<p><strong>Step 2.</strong> Embed as an iframe or open the received URL in a browser as a new window.</p>
 
-<p>Sample code of embedded form:</p>
+<p><strong>Sample code of embedded form:</strong></p>
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">iframe</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{payment_form_url}&#34;</span>&gt;&lt;/<span style="color:#f92672">iframe</span>&gt;</code></pre></div>
 
-<h2 id="span-style-color-2e00a8-step-5-span-set-up-webhook-handling"><span style="color:#2e00a8;">Step 5.</span> Set up webhook handling</h2>
+<h2 id="span-style-color-2e00a8-step-5-span-set-up-a-webhook-handling"><span style="color:#2e00a8;">Step 5.</span> Set up a webhook handling</h2>
 
-<p>Handle actions and transaction states after the payment.</p>
+<p>The PaySuper system can send webhooks to your server for a set of events about transactions and user actions. Types of events described in the list notification types.</p>
+
+<p><strong>Set up webhooks for your project:</strong></p>
+
+<ol>
+<li><p>Configure URLs for all event types:</p>
+
+<p>СКРИНШОТ</p></li>
+
+<li><p>PaySuper signs the webhook events it sends to your endpoint, allowing you to validate that they were not sent by a third-party and prevent hacker attacks.
+To verify a webhook request, generate a signature and compare that to the value of the Authorization header.</p>
+
+<p><a href="ССЫЛКА НА API webhook">Learn more about how to check a digital signature.</a></p></li>
+
+<li><p>Respond with HTTP code 200 without a message body to acknowledge the receipt a webhook.</p></li>
+</ol>
 
 <hr />
 
@@ -398,7 +425,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="#client-integration-with-js-sdk">Client integration with JS SDK</a></li>
 <li><a href="#integration-with-paysuper-api">Integration with PaySuper API</a></li>
 </ul></li>
-<li><a href="#span-style-color-2e00a8-step-5-span-set-up-webhook-handling"><span style="color:#2e00a8;">Step 5.</span> Set up webhook handling</a></li>
+<li><a href="#span-style-color-2e00a8-step-5-span-set-up-a-webhook-handling"><span style="color:#2e00a8;">Step 5.</span> Set up a webhook handling</a></li>
 <li><a href="#questions">Questions?</a></li>
 </ul></li>
 </ul>
