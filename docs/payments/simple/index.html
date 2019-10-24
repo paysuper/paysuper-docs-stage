@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta property="og:title" content="Simple Checkout" />
 <meta property="og:description" content="Simple Checkout Integration with PaySuper JS SDK You can create an instance of a PaySuper Form on your website using this sample code.
  Use your IDs for the Project and Products found in your merchant account in the PaySuper Admin. To get the Project and Product IDs click on the Product from the Products list page and copy the ID from an opened page URL.
- Sample code of the Payment form with Token &lt;script&gt; function buyItems() { const paySuper = new PaySuper({ token: &#39;5cd5620f06ae110001509185&#39; }); paySuper." />
+ Sample code of the Payment form with Token const paySuper = new PaySuper({ token: &#39;5cd5620f06ae110001509185&#39; });  Sample code of the Payment form with order parameters const paySuper = new PaySuper({ project: &#39;5cd5624a06ae110001509186&#39;, amount: 50, currency: &#39;USD&#39; });  Integration with PaySuper API ПРИМЕР КОДА HTTP запроса с параметрами для simple checkout" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://docs.stg.pay.super.com/docs/payments/simple/" />
 
@@ -17,7 +17,7 @@
 <link rel="stylesheet" href="/book.min.1b994bd28c6ce2255f069b6bf6837b4d396307637fc48d61dcb2a6caac26e031.css" integrity="sha256-G5lL0oxs4iVfBptr9oN7TTljB2N/xI1h3LKmyqwm4DE=">
 
 
-<script defer src="/search.min.5dacef7cfb854bbfb9f349ed8e3cda1a1506fd9b463f7b6dad4837829fa91214.js" integrity="sha256-XazvfPuFS7&#43;580ntjjzaGhUG/ZtGP3ttrUg3gp&#43;pEhQ="></script>
+<script defer src="/search.min.30177add9457e999b46093608b40161342c9c36877f72da9902b05c670b29c50.js" integrity="sha256-MBd63ZRX6Zm0YJNgi0AWE0LJw2h39y2pkCsFxnCynFA="></script>
 
 <!--
 Made with Book Theme
@@ -120,33 +120,19 @@ https://github.com/alex-shpak/hugo-book
 
 <h3 id="sample-code-of-the-payment-form-with-token">Sample code of the Payment form with Token</h3>
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">script</span>&gt;
-<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">buyItems</span>() {
-    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">paySuper</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">PaySuper</span>({
-        <span style="color:#a6e22e">token</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;5cd5620f06ae110001509185&#39;</span>
-    });
-    
-    <span style="color:#a6e22e">paySuper</span>.<span style="color:#a6e22e">renderModal</span>();
-}
-&lt;/<span style="color:#f92672">script</span>&gt;
-
-&lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">onclick</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;buyItems()&#34;</span>&gt;BUY&lt;/<span style="color:#f92672">button</span>&gt;</code></pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">paySuper</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">PaySuper</span>({
+    <span style="color:#a6e22e">token</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;5cd5620f06ae110001509185&#39;</span>
+});
+</code></pre></div>
 
 <h3 id="sample-code-of-the-payment-form-with-order-parameters">Sample code of the Payment form with order parameters</h3>
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">script</span>&gt;
-    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">buyItems</span>() {
-        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">paySuper</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">PaySuper</span>({
-            <span style="color:#a6e22e">project</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;5cd5624a06ae110001509186&#39;</span>,
-            <span style="color:#a6e22e">amount</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">50</span>,
-            <span style="color:#a6e22e">currency</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;USD&#39;</span>
-        });
-
-        <span style="color:#a6e22e">paySuper</span>.<span style="color:#a6e22e">renderModal</span>();
-    }
-&lt;/<span style="color:#f92672">script</span>&gt;
-
-&lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">onclick</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;buyItems()&#34;</span>&gt;BUY&lt;/<span style="color:#f92672">button</span>&gt;</code></pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">paySuper</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">PaySuper</span>({
+    <span style="color:#a6e22e">project</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;5cd5624a06ae110001509186&#39;</span>,
+    <span style="color:#a6e22e">amount</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">50</span>,
+    <span style="color:#a6e22e">currency</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;USD&#39;</span>
+});
+</code></pre></div>
 
 <h2 id="integration-with-paysuper-api">Integration with PaySuper API</h2>
 
