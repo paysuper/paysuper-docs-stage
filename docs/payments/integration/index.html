@@ -3,19 +3,27 @@
 
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><meta property="og:title" content="Typed Checkout" />
-<meta property="og:description" content="Questions? Sales Our salespeople are pleasant and friendly. Leave your contact details, and we&rsquo;ll be back to you in no time.  Support We are always happy to help with a code, improve a guide or consider a feature.  GitHub The PaySuper Checkout Form, the JS SDK and even the server are available as a source code on our GitHub. You&rsquo;re welcome to explore the code and help us make PaySuper even better." />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><meta property="og:title" content="Client-Server Integration" />
+<meta property="og:description" content="Client-Server Integration with PaySuper API Client-side code
+Server-side code
+Step 1. Send a HTTP request to initiate a payment POST /api/v1/order
+ДОБАВИТЬ RUNKIT
+Step 2. Retrieve a response parameter payment_form_url - URL of PaySuper Checkout Form.
+Step 3. Show the Checkout Form:
+ Open the received URL in a browser as a new window
+ Integrate the the Checkout Form as iframe:
+  &lt;iframe src=&#34;{payment_form_url}&#34;&gt;&lt;/iframe&gt; Questions? Sales Our salespeople are pleasant and friendly." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://docs.stg.pay.super.com/docs/payments/typed/" />
+<meta property="og:url" content="https://docs.stg.pay.super.com/docs/payments/integration/" />
 
-<title>Typed Checkout | PaySuper docs</title>
+<title>Client-Server Integration | PaySuper docs</title>
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 
 
 <link rel="stylesheet" href="/book.min.1b994bd28c6ce2255f069b6bf6837b4d396307637fc48d61dcb2a6caac26e031.css" integrity="sha256-G5lL0oxs4iVfBptr9oN7TTljB2N/xI1h3LKmyqwm4DE=">
 
 
-<script defer src="/search.min.74fc4481228072ed81a1ab26873a5b86e0c9ef46c32c13a1f989e2e23c41fc53.js" integrity="sha256-dPxEgSKAcu2BoasmhzpbhuDJ70bDLBOh&#43;Yni4jxB/FM="></script>
+<script defer src="/search.min.6ef82f713d3aaae5acb9a50ca105819f305067a521a4fa99407735bc8782623a.js" integrity="sha256-bvgvcT06quWsuaUMoQWBnzBQZ6UhpPqZQHc1vIeCYjo="></script>
 
 <!--
 Made with Book Theme
@@ -24,6 +32,7 @@ https://github.com/alex-shpak/hugo-book
 
   
   <script src="https://cdn.pay.super.com/paysdk/v0.5.2/paysuper.js"></script>
+  <script src="https://embed.runkit.com"></script>
 </head>
 
 <body>
@@ -55,23 +64,15 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li><a href="/docs/payments/">Checkout Overview</a></li>
 <li><a href="/docs/payments/quick-start/">Quick Start</a></li>
-<li><a href="/docs/payments/simple/">Simple Checkout</a></li>
-<li><a href="/docs/payments/typed/"class=active>Typed Checkout</a></li>
+<li><a href="/docs/payments/token/">Tokenization</a></li>
+<li><a href="/docs/payments/sdk-integration/">Client-Only Integration</a></li>
+<li><a href="/docs/payments/integration/"class=active>Client-Server Integration</a></li>
 <li><a href="/docs/payments/fulfillment/">After the payment</a></li>
 <li><a href="/docs/payments/customization/">Customizing Checkout</a></li>
 <li><a href="/docs/payments/testing/">Testing</a></li>
 <li><a href="/docs/payments/live/">Going Live</a></li>
 </ul></li>
-<li><a href="/docs/api/"><strong>API Reference</strong></a>
-
-<ul>
-<li><a href="/docs/api/v1/authentication/">Authentication</a></li>
-<li><a href="/docs/api/v1/versioning/">Versioning</a></li>
-<li><a href="/docs/api/v1/errors/">Errors List</a></li>
-<li><a href="/docs/api/v1/compression/">Compression</a></li>
-<li><a href="/docs/api/v1/pagination/">Pagination</a></li>
-<li><a href="/docs/api/v1/">PaySuper API</a></li>
-</ul></li>
+<li><a href="/docs/api/"><strong>API Reference</strong></a></li>
 </ul>
 
 
@@ -98,11 +99,37 @@ https://github.com/alex-shpak/hugo-book
   <label for="menu-control">
     <img src="/svg/menu.svg" alt="Menu" />
   </label>
-  <strong>Typed Checkout</strong>
+  <strong>Client-Server Integration</strong>
 </header>
 
       
-<article class="markdown"><hr />
+<article class="markdown">
+
+<h1 id="client-server-integration-with-paysuper-api">Client-Server Integration with PaySuper API</h1>
+
+<hr />
+
+<p>Client-side code</p>
+
+<p>Server-side code</p>
+
+<p><strong>Step 1.</strong> Send a HTTP request to initiate a payment <a href="ССЫЛКА НА API метод в redoc">POST /api/v1/order</a></p>
+
+<p>ДОБАВИТЬ RUNKIT</p>
+
+<p><strong>Step 2.</strong> Retrieve a response parameter <strong><code>payment_form_url</code></strong> - URL of PaySuper Checkout Form.</p>
+
+<p><strong>Step 3.</strong> Show the Checkout Form:</p>
+
+<ul>
+<li><p>Open the received URL in a browser as a <strong>new window</strong></p></li>
+
+<li><p>Integrate the the Checkout Form as <strong>iframe</strong>:</p></li>
+</ul>
+
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#062873;font-weight:bold">iframe</span> <span style="color:#4070a0">src</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;{payment_form_url}&#34;</span>&gt;&lt;/<span style="color:#062873;font-weight:bold">iframe</span>&gt;</code></pre></div>
+
+<hr />
 
 <h2 id="questions">Questions?</h2>
 
@@ -127,6 +154,12 @@ https://github.com/alex-shpak/hugo-book
 </div>
 
 </div>
+
+<hr />
+
+<h2 id="not-a-developer">Not a developer?</h2>
+
+Our engineers will help you <a href="https://docs.google.com/forms/d/e/1FAIpQLScQPU83wKPkJeui_WvxGDoXWLDL4vyD8GsWNqf9-ccwDg3dEw/viewform">to integrate PaySuper Checkout</a> into your existing site or game in the best possible way.
 </article>
 
       
@@ -136,6 +169,14 @@ https://github.com/alex-shpak/hugo-book
 
     
   
+
+  <aside class="book-toc level-true fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#client-server-integration-with-paysuper-api">Client-Server Integration with PaySuper API</a></li>
+</ul>
+</nav>
+  </aside>
 
 
   </main>

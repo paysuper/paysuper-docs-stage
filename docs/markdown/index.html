@@ -16,7 +16,7 @@ Headings h1 Heading h2 Heading h3 Heading h4 Heading h5 Heading h6 Heading Notes
 <link rel="stylesheet" href="/book.min.1b994bd28c6ce2255f069b6bf6837b4d396307637fc48d61dcb2a6caac26e031.css" integrity="sha256-G5lL0oxs4iVfBptr9oN7TTljB2N/xI1h3LKmyqwm4DE=">
 
 
-<script defer src="/search.min.74fc4481228072ed81a1ab26873a5b86e0c9ef46c32c13a1f989e2e23c41fc53.js" integrity="sha256-dPxEgSKAcu2BoasmhzpbhuDJ70bDLBOh&#43;Yni4jxB/FM="></script>
+<script defer src="/search.min.6ef82f713d3aaae5acb9a50ca105819f305067a521a4fa99407735bc8782623a.js" integrity="sha256-bvgvcT06quWsuaUMoQWBnzBQZ6UhpPqZQHc1vIeCYjo="></script>
 
 <!--
 Made with Book Theme
@@ -25,6 +25,7 @@ https://github.com/alex-shpak/hugo-book
 
   
   <script src="https://cdn.pay.super.com/paysdk/v0.5.2/paysuper.js"></script>
+  <script src="https://embed.runkit.com"></script>
 </head>
 
 <body>
@@ -56,23 +57,15 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li><a href="/docs/payments/">Checkout Overview</a></li>
 <li><a href="/docs/payments/quick-start/">Quick Start</a></li>
-<li><a href="/docs/payments/simple/">Simple Checkout</a></li>
-<li><a href="/docs/payments/typed/">Typed Checkout</a></li>
+<li><a href="/docs/payments/token/">Tokenization</a></li>
+<li><a href="/docs/payments/sdk-integration/">Client-Only Integration</a></li>
+<li><a href="/docs/payments/integration/">Client-Server Integration</a></li>
 <li><a href="/docs/payments/fulfillment/">After the payment</a></li>
 <li><a href="/docs/payments/customization/">Customizing Checkout</a></li>
 <li><a href="/docs/payments/testing/">Testing</a></li>
 <li><a href="/docs/payments/live/">Going Live</a></li>
 </ul></li>
-<li><a href="/docs/api/"><strong>API Reference</strong></a>
-
-<ul>
-<li><a href="/docs/api/v1/authentication/">Authentication</a></li>
-<li><a href="/docs/api/v1/versioning/">Versioning</a></li>
-<li><a href="/docs/api/v1/errors/">Errors List</a></li>
-<li><a href="/docs/api/v1/compression/">Compression</a></li>
-<li><a href="/docs/api/v1/pagination/">Pagination</a></li>
-<li><a href="/docs/api/v1/">PaySuper API</a></li>
-</ul></li>
+<li><a href="/docs/api/"><strong>API Reference</strong></a></li>
 </ul>
 
 
@@ -147,11 +140,11 @@ nativum</a>.</p>
 
 <hr />
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
-  <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#e6db74">&#34;5ca5124868add448289e432e&#34;</span>,
-  <span style="color:#f92672">&#34;project_id&#34;</span>: <span style="color:#e6db74">&#34;5be2e16701d96d00012d26c3&#34;</span>,
-  <span style="color:#f92672">&#34;description&#34;</span>: {
-    <span style="color:#f92672">&#34;en&#34;</span>: <span style="color:#e6db74">&#34;GTA 3 description&#34;</span>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#062873;font-weight:bold">&#34;id&#34;</span>: <span style="color:#4070a0">&#34;5ca5124868add448289e432e&#34;</span>,
+  <span style="color:#062873;font-weight:bold">&#34;project_id&#34;</span>: <span style="color:#4070a0">&#34;5be2e16701d96d00012d26c3&#34;</span>,
+  <span style="color:#062873;font-weight:bold">&#34;description&#34;</span>: {
+    <span style="color:#062873;font-weight:bold">&#34;en&#34;</span>: <span style="color:#4070a0">&#34;GTA 3 description&#34;</span>
   }
 }</code></pre></div>
 
@@ -199,20 +192,20 @@ nativum</a>.</p>
 <hr />
 
 <p>Columns help organize shorter pieces of content horizontally for readability.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{&lt; <span style="color:#f92672">columns</span> &gt;}} <span style="color:#75715e">&lt;!-- begin columns block --&gt;</span>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{&lt; <span style="color:#062873;font-weight:bold">columns</span> &gt;}} <span style="color:#60a0b0;font-style:italic">&lt;!-- begin columns block --&gt;</span>
 # Left Content
 Lorem markdownum insigne...
 
-&lt;<span style="color:#f92672">---</span>&gt; <span style="color:#75715e">&lt;!-- magic sparator, between columns --&gt;</span>
+&lt;<span style="color:#062873;font-weight:bold">---</span>&gt; <span style="color:#60a0b0;font-style:italic">&lt;!-- magic sparator, between columns --&gt;</span>
 
 # Mid Content
 Lorem markdownum insigne...
 
-&lt;<span style="color:#f92672">---</span>&gt; <span style="color:#75715e">&lt;!-- magic sparator, between columns --&gt;</span>
+&lt;<span style="color:#062873;font-weight:bold">---</span>&gt; <span style="color:#60a0b0;font-style:italic">&lt;!-- magic sparator, between columns --&gt;</span>
 
 # Right Content
 Lorem markdownum insigne...
-{{&lt; /<span style="color:#f92672">columns</span> &gt;}}</code></pre></div>
+{{&lt; /<span style="color:#062873;font-weight:bold">columns</span> &gt;}}</code></pre></div>
 <h2 id="example">Example</h2>
 
 <div class="book-columns flex flex-wrap">
@@ -251,11 +244,11 @@ Miseratus fonte Ditis conubia.
 
 <p>Hint shortcode can be used as hint/alerts/notification block.<br />
 There are 3 colors to choose: <code>info</code>, <code>warning</code> and <code>danger</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl"><span style="color:#75715e">{{</span><span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">hint</span> <span style="color:#f92672">[</span><span style="color:#a6e22e">info</span><span style="color:#f92672">|</span><span style="color:#a6e22e">warning</span><span style="color:#f92672">|</span><span style="color:#a6e22e">danger</span><span style="color:#f92672">]</span> <span style="color:#f92672">&gt;</span><span style="color:#75715e">}}</span>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl"><span style="color:#007020">{{</span><span style="color:#666">&lt;</span> <span style="color:#4070a0">hint</span> <span style="color:#666">[</span><span style="color:#4070a0">info</span><span style="color:#666">|</span><span style="color:#4070a0">warning</span><span style="color:#666">|</span><span style="color:#4070a0">danger</span><span style="color:#666">]</span> <span style="color:#666">&gt;</span><span style="color:#007020">}}</span>
 **Markdown content**  
 Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat
 stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa
-<span style="color:#75715e">{{</span><span style="color:#f92672">&lt;</span> <span style="color:#f92672">/</span><span style="color:#a6e22e">hint</span> <span style="color:#f92672">&gt;</span><span style="color:#75715e">}}</span></code></pre></div>
+<span style="color:#007020">{{</span><span style="color:#666">&lt;</span> <span style="color:#666">/</span><span style="color:#4070a0">hint</span> <span style="color:#666">&gt;</span><span style="color:#007020">}}</span></code></pre></div>
 <h2 id="example-1">Example</h2>
 
 <blockquote class="book-hint info">
@@ -294,8 +287,8 @@ stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa
 <hr />
 
 <p>Buttons are styled links that can lead to local page or external link ad contain CSS styles.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl"><span style="color:#75715e">{{</span><span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">button</span> <span style="color:#a6e22e">relref</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/&#34;</span> <span style="color:#f92672">[</span><span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;...&#34;</span><span style="color:#f92672">]</span> <span style="color:#f92672">&gt;</span><span style="color:#75715e">}}</span>Get Home<span style="color:#75715e">{{</span><span style="color:#f92672">&lt;</span> <span style="color:#f92672">/</span><span style="color:#a6e22e">button</span> <span style="color:#f92672">&gt;</span><span style="color:#75715e">}}</span>
-<span style="color:#75715e">{{</span><span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">button</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://github.com/alex-shpak/hugo-book&#34;</span> <span style="color:#f92672">&gt;</span><span style="color:#75715e">}}</span>Contribute<span style="color:#75715e">{{</span><span style="color:#f92672">&lt;</span> <span style="color:#f92672">/</span><span style="color:#a6e22e">button</span> <span style="color:#f92672">&gt;</span><span style="color:#75715e">}}</span></code></pre></div>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl"><span style="color:#007020">{{</span><span style="color:#666">&lt;</span> <span style="color:#4070a0">button</span> <span style="color:#4070a0">relref</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;/&#34;</span> <span style="color:#666">[</span><span style="color:#4070a0">class</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;...&#34;</span><span style="color:#666">]</span> <span style="color:#666">&gt;</span><span style="color:#007020">}}</span>Get Home<span style="color:#007020">{{</span><span style="color:#666">&lt;</span> <span style="color:#666">/</span><span style="color:#4070a0">button</span> <span style="color:#666">&gt;</span><span style="color:#007020">}}</span>
+<span style="color:#007020">{{</span><span style="color:#666">&lt;</span> <span style="color:#4070a0">button</span> <span style="color:#4070a0">href</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;https://github.com/alex-shpak/hugo-book&#34;</span> <span style="color:#666">&gt;</span><span style="color:#007020">}}</span>Contribute<span style="color:#007020">{{</span><span style="color:#666">&lt;</span> <span style="color:#666">/</span><span style="color:#4070a0">button</span> <span style="color:#666">&gt;</span><span style="color:#007020">}}</span></code></pre></div>
 <h2 id="example-2">Example</h2>
 
 <p>
@@ -329,10 +322,10 @@ stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa
 <h2 id="example-3">Example</h2>
 
 <h3 id="default">Default</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl"><span style="color:#75715e">{{</span><span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">expand</span> <span style="color:#f92672">&gt;</span><span style="color:#75715e">}}</span>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl"><span style="color:#007020">{{</span><span style="color:#666">&lt;</span> <span style="color:#4070a0">expand</span> <span style="color:#666">&gt;</span><span style="color:#007020">}}</span>
 ## Markdown content
 Lorem markdownum insigne...
-<span style="color:#75715e">{{</span><span style="color:#f92672">&lt;</span> <span style="color:#f92672">/</span><span style="color:#a6e22e">expand</span> <span style="color:#f92672">&gt;</span><span style="color:#75715e">}}</span></code></pre></div>
+<span style="color:#007020">{{</span><span style="color:#666">&lt;</span> <span style="color:#666">/</span><span style="color:#4070a0">expand</span> <span style="color:#666">&gt;</span><span style="color:#007020">}}</span></code></pre></div>
 <div class="book-expand">
   <label>
     <div class="book-expand-head flex justify-between">
@@ -350,10 +343,10 @@ Lorem markdownum insigne...
 
 
 <h3 id="with-custom-label">With Custom Label</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl"><span style="color:#75715e">{{</span><span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">expand</span> <span style="color:#e6db74">&#34;Custom Label&#34;</span> <span style="color:#e6db74">&#34;...&#34;</span> <span style="color:#f92672">&gt;</span><span style="color:#75715e">}}</span>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl"><span style="color:#007020">{{</span><span style="color:#666">&lt;</span> <span style="color:#4070a0">expand</span> <span style="color:#4070a0">&#34;Custom Label&#34;</span> <span style="color:#4070a0">&#34;...&#34;</span> <span style="color:#666">&gt;</span><span style="color:#007020">}}</span>
 ## Markdown content
 Lorem markdownum insigne...
-<span style="color:#75715e">{{</span><span style="color:#f92672">&lt;</span> <span style="color:#f92672">/</span><span style="color:#a6e22e">expand</span> <span style="color:#f92672">&gt;</span><span style="color:#75715e">}}</span></code></pre></div>
+<span style="color:#007020">{{</span><span style="color:#666">&lt;</span> <span style="color:#666">/</span><span style="color:#4070a0">expand</span> <span style="color:#666">&gt;</span><span style="color:#007020">}}</span></code></pre></div>
 <div class="book-expand">
   <label>
     <div class="book-expand-head flex justify-between">
@@ -378,11 +371,11 @@ Miseratus fonte Ditis conubia.
 <hr />
 
 <p>Tabs let you organize content by context, for example installation instructions for each supported platform.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl"><span style="color:#75715e">{{</span><span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">tabs</span> <span style="color:#e6db74">&#34;uniqueid&#34;</span> <span style="color:#f92672">&gt;</span><span style="color:#75715e">}}</span>
-<span style="color:#75715e">{{</span><span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">tab</span> <span style="color:#e6db74">&#34;MacOS&#34;</span> <span style="color:#f92672">&gt;</span><span style="color:#75715e">}}</span> # MacOS Content <span style="color:#75715e">{{</span><span style="color:#f92672">&lt;</span> <span style="color:#f92672">/</span><span style="color:#a6e22e">tab</span> <span style="color:#f92672">&gt;</span><span style="color:#75715e">}}</span>
-<span style="color:#75715e">{{</span><span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">tab</span> <span style="color:#e6db74">&#34;Linux&#34;</span> <span style="color:#f92672">&gt;</span><span style="color:#75715e">}}</span> # Linux Content <span style="color:#75715e">{{</span><span style="color:#f92672">&lt;</span> <span style="color:#f92672">/</span><span style="color:#a6e22e">tab</span> <span style="color:#f92672">&gt;</span><span style="color:#75715e">}}</span>
-<span style="color:#75715e">{{</span><span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">tab</span> <span style="color:#e6db74">&#34;Windows&#34;</span> <span style="color:#f92672">&gt;</span><span style="color:#75715e">}}</span> # Windows Content <span style="color:#75715e">{{</span><span style="color:#f92672">&lt;</span> <span style="color:#f92672">/</span><span style="color:#a6e22e">tab</span> <span style="color:#f92672">&gt;</span><span style="color:#75715e">}}</span>
-<span style="color:#75715e">{{</span><span style="color:#f92672">&lt;</span> <span style="color:#f92672">/</span><span style="color:#a6e22e">tabs</span> <span style="color:#f92672">&gt;</span><span style="color:#75715e">}}</span></code></pre></div>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl"><span style="color:#007020">{{</span><span style="color:#666">&lt;</span> <span style="color:#4070a0">tabs</span> <span style="color:#4070a0">&#34;uniqueid&#34;</span> <span style="color:#666">&gt;</span><span style="color:#007020">}}</span>
+<span style="color:#007020">{{</span><span style="color:#666">&lt;</span> <span style="color:#4070a0">tab</span> <span style="color:#4070a0">&#34;MacOS&#34;</span> <span style="color:#666">&gt;</span><span style="color:#007020">}}</span> # MacOS Content <span style="color:#007020">{{</span><span style="color:#666">&lt;</span> <span style="color:#666">/</span><span style="color:#4070a0">tab</span> <span style="color:#666">&gt;</span><span style="color:#007020">}}</span>
+<span style="color:#007020">{{</span><span style="color:#666">&lt;</span> <span style="color:#4070a0">tab</span> <span style="color:#4070a0">&#34;Linux&#34;</span> <span style="color:#666">&gt;</span><span style="color:#007020">}}</span> # Linux Content <span style="color:#007020">{{</span><span style="color:#666">&lt;</span> <span style="color:#666">/</span><span style="color:#4070a0">tab</span> <span style="color:#666">&gt;</span><span style="color:#007020">}}</span>
+<span style="color:#007020">{{</span><span style="color:#666">&lt;</span> <span style="color:#4070a0">tab</span> <span style="color:#4070a0">&#34;Windows&#34;</span> <span style="color:#666">&gt;</span><span style="color:#007020">}}</span> # Windows Content <span style="color:#007020">{{</span><span style="color:#666">&lt;</span> <span style="color:#666">/</span><span style="color:#4070a0">tab</span> <span style="color:#666">&gt;</span><span style="color:#007020">}}</span>
+<span style="color:#007020">{{</span><span style="color:#666">&lt;</span> <span style="color:#666">/</span><span style="color:#4070a0">tabs</span> <span style="color:#666">&gt;</span><span style="color:#007020">}}</span></code></pre></div>
 <h2 id="example-4">Example</h2>
 
 
@@ -453,12 +446,12 @@ Miseratus fonte Ditis conubia.</p>
 <div class="book-columns flex flex-wrap">
   
   <div class="flex-even markdown-inner">
-    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-latex" data-lang="latex">{{&lt; katex [class=&#34;text-center&#34;] &gt;}}
-x = <span style="color:#66d9ef">\begin</span>{cases}
-   a &amp;<span style="color:#66d9ef">\text</span>{if } b <span style="color:#66d9ef">\\</span>
-   c &amp;<span style="color:#66d9ef">\text</span>{if } d
-<span style="color:#66d9ef">\end</span>{cases}
-{{&lt; /katex &gt;}}</code></pre></div>
+    <div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-latex" data-lang="latex"><span style="color:#007020">{{</span>&lt; katex [class=&#34;text-center&#34;] &gt;<span style="color:#007020">}}</span>
+x = <span style="color:#007020;font-weight:bold">\begin</span><span style="color:#007020">{</span>cases<span style="color:#007020">}</span>
+   a <span style="color:#007020">&amp;</span><span style="color:#007020;font-weight:bold">\text</span><span style="color:#007020">{</span>if <span style="color:#007020">}</span> b <span style="color:#007020;font-weight:bold">\\</span>
+   c <span style="color:#007020">&amp;</span><span style="color:#007020;font-weight:bold">\text</span><span style="color:#007020">{</span>if <span style="color:#007020">}</span> d
+<span style="color:#007020;font-weight:bold">\end</span><span style="color:#007020">{</span>cases<span style="color:#007020">}</span>
+<span style="color:#007020">{{</span>&lt; /katex &gt;<span style="color:#007020">}}</span></code></pre></div>
   </div>
   
   <div class="flex-even markdown-inner">
@@ -491,7 +484,7 @@ x = \begin{cases}
 <div class="book-columns flex flex-wrap">
   
   <div class="flex-even markdown-inner">
-    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl"><span style="color:#75715e">{{</span><span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">mermaid</span> <span style="color:#f92672">[</span><span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text-center&#34;</span><span style="color:#f92672">]&gt;</span><span style="color:#75715e">}}</span>
+    <div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl"><span style="color:#007020">{{</span><span style="color:#666">&lt;</span> <span style="color:#4070a0">mermaid</span> <span style="color:#666">[</span><span style="color:#4070a0">class</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;text-center&#34;</span><span style="color:#666">]&gt;</span><span style="color:#007020">}}</span>
 sequenceDiagram
     Alice-&gt;&gt;Bob: Hello Bob, how are you?
     alt is sick
@@ -502,7 +495,7 @@ sequenceDiagram
     opt Extra response
         Bob-&gt;&gt;Alice: Thanks for asking
     end
-<span style="color:#75715e">{{</span><span style="color:#f92672">&lt;</span> <span style="color:#f92672">/</span><span style="color:#a6e22e">mermaid</span> <span style="color:#f92672">&gt;</span><span style="color:#75715e">}}</span></code></pre></div>
+<span style="color:#007020">{{</span><span style="color:#666">&lt;</span> <span style="color:#666">/</span><span style="color:#4070a0">mermaid</span> <span style="color:#666">&gt;</span><span style="color:#007020">}}</span></code></pre></div>
   </div>
   
   <div class="flex-even markdown-inner">

@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta property="og:title" content="Quick start" />
-<meta property="og:description" content="Payments Flow User Flow   Integration Flow   Quick start Step 1. Register a PaySuper Company account  Registration and onboarding     Sign up. Verify your email address from a delivered confirmation email. Follow several steps of a brief Welcome Onboarding. It&rsquo;s required to fill in the Contacts in the Company Onboarding before creating the first Project.  When you are ready to start selling you will need to fill in all your company details in the Company Onboarding with the signed documents." />
+<meta property="og:description" content="Payments Flow User Flow   Integration Flow   Quick start Step 1 Register a PaySuper Company account  Registration and onboarding     Sign up. Verify your email address from a delivered confirmation email. Follow several steps of a brief Welcome Onboarding. It&rsquo;s required to fill in the Banking info in the Company Onboarding to enable creating a project.  When you are ready to start selling you will need to fill in all your company details in the Company Onboarding and the signed documents in the License Agreement." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://docs.stg.pay.super.com/docs/payments/quick-start/" />
 
@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="/book.min.1b994bd28c6ce2255f069b6bf6837b4d396307637fc48d61dcb2a6caac26e031.css" integrity="sha256-G5lL0oxs4iVfBptr9oN7TTljB2N/xI1h3LKmyqwm4DE=">
 
 
-<script defer src="/search.min.74fc4481228072ed81a1ab26873a5b86e0c9ef46c32c13a1f989e2e23c41fc53.js" integrity="sha256-dPxEgSKAcu2BoasmhzpbhuDJ70bDLBOh&#43;Yni4jxB/FM="></script>
+<script defer src="/search.min.6ef82f713d3aaae5acb9a50ca105819f305067a521a4fa99407735bc8782623a.js" integrity="sha256-bvgvcT06quWsuaUMoQWBnzBQZ6UhpPqZQHc1vIeCYjo="></script>
 
 <!--
 Made with Book Theme
@@ -24,6 +24,7 @@ https://github.com/alex-shpak/hugo-book
 
   
   <script src="https://cdn.pay.super.com/paysdk/v0.5.2/paysuper.js"></script>
+  <script src="https://embed.runkit.com"></script>
 </head>
 
 <body>
@@ -55,23 +56,15 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li><a href="/docs/payments/">Checkout Overview</a></li>
 <li><a href="/docs/payments/quick-start/"class=active>Quick Start</a></li>
-<li><a href="/docs/payments/simple/">Simple Checkout</a></li>
-<li><a href="/docs/payments/typed/">Typed Checkout</a></li>
+<li><a href="/docs/payments/token/">Tokenization</a></li>
+<li><a href="/docs/payments/sdk-integration/">Client-Only Integration</a></li>
+<li><a href="/docs/payments/integration/">Client-Server Integration</a></li>
 <li><a href="/docs/payments/fulfillment/">After the payment</a></li>
 <li><a href="/docs/payments/customization/">Customizing Checkout</a></li>
 <li><a href="/docs/payments/testing/">Testing</a></li>
 <li><a href="/docs/payments/live/">Going Live</a></li>
 </ul></li>
-<li><a href="/docs/api/"><strong>API Reference</strong></a>
-
-<ul>
-<li><a href="/docs/api/v1/authentication/">Authentication</a></li>
-<li><a href="/docs/api/v1/versioning/">Versioning</a></li>
-<li><a href="/docs/api/v1/errors/">Errors List</a></li>
-<li><a href="/docs/api/v1/compression/">Compression</a></li>
-<li><a href="/docs/api/v1/pagination/">Pagination</a></li>
-<li><a href="/docs/api/v1/">PaySuper API</a></li>
-</ul></li>
+<li><a href="/docs/api/"><strong>API Reference</strong></a></li>
 </ul>
 
 
@@ -126,7 +119,7 @@ https://github.com/alex-shpak/hugo-book
 
 <hr />
 
-<h2 id="span-style-color-2e00a8-step-1-span-register-a-paysuper-company-account"><span style="color:#2e00a8;">Step 1.</span> Register a PaySuper Company account</h2>
+<h2 id="step-1-register-a-paysuper-company-account"><strong>Step 1</strong> Register a PaySuper Company account</h2>
 
 <div class="book-expand">
   <label>
@@ -140,13 +133,13 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="https://paysupermgmt.tst.protocol.one">Sign up</a>.</li>
 <li>Verify your email address from a delivered confirmation email.</li>
 <li>Follow several steps of a brief <a href="https://paysupermgmt.tst.protocol.one/profile">Welcome Onboarding</a>.</li>
-<li>It&rsquo;s required to fill in the Contacts in the <a href="https://paysupermgmt.tst.protocol.one/company">Company Onboarding</a> before creating the first Project.</li>
+<li>It&rsquo;s required to fill in the Banking info in the <a href="https://paysupermgmt.tst.protocol.one/company">Company Onboarding</a> to enable creating a project.</li>
 </ol>
 
 <blockquote class="book-hint info">
-  <p>When you are ready to start selling you will need to fill in all your company details in the <a href="https://paysupermgmt.tst.protocol.one/company">Company Onboarding</a> with the signed documents.</p>
+  <p>When you are ready to start selling you will need to fill in all your company details in the <a href="https://paysupermgmt.tst.protocol.one/company">Company Onboarding</a> and the signed documents in the License Agreement.</p>
 
-<p>We manually check each new account to ensure that our platform is attended only by companies who is related to the gaming industry, this allows us to provide maximum features and stability to all our users.</p>
+<p>Before sign the documents we manually check each new account to ensure that our platform is attended only by companies who are related to the gaming industry, this allows us to provide maximum features and stability to all our users.</p>
 
 </blockquote>
 
@@ -155,7 +148,7 @@ https://github.com/alex-shpak/hugo-book
 </div>
 
 
-<h2 id="span-style-color-2e00a8-step-2-span-set-up-a-project"><span style="color:#2e00a8;">Step 2.</span> Set up a Project</h2>
+<h2 id="step-2-set-up-a-project"><strong>Step 2</strong> Set up a Project</h2>
 
 <p>Having a single project is enough to start selling.</p>
 
@@ -261,136 +254,21 @@ https://github.com/alex-shpak/hugo-book
 </div>
 
 
-<h2 id="span-style-color-2e00a8-step-3-span-create-a-token-or-order-id"><span style="color:#2e00a8;">Step 3.</span> Create a Token or Order ID</h2>
+<h2 id="step-3-set-up-a-checkout-form"><strong>Step 3</strong> Set up a Checkout Form</h2>
 
-<p>You can obtain a Token to integrate with the Checkout Form. The Token is a secure string that encrypts all order parameters which identifies a user and project.</p>
+<p>Use Checkout to collect <a href="/docs/payments/#simple-checkout">one-time payments</a> or to sell <a href="/docs/payments/#typed-checkout">products defined in the Project</a>.</p>
 
-<p><strong>Token-based features:</strong></p>
+<h3 id="integration-on-client-side-docs-payments-sdk-integration"><a href="/docs/payments/sdk-integration/">Integration on client-side</a></h3>
 
-<ul>
-<li><strong>Instantly redirect from anywhere of your game application</strong>: You can create a token after a user registered or logged in your game and instantly redirect the user to the Checkout Form when the user intent a payment.</li>
-<li><strong>The pre-filled information in a payment form</strong>: Token can encrypt all required information about your user intent to pay. The Checkout Form is pre-filled in this case.</li>
-</ul>
+<p>The client-only integration lets you accept online payments using only frontend code PaySuper JS SDK. The Checkout Form can be embedded as an <a href="ССЫЛКА на метод renderPage">iframe</a> or <a href="ССЫЛКА на метод renderModal">modal window</a>.</p>
 
-<p><strong>To create a Token:</strong></p>
+<h3 id="integration-on-client-and-server-side-docs-payments-integration"><a href="/docs/payments/integration/">Integration on client and server-side</a></h3>
 
-<p>Send the request <strong><code>POST /api/v1/tokens</code></strong>. Both the request and the response are in JSON format.</p>
+<p>You can also integrate on a server-side without PaySuper SJ SDK for other reasons. Checkout Form can be embedded as an <a href="ССЫЛКА">iframe</a> or <a href="ССЫЛКА">new window</a>.</p>
 
-<p>ПРИМЕР ТОКЕНА с обязательными параметрами для ключа и пользователя Вставьте сюда <a href="https://runkit.com/home">https://runkit.com/home</a> пример с созданием токена</p>
+<h2 id="step-4-after-the-payment"><strong>Step 4</strong> After the payment</h2>
 
-<p><strong>Order-based features:</strong></p>
-
-<ul>
-<li><strong>Request a payment order on-demand:</strong>  It is best suited for e-store where a user creates a product cart.</li>
-</ul>
-
-<p><strong>To create a payment Order ID:</strong></p>
-
-<p>Send the request <strong><code>POST /api/v1/order</code></strong>. Both the request and the response are in JSON format.</p>
-
-<p>ПОКАЗАТЬ ПРИМЕР С ПАРАМЕТРАМИ для type=key</p>
-
-<h2 id="span-style-color-2e00a8-step-4-span-set-up-a-checkout-form"><span style="color:#2e00a8;">Step 4.</span> Set up a Checkout Form</h2>
-
-<p>Checkout Form has a flexible integration on all your available platforms:</p>
-
-<ul>
-<li><strong>Iframe</strong></li>
-<li><strong>Embedded</strong> (only for the integration with <a href="https://github.com/paysuper/paysuper-js-sdk">PaySuper JS SDK</a>)</li>
-<li><strong>New window</strong> (only for the integration with <a href="/docs/api/">PaySuper API</a>)</li>
-</ul>
-
-<h3 id="integration-with-paysuper-js-sdk">Integration with PaySuper JS SDK</h3>
-
-<p>You can use PaySuper JavaScript SDK to create an instance of a Payment Form with just a few lines of code.</p>
-
-<p><strong>Step 1.</strong> To get started, include the following script tag on your website - always load it directly from <code>https://cdn.pay.super.com</code>:</p>
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.pay.super.com/paysdk/latest/paysuper.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;</code></pre></div>
-
-<p><strong>Step 2.</strong> Create an instance of the PaySuper form to initiate the payment process:</p>
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">script</span>&gt;
-<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">buyItems</span>() {
-    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">paySuper</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">PaySuper</span>({
-        <span style="color:#a6e22e">token</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;5cd5620f06ae110001509185&#39;</span>
-    });
-
-    <span style="color:#a6e22e">paySuper</span>.<span style="color:#a6e22e">renderModal</span>();
-}
-&lt;/<span style="color:#f92672">script</span>&gt;
-
-&lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">onclick</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;buyItems()&#34;</span>&gt;BUY&lt;/<span style="color:#f92672">button</span>&gt;</code></pre></div>
-
-<p><a href="https://github.com/paysuper/paysuper-js-sdk/tree/master#paysuper-options">Full list of PaySuper parameters</a></p>
-
-<p>See the sample codes of the Checkout Form for a Simple Checkout or products:</p>
-
-<ul>
-<li><a href="/docs/payments/simple/#integration-with-js-sdk">Simple Checkout form parameters</a></li>
-<li><a href="/docs/payments/typed/#integration-with-js-sdk">Typed Checkout form parameters</a></li>
-</ul>
-
-<p><strong>Step 3.</strong> Display the form in a modal window or iframe:</p>
-
-<p><strong>Display the Checkout form in a modal window anywhere of your platform</strong></p>
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">paySuper</span>.<span style="color:#a6e22e">renderModal</span>();
-</code></pre></div>
-
-<p><strong>Display the Checkout form in an iframe</strong></p>
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">paySuper</span>.<span style="color:#a6e22e">renderPage</span>();
-</code></pre></div>
-
-<p><strong>Step 4.</strong> Handle the purchase events</p>
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">paySuper</span>.<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#39;paymentCompleted&#39;</span>, <span style="color:#66d9ef">function</span>() {
-      <span style="color:#75715e">// You can show a message about payment is completed
-</span><span style="color:#75715e"></span>})
-</code></pre></div>
-
-<p><a href="https://github.com/paysuper/paysuper-js-sdk#paysuper-events">Full events list in the expected order of execution</a></p>
-
-<hr />
-
-<h3 id="integration-with-paysuper-api">Integration with PaySuper API</h3>
-
-<p>You can follow these steps if you want to integrate the Checkout Form without PaySuper SJ SDK for other reasons.</p>
-
-<p><strong>Step 1.</strong> Send a HTTP request to initiate a payment <a href="ССЫЛКА НА API метод в redoc">POST /api/v1/order</a> and retrieve a response parameter <strong><code>payment_form_url</code></strong> - URL of PaySuper Checkout Form.</p>
-
-<p>See the sample codes of the Checkout Form for a Simple Checkout or products:</p>
-
-<ul>
-<li><a href="/docs/payments/simple/#integration-with-paysuper-api">Simple Checkout form parameters</a></li>
-<li><a href="/docs/payments/typed/#integration-with-paysuper-api">Types Checkout form parameters</a></li>
-</ul>
-
-<p><strong>Step 2.</strong> Embed as an iframe or open the received URL in a browser as a new window.</p>
-
-<p><strong>Sample code of embedded form:</strong></p>
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">iframe</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{payment_form_url}&#34;</span>&gt;&lt;/<span style="color:#f92672">iframe</span>&gt;</code></pre></div>
-
-<h2 id="span-style-color-2e00a8-step-5-span-set-up-a-webhook-handling"><span style="color:#2e00a8;">Step 5.</span> Set up a webhook handling</h2>
-
-<p>The PaySuper system can send webhooks to your server for a set of events about transactions and user actions. Types of events described in <a href="ССЫлка на апи вебхуков">the list notification types</a>.</p>
-
-<p><strong>Set up webhooks for your project:</strong></p>
-
-<ol>
-<li><p>Configure URLs for all event types:</p>
-
-<p>СКРИНШОТ</p></li>
-
-<li><p>PaySuper signs the webhook events it sends to your endpoint, allowing you to validate that they were not sent by a third-party and prevent hacker attacks.
-To verify a webhook request, generate a signature and compare that to the value of the Authorization header.</p>
-
-<p><a href="ССЫЛКА НА API webhook">Learn more about how to check a digital signature.</a></p></li>
-
-<li><p>Respond with HTTP code 200 without a message body to acknowledge the receipt a webhook.</p></li>
-</ol>
+<p>Once payment is successful, you should fulfill the customer’s purchase. You can use <a href="ССЫЛКА">webhooks</a> to fulfill the purchase. For more details about handling purchase fulfillment with Checkout, see <a href="/docs/payments/fulfillment/">After the payment</a>.</p>
 
 <h2 id="next-steps">Next steps</h2>
 
@@ -434,6 +312,12 @@ To verify a webhook request, generate a signature and compare that to the value 
 </div>
 
 </div>
+
+<hr />
+
+<h2 id="not-a-developer">Not a developer?</h2>
+
+Our engineers will help you <a href="https://docs.google.com/forms/d/e/1FAIpQLScQPU83wKPkJeui_WvxGDoXWLDL4vyD8GsWNqf9-ccwDg3dEw/viewform">to integrate PaySuper Checkout</a> into your existing site or game in the best possible way.
 </article>
 
       
@@ -454,15 +338,14 @@ To verify a webhook request, generate a signature and compare that to the value 
 </ul></li>
 <li><a href="#quick-start">Quick start</a>
 <ul>
-<li><a href="#span-style-color-2e00a8-step-1-span-register-a-paysuper-company-account"><span style="color:#2e00a8;">Step 1.</span> Register a PaySuper Company account</a></li>
-<li><a href="#span-style-color-2e00a8-step-2-span-set-up-a-project"><span style="color:#2e00a8;">Step 2.</span> Set up a Project</a></li>
-<li><a href="#span-style-color-2e00a8-step-3-span-create-a-token-or-order-id"><span style="color:#2e00a8;">Step 3.</span> Create a Token or Order ID</a></li>
-<li><a href="#span-style-color-2e00a8-step-4-span-set-up-a-checkout-form"><span style="color:#2e00a8;">Step 4.</span> Set up a Checkout Form</a>
+<li><a href="#step-1-register-a-paysuper-company-account"><strong>Step 1</strong> Register a PaySuper Company account</a></li>
+<li><a href="#step-2-set-up-a-project"><strong>Step 2</strong> Set up a Project</a></li>
+<li><a href="#step-3-set-up-a-checkout-form"><strong>Step 3</strong> Set up a Checkout Form</a>
 <ul>
-<li><a href="#integration-with-paysuper-js-sdk">Integration with PaySuper JS SDK</a></li>
-<li><a href="#integration-with-paysuper-api">Integration with PaySuper API</a></li>
+<li><a href="#integration-on-client-side-docs-payments-sdk-integration"><a href="/docs/payments/sdk-integration/">Integration on client-side</a></a></li>
+<li><a href="#integration-on-client-and-server-side-docs-payments-integration"><a href="/docs/payments/integration/">Integration on client and server-side</a></a></li>
 </ul></li>
-<li><a href="#span-style-color-2e00a8-step-5-span-set-up-a-webhook-handling"><span style="color:#2e00a8;">Step 5.</span> Set up a webhook handling</a></li>
+<li><a href="#step-4-after-the-payment"><strong>Step 4</strong> After the payment</a></li>
 <li><a href="#next-steps">Next steps</a></li>
 </ul></li>
 </ul>

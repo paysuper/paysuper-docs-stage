@@ -3,12 +3,14 @@
 
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><meta property="og:title" content="Docs" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://docs.stg.pay.super.com/docs/" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><meta property="og:title" content="Token-based Checkout" />
+<meta property="og:description" content="Token-based Checkout A Token is a secure string that represents the details of your user, game and purchase parameters. It&rsquo;s You can create the Token when your customer wants to pay for something. After redirecting your customer to a Checkout Session, Stripe presents a payment form where your customer can complete their purchase.
+Token-based features:
+ Instantly redirect from anywhere of your game application: You can create a token after a user registered or logged in your game and instantly redirect the user to the Checkout Form when the user intent a payment." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://docs.stg.pay.super.com/docs/payments/token/" />
 
-<title>Docs | PaySuper docs</title>
+<title>Token-based Checkout | PaySuper docs</title>
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 
 
@@ -17,7 +19,6 @@
 
 <script defer src="/search.min.6ef82f713d3aaae5acb9a50ca105819f305067a521a4fa99407735bc8782623a.js" integrity="sha256-bvgvcT06quWsuaUMoQWBnzBQZ6UhpPqZQHc1vIeCYjo="></script>
 
-<link rel="alternate" type="application/rss+xml" href="https://docs.stg.pay.super.com/docs/index.xml" title="PaySuper docs" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -57,7 +58,7 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li><a href="/docs/payments/">Checkout Overview</a></li>
 <li><a href="/docs/payments/quick-start/">Quick Start</a></li>
-<li><a href="/docs/payments/token/">Tokenization</a></li>
+<li><a href="/docs/payments/token/"class=active>Tokenization</a></li>
 <li><a href="/docs/payments/sdk-integration/">Client-Only Integration</a></li>
 <li><a href="/docs/payments/integration/">Client-Server Integration</a></li>
 <li><a href="/docs/payments/fulfillment/">After the payment</a></li>
@@ -92,11 +93,31 @@ https://github.com/alex-shpak/hugo-book
   <label for="menu-control">
     <img src="/svg/menu.svg" alt="Menu" />
   </label>
-  <strong>Docs</strong>
+  <strong>Token-based Checkout</strong>
 </header>
 
       
-<article class="markdown"></article>
+<article class="markdown">
+
+<h1 id="token-based-checkout">Token-based Checkout</h1>
+
+<hr />
+
+<p>A Token is a secure string that represents the details of your user, game and purchase parameters. It&rsquo;s You can create the Token when your customer wants to pay for something. After redirecting your customer to a Checkout Session, Stripe presents a payment form where your customer can complete their purchase.</p>
+
+<p><strong>Token-based features:</strong></p>
+
+<ul>
+<li><strong>Instantly redirect from anywhere of your game application</strong>: You can create a token after a user registered or logged in your game and instantly redirect the user to the Checkout Form when the user intent a payment.</li>
+<li><strong>The pre-filled information in a payment form</strong>: Token can encrypt all required information about your user intent to pay. The Checkout Form is pre-filled in this case.</li>
+</ul>
+
+<p><strong>To create a Token:</strong></p>
+
+<p>Send the request <strong><code>POST /api/v1/tokens</code></strong>. Both the request and the response are in JSON format.</p>
+
+<p>ПРИМЕР ТОКЕНА с обязательными параметрами для ключа и пользователя Вставьте сюда <a href="https://runkit.com/home">https://runkit.com/home</a> пример с созданием токена</p>
+</article>
 
       
 
@@ -105,6 +126,14 @@ https://github.com/alex-shpak/hugo-book
 
     
   
+
+  <aside class="book-toc level-true fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#token-based-checkout">Token-based Checkout</a></li>
+</ul>
+</nav>
+  </aside>
 
 
   </main>

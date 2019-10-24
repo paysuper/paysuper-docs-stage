@@ -15,6 +15,14 @@
   </url>
   
   <url>
+    <loc>https://docs.stg.pay.super.com/docs/payments/sdk-integration/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.stg.pay.super.com/docs/payments/integration/</loc>
+  </url>
+  
+  <url>
     <loc>https://docs.stg.pay.super.com/docs/payments/customization/</loc>
   </url>
   
@@ -27,31 +35,7 @@
   </url>
   
   <url>
-    <loc>https://docs.stg.pay.super.com/docs/api/v1/</loc>
-  </url>
-  
-  <url>
-    <loc>https://docs.stg.pay.super.com/docs/api/v1/authentication/</loc>
-  </url>
-  
-  <url>
-    <loc>https://docs.stg.pay.super.com/docs/api/v1/compression/</loc>
-  </url>
-  
-  <url>
-    <loc>https://docs.stg.pay.super.com/docs/api/v1/errors/</loc>
-  </url>
-  
-  <url>
-    <loc>https://docs.stg.pay.super.com/docs/api/v1/pagination/</loc>
-  </url>
-  
-  <url>
     <loc>https://docs.stg.pay.super.com/docs/api/</loc>
-  </url>
-  
-  <url>
-    <loc>https://docs.stg.pay.super.com/docs/api/v1/versioning/</loc>
   </url>
   
   <url>
@@ -63,15 +47,11 @@
   </url>
   
   <url>
-    <loc>https://docs.stg.pay.super.com/docs/payments/simple/</loc>
-  </url>
-  
-  <url>
     <loc>https://docs.stg.pay.super.com/docs/payments/testing/</loc>
   </url>
   
   <url>
-    <loc>https://docs.stg.pay.super.com/docs/payments/typed/</loc>
+    <loc>https://docs.stg.pay.super.com/docs/payments/token/</loc>
   </url>
   
 </urlset>

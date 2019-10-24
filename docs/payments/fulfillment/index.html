@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta property="og:title" content="After the payment" />
-<meta property="og:description" content="PaySuper" />
+<meta property="og:description" content="Your customer gets an email with the receipt and an extra email with the purchased Product or Products as soon as the transaction is complete. If your customer has purchased several game-keys for different DRM platforms, they get an email per DRM platform with a game key and instructions on how to activate the key on the target DRM store. At the same time you see that transaction on the Dashboard in PaySuper Admin." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://docs.stg.pay.super.com/docs/payments/fulfillment/" />
 
@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="/book.min.1b994bd28c6ce2255f069b6bf6837b4d396307637fc48d61dcb2a6caac26e031.css" integrity="sha256-G5lL0oxs4iVfBptr9oN7TTljB2N/xI1h3LKmyqwm4DE=">
 
 
-<script defer src="/search.min.74fc4481228072ed81a1ab26873a5b86e0c9ef46c32c13a1f989e2e23c41fc53.js" integrity="sha256-dPxEgSKAcu2BoasmhzpbhuDJ70bDLBOh&#43;Yni4jxB/FM="></script>
+<script defer src="/search.min.6ef82f713d3aaae5acb9a50ca105819f305067a521a4fa99407735bc8782623a.js" integrity="sha256-bvgvcT06quWsuaUMoQWBnzBQZ6UhpPqZQHc1vIeCYjo="></script>
 
 <!--
 Made with Book Theme
@@ -24,6 +24,7 @@ https://github.com/alex-shpak/hugo-book
 
   
   <script src="https://cdn.pay.super.com/paysdk/v0.5.2/paysuper.js"></script>
+  <script src="https://embed.runkit.com"></script>
 </head>
 
 <body>
@@ -55,23 +56,15 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li><a href="/docs/payments/">Checkout Overview</a></li>
 <li><a href="/docs/payments/quick-start/">Quick Start</a></li>
-<li><a href="/docs/payments/simple/">Simple Checkout</a></li>
-<li><a href="/docs/payments/typed/">Typed Checkout</a></li>
+<li><a href="/docs/payments/token/">Tokenization</a></li>
+<li><a href="/docs/payments/sdk-integration/">Client-Only Integration</a></li>
+<li><a href="/docs/payments/integration/">Client-Server Integration</a></li>
 <li><a href="/docs/payments/fulfillment/"class=active>After the payment</a></li>
 <li><a href="/docs/payments/customization/">Customizing Checkout</a></li>
 <li><a href="/docs/payments/testing/">Testing</a></li>
 <li><a href="/docs/payments/live/">Going Live</a></li>
 </ul></li>
-<li><a href="/docs/api/"><strong>API Reference</strong></a>
-
-<ul>
-<li><a href="/docs/api/v1/authentication/">Authentication</a></li>
-<li><a href="/docs/api/v1/versioning/">Versioning</a></li>
-<li><a href="/docs/api/v1/errors/">Errors List</a></li>
-<li><a href="/docs/api/v1/compression/">Compression</a></li>
-<li><a href="/docs/api/v1/pagination/">Pagination</a></li>
-<li><a href="/docs/api/v1/">PaySuper API</a></li>
-</ul></li>
+<li><a href="/docs/api/"><strong>API Reference</strong></a></li>
 </ul>
 
 
@@ -102,7 +95,91 @@ https://github.com/alex-shpak/hugo-book
 </header>
 
       
-<article class="markdown"><p>PaySuper</p>
+<article class="markdown">
+
+<p>Your customer gets an email with the receipt and an extra email with the purchased Product or Products as soon as the transaction is complete. If your customer has purchased several game-keys for different DRM platforms, they get an email per DRM platform with a game key and instructions on how to activate the key on the target DRM store. At the same time you see that transaction on the Dashboard in PaySuper Admin.</p>
+
+<p>You can handle actions after your customer completes their payment.</p>
+
+<h2 id="fulfilling-purchases-with-webhooks">Fulfilling purchases with webhooks</h2>
+
+<p>PaySuper can send the <code>payment.success</code> webhook event to your server to notify you when a customer completes the payment. You can configure webhooks for your Projects in PaySuper Admin and handle them on your server.</p>
+
+<p>A webhook handler is a script on your server that handles the PaySuper events such as <code>payment.success</code> or <code>payment.cancel</code>. See all event types in [PaySuper API reference]().</p>
+
+<p>These webhook events are signed to protect you from fraudlent activities. You can validate our signed webhooks by generating a signature and comparing it to the value of the Authorization http header value.</p>
+
+<p>** Webhook object can look like this:
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#062873;font-weight:bold">&#34;id&#34;</span>: <span style="color:#4070a0">&#34;22d6d597-000f-5000-9000-145f6df21d6f&#34;</span>,
+  <span style="color:#062873;font-weight:bold">&#34;type&#34;</span>: <span style="color:#4070a0">&#34;notification&#34;</span>,
+  <span style="color:#062873;font-weight:bold">&#34;event&#34;</span>: <span style="color:#4070a0">&#34;payment.success&#34;</span>,
+  <span style="color:#062873;font-weight:bold">&#34;live&#34;</span>: <span style="color:#007020;font-weight:bold">true</span>,
+  <span style="color:#062873;font-weight:bold">&#34;created_at&#34;</span>: <span style="color:#4070a0">&#34;2018-07-10T14:27:54.691Z&#34;</span>,
+  <span style="color:#062873;font-weight:bold">&#34;expires_at&#34;</span>: <span style="color:#007020;font-weight:bold">null</span>,
+  <span style="color:#062873;font-weight:bold">&#34;delivery_try&#34;</span>: <span style="color:#40a070">1</span>,
+  <span style="color:#062873;font-weight:bold">&#34;object&#34;</span>: {}
+}</code></pre></div></p>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>id</td>
+<td>string</td>
+<td>Unique identifier for the object.</td>
+</tr>
+
+<tr>
+<td>type</td>
+<td>string</td>
+<td>String representing the web hook’s type.</td>
+</tr>
+
+<tr>
+<td>event</td>
+<td>string</td>
+<td>String representing the event`s type.</td>
+</tr>
+
+<tr>
+<td>live</td>
+<td>boolean</td>
+<td>True is notification originated from the live environment.</td>
+</tr>
+
+<tr>
+<td>created_at</td>
+<td>DateTime</td>
+<td>The date and time in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> when an event has been created.</td>
+</tr>
+
+<tr>
+<td>expires_at</td>
+<td>DateTime</td>
+<td>The date and time in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> when the event stops trying to deliver.</td>
+</tr>
+
+<tr>
+<td>delivery_try</td>
+<td>integer</td>
+<td>The current delivery try for this event</td>
+</tr>
+
+<tr>
+<td>object</td>
+<td>object</td>
+<td>The object representing payload of event with given type. Objects of the same type share the same value.</td>
+</tr>
+</tbody>
+</table>
 </article>
 
       
@@ -112,6 +189,17 @@ https://github.com/alex-shpak/hugo-book
 
     
   
+
+  <aside class="book-toc level-true fixed">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#fulfilling-purchases-with-webhooks">Fulfilling purchases with webhooks</a></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
 
 
   </main>
