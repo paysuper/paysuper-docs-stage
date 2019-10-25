@@ -17,7 +17,7 @@ Token-based features:
 <link rel="stylesheet" href="/book.min.1b994bd28c6ce2255f069b6bf6837b4d396307637fc48d61dcb2a6caac26e031.css" integrity="sha256-G5lL0oxs4iVfBptr9oN7TTljB2N/xI1h3LKmyqwm4DE=">
 
 
-<script defer src="/search.min.971b612fb51bf7f4bad6eb140e769be47c40aded07e5d08a62a0db3fd4a51afe.js" integrity="sha256-lxthL7Ub9/S61usUDnab5HxAre0H5dCKYqDbP9SlGv4="></script>
+<script defer src="/search.min.1262581e8432072939ffe8453844f99897614ee4899a3efb65e180b0d83a4488.js" integrity="sha256-EmJYHoQyByk5/&#43;hFOET5mJdhTuSJmj77ZeGAsNg6RIg="></script>
 
 <!--
 Made with Book Theme
@@ -26,7 +26,6 @@ https://github.com/alex-shpak/hugo-book
 
   
   <script src="https://cdn.pay.super.com/paysdk/v0.5.2/paysuper.js"></script>
-  <script src="https://embed.runkit.com"></script>
 </head>
 
 <body>
@@ -117,6 +116,29 @@ https://github.com/alex-shpak/hugo-book
 <p>Send the request <strong><code>POST /api/v1/tokens</code></strong>. Both the request and the response are in JSON format.</p>
 
 <p>ПРИМЕР ТОКЕНА с обязательными параметрами для ключа и пользователя Вставьте сюда <a href="https://runkit.com/home">https://runkit.com/home</a> пример с созданием токена</p>
+
+<script src="https://embed.runkit.com" data-element-id=".Get 0"></script>
+
+<div id=".Get 0">
+    const curl = new (require( 'curl-request' ))();
+
+    
+curl
+    .setBody({
+        'input-arr[0]': 'input-arr-val0',
+        'input-arr[1]': 'input-arr-val1',
+        'input-arr[2]': 'input-arr-val2',
+        'input-name': 'input-val'
+    })
+    .post('https://www.google.com')
+    .then(({statusCode, body, headers}) => {
+        console.log(statusCode, body, headers)
+    })
+    .catch((e) => {
+        console.log(e);
+    });
+
+</div>
 </article>
 
       
