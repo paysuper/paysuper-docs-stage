@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta property="og:title" content="Client-Only Integration" />
 <meta property="og:description" content="Client-Only Integration with PaySuper JS SDK It’s easy to embed PaySuper JS SDK on any platform to display a Payment Form with just a few lines of code.  HOW IT WORKS
 Try out the payment sample or see the code on GitHub.
-  Step 1. Embed the PaySuper Form To get started, include the following script tag on your website - always load it directly from https://cdn.pay.super.com:" />
+  Step 1. Embed the Checkout Form To get started, include the following script tag on your website - always load it directly from https://cdn.pay.super.com:" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://docs.stg.pay.super.com/docs/payments/sdk-integration/" />
 
@@ -17,7 +17,7 @@ Try out the payment sample or see the code on GitHub.
 <link rel="stylesheet" href="/book.min.1b994bd28c6ce2255f069b6bf6837b4d396307637fc48d61dcb2a6caac26e031.css" integrity="sha256-G5lL0oxs4iVfBptr9oN7TTljB2N/xI1h3LKmyqwm4DE=">
 
 
-<script defer src="/search.min.2d05ca2f7db14f4053540aefc08636a5546a6a183815f5218339f8baa7613756.js" integrity="sha256-LQXKL32xT0BTVArvwIY2pVRqahg4FfUhgzn4uqdhN1Y="></script>
+<script defer src="/search.min.6567f97e8805ad804a4f4ba09b219a080ea5553e71e8fbf3e90d9f27d1a83ab3.js" integrity="sha256-ZWf5fogFrYBKT0ugmyGaCA6lVT5x6Pvz6Q2fJ9GoOrM="></script>
 
 <!--
 Made with Book Theme
@@ -57,9 +57,9 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li><a href="/docs/payments/">Checkout Overview</a></li>
 <li><a href="/docs/payments/quick-start/">Quick Start</a></li>
-<li><a href="/docs/payments/token/">Tokenization</a></li>
 <li><a href="/docs/payments/sdk-integration/"class=active>Client-Only Integration</a></li>
 <li><a href="/docs/payments/integration/">Client-Server Integration</a></li>
+<li><a href="/docs/payments/token/">Tokenization</a></li>
 <li><a href="/docs/payments/fulfillment/">After the payment</a></li>
 <li><a href="/docs/payments/customization/">Customizing Checkout</a></li>
 <li><a href="/docs/payments/testing/">Testing</a></li>
@@ -120,7 +120,7 @@ https://github.com/alex-shpak/hugo-book
 
 <hr />
 
-<h2 id="step-1-embed-the-paysuper-form"><strong>Step 1.</strong> Embed the PaySuper Form</h2>
+<h2 id="step-1-embed-the-checkout-form"><strong>Step 1.</strong> Embed the Checkout Form</h2>
 
 <p>To get started, include the following script tag on your website - always load it directly from <code>https://cdn.pay.super.com</code>:</p>
 
@@ -130,16 +130,20 @@ https://github.com/alex-shpak/hugo-book
 
 <h3 id="simple-checkout"><strong>Simple Checkout</strong></h3>
 
-<p>Create a Checkout Form to collect one-time payments. It&rsquo;s enough to have a Project ID to initiate a payment with an acceptable amount.</p>
+<p>To create a Checkout Form to collect one-time payments it&rsquo;s enough to have a <a href="/docs/payments/quick-start/#step-2-set-up-a-project">Project ID</a> and an acceptable amount with currency.</p>
+
+<p>Use this sample code to create an instance of the Checkout object with the required parameters for a simple checkout:</p>
 
 <div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#007020;font-weight:bold">const</span> paySuper <span style="color:#666">=</span> <span style="color:#007020;font-weight:bold">new</span> PaySuper({
     project<span style="color:#666">:</span> <span style="color:#4070a0">&#39;5cd5624a06ae110001509186&#39;</span>,
-    amount<span style="color:#666">:</span> <span style="color:#40a070">50</span>,
+    amount<span style="color:#666">:</span> <span style="color:#40a070">10</span>,
     currency<span style="color:#666">:</span> <span style="color:#4070a0">&#39;USD&#39;</span>
 });
 </code></pre></div>
 
-<h3 id="products-docs-payments-quick-start-step-2-set-up-a-project-checkout"><strong><a href="/docs/payments/quick-start/#step-2-set-up-a-project">Products</a> Checkout</strong></h3>
+<h3 id="products-checkout"><strong>Products Checkout</strong></h3>
+
+<p>In case of using the sales methods for products such as <a href="/docs/payments/quick-start/#step-2-set-up-a-project">key-activated products, virtual items or in-game currency</a> implement this sample code for a specific product:</p>
 
 
 
@@ -147,13 +151,13 @@ https://github.com/alex-shpak/hugo-book
 
 <div class="book-tabs">
 
-  <input type="radio" class="hidden" name="tabs-uniqueid" id="tabs-uniqueid-0" checked="checked" />
-  <label for="tabs-uniqueid-0">
+  <input type="radio" class="hidden" name="tabs-products_id" id="tabs-products_id-0" checked="checked" />
+  <label for="tabs-products_id-0">
     Game key
   </label>
   <div class="book-tabs-content markdown-inner">
     <div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#007020;font-weight:bold">const</span> paySuper <span style="color:#666">=</span> <span style="color:#007020;font-weight:bold">new</span> PaySuper({
-    project<span style="color:#666">:</span> <span style="color:#4070a0">&#39;5cd5620f06ae110001509185&#39;</span>,
+    project<span style="color:#666">:</span> <span style="color:#4070a0">&#39;5cd5624a06ae110001509186&#39;</span>,
     products<span style="color:#666">:</span> [<span style="color:#4070a0">&#39;5d7baee015ff7d0001b986a8&#39;</span>],
     platform_id<span style="color:#666">:</span> <span style="color:#4070a0">&#39;gog&#39;</span>,
     type<span style="color:#666">:</span> <span style="color:#4070a0">&#39;key&#39;</span>
@@ -161,30 +165,28 @@ https://github.com/alex-shpak/hugo-book
 </code></pre></div>
   </div>
 
-  <input type="radio" class="hidden" name="tabs-uniqueid" id="tabs-uniqueid-1"  />
-  <label for="tabs-uniqueid-1">
+  <input type="radio" class="hidden" name="tabs-products_id" id="tabs-products_id-1"  />
+  <label for="tabs-products_id-1">
     Virtual item
   </label>
   <div class="book-tabs-content markdown-inner">
     <div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#007020;font-weight:bold">const</span> paySuper <span style="color:#666">=</span> <span style="color:#007020;font-weight:bold">new</span> PaySuper({
-    project<span style="color:#666">:</span> <span style="color:#4070a0">&#39;5cd5620f06ae110001509185&#39;</span>,
+    project<span style="color:#666">:</span> <span style="color:#4070a0">&#39;5cd5624a06ae110001509186&#39;</span>,
     products<span style="color:#666">:</span> [<span style="color:#4070a0">&#39;5d848f484dd6a50001970479&#39;</span>, <span style="color:#4070a0">&#39;5d8c7a219e362100013de214&#39;</span>],
     type<span style="color:#666">:</span> <span style="color:#4070a0">&#39;product&#39;</span>
 });
 </code></pre></div>
   </div>
 
-  <input type="radio" class="hidden" name="tabs-uniqueid" id="tabs-uniqueid-2"  />
-  <label for="tabs-uniqueid-2">
+  <input type="radio" class="hidden" name="tabs-products_id" id="tabs-products_id-2"  />
+  <label for="tabs-products_id-2">
     Virtual currency
   </label>
   <div class="book-tabs-content markdown-inner">
     <p>ПРИМЕР КОДА ПРОСИТЬ У ДИМЫ или АНДРЕЯ кода реализуют</p>
 
 <div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#007020;font-weight:bold">const</span> paySuper <span style="color:#666">=</span> <span style="color:#007020;font-weight:bold">new</span> PaySuper({
-    project<span style="color:#666">:</span> <span style="color:#4070a0">&#39;5cd5620f06ae110001509185&#39;</span>,
-    products<span style="color:#666">:</span> [<span style="color:#4070a0">&#39;5d848f484dd6a50001970479&#39;</span>, <span style="color:#4070a0">&#39;5d8c7a219e362100013de214&#39;</span>],
-    type<span style="color:#666">:</span> <span style="color:#4070a0">&#39;virtual_currency&#39;</span>
+    
 });
 </code></pre></div>
 
@@ -195,29 +197,63 @@ https://github.com/alex-shpak/hugo-book
 
 <p><a href="https://github.com/paysuper/paysuper-js-sdk/tree/master#paysuper-options">Full list of PaySuper parameters</a></p>
 
-<blockquote>
-<p>Use your IDs for the Project and Products found in your merchant account on <a href="https://paysupermgmt.tst.protocol.one/projects/">the PaySuper Projects</a>. To get the Project and Product IDs: open your Project settings page, select the product tab and click on the Product name. Copy the Project and Product IDs from an opened page URL.</p>
+<blockquote class="book-hint warning">
+  Note to use your IDs for the Project and Products found in your merchant account on <a href="https://paysupermgmt.tst.protocol.one/projects/">the PaySuper Projects</a>. To get the Project and Product IDs: open your Project settings page, select the product tab and click on the Product name. Copy the Project and Product IDs from an opened page URL.
 </blockquote>
 
-<h2 id="step-3-display-a-form"><strong>Step 3.</strong> Display a form</h2>
 
-<p>When your customer is ready to pay, call create an instance of the PaySuper and render it:</p>
+<h2 id="step-3-display-the-checkout-form"><strong>Step 3.</strong> Display the Checkout Form</h2>
 
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#062873;font-weight:bold">script</span>&gt;
+<p>This is a brief example usage of a sample code how to call a method to display the Checkout Form when user intent to buy in particular clicking on a payment button.</p>
+
+
+
+
+
+<div class="book-tabs">
+
+  <input type="radio" class="hidden" name="tabs-embed_id" id="tabs-embed_id-0" checked="checked" />
+  <label for="tabs-embed_id-0">
+    Embed as a modal window
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#062873;font-weight:bold">script</span>&gt;
 <span style="color:#007020;font-weight:bold">function</span> buyItems() {
     <span style="color:#007020;font-weight:bold">const</span> paySuper <span style="color:#666">=</span> <span style="color:#007020;font-weight:bold">new</span> PaySuper({
-        token<span style="color:#666">:</span> <span style="color:#4070a0">&#39;5cd5620f06ae110001509185&#39;</span>
+        project<span style="color:#666">:</span> <span style="color:#4070a0">&#39;5cd5624a06ae110001509186&#39;</span>,
+        amount<span style="color:#666">:</span> <span style="color:#40a070">10</span>,
+        currency<span style="color:#666">:</span> <span style="color:#4070a0">&#39;USD&#39;</span>
     });
 
-    <span style="color:#60a0b0;font-style:italic">// Embed a form as a modal window
-</span><span style="color:#60a0b0;font-style:italic"></span>    paySuper.renderModal();
-    
-    <span style="color:#60a0b0;font-style:italic">// Embed a form as an iframe
-</span><span style="color:#60a0b0;font-style:italic"></span>    <span style="color:#60a0b0;font-style:italic">// paySuper.renderPage();
-</span><span style="color:#60a0b0;font-style:italic"></span>}
+    paySuper.renderModal();
+}
 &lt;/<span style="color:#062873;font-weight:bold">script</span>&gt;
 
 &lt;<span style="color:#062873;font-weight:bold">button</span> <span style="color:#4070a0">onclick</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;buyItems()&#34;</span>&gt;BUY&lt;/<span style="color:#062873;font-weight:bold">button</span>&gt;</code></pre></div>
+  </div>
+
+  <input type="radio" class="hidden" name="tabs-embed_id" id="tabs-embed_id-1"  />
+  <label for="tabs-embed_id-1">
+    Embed as an iframe
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#062873;font-weight:bold">script</span>&gt;
+<span style="color:#007020;font-weight:bold">function</span> buyItems() {
+    <span style="color:#007020;font-weight:bold">const</span> paySuper <span style="color:#666">=</span> <span style="color:#007020;font-weight:bold">new</span> PaySuper({
+        project<span style="color:#666">:</span> <span style="color:#4070a0">&#39;5cd5624a06ae110001509186&#39;</span>,
+        amount<span style="color:#666">:</span> <span style="color:#40a070">10</span>,
+        currency<span style="color:#666">:</span> <span style="color:#4070a0">&#39;USD&#39;</span>
+    });
+
+    paySuper.renderPage();
+}
+&lt;/<span style="color:#062873;font-weight:bold">script</span>&gt;
+
+&lt;<span style="color:#062873;font-weight:bold">button</span> <span style="color:#4070a0">onclick</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;buyItems()&#34;</span>&gt;BUY&lt;/<span style="color:#062873;font-weight:bold">button</span>&gt;</code></pre></div>
+  </div>
+
+</div>
+
 
 <h2 id="step-4-handle-the-purchase-events"><strong>Step 4.</strong> Handle the purchase events</h2>
 
@@ -233,17 +269,26 @@ https://github.com/alex-shpak/hugo-book
 <h2 id="next-steps">Next steps</h2>
 
 <blockquote class="book-hint info">
-  <a href="/docs/payments/live/"><strong>After the payment</strong></a>
+  <p><a href="/docs/payments/live/"><strong>After the payment</strong></a></p>
+
+<p>After a successful payment, you have to fulfil the customer’s purchase. You can use <a href="ССЫЛКА">webhooks</a> or the <a href="ССЫЛКА">Transaction log</a> to accomplish the purchase.</p>
+
 </blockquote>
 
 
 <blockquote class="book-hint info">
-  <a href="/docs/payments/testing/"><strong>Testing the Checkout</strong></a>
+  <p><a href="/docs/payments/testing/"><strong>Testing the Checkout</strong></a></p>
+
+<p>Check your integration with PaySuper Checkout works correctly. Test cards can be used to create payments that produce successful and particular responses.</p>
+
 </blockquote>
 
 
 <blockquote class="book-hint info">
-  <a href="/docs/payments/customization/"><strong>Customizing Checkout</strong></a>
+  <p><a href="/docs/payments/customization/"><strong>Customizing Checkout</strong></a></p>
+
+<p>Learn about the different ways you can customize your Checkout.</p>
+
 </blockquote>
 
 
@@ -293,13 +338,13 @@ Our engineers will help you <a href="https://docs.google.com/forms/d/e/1FAIpQLSc
 <ul>
 <li><a href="#client-only-integration-with-paysuper-js-sdk">Client-Only Integration with PaySuper JS SDK</a>
 <ul>
-<li><a href="#step-1-embed-the-paysuper-form"><strong>Step 1.</strong> Embed the PaySuper Form</a></li>
+<li><a href="#step-1-embed-the-checkout-form"><strong>Step 1.</strong> Embed the Checkout Form</a></li>
 <li><a href="#step-2-provide-parameters"><strong>Step 2.</strong> Provide parameters</a>
 <ul>
 <li><a href="#simple-checkout"><strong>Simple Checkout</strong></a></li>
-<li><a href="#products-docs-payments-quick-start-step-2-set-up-a-project-checkout"><strong><a href="/docs/payments/quick-start/#step-2-set-up-a-project">Products</a> Checkout</strong></a></li>
+<li><a href="#products-checkout"><strong>Products Checkout</strong></a></li>
 </ul></li>
-<li><a href="#step-3-display-a-form"><strong>Step 3.</strong> Display a form</a></li>
+<li><a href="#step-3-display-the-checkout-form"><strong>Step 3.</strong> Display the Checkout Form</a></li>
 <li><a href="#step-4-handle-the-purchase-events"><strong>Step 4.</strong> Handle the purchase events</a></li>
 <li><a href="#next-steps">Next steps</a></li>
 </ul></li>
@@ -316,7 +361,7 @@ Our engineers will help you <a href="https://docs.google.com/forms/d/e/1FAIpQLSc
     function buyItems() {
       const paySuper = new PaySuper({
         project: '5cd5620f06ae110001509185',
-        amount: 20,
+        amount: 10,
         currency: 'USD',
         type: 'simple',
         apiUrl: 'https://p1payapi.tst.protocol.one'

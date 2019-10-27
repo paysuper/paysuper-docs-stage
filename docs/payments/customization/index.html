@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta property="og:title" content="Customizing Checkout" />
-<meta property="og:description" content="Customizing Checkout Learn about the different ways you can customize your Checkout integration.
+<meta property="og:description" content="Customizing Checkout Learn about the different ways you can customize your Checkout.
 Localization The Checkout Form is localized for 2 languages with 10 more translations coming soon.
 You can choose the complete set of supported languages for the project and products descriptions on the Project Settings page.
 Prefilling user data Boost your paying conversion rate with pre-filled payment form with user&rsquo;s name and email. Generate a Token to encrypt all required information about the user intent to pay." />
@@ -18,7 +18,7 @@ Prefilling user data Boost your paying conversion rate with pre-filled payment f
 <link rel="stylesheet" href="/book.min.1b994bd28c6ce2255f069b6bf6837b4d396307637fc48d61dcb2a6caac26e031.css" integrity="sha256-G5lL0oxs4iVfBptr9oN7TTljB2N/xI1h3LKmyqwm4DE=">
 
 
-<script defer src="/search.min.2d05ca2f7db14f4053540aefc08636a5546a6a183815f5218339f8baa7613756.js" integrity="sha256-LQXKL32xT0BTVArvwIY2pVRqahg4FfUhgzn4uqdhN1Y="></script>
+<script defer src="/search.min.6567f97e8805ad804a4f4ba09b219a080ea5553e71e8fbf3e90d9f27d1a83ab3.js" integrity="sha256-ZWf5fogFrYBKT0ugmyGaCA6lVT5x6Pvz6Q2fJ9GoOrM="></script>
 
 <!--
 Made with Book Theme
@@ -58,9 +58,9 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li><a href="/docs/payments/">Checkout Overview</a></li>
 <li><a href="/docs/payments/quick-start/">Quick Start</a></li>
-<li><a href="/docs/payments/token/">Tokenization</a></li>
 <li><a href="/docs/payments/sdk-integration/">Client-Only Integration</a></li>
 <li><a href="/docs/payments/integration/">Client-Server Integration</a></li>
+<li><a href="/docs/payments/token/">Tokenization</a></li>
 <li><a href="/docs/payments/fulfillment/">After the payment</a></li>
 <li><a href="/docs/payments/customization/"class=active>Customizing Checkout</a></li>
 <li><a href="/docs/payments/testing/">Testing</a></li>
@@ -103,7 +103,7 @@ https://github.com/alex-shpak/hugo-book
 
 <hr />
 
-<p>Learn about the different ways you can customize your Checkout integration.</p>
+<p>Learn about the different ways you can customize your Checkout.</p>
 
 <h2 id="localization">Localization</h2>
 
@@ -122,7 +122,6 @@ https://github.com/alex-shpak/hugo-book
 <h2 id="customizing-theme">Customizing theme</h2>
 
 <div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#007020;font-weight:bold">const</span> paySuper <span style="color:#666">=</span> <span style="color:#007020;font-weight:bold">new</span> PaySuper({
-    token<span style="color:#666">:</span> <span style="color:#4070a0">&#39;5cd5620f06ae110001509185&#39;</span>,
     viewScheme<span style="color:#666">:</span> <span style="color:#4070a0">&#39;light&#39;</span>
 });
 </code></pre></div>
@@ -132,7 +131,6 @@ https://github.com/alex-shpak/hugo-book
 <h2 id="customizing-the-colors">Customizing the colors</h2>
 
 <div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#007020;font-weight:bold">const</span> paySuper <span style="color:#666">=</span> <span style="color:#007020;font-weight:bold">new</span> PaySuper({
-    token<span style="color:#666">:</span> <span style="color:#4070a0">&#39;5cd5620f06ae110001509185&#39;</span>,
     viewSchemeConfig<span style="color:#666">:</span> { 
         <span style="color:#60a0b0;font-style:italic">// headerTextColor overrides the default value of the viewSchemeConfig object
 </span><span style="color:#60a0b0;font-style:italic"></span>        headerTextColor<span style="color:#666">:</span> <span style="color:#4070a0">&#39;#333333&#39;</span>
@@ -147,17 +145,26 @@ https://github.com/alex-shpak/hugo-book
 <h2 id="next-steps">Next steps</h2>
 
 <blockquote class="book-hint info">
-  <a href="/docs/payments/live/"><strong>After the payment</strong></a>
+  <p><a href="/docs/payments/live/"><strong>After the payment</strong></a></p>
+
+<p>After a successful payment, you have to fulfil the customer’s purchase. You can use <a href="ССЫЛКА">webhooks</a> or the <a href="ССЫЛКА">Transaction log</a> to accomplish the purchase.</p>
+
 </blockquote>
 
 
 <blockquote class="book-hint info">
-  <a href="/docs/payments/testing/"><strong>Testing the Checkout</strong></a>
+  <p><a href="/docs/payments/testing/"><strong>Testing the Checkout</strong></a></p>
+
+<p>Check your integration with PaySuper Checkout works correctly. Test cards can be used to create payments that produce successful and particular responses.</p>
+
 </blockquote>
 
 
 <blockquote class="book-hint info">
-  <a href="/docs/payments/live/"><strong>Going live checklist</strong></a>
+  <p><a href="/docs/payments/live/"><strong>Going live checklist</strong></a></p>
+
+<p>Before going live inspect this checklist to ensure you&rsquo;ve implemented all the significant setup steps.</p>
+
 </blockquote>
 
 
@@ -227,7 +234,7 @@ Our engineers will help you <a href="https://docs.google.com/forms/d/e/1FAIpQLSc
     function buyItems() {
       const paySuper = new PaySuper({
         project: '5cd5620f06ae110001509185',
-        amount: 20,
+        amount: 10,
         currency: 'USD',
         type: 'simple',
         apiUrl: 'https://p1payapi.tst.protocol.one'

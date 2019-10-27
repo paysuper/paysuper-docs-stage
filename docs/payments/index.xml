@@ -27,7 +27,7 @@
       <guid>https://docs.stg.pay.super.com/docs/payments/sdk-integration/</guid>
       <description>Client-Only Integration with PaySuper JS SDK It’s easy to embed PaySuper JS SDK on any platform to display a Payment Form with just a few lines of code.  HOW IT WORKS
 Try out the payment sample or see the code on GitHub.
-  Step 1. Embed the PaySuper Form To get started, include the following script tag on your website - always load it directly from https://cdn.pay.super.com:</description>
+  Step 1. Embed the Checkout Form To get started, include the following script tag on your website - always load it directly from https://cdn.pay.super.com:</description>
     </item>
     
     <item>
@@ -36,15 +36,9 @@ Try out the payment sample or see the code on GitHub.
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://docs.stg.pay.super.com/docs/payments/integration/</guid>
-      <description>Client-Server Integration with PaySuper API Client-side code
-Server-side code
-Step 1. Send a HTTP request to initiate a payment POST /api/v1/order
-ДОБАВИТЬ RUNKIT
-Step 2. Retrieve a response parameter payment_form_url - URL of PaySuper Checkout Form.
-Step 3. Show the Checkout Form:
- Open the received URL in a browser as a new window
- Integrate the the Checkout Form as iframe:
-  &amp;lt;iframe src=&amp;#34;{payment_form_url}&amp;#34;&amp;gt;&amp;lt;/iframe&amp;gt; Questions? Sales Our salespeople are pleasant and friendly.</description>
+      <description>Client-Server Integration with PaySuper API If your sales use cases are not suited the client-only integration, use the client-server integration with PaySuper API instead.
+Step 1. Create a Checkout Order ID on your server Send the POST /api/v1/order to receive an Order ID. Learn more about the full list of parameters that can be used for instance the redirect URLs for successful and failed payments.
+Simple Checkout To collect one-time payments it&amp;rsquo;s enough to have a Project ID and an acceptable amount with currency.</description>
     </item>
     
     <item>
@@ -53,7 +47,7 @@ Step 3. Show the Checkout Form:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://docs.stg.pay.super.com/docs/payments/customization/</guid>
-      <description>Customizing Checkout Learn about the different ways you can customize your Checkout integration.
+      <description>Customizing Checkout Learn about the different ways you can customize your Checkout.
 Localization The Checkout Form is localized for 2 languages with 10 more translations coming soon.
 You can choose the complete set of supported languages for the project and products descriptions on the Project Settings page.
 Prefilling user data Boost your paying conversion rate with pre-filled payment form with user&amp;rsquo;s name and email. Generate a Token to encrypt all required information about the user intent to pay.</description>
@@ -84,9 +78,8 @@ Prefilling user data Boost your paying conversion rate with pre-filled payment f
       
       <guid>https://docs.stg.pay.super.com/docs/payments/testing/</guid>
       <description>Testing the Payment Process Before going live you should test the payment process in the Sandbox.
-To test a bank card payment:
- Open the PaySuper Checkout Form. Choose the Credit/Debit cards group of payment methods. Enter the bank card details. Enter any values in the remaining fields.   You can also specify incorrect details (card number, expiration date, or CVV) in order to generate an error.
- List of bank cards to be used for testing:</description>
+Test in The Sandbox To test a bank card payment:
+ Open the PaySuper Checkout Form. Choose the Credit/Debit cards group of payment methods. Enter the bank card details. Enter any values in the remaining fields.  You can also specify incorrect details (card number, expiration date, or CVV) in order to generate an error.</description>
     </item>
     
     <item>
@@ -95,9 +88,8 @@ To test a bank card payment:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://docs.stg.pay.super.com/docs/payments/token/</guid>
-      <description>Token-based Checkout A Token is a secure string that represents the details of your user, game and purchase parameters. It&amp;rsquo;s You can create the Token when your customer wants to pay for something. After redirecting your customer to a Checkout Session, Stripe presents a payment form where your customer can complete their purchase.
-Token-based features:
- Instantly redirect from anywhere of your game application: You can create a token after a user registered or logged in your game and instantly redirect the user to the Checkout Form when the user intent a payment.</description>
+      <description>Token-based Checkout A Token is a secure string that represents the details of your user, game and purchase parameters.
+You can create a Token before your customer intents to pay and use it in the future payments. For instance, you can create the Token after a user signed up or logged in your website or a game client. When your customer wants to pay for something you instantly redirect them to the PaySuper-hosted Checkout Form to immediately complete a purchase.</description>
     </item>
     
   </channel>

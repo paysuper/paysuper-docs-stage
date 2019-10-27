@@ -4,15 +4,9 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta property="og:title" content="Client-Server Integration" />
-<meta property="og:description" content="Client-Server Integration with PaySuper API Client-side code
-Server-side code
-Step 1. Send a HTTP request to initiate a payment POST /api/v1/order
-ДОБАВИТЬ RUNKIT
-Step 2. Retrieve a response parameter payment_form_url - URL of PaySuper Checkout Form.
-Step 3. Show the Checkout Form:
- Open the received URL in a browser as a new window
- Integrate the the Checkout Form as iframe:
-  &lt;iframe src=&#34;{payment_form_url}&#34;&gt;&lt;/iframe&gt; Questions? Sales Our salespeople are pleasant and friendly." />
+<meta property="og:description" content="Client-Server Integration with PaySuper API If your sales use cases are not suited the client-only integration, use the client-server integration with PaySuper API instead.
+Step 1. Create a Checkout Order ID on your server Send the POST /api/v1/order to receive an Order ID. Learn more about the full list of parameters that can be used for instance the redirect URLs for successful and failed payments.
+Simple Checkout To collect one-time payments it&rsquo;s enough to have a Project ID and an acceptable amount with currency." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://docs.stg.pay.super.com/docs/payments/integration/" />
 
@@ -23,7 +17,7 @@ Step 3. Show the Checkout Form:
 <link rel="stylesheet" href="/book.min.1b994bd28c6ce2255f069b6bf6837b4d396307637fc48d61dcb2a6caac26e031.css" integrity="sha256-G5lL0oxs4iVfBptr9oN7TTljB2N/xI1h3LKmyqwm4DE=">
 
 
-<script defer src="/search.min.2d05ca2f7db14f4053540aefc08636a5546a6a183815f5218339f8baa7613756.js" integrity="sha256-LQXKL32xT0BTVArvwIY2pVRqahg4FfUhgzn4uqdhN1Y="></script>
+<script defer src="/search.min.6567f97e8805ad804a4f4ba09b219a080ea5553e71e8fbf3e90d9f27d1a83ab3.js" integrity="sha256-ZWf5fogFrYBKT0ugmyGaCA6lVT5x6Pvz6Q2fJ9GoOrM="></script>
 
 <!--
 Made with Book Theme
@@ -63,9 +57,9 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li><a href="/docs/payments/">Checkout Overview</a></li>
 <li><a href="/docs/payments/quick-start/">Quick Start</a></li>
-<li><a href="/docs/payments/token/">Tokenization</a></li>
 <li><a href="/docs/payments/sdk-integration/">Client-Only Integration</a></li>
 <li><a href="/docs/payments/integration/"class=active>Client-Server Integration</a></li>
+<li><a href="/docs/payments/token/">Tokenization</a></li>
 <li><a href="/docs/payments/fulfillment/">After the payment</a></li>
 <li><a href="/docs/payments/customization/">Customizing Checkout</a></li>
 <li><a href="/docs/payments/testing/">Testing</a></li>
@@ -108,25 +102,126 @@ https://github.com/alex-shpak/hugo-book
 
 <hr />
 
-<p>Client-side code</p>
+<p>If your sales use cases are not suited <a href="/docs/payments/sdk-integration/">the client-only integration</a>, use the client-server integration with PaySuper API instead.</p>
 
-<p>Server-side code</p>
+<hr />
 
-<p><strong>Step 1.</strong> Send a HTTP request to initiate a payment <a href="ССЫЛКА НА API метод в redoc">POST /api/v1/order</a></p>
+<h2 id="step-1-create-a-checkout-order-id-on-your-server"><strong>Step 1.</strong> Create a Checkout Order ID on your server</h2>
 
-<p>ДОБАВИТЬ RUNKIT</p>
+<p>Send the <a href="ССЫЛКА">POST /api/v1/order</a> to receive an Order ID. Learn more about <a href="ССЫЛКА">the full list of parameters</a> that can be used for instance the redirect URLs for successful and failed payments.</p>
 
-<p><strong>Step 2.</strong> Retrieve a response parameter <strong><code>payment_form_url</code></strong> - URL of PaySuper Checkout Form.</p>
+<h3 id="simple-checkout"><strong>Simple Checkout</strong></h3>
 
-<p><strong>Step 3.</strong> Show the Checkout Form:</p>
+<p>To collect one-time payments it&rsquo;s enough to have a <a href="/docs/payments/quick-start/#step-2-set-up-a-project">Project ID</a> and an acceptable amount with currency.</p>
+
+<p>Use this sample code to create an Order ID with the required parameters for a simple checkout:</p>
+
+<script src="https://embed.runkit.com" data-element-id=".Get 0"></script>
+
+<div id=".Get 0">
+    
+
+</div>
+
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -X POST -H <span style="color:#4070a0">&#39;Content-Type: application/json&#39;</span> -d <span style="color:#4070a0">&#39;{
+</span><span style="color:#4070a0">    &#34;project&#34;: &#34;5db16ae811bf0d0001fdfbd1&#34;,
+</span><span style="color:#4070a0">    &#34;amount&#34;: 10,
+</span><span style="color:#4070a0">    &#34;currency&#34;: &#34;USD&#34;,
+</span><span style="color:#4070a0">    &#34;type&#34;: &#34;simple&#34;
+</span><span style="color:#4070a0">}&#39;</span> <span style="color:#4070a0">&#39;https://p1payapi.tst.protocol.one/api/v1/order&#39;</span></code></pre></div>
+
+<h3 id="products-checkout"><strong>Products Checkout</strong></h3>
+
+<p>In case of using the sales methods for products such as <a href="/docs/payments/quick-start/#step-2-set-up-a-project">key-activated products, virtual items or in-game currency</a> implement this sample code for a specific product:</p>
+
+
+
+
+
+<div class="book-tabs">
+
+  <input type="radio" class="hidden" name="tabs-products_id" id="tabs-products_id-0" checked="checked" />
+  <label for="tabs-products_id-0">
+    Game key
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <p>RUNKIT</p>
+
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"></code></pre></div>
+
+  </div>
+
+  <input type="radio" class="hidden" name="tabs-products_id" id="tabs-products_id-1"  />
+  <label for="tabs-products_id-1">
+    Virtual item
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <p>RUNKIT</p>
+
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"></code></pre></div>
+
+  </div>
+
+  <input type="radio" class="hidden" name="tabs-products_id" id="tabs-products_id-2"  />
+  <label for="tabs-products_id-2">
+    Virtual currency
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <p>RUNKIT</p>
+
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"></code></pre></div>
+
+  </div>
+
+</div>
+
+
+<blockquote class="book-hint warning">
+  Note to use your IDs for the Project and Products found in your merchant account on <a href="https://paysupermgmt.tst.protocol.one/projects/">the PaySuper Projects</a>. To get the Project and Product IDs: open your Project settings page, select the product tab and click on the Product name. Copy the Project and Product IDs from an opened page URL.
+</blockquote>
+
+
+<h2 id="step-2-display-a-checkout-form"><strong>Step 2.</strong> Display a Checkout Form</h2>
+
+<p>From the previous step retrieve the response parameter <strong><code>payment_form_url</code></strong> - the URL of PaySuper-hosted payment form.</p>
+
+<p>When your customer is ready to intent a payment you can use this URL in two ways:</p>
 
 <ul>
-<li><p>Open the received URL in a browser as a <strong>new window</strong></p></li>
+<li><p><strong>Redirect the user to URL in a new browser window</strong></p></li>
 
-<li><p>Integrate the the Checkout Form as <strong>iframe</strong>:</p></li>
+<li><p><strong>Embed PaySuper Form as an inline iframe by URL</strong></p></li>
 </ul>
 
 <div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#062873;font-weight:bold">iframe</span> <span style="color:#4070a0">src</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;{payment_form_url}&#34;</span>&gt;&lt;/<span style="color:#062873;font-weight:bold">iframe</span>&gt;</code></pre></div>
+
+<hr />
+
+<h2 id="next-steps">Next steps</h2>
+
+<blockquote class="book-hint info">
+  <p><a href="/docs/payments/live/"><strong>After the payment</strong></a></p>
+
+<p>After a successful payment, you have to fulfil the customer’s purchase. You can use <a href="ССЫЛКА">webhooks</a> or the <a href="ССЫЛКА">Transaction log</a> to accomplish the purchase.</p>
+
+</blockquote>
+
+
+<blockquote class="book-hint info">
+  <p><a href="/docs/payments/testing/"><strong>Testing the Checkout</strong></a></p>
+
+<p>Check your integration with PaySuper Checkout works correctly. Test cards can be used to create payments that produce successful and particular responses.</p>
+
+</blockquote>
+
+
+<blockquote class="book-hint info">
+  <p><a href="/docs/payments/customization/"><strong>Customizing Checkout</strong></a></p>
+
+<p>Learn about the different ways you can customize your Checkout.</p>
+
+</blockquote>
+
 
 <hr />
 
@@ -172,7 +267,16 @@ Our engineers will help you <a href="https://docs.google.com/forms/d/e/1FAIpQLSc
   <aside class="book-toc level-true fixed">
     <nav id="TableOfContents">
 <ul>
-<li><a href="#client-server-integration-with-paysuper-api">Client-Server Integration with PaySuper API</a></li>
+<li><a href="#client-server-integration-with-paysuper-api">Client-Server Integration with PaySuper API</a>
+<ul>
+<li><a href="#step-1-create-a-checkout-order-id-on-your-server"><strong>Step 1.</strong> Create a Checkout Order ID on your server</a>
+<ul>
+<li><a href="#simple-checkout"><strong>Simple Checkout</strong></a></li>
+<li><a href="#products-checkout"><strong>Products Checkout</strong></a></li>
+</ul></li>
+<li><a href="#step-2-display-a-checkout-form"><strong>Step 2.</strong> Display a Checkout Form</a></li>
+<li><a href="#next-steps">Next steps</a></li>
+</ul></li>
 </ul>
 </nav>
   </aside>
@@ -186,7 +290,7 @@ Our engineers will help you <a href="https://docs.google.com/forms/d/e/1FAIpQLSc
     function buyItems() {
       const paySuper = new PaySuper({
         project: '5cd5620f06ae110001509185',
-        amount: 20,
+        amount: 10,
         currency: 'USD',
         type: 'simple',
         apiUrl: 'https://p1payapi.tst.protocol.one'
