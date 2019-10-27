@@ -17,7 +17,7 @@ Try out the payment sample or see the code on GitHub.
 <link rel="stylesheet" href="/book.min.1b994bd28c6ce2255f069b6bf6837b4d396307637fc48d61dcb2a6caac26e031.css" integrity="sha256-G5lL0oxs4iVfBptr9oN7TTljB2N/xI1h3LKmyqwm4DE=">
 
 
-<script defer src="/search.min.1262581e8432072939ffe8453844f99897614ee4899a3efb65e180b0d83a4488.js" integrity="sha256-EmJYHoQyByk5/&#43;hFOET5mJdhTuSJmj77ZeGAsNg6RIg="></script>
+<script defer src="/search.min.2d05ca2f7db14f4053540aefc08636a5546a6a183815f5218339f8baa7613756.js" integrity="sha256-LQXKL32xT0BTVArvwIY2pVRqahg4FfUhgzn4uqdhN1Y="></script>
 
 <!--
 Made with Book Theme
@@ -130,19 +130,12 @@ https://github.com/alex-shpak/hugo-book
 
 <h3 id="simple-checkout"><strong>Simple Checkout</strong></h3>
 
-<p>Create a Checkout Form to collect one-time payments. It&rsquo;s enough to have a project ID to initiate a payment with a acceptable amount.</p>
+<p>Create a Checkout Form to collect one-time payments. It&rsquo;s enough to have a Project ID to initiate a payment with an acceptable amount.</p>
 
 <div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#007020;font-weight:bold">const</span> paySuper <span style="color:#666">=</span> <span style="color:#007020;font-weight:bold">new</span> PaySuper({
     project<span style="color:#666">:</span> <span style="color:#4070a0">&#39;5cd5624a06ae110001509186&#39;</span>,
     amount<span style="color:#666">:</span> <span style="color:#40a070">50</span>,
     currency<span style="color:#666">:</span> <span style="color:#4070a0">&#39;USD&#39;</span>
-});
-</code></pre></div>
-
-<h3 id="token-based-docs-payments-token-checkout"><strong><a href="/docs/payments/token">Token-based</a> Checkout</strong></h3>
-
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#007020;font-weight:bold">const</span> paySuper <span style="color:#666">=</span> <span style="color:#007020;font-weight:bold">new</span> PaySuper({
-    token<span style="color:#666">:</span> <span style="color:#4070a0">&#39;5cd5620f06ae110001509185&#39;</span>
 });
 </code></pre></div>
 
@@ -240,12 +233,12 @@ https://github.com/alex-shpak/hugo-book
 <h2 id="next-steps">Next steps</h2>
 
 <blockquote class="book-hint info">
-  <a href="/docs/payments/testing/"><strong>Testig the Checkout</strong></a>
+  <a href="/docs/payments/live/"><strong>After the payment</strong></a>
 </blockquote>
 
 
 <blockquote class="book-hint info">
-  <a href="/docs/payments/live/"><strong>After the payment</strong></a>
+  <a href="/docs/payments/testing/"><strong>Testing the Checkout</strong></a>
 </blockquote>
 
 
@@ -304,7 +297,6 @@ Our engineers will help you <a href="https://docs.google.com/forms/d/e/1FAIpQLSc
 <li><a href="#step-2-provide-parameters"><strong>Step 2.</strong> Provide parameters</a>
 <ul>
 <li><a href="#simple-checkout"><strong>Simple Checkout</strong></a></li>
-<li><a href="#token-based-docs-payments-token-checkout"><strong><a href="/docs/payments/token">Token-based</a> Checkout</strong></a></li>
 <li><a href="#products-docs-payments-quick-start-step-2-set-up-a-project-checkout"><strong><a href="/docs/payments/quick-start/#step-2-set-up-a-project">Products</a> Checkout</strong></a></li>
 </ul></li>
 <li><a href="#step-3-display-a-form"><strong>Step 3.</strong> Display a form</a></li>
