@@ -77,9 +77,10 @@ Prefilling user data Boost your paying conversion rate with pre-filled payment f
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://docs.stg.pay.super.com/docs/payments/testing/</guid>
-      <description>Testing the Payment Process Before going live you should test the payment process in the Sandbox.
-Test in The Sandbox To test a bank card payment:
- Open the PaySuper Checkout Form. Choose the Credit/Debit cards group of payment methods. Enter the bank card details. Enter any values in the remaining fields.  You can also specify incorrect details (card number, expiration date, or CVV) in order to generate an error.</description>
+      <description>Testing the Payment Process The Payment Form integration should be tested in the Sandbox before going live.
+The Sandbox provides full functionality but it only emulates processing, no actual bank transactions are made.
+When using the PaySuper JS SDK ensure that:
+ Handlers for the events are displayed properly. The PaySuper object created with all required parameters or your token contains all desired parameters.  Incase of using the PaySuper API in your server-side code ensure that:</description>
     </item>
     
     <item>
