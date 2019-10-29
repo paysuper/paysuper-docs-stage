@@ -26,22 +26,27 @@ Headings h1 Heading h2 Heading h3 Heading h4 Heading h5 Heading h6 Heading Notes
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://docs.stg.pay.super.com/docs/glossary/</guid>
-      <description>Payment form: a|the Checkout Form
-PaySuper Admin entities and properties: a|the Project
-a|the Product
-a|the Project Secret key
+      <description>Payment form: a Checkout Form
+PaySuper Admin entities and properties: a Project
+a Product
+a Project Secret key
 the Banking info
+Virtual Currency
+Game Keys
+Virtual Items
+a key-activated product
+a virtual item
+an in-game currency
 PaySuper Admin pages: the Projects list page
 the Project settings page
-Terms in lowercase: a|the payment
-a|the order
-a|the token
+Terms in lowercase: a payment
+an order
+a token
 Terms in uppercase: PaySuper Checkout
 Company Onboarding
 PaySuper JS SDK
 PaySuper API
-PaySuper
-PaySuper Dashboard</description>
+PaySuper</description>
     </item>
     
     <item>
