@@ -20,5 +20,29 @@
 Headings h1 Heading h2 Heading h3 Heading h4 Heading h5 Heading h6 Heading Notes  The note with padding example.</description>
     </item>
     
+    <item>
+      <title></title>
+      <link>https://docs.stg.pay.super.com/docs/glossary/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.stg.pay.super.com/docs/glossary/</guid>
+      <description>Payment form: a|the Checkout Form
+PaySuper Admin entities and properties: a|the Project
+a|the Product
+a|the Project Secret key
+the Banking info
+PaySuper Admin pages: the Projects list page
+the Project settings page
+Terms in lowercase: a|the payment
+a|the order
+a|the token
+Terms in uppercase: PaySuper Checkout
+Company Onboarding
+PaySuper JS SDK
+PaySuper API
+PaySuper
+PaySuper Dashboard</description>
+    </item>
+    
   </channel>
 </rss>
