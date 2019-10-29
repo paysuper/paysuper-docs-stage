@@ -65,7 +65,7 @@ PaySuper</description>
       
       <guid>https://docs.stg.pay.super.com/docs/payments/sdk-integration/</guid>
       <description>Payment initialization on the client-side The client-side payment initialization makes it possible to integrate a Checkout Form into your website using only frontend code.
-It’s easy to embed PaySuper JS SDK with just a few lines of code to start a payment process and display a purchase status finally whithout any server-side code.
+It’s easy to embed PaySuper JS SDK with just a few lines of Javascript code to start a payment process and display a purchase status finally whithout any server-side code.
 If your sales use cases are not filled, use the server-side payment initialization with PaySuper API instead.</description>
     </item>
     
@@ -96,8 +96,8 @@ Prefilling customer data Boost your payment conversion rate with a payment form 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://docs.stg.pay.super.com/docs/payments/token/</guid>
-      <description>Payment initialization with token A token is an encrypted string that represents certain details of your customer, such as the user id, game and purchase parameters.
-You can create a token before your customer intents to pay and use it in the future payments. For instance, you can create the token after a user has signed up or has logged in to your website or a game client. When your customer wants to pay for something you redirect them to the PaySuper-hosted Checkout Form to instantly complete a purchase.</description>
+      <description>Payment initialization with token A token is an encrypted string that represents certain details of your customer (such as the user ID, email and others), a game and purchase parameters.
+You can create a token before your customer intents to pay and use it in the future payments. For instance, you can create the token after a user has signed up or has logged in to your website or a game client.</description>
     </item>
     
     <item>
@@ -115,10 +115,9 @@ You can create a token before your customer intents to pay and use it in the fut
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://docs.stg.pay.super.com/docs/payments/integration/</guid>
-      <description>Payment initialization on the server-side НАПИСАТЬ ОПИСАНИЕ ЭТОГО ПОДХОДА
-If your sales use cases are not filled, use the client-side payment initialization with PaySuper JS SDK instead.
-Step 1. Create a Checkout Order ID on your server Send the POST /api/v1/order to receive an Order ID. Learn more about the full list of parameters that can be used for instance the redirect URLs for successful and failed payments.
-Simple Checkout To collect one-time payments it&amp;rsquo;s enough to have a Project ID and an acceptable amount with currency.</description>
+      <description>Payment initialization on the server-side The server-side payment initialization makes it possible to integrate a Checkout Form into your website or game client using PaySuper API.
+You can use PaySuper JS SDK for the client-side payment initialization to integrate a Checkout Form into your website only on the client-side.
+Step 1. Create a Checkout Order ID on your server Send the POST /api/v1/order to receive an Order ID. Learn more about the full list of parameters that can be used for instance the redirect URLs for successful and failed payments.</description>
     </item>
     
     <item>
