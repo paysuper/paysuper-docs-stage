@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta property="og:title" content="Quick start" />
-<meta property="og:description" content="Payments Flow User Flow   Integration Flow   Quick start Step 1. Register a PaySuper Company account  Registration and onboarding     Sign up. Verify your email address from a delivered confirmation email. Follow several steps of a brief Welcome Onboarding. It&rsquo;s required to fill in the Banking info in the Company Onboarding to enable creating a project.  When you are ready to start selling you will need to fill in all your company details in the Company Onboarding and the signed documents in the License Agreement." />
+<meta property="og:description" content="Payments Flow User Flow   Integration Flow   Quick start Step 1. Register a PaySuper Company account  Registration and onboarding     Sign up. Verify your email address with the delivered confirmation email. Follow the steps of a brief Welcome Onboarding. You are required to fill in the Banking info in Company Onboarding to be able create a project.  When you are ready to start selling you will need to fill in all your company details in Company Onboarding and the sign the documents in the License Agreement." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://docs.stg.pay.super.com/docs/payments/quick-start/" />
 
@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="/book.min.1b994bd28c6ce2255f069b6bf6837b4d396307637fc48d61dcb2a6caac26e031.css" integrity="sha256-G5lL0oxs4iVfBptr9oN7TTljB2N/xI1h3LKmyqwm4DE=">
 
 
-<script defer src="/search.min.fdd77c11206354759073623c6faee213988577b31092fc6dfa64ec096f9694d0.js" integrity="sha256-/dd8ESBjVHWQc2I8b67iE5iFd7MQkvxt&#43;mTsCW&#43;WlNA="></script>
+<script defer src="/search.min.0c8aad5b4e0c2d31bbdb78e224ecb392f364b527805defb442e25b9e81eabd62.js" integrity="sha256-DIqtW04MLTG723jiJOyzkvNktSeAXe&#43;0QuJbnoHqvWI="></script>
 
 <!--
 Made with Book Theme
@@ -55,9 +55,9 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li><a href="/docs/payments/">Checkout Overview</a></li>
 <li><a href="/docs/payments/quick-start/"class=active>Quick Start</a></li>
-<li><a href="/docs/payments/sdk-integration/">Client-Only Integration</a></li>
-<li><a href="/docs/payments/integration/">Client-Server Integration</a></li>
-<li><a href="/docs/payments/token/">Tokenization</a></li>
+<li><a href="/docs/payments/sdk-integration/">Payments from client-side</a></li>
+<li><a href="/docs/payments/integration/">Payments from server-side</a></li>
+<li><a href="/docs/payments/token/">Payments with token</a></li>
 <li><a href="/docs/payments/fulfillment/">After the payment</a></li>
 <li><a href="/docs/payments/customization/">Customizing Checkout</a></li>
 <li><a href="/docs/payments/testing/">Testing</a></li>
@@ -130,15 +130,15 @@ https://github.com/alex-shpak/hugo-book
     <div class="book-expand-content markdown-inner">
       <ol>
 <li><a href="https://paysupermgmt.tst.protocol.one">Sign up</a>.</li>
-<li>Verify your email address from a delivered confirmation email.</li>
-<li>Follow several steps of a brief <a href="https://paysupermgmt.tst.protocol.one/profile">Welcome Onboarding</a>.</li>
-<li>It&rsquo;s required to fill in the Banking info in the <a href="https://paysupermgmt.tst.protocol.one/company">Company Onboarding</a> to enable creating a project.</li>
+<li>Verify your email address with the delivered confirmation email.</li>
+<li>Follow the steps of a brief <a href="https://paysupermgmt.tst.protocol.one/profile">Welcome Onboarding</a>.</li>
+<li>You are required to fill in the Banking info in <a href="https://paysupermgmt.tst.protocol.one/company">Company Onboarding</a> to be able create a project.</li>
 </ol>
 
 <blockquote class="book-hint info">
-  <p>When you are ready to start selling you will need to fill in all your company details in the <a href="https://paysupermgmt.tst.protocol.one/company">Company Onboarding</a> and the signed documents in the License Agreement.</p>
+  <p>When you are ready to start selling you will need to fill in all your company details in <a href="https://paysupermgmt.tst.protocol.one/company">Company Onboarding</a> and the sign the documents in the License Agreement.</p>
 
-<p>Before sign the documents we manually check each new account to ensure that our platform is attended only by companies who are related to the gaming industry, this allows us to provide maximum features and stability to all our users.</p>
+<p>Before confirming your application we manually check each new account to ensure that our platform is attended only by companies who are related to the gaming industry. This allows us focus on the relevant features and quality for our users.</p>
 
 </blockquote>
 
@@ -149,7 +149,7 @@ https://github.com/alex-shpak/hugo-book
 
 <h2 id="step-2-set-up-a-project"><strong>Step 2.</strong> Set up a Project</h2>
 
-<p>Having a single project is enough to start selling.</p>
+<p>A single project is enough to start selling.</p>
 
 <div class="book-expand">
   <label>
@@ -159,10 +159,10 @@ https://github.com/alex-shpak/hugo-book
     </div>
     <input type="checkbox" class="hidden" />
     <div class="book-expand-content markdown-inner">
-      <p><strong>To create a project:</strong></p>
+      <p><strong>To create a Project:</strong></p>
 
 <ol>
-<li>Open <a href="https://paysupermgmt.tst.protocol.one/projects/"><strong>the Projects List page</strong></a></li>
+<li>Open <a href="https://paysupermgmt.tst.protocol.one/projects/"><strong>the Projects list page</strong></a></li>
 <li>Click the <strong>Create Project</strong> button.</li>
 <li>Enter a <strong>Project Name</strong>.</li>
 <li>Click <strong>Create</strong> to redirect to the Project Settings page.</li>
@@ -174,13 +174,6 @@ https://github.com/alex-shpak/hugo-book
 <li><strong>Short description</strong></li>
 <li><strong>Secret key</strong>: Generate a secret key to set up correct integration with PaySuper platform.</li>
 <li><strong>Currency</strong>: by default is equal to <strong>USD</strong>.</li>
-</ul></li>
-
-<li><p>Optional information:</p>
-
-<ul>
-<li><strong>Localization</strong>: you can choose the complete set of supported languages for the project and products descriptions</li>
-<li><strong>Logotype</strong></li>
 </ul></li>
 
 <li><p>Click <strong>Save</strong>.</p></li>
@@ -204,7 +197,7 @@ https://github.com/alex-shpak/hugo-book
       <strong>To add a Game key:</strong></p>
 
 <ol>
-<li>Open <a href="https://paysupermgmt.tst.protocol.one/projects/"><strong>the Projects List page</strong></a></li>
+<li>Open <a href="https://paysupermgmt.tst.protocol.one/projects/"><strong>the Projects list page</strong></a></li>
 <li>Open the Project settings page.</li>
 <li></li>
 </ol>
@@ -224,7 +217,7 @@ https://github.com/alex-shpak/hugo-book
       <strong>To add a Virtual item:</strong></p>
 
 <ol>
-<li>Open <a href="https://paysupermgmt.tst.protocol.one/projects/"><strong>the Projects List page</strong></a></li>
+<li>Open <a href="https://paysupermgmt.tst.protocol.one/projects/"><strong>the Projects list page</strong></a></li>
 <li>Open the Project settings page.</li>
 <li></li>
 </ol>
@@ -244,7 +237,7 @@ https://github.com/alex-shpak/hugo-book
       <strong>To add a Virtual currency:</strong></p>
 
 <ol>
-<li>Open <a href="https://paysupermgmt.tst.protocol.one/projects/"><strong>the Projects List page</strong></a></li>
+<li>Open <a href="https://paysupermgmt.tst.protocol.one/projects/"><strong>the Projects list page</strong></a></li>
 <li>Open the Project settings page.</li>
 <li></li>
 </ol>
@@ -257,17 +250,21 @@ https://github.com/alex-shpak/hugo-book
 
 <p>Use Checkout to collect <a href="/docs/payments/#simple-checkout">one-time payments</a> or to sell <a href="/docs/payments/#typed-checkout">products defined in the Project</a>.</p>
 
-<h3 id="integration-on-client-side-docs-payments-sdk-integration"><a href="/docs/payments/sdk-integration/">Integration on client-side</a></h3>
+<h3 id="client-side-payment-initialization-docs-payments-sdk-integration"><a href="/docs/payments/sdk-integration/">Client-side payment initialization</a></h3>
 
-<p>The client-only integration lets you accept online payments using only frontend code PaySuper JS SDK. The Checkout Form can be embedded as an <a href="ССЫЛКА на метод renderPage">iframe</a> or <a href="ССЫЛКА на метод renderModal">modal window</a>.</p>
+<p>The client-side payment initialization lets you accept online payments using only frontend code PaySuper JS SDK. The Checkout Form can be embedded as an <a href="ССЫЛКА на метод renderPage">iframe</a> or <a href="ССЫЛКА на метод renderModal">modal window</a>.</p>
 
-<h3 id="integration-on-client-and-server-side-docs-payments-integration"><a href="/docs/payments/integration/">Integration on client and server-side</a></h3>
+<h3 id="server-side-payment-initialization-docs-payments-integration"><a href="/docs/payments/integration/">Server-side payment initialization</a></h3>
 
 <p>You can also integrate on a server-side without PaySuper SJ SDK for other reasons. Checkout Form can be embedded as an <a href="ССЫЛКА">iframe</a> or <a href="ССЫЛКА">new window</a>.</p>
 
+<h3 id="payment-initialization-with-token-docs-payments-token"><a href="/docs/payments/token/">Payment initialization with token</a></h3>
+
+<p>ДОПИСАТЬ ПРО ТОКЕН</p>
+
 <h2 id="step-4-after-the-payment"><strong>Step 4.</strong> After the payment</h2>
 
-<p>Following the successful payment, you should fulfil the customer’s purchase. You can use <a href="ССЫЛКА">webhooks</a> or the <a href="ССЫЛКА">Transaction log</a> to accomplish the purchase. For more details about handling purchase fulfilment with Checkout, see <a href="/docs/payments/fulfillment/">After the payment</a>.</p>
+<p>You can use <a href="ССЫЛКА">webhooks</a> or the <a href="ССЫЛКА">Transaction log</a> to accomplish the purchase. More details about handling the purchase fulfilment with PaySuper Checkout are available at <a href="/docs/payments/fulfillment/">After the payment</a>.</p>
 
 <hr />
 
@@ -284,13 +281,13 @@ https://github.com/alex-shpak/hugo-book
 <blockquote class="book-hint info">
   <p><a href="/docs/payments/testing/"><strong>Testing the Checkout</strong></a></p>
 
-<p>Check your integration with PaySuper Checkout works correctly. Test cards can be used to create payments that produce successful and particular responses.</p>
+<p>Verify that your integration with PaySuper Checkout works correctly. Our offered test cards can be used to create payments that produce defined responses for you to test your integration code.</p>
 
 </blockquote>
 
 
 <blockquote class="book-hint info">
-  <p><a href="/docs/payments/customization/"><strong>Customizing Checkout</strong></a></p>
+  <p><a href="/docs/payments/customization/"><strong>Customizing the Checkout</strong></a></p>
 
 <p>Learn about the different ways you can customize your Checkout.</p>
 
@@ -327,7 +324,9 @@ https://github.com/alex-shpak/hugo-book
 
 <h2 id="not-a-developer">Not a developer?</h2>
 
-Our engineers will help you <a href="https://docs.google.com/forms/d/e/1FAIpQLScQPU83wKPkJeui_WvxGDoXWLDL4vyD8GsWNqf9-ccwDg3dEw/viewform">to integrate PaySuper Checkout</a> into your existing site or game in the best possible way.
+Our engineers will help you <a href="https://docs.google.com/forms/d/e/1FAIpQLScQPU83wKPkJeui_WvxGDoXWLDL4vyD8GsWNqf9-ccwDg3dEw/viewform">integrate PaySuper</a> into your existing e-commerce platform, a website or a game in the best possible way.
+
+If you want something very special and crazy custom yet don&rsquo;t have a suitable programmer available nearby - <a href="https://docs.google.com/forms/d/e/1FAIpQLScQPU83wKPkJeui_WvxGDoXWLDL4vyD8GsWNqf9-ccwDg3dEw/viewform">talk to us</a>! We won&rsquo;t let down a PaySuper user. We will try to help you in every possible way. We can even hire a programmer for you!
 </article>
 
       
@@ -352,8 +351,9 @@ Our engineers will help you <a href="https://docs.google.com/forms/d/e/1FAIpQLSc
 <li><a href="#step-2-set-up-a-project"><strong>Step 2.</strong> Set up a Project</a></li>
 <li><a href="#step-3-set-up-a-checkout-form"><strong>Step 3.</strong> Set up a Checkout Form</a>
 <ul>
-<li><a href="#integration-on-client-side-docs-payments-sdk-integration"><a href="/docs/payments/sdk-integration/">Integration on client-side</a></a></li>
-<li><a href="#integration-on-client-and-server-side-docs-payments-integration"><a href="/docs/payments/integration/">Integration on client and server-side</a></a></li>
+<li><a href="#client-side-payment-initialization-docs-payments-sdk-integration"><a href="/docs/payments/sdk-integration/">Client-side payment initialization</a></a></li>
+<li><a href="#server-side-payment-initialization-docs-payments-integration"><a href="/docs/payments/integration/">Server-side payment initialization</a></a></li>
+<li><a href="#payment-initialization-with-token-docs-payments-token"><a href="/docs/payments/token/">Payment initialization with token</a></a></li>
 </ul></li>
 <li><a href="#step-4-after-the-payment"><strong>Step 4.</strong> After the payment</a></li>
 <li><a href="#next-steps">Next steps</a></li>

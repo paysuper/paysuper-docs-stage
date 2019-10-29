@@ -3,20 +3,20 @@
 
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><meta property="og:title" content="Token-based Checkout" />
-<meta property="og:description" content="Token-based Checkout A Token is a secure string that represents the details of your user, game and purchase parameters.
-You can create a Token before your customer intents to pay and use it in the future payments. For instance, you can create the Token after a user signed up or logged in your website or a game client. When your customer wants to pay for something you instantly redirect them to the PaySuper-hosted Checkout Form to immediately complete a purchase." />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><meta property="og:title" content="Payment initialization with token" />
+<meta property="og:description" content="Payment initialization with token A token is an encrypted string that represents certain details of your customer, such as the user id, game and purchase parameters.
+You can create a token before your customer intents to pay and use it in the future payments. For instance, you can create the token after a user has signed up or has logged in to your website or a game client. When your customer wants to pay for something you instantly redirect them to the PaySuper-hosted Checkout Form to instantly complete a purchase." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://docs.stg.pay.super.com/docs/payments/token/" />
 
-<title>Token-based Checkout | PaySuper docs</title>
+<title>Payment initialization with token | PaySuper docs</title>
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 
 
 <link rel="stylesheet" href="/book.min.1b994bd28c6ce2255f069b6bf6837b4d396307637fc48d61dcb2a6caac26e031.css" integrity="sha256-G5lL0oxs4iVfBptr9oN7TTljB2N/xI1h3LKmyqwm4DE=">
 
 
-<script defer src="/search.min.fdd77c11206354759073623c6faee213988577b31092fc6dfa64ec096f9694d0.js" integrity="sha256-/dd8ESBjVHWQc2I8b67iE5iFd7MQkvxt&#43;mTsCW&#43;WlNA="></script>
+<script defer src="/search.min.0c8aad5b4e0c2d31bbdb78e224ecb392f364b527805defb442e25b9e81eabd62.js" integrity="sha256-DIqtW04MLTG723jiJOyzkvNktSeAXe&#43;0QuJbnoHqvWI="></script>
 
 <!--
 Made with Book Theme
@@ -56,9 +56,9 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li><a href="/docs/payments/">Checkout Overview</a></li>
 <li><a href="/docs/payments/quick-start/">Quick Start</a></li>
-<li><a href="/docs/payments/sdk-integration/">Client-Only Integration</a></li>
-<li><a href="/docs/payments/integration/">Client-Server Integration</a></li>
-<li><a href="/docs/payments/token/"class=active>Tokenization</a></li>
+<li><a href="/docs/payments/sdk-integration/">Payments from client-side</a></li>
+<li><a href="/docs/payments/integration/">Payments from server-side</a></li>
+<li><a href="/docs/payments/token/"class=active>Payments with token</a></li>
 <li><a href="/docs/payments/fulfillment/">After the payment</a></li>
 <li><a href="/docs/payments/customization/">Customizing Checkout</a></li>
 <li><a href="/docs/payments/testing/">Testing</a></li>
@@ -91,33 +91,33 @@ https://github.com/alex-shpak/hugo-book
   <label for="menu-control">
     <img src="/svg/menu.svg" alt="Menu" />
   </label>
-  <strong>Token-based Checkout</strong>
+  <strong>Payment initialization with token</strong>
 </header>
 
       
 <article class="markdown">
 
-<h1 id="token-based-checkout">Token-based Checkout</h1>
+<h1 id="payment-initialization-with-token">Payment initialization with token</h1>
 
 <hr />
 
-<p>A Token is a secure string that represents the details of your user, game and purchase parameters.</p>
+<p>A token is an encrypted string that represents certain details of your customer, such as the user id, game and purchase parameters.</p>
 
-<p>You can create a Token before your customer intents to pay and use it in the future payments. For instance, you can create the Token after a user signed up or logged in your website or a game client. When your customer wants to pay for something you instantly redirect them to the PaySuper-hosted Checkout Form to immediately complete a purchase.</p>
+<p>You can create a token before your customer intents to pay and use it in the future payments. For instance, you can create the token after a user has signed up or has logged in to your website or a game client. When your customer wants to pay for something you instantly redirect them to the PaySuper-hosted Checkout Form to instantly complete a purchase.</p>
 
 <h2 id="token-based-features">Token-based features</h2>
 
 <ul>
-<li><p><strong>Instantly redirect to a Checkout Form</strong>: Using a previously stored user data in the Token you don&rsquo;t need to receive additional information about the user on your server-side. In that case, you can redirect to the PaySuper Checkout Form from anywhere of your website or a game client.</p></li>
+<li><p><strong>Instantly redirect to a Checkout Form</strong>: Once you have created a token that stores the necessary customer data, you don&rsquo;t need to request that data again from the customer. Instead you can display the PaySuper Checkout Form so the customer can conveniently confirm the purchase. This is useful when you can identify a customer in your system.</p></li>
 
-<li><p><strong>The pre-filled information in a Checkout Form</strong>: Incase of using the Token the Checkout Form is pre-filled with applicable information about your customer after a payment process is initiated.</p></li>
+<li><p><strong>The pre-filled information in a Checkout Form</strong>: The Checkout Form is pre-filled with the applicable information about your customer that it can get from the token.</p></li>
 </ul>
 
 <hr />
 
-<p>Follow these steps to create a Checkout Form:</p>
+<p>You can follow these steps to create a Checkout Form:</p>
 
-<h2 id="step-1-create-a-token-on-your-server"><strong>Step 1.</strong> Create a Token on your server</h2>
+<h2 id="step-1-create-a-token-on-your-server"><strong>Step 1.</strong> Create a token on your server</h2>
 
 <p>Send the <a href="ССЫЛКА">POST /api/v1/tokens</a> to receive an encrypted string. Learn more about <a href="ССЫЛКА">the full list of parameters</a>.</p>
 
@@ -129,7 +129,7 @@ https://github.com/alex-shpak/hugo-book
 </div>
 
 <blockquote class="book-hint warning">
-  Setting up the <code>type</code> parameter in a Token is required for all of the sales options.
+  Setting up the <code>type</code> parameter in a token is required for all of the sales options.
 </blockquote>
 
 
@@ -141,83 +141,50 @@ https://github.com/alex-shpak/hugo-book
 </span><span style="color:#4070a0">    &#34;type&#34;: &#34;simple&#34;
 </span><span style="color:#4070a0"> },
 </span><span style="color:#4070a0"> &#34;user&#34;: {
-</span><span style="color:#4070a0">    &#34;address&#34;: {
-</span><span style="color:#4070a0">       &#34;city&#34;: &#34;Almere&#34;,
-</span><span style="color:#4070a0">       &#34;country&#34;: &#34;NL&#34;,
-</span><span style="color:#4070a0">       &#34;postal_code&#34;: &#34;1326 PA&#34;,
-</span><span style="color:#4070a0">       &#34;state&#34;: &#34;Flevoland&#34;
-</span><span style="color:#4070a0">    },
-</span><span style="color:#4070a0">    &#34;email&#34;: {
-</span><span style="color:#4070a0">       &#34;value&#34;: &#34;user.email@example.com&#34;,
-</span><span style="color:#4070a0">       &#34;verified&#34;: true
-</span><span style="color:#4070a0">    },
-</span><span style="color:#4070a0">    &#34;id&#34;: &#34;58799f2c2564296bd2cb&#34;,
-</span><span style="color:#4070a0">    &#34;ip&#34;: {
-</span><span style="color:#4070a0">       &#34;value&#34;: &#34;188.226.141.211&#34;
-</span><span style="color:#4070a0">    },
-</span><span style="color:#4070a0">    &#34;locale&#34;: {
-</span><span style="color:#4070a0">       &#34;value&#34;: &#34;NL&#34;
-</span><span style="color:#4070a0">    },
-</span><span style="color:#4070a0">    &#34;name&#34;: {
-</span><span style="color:#4070a0">       &#34;value&#34;: &#34;Yavuz Stolwijk&#34;
-</span><span style="color:#4070a0">    },
-</span><span style="color:#4070a0">    &#34;phone&#34;: {
-</span><span style="color:#4070a0">       &#34;value&#34;: &#34;71111111111&#34;,
-</span><span style="color:#4070a0">       &#34;verified&#34;: true
-</span><span style="color:#4070a0">    }
+</span><span style="color:#4070a0">   &#34;id&#34;: &#34;58799f2c2564296bd2cb&#34;,
+</span><span style="color:#4070a0">   &#34;address&#34;: {
+</span><span style="color:#4070a0">      &#34;city&#34;: &#34;Almere&#34;,
+</span><span style="color:#4070a0">      &#34;country&#34;: &#34;NL&#34;,
+</span><span style="color:#4070a0">      &#34;postal_code&#34;: &#34;1326 PA&#34;,
+</span><span style="color:#4070a0">      &#34;state&#34;: &#34;Flevoland&#34;
+</span><span style="color:#4070a0">   },
+</span><span style="color:#4070a0">   &#34;email&#34;: {
+</span><span style="color:#4070a0">      &#34;value&#34;: &#34;user.email@example.com&#34;,
+</span><span style="color:#4070a0">      &#34;verified&#34;: true
+</span><span style="color:#4070a0">   }
 </span><span style="color:#4070a0"> }
 </span><span style="color:#4070a0">}&#39;</span> <span style="color:#4070a0">&#39;https://p1payapi.tst.protocol.one/api/v1/tokens&#39;</span></code></pre></div>
 
 <blockquote class="book-hint warning">
-  Make sure to replace the value with a <a href="ССЫЛКА НА АПИ СПЕКУ как передавать хедер с авторизацией must contain a sha512 hash of concatenation request body and the project secret key">sha512 hash</a> in the Header <code>X-API-SIGNATURE</code> and your Project ID in the <code>project_id</code> parameter.
+  Remember to replace the value with a <a href="ССЫЛКА НА АПИ СПЕКУ как передавать хедер с авторизацией must contain a sha512 hash of concatenation request body and the project secret key">sha512 hash</a> in the Header <code>X-API-SIGNATURE</code> and your Project ID in the <code>project_id</code> parameter.
 </blockquote>
 
 
-<h2 id="step-2-create-a-checkout-form-with-the-token"><strong>Step 2.</strong> Create a Checkout Form with the Token</h2>
+<h2 id="step-2-create-a-checkout-form-with-a-token"><strong>Step 2.</strong> Create a Checkout Form with a token</h2>
 
-<h3 id="client-only-integration"><strong>Client-only integration</strong></h3>
+<h3 id="client-side-payment-initialization"><strong>client-side payment initialization</strong></h3>
 
-<p>To integrate a Checkout Form you can follow all steps for the <a href="/docs/payments/sdk-integration/">Client-only integration</a> but passing a Token parameter when creating a PaySuper object.</p>
+<p>To integrate a Checkout Form you can follow the <a href="/docs/payments/sdk-integration/">client-side payment initialization</a> but instead pass a token parameter when creating a PaySuper object.</p>
 
-<p>If your Token encrypts a <a href="ССЫЛКА НА АПИ СПЕКУ параметры tokens">user and order parameters</a> you can create a PaySuper Form instance passing one parameter:</p>
+<p>If your token contains <a href="ССЫЛКА НА АПИ СПЕКУ параметры tokens">user and order parameters</a> then you can create a Checkout Form instance with just a single parameter:</p>
 
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#666">&lt;</span>script src<span style="color:#666">=</span><span style="color:#4070a0">&#34;https://cdn.pay.super.com/paysdk/latest/paysuper.js&#34;</span><span style="color:#666">&gt;&lt;</span><span style="">/script&gt;</span>
-
-<span style="color:#666">&lt;</span>script<span style="color:#666">&gt;</span>
-<span style="color:#007020;font-weight:bold">function</span> buyItems() {
-    <span style="color:#007020;font-weight:bold">const</span> paySuper <span style="color:#666">=</span> <span style="color:#007020;font-weight:bold">new</span> PaySuper({
-        token<span style="color:#666">:</span> <span style="color:#4070a0">&#39;5cd5620f06ae110001509185&#39;</span>
-    });
-
-    paySuper.renderModal();
-}
-<span style="color:#666">&lt;</span><span style="">/script&gt;</span>
-
-<span style="color:#666">&lt;</span>button onclick<span style="color:#666">=</span><span style="color:#4070a0">&#34;buyItems()&#34;</span><span style="color:#666">&gt;</span>BUY<span style="color:#666">&lt;</span><span style="">/button&gt;</span>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#007020;font-weight:bold">const</span> paySuper <span style="color:#666">=</span> <span style="color:#007020;font-weight:bold">new</span> PaySuper({
+   token<span style="color:#666">:</span> <span style="color:#4070a0">&#39;5cd5620f06ae110001509185&#39;</span>
+});
 </code></pre></div>
 
-<p>If your Token encrypts only <a href="ССЫЛКА НА АПИ СПЕКУ параметры tokens">user data</a> you can create a PaySuper Form instance passing the Token and also the order parameters:</p>
+<p>If your token encrypts only the <a href="ССЫЛКА НА АПИ СПЕКУ параметры tokens">user data</a> then you can create a Checkout Form instance passing the token and also the order parameters:</p>
 
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#666">&lt;</span>script src<span style="color:#666">=</span><span style="color:#4070a0">&#34;https://cdn.pay.super.com/paysdk/latest/paysuper.js&#34;</span><span style="color:#666">&gt;&lt;</span><span style="">/script&gt;</span>
-
-<span style="color:#666">&lt;</span>script<span style="color:#666">&gt;</span>
-<span style="color:#007020;font-weight:bold">function</span> buyItems() {
-    <span style="color:#007020;font-weight:bold">const</span> paySuper <span style="color:#666">=</span> <span style="color:#007020;font-weight:bold">new</span> PaySuper({
-        token<span style="color:#666">:</span> <span style="color:#4070a0">&#39;5cd5620f06ae110001509185&#39;</span>
-        project<span style="color:#666">:</span> <span style="color:#4070a0">&#39;5cd5624a06ae110001509186&#39;</span>,
-        amount<span style="color:#666">:</span> <span style="color:#40a070">10</span>,
-        currency<span style="color:#666">:</span> <span style="color:#4070a0">&#39;USD&#39;</span>
-    });
-
-    paySuper.renderModal();
-}
-<span style="color:#666">&lt;</span><span style="">/script&gt;</span>
-
-<span style="color:#666">&lt;</span>button onclick<span style="color:#666">=</span><span style="color:#4070a0">&#34;buyItems()&#34;</span><span style="color:#666">&gt;</span>BUY<span style="color:#666">&lt;</span><span style="">/button&gt;</span>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#007020;font-weight:bold">const</span> paySuper <span style="color:#666">=</span> <span style="color:#007020;font-weight:bold">new</span> PaySuper({
+   token<span style="color:#666">:</span> <span style="color:#4070a0">&#39;5cd5620f06ae110001509185&#39;</span>
+   project<span style="color:#666">:</span> <span style="color:#4070a0">&#39;5cd5624a06ae110001509186&#39;</span>,
+   amount<span style="color:#666">:</span> <span style="color:#40a070">10</span>,
+   currency<span style="color:#666">:</span> <span style="color:#4070a0">&#39;USD&#39;</span>
+});
 </code></pre></div>
 
 <blockquote class="book-hint warning">
-  Note that the parameters used in the <code>POST /api/v1/tokens</code> request overrides the same parameters in the PaySuper object if they exist.
+  Note that the parameters used in the <code>POST /api/v1/tokens</code> request override the corresponding parameters in a PaySuper object if they exist.
 </blockquote>
 
 
@@ -236,13 +203,13 @@ https://github.com/alex-shpak/hugo-book
 <blockquote class="book-hint info">
   <p><a href="/docs/payments/testing/"><strong>Testing the Checkout</strong></a></p>
 
-<p>Check your integration with PaySuper Checkout works correctly. Test cards can be used to create payments that produce successful and particular responses.</p>
+<p>Verify that your integration with PaySuper Checkout works correctly. Our offered test cards can be used to create payments that produce defined responses for you to test your integration code.</p>
 
 </blockquote>
 
 
 <blockquote class="book-hint info">
-  <p><a href="/docs/payments/customization/"><strong>Customizing Checkout</strong></a></p>
+  <p><a href="/docs/payments/customization/"><strong>Customizing the Checkout</strong></a></p>
 
 <p>Learn about the different ways you can customize your Checkout.</p>
 
@@ -279,7 +246,9 @@ https://github.com/alex-shpak/hugo-book
 
 <h2 id="not-a-developer">Not a developer?</h2>
 
-Our engineers will help you <a href="https://docs.google.com/forms/d/e/1FAIpQLScQPU83wKPkJeui_WvxGDoXWLDL4vyD8GsWNqf9-ccwDg3dEw/viewform">to integrate PaySuper Checkout</a> into your existing site or game in the best possible way.
+Our engineers will help you <a href="https://docs.google.com/forms/d/e/1FAIpQLScQPU83wKPkJeui_WvxGDoXWLDL4vyD8GsWNqf9-ccwDg3dEw/viewform">integrate PaySuper</a> into your existing e-commerce platform, a website or a game in the best possible way.
+
+If you want something very special and crazy custom yet don&rsquo;t have a suitable programmer available nearby - <a href="https://docs.google.com/forms/d/e/1FAIpQLScQPU83wKPkJeui_WvxGDoXWLDL4vyD8GsWNqf9-ccwDg3dEw/viewform">talk to us</a>! We won&rsquo;t let down a PaySuper user. We will try to help you in every possible way. We can even hire a programmer for you!
 </article>
 
       
@@ -293,13 +262,13 @@ Our engineers will help you <a href="https://docs.google.com/forms/d/e/1FAIpQLSc
   <aside class="book-toc level-true fixed">
     <nav id="TableOfContents">
 <ul>
-<li><a href="#token-based-checkout">Token-based Checkout</a>
+<li><a href="#payment-initialization-with-token">Payment initialization with token</a>
 <ul>
 <li><a href="#token-based-features">Token-based features</a></li>
-<li><a href="#step-1-create-a-token-on-your-server"><strong>Step 1.</strong> Create a Token on your server</a></li>
-<li><a href="#step-2-create-a-checkout-form-with-the-token"><strong>Step 2.</strong> Create a Checkout Form with the Token</a>
+<li><a href="#step-1-create-a-token-on-your-server"><strong>Step 1.</strong> Create a token on your server</a></li>
+<li><a href="#step-2-create-a-checkout-form-with-a-token"><strong>Step 2.</strong> Create a Checkout Form with a token</a>
 <ul>
-<li><a href="#client-only-integration"><strong>Client-only integration</strong></a></li>
+<li><a href="#client-side-payment-initialization"><strong>client-side payment initialization</strong></a></li>
 </ul></li>
 <li><a href="#next-steps">Next steps</a></li>
 </ul></li>

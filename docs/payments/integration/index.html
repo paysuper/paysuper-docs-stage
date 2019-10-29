@@ -3,21 +3,22 @@
 
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><meta property="og:title" content="Client-Server Integration" />
-<meta property="og:description" content="Client-Server Integration with PaySuper API If your sales use cases are not suited the client-only integration, use the client-server integration with PaySuper API instead.
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><meta property="og:title" content="Server-side payment initialization" />
+<meta property="og:description" content="Payment initialization on the server-side НАПИСАТЬ ОПИСАНИЕ ЭТОГО ПОДХОДА
+If your sales use cases are not filled, use the client-side payment initialization with PaySuper JS SDK instead.
 Step 1. Create a Checkout Order ID on your server Send the POST /api/v1/order to receive an Order ID. Learn more about the full list of parameters that can be used for instance the redirect URLs for successful and failed payments.
 Simple Checkout To collect one-time payments it&rsquo;s enough to have a Project ID and an acceptable amount with currency." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://docs.stg.pay.super.com/docs/payments/integration/" />
 
-<title>Client-Server Integration | PaySuper docs</title>
+<title>Server-side payment initialization | PaySuper docs</title>
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 
 
 <link rel="stylesheet" href="/book.min.1b994bd28c6ce2255f069b6bf6837b4d396307637fc48d61dcb2a6caac26e031.css" integrity="sha256-G5lL0oxs4iVfBptr9oN7TTljB2N/xI1h3LKmyqwm4DE=">
 
 
-<script defer src="/search.min.fdd77c11206354759073623c6faee213988577b31092fc6dfa64ec096f9694d0.js" integrity="sha256-/dd8ESBjVHWQc2I8b67iE5iFd7MQkvxt&#43;mTsCW&#43;WlNA="></script>
+<script defer src="/search.min.0c8aad5b4e0c2d31bbdb78e224ecb392f364b527805defb442e25b9e81eabd62.js" integrity="sha256-DIqtW04MLTG723jiJOyzkvNktSeAXe&#43;0QuJbnoHqvWI="></script>
 
 <!--
 Made with Book Theme
@@ -57,9 +58,9 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li><a href="/docs/payments/">Checkout Overview</a></li>
 <li><a href="/docs/payments/quick-start/">Quick Start</a></li>
-<li><a href="/docs/payments/sdk-integration/">Client-Only Integration</a></li>
-<li><a href="/docs/payments/integration/"class=active>Client-Server Integration</a></li>
-<li><a href="/docs/payments/token/">Tokenization</a></li>
+<li><a href="/docs/payments/sdk-integration/">Payments from client-side</a></li>
+<li><a href="/docs/payments/integration/"class=active>Payments from server-side</a></li>
+<li><a href="/docs/payments/token/">Payments with token</a></li>
 <li><a href="/docs/payments/fulfillment/">After the payment</a></li>
 <li><a href="/docs/payments/customization/">Customizing Checkout</a></li>
 <li><a href="/docs/payments/testing/">Testing</a></li>
@@ -92,23 +93,25 @@ https://github.com/alex-shpak/hugo-book
   <label for="menu-control">
     <img src="/svg/menu.svg" alt="Menu" />
   </label>
-  <strong>Client-Server Integration</strong>
+  <strong>Server-side payment initialization</strong>
 </header>
 
       
 <article class="markdown">
 
-<h1 id="client-server-integration-with-paysuper-api">Client-Server Integration with PaySuper API</h1>
+<h1 id="payment-initialization-on-the-server-side">Payment initialization on the server-side</h1>
 
 <hr />
 
-<p>If your sales use cases are not suited <a href="/docs/payments/sdk-integration/">the client-only integration</a>, use the client-server integration with PaySuper API instead.</p>
+<p>НАПИСАТЬ ОПИСАНИЕ ЭТОГО ПОДХОДА</p>
+
+<p>If your sales use cases are not filled, use the <a href="/docs/payments/sdk-integration/">client-side payment initialization</a> with PaySuper JS SDK instead.</p>
 
 <hr />
 
 <h2 id="step-1-create-a-checkout-order-id-on-your-server"><strong>Step 1.</strong> Create a Checkout Order ID on your server</h2>
 
-<p>Send the <a href="ССЫЛКА">POST /api/v1/order</a> to receive an Order ID. Learn more about <a href="ССЫЛКА">the full list of parameters</a> that can be used for instance the redirect URLs for successful and failed payments.</p>
+<p>Send the <a href="ССЫЛКА">POST /api/v1/order</a> to receive an Order ID. Learn more about the <a href="ССЫЛКА">full list of parameters</a> that can be used for instance the redirect URLs for successful and failed payments.</p>
 
 <h3 id="simple-checkout"><strong>Simple Checkout</strong></h3>
 
@@ -132,7 +135,7 @@ https://github.com/alex-shpak/hugo-book
 
 <h3 id="products-checkout"><strong>Products Checkout</strong></h3>
 
-<p>In case of using the sales methods for products such as <a href="/docs/payments/quick-start/#step-2-set-up-a-project">key-activated products, virtual items or in-game currency</a> implement this sample code for a specific product:</p>
+<p>If you&rsquo;re selling such products such as <a href="/docs/payments/quick-start/#step-2-set-up-a-project">key-activated products, virtual items or in-game currency</a>, you can use this sample code with a defined product parameter:</p>
 
 
 
@@ -177,20 +180,20 @@ https://github.com/alex-shpak/hugo-book
 
 
 <blockquote class="book-hint warning">
-  Note to use your IDs for the Project and Products found in your merchant account on <a href="https://paysupermgmt.tst.protocol.one/projects/">the PaySuper Projects</a>. To get the Project and Product IDs: open your Project settings page, select the product tab and click on the Product name. Copy the Project and Product IDs from an opened page URL.
+  Remember to use your IDs for the project and products. You can find your IDs in your merchant account on <a href="https://paysupermgmt.tst.protocol.one/projects/">the PaySuper Projects</a>. Open your Project settings page, select the Product tab and click on the Product name. Copy the Project and Product IDs from the page URL.
 </blockquote>
 
 
 <h2 id="step-2-display-a-checkout-form"><strong>Step 2.</strong> Display a Checkout Form</h2>
 
-<p>From the previous step retrieve the response parameter <strong><code>payment_form_url</code></strong> - the URL of PaySuper-hosted payment form.</p>
+<p>retrieve the response parameter <strong><code>payment_form_url</code></strong> from the previous step - the URL of PaySuper-hosted payment form.</p>
 
-<p>When your customer is ready to intent a payment you can use this URL in two ways:</p>
+<p>When your customer is ready to start a payment you can use this URL in two ways:</p>
 
 <ul>
-<li><p><strong>Redirect the user to URL in a new browser window</strong></p></li>
+<li><p><strong>Redirect the user to an URL in a new browser window</strong></p></li>
 
-<li><p><strong>Embed PaySuper Form as an inline iframe by URL</strong></p></li>
+<li><p><strong>Embed Checkout Form as an inline iframe by URL</strong></p></li>
 </ul>
 
 <div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#062873;font-weight:bold">iframe</span> <span style="color:#4070a0">src</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;{payment_form_url}&#34;</span>&gt;&lt;/<span style="color:#062873;font-weight:bold">iframe</span>&gt;</code></pre></div>
@@ -210,13 +213,13 @@ https://github.com/alex-shpak/hugo-book
 <blockquote class="book-hint info">
   <p><a href="/docs/payments/testing/"><strong>Testing the Checkout</strong></a></p>
 
-<p>Check your integration with PaySuper Checkout works correctly. Test cards can be used to create payments that produce successful and particular responses.</p>
+<p>Verify that your integration with PaySuper Checkout works correctly. Our offered test cards can be used to create payments that produce defined responses for you to test your integration code.</p>
 
 </blockquote>
 
 
 <blockquote class="book-hint info">
-  <p><a href="/docs/payments/customization/"><strong>Customizing Checkout</strong></a></p>
+  <p><a href="/docs/payments/customization/"><strong>Customizing the Checkout</strong></a></p>
 
 <p>Learn about the different ways you can customize your Checkout.</p>
 
@@ -253,7 +256,9 @@ https://github.com/alex-shpak/hugo-book
 
 <h2 id="not-a-developer">Not a developer?</h2>
 
-Our engineers will help you <a href="https://docs.google.com/forms/d/e/1FAIpQLScQPU83wKPkJeui_WvxGDoXWLDL4vyD8GsWNqf9-ccwDg3dEw/viewform">to integrate PaySuper Checkout</a> into your existing site or game in the best possible way.
+Our engineers will help you <a href="https://docs.google.com/forms/d/e/1FAIpQLScQPU83wKPkJeui_WvxGDoXWLDL4vyD8GsWNqf9-ccwDg3dEw/viewform">integrate PaySuper</a> into your existing e-commerce platform, a website or a game in the best possible way.
+
+If you want something very special and crazy custom yet don&rsquo;t have a suitable programmer available nearby - <a href="https://docs.google.com/forms/d/e/1FAIpQLScQPU83wKPkJeui_WvxGDoXWLDL4vyD8GsWNqf9-ccwDg3dEw/viewform">talk to us</a>! We won&rsquo;t let down a PaySuper user. We will try to help you in every possible way. We can even hire a programmer for you!
 </article>
 
       
@@ -267,7 +272,7 @@ Our engineers will help you <a href="https://docs.google.com/forms/d/e/1FAIpQLSc
   <aside class="book-toc level-true fixed">
     <nav id="TableOfContents">
 <ul>
-<li><a href="#client-server-integration-with-paysuper-api">Client-Server Integration with PaySuper API</a>
+<li><a href="#payment-initialization-on-the-server-side">Payment initialization on the server-side</a>
 <ul>
 <li><a href="#step-1-create-a-checkout-order-id-on-your-server"><strong>Step 1.</strong> Create a Checkout Order ID on your server</a>
 <ul>

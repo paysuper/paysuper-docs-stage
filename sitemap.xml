@@ -19,10 +19,6 @@
   </url>
   
   <url>
-    <loc>https://docs.stg.pay.super.com/docs/payments/integration/</loc>
-  </url>
-  
-  <url>
     <loc>https://docs.stg.pay.super.com/docs/payments/customization/</loc>
   </url>
   
@@ -32,6 +28,10 @@
   
   <url>
     <loc>https://docs.stg.pay.super.com/docs/payments/live/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.stg.pay.super.com/docs/payments/token/</loc>
   </url>
   
   <url>
@@ -47,11 +47,11 @@
   </url>
   
   <url>
-    <loc>https://docs.stg.pay.super.com/docs/payments/testing/</loc>
+    <loc>https://docs.stg.pay.super.com/docs/payments/integration/</loc>
   </url>
   
   <url>
-    <loc>https://docs.stg.pay.super.com/docs/payments/token/</loc>
+    <loc>https://docs.stg.pay.super.com/docs/payments/testing/</loc>
   </url>
   
 </urlset>

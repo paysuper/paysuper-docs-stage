@@ -30,25 +30,14 @@ Headings h1 Heading h2 Heading h3 Heading h4 Heading h5 Heading h6 Heading Notes
     </item>
     
     <item>
-      <title>Client-Only Integration</title>
+      <title>Client-side payment initialization</title>
       <link>https://docs.stg.pay.super.com/docs/payments/sdk-integration/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://docs.stg.pay.super.com/docs/payments/sdk-integration/</guid>
-      <description>Client-Only Integration with PaySuper JS SDK It’s easy to embed PaySuper JS SDK on any platform to display a Payment Form with just a few lines of code.  HOW IT WORKS
-Try out the payment sample or see the code on GitHub.
-  Step 1. Embed the Checkout Form To get started, include the following script tag on your website - always load it directly from https://cdn.pay.super.com:</description>
-    </item>
-    
-    <item>
-      <title>Client-Server Integration</title>
-      <link>https://docs.stg.pay.super.com/docs/payments/integration/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://docs.stg.pay.super.com/docs/payments/integration/</guid>
-      <description>Client-Server Integration with PaySuper API If your sales use cases are not suited the client-only integration, use the client-server integration with PaySuper API instead.
-Step 1. Create a Checkout Order ID on your server Send the POST /api/v1/order to receive an Order ID. Learn more about the full list of parameters that can be used for instance the redirect URLs for successful and failed payments.
-Simple Checkout To collect one-time payments it&amp;rsquo;s enough to have a Project ID and an acceptable amount with currency.</description>
+      <description>Payment initialization on the client-side The client-side payment initialization makes it possible to integrate a Checkout Form into your website using only frontend code.
+It’s easy to embed PaySuper JS SDK with just a few lines of code to start a payment process and display a purchase status finally whithout any server-side code.
+If your sales use cases are not filled, use the server-side payment initialization with PaySuper API instead.</description>
     </item>
     
     <item>
@@ -58,9 +47,9 @@ Simple Checkout To collect one-time payments it&amp;rsquo;s enough to have a Pro
       
       <guid>https://docs.stg.pay.super.com/docs/payments/customization/</guid>
       <description>Customizing Checkout Learn about the different ways you can customize your Checkout.
-Localization The Checkout Form is localized for 2 languages with 10 more translations coming soon.
-You can choose the complete set of supported languages for the project and products descriptions on the Project Settings page.
-Prefilling user data Boost your paying conversion rate with pre-filled payment form with user&amp;rsquo;s name and email. Generate a Token to encrypt all required information about the user intent to pay.</description>
+Localization The Checkout Form is localized to 2 languages with 10 more translations coming soon.
+You can choose the complete set of supported languages for the project and products descriptions on the Project Settings page in your PaySuper Dashboard.
+Prefilling customer data Boost your payment conversion rate with a payment form pre-filled with your customer&amp;rsquo;s name and email.</description>
     </item>
     
     <item>
@@ -73,12 +62,34 @@ Prefilling user data Boost your paying conversion rate with pre-filled payment f
     </item>
     
     <item>
+      <title>Payment initialization with token</title>
+      <link>https://docs.stg.pay.super.com/docs/payments/token/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.stg.pay.super.com/docs/payments/token/</guid>
+      <description>Payment initialization with token A token is an encrypted string that represents certain details of your customer, such as the user id, game and purchase parameters.
+You can create a token before your customer intents to pay and use it in the future payments. For instance, you can create the token after a user has signed up or has logged in to your website or a game client. When your customer wants to pay for something you instantly redirect them to the PaySuper-hosted Checkout Form to instantly complete a purchase.</description>
+    </item>
+    
+    <item>
       <title>Quick start</title>
       <link>https://docs.stg.pay.super.com/docs/payments/quick-start/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://docs.stg.pay.super.com/docs/payments/quick-start/</guid>
-      <description>Payments Flow User Flow   Integration Flow   Quick start Step 1. Register a PaySuper Company account  Registration and onboarding     Sign up. Verify your email address from a delivered confirmation email. Follow several steps of a brief Welcome Onboarding. It&amp;rsquo;s required to fill in the Banking info in the Company Onboarding to enable creating a project.  When you are ready to start selling you will need to fill in all your company details in the Company Onboarding and the signed documents in the License Agreement.</description>
+      <description>Payments Flow User Flow   Integration Flow   Quick start Step 1. Register a PaySuper Company account  Registration and onboarding     Sign up. Verify your email address with the delivered confirmation email. Follow the steps of a brief Welcome Onboarding. You are required to fill in the Banking info in Company Onboarding to be able create a project.  When you are ready to start selling you will need to fill in all your company details in Company Onboarding and the sign the documents in the License Agreement.</description>
+    </item>
+    
+    <item>
+      <title>Server-side payment initialization</title>
+      <link>https://docs.stg.pay.super.com/docs/payments/integration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.stg.pay.super.com/docs/payments/integration/</guid>
+      <description>Payment initialization on the server-side НАПИСАТЬ ОПИСАНИЕ ЭТОГО ПОДХОДА
+If your sales use cases are not filled, use the client-side payment initialization with PaySuper JS SDK instead.
+Step 1. Create a Checkout Order ID on your server Send the POST /api/v1/order to receive an Order ID. Learn more about the full list of parameters that can be used for instance the redirect URLs for successful and failed payments.
+Simple Checkout To collect one-time payments it&amp;rsquo;s enough to have a Project ID and an acceptable amount with currency.</description>
     </item>
     
     <item>
@@ -89,18 +100,8 @@ Prefilling user data Boost your paying conversion rate with pre-filled payment f
       <guid>https://docs.stg.pay.super.com/docs/payments/testing/</guid>
       <description>Testing the Payment Process The Payment Form integration should be tested in the Sandbox before going live.
 The Sandbox provides full functionality but it only emulates processing, no actual bank transactions are made.
-When using the PaySuper JS SDK ensure that:
+When using PaySuper JS SDK ensure that:
  Handlers for the events are displayed properly. The PaySuper object created with all required parameters or your token contains all desired parameters.  Incase of using the PaySuper API in your server-side code ensure that:</description>
-    </item>
-    
-    <item>
-      <title>Token-based Checkout</title>
-      <link>https://docs.stg.pay.super.com/docs/payments/token/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://docs.stg.pay.super.com/docs/payments/token/</guid>
-      <description>Token-based Checkout A Token is a secure string that represents the details of your user, game and purchase parameters.
-You can create a Token before your customer intents to pay and use it in the future payments. For instance, you can create the Token after a user signed up or logged in your website or a game client. When your customer wants to pay for something you instantly redirect them to the PaySuper-hosted Checkout Form to immediately complete a purchase.</description>
     </item>
     
   </channel>
