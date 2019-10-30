@@ -4,9 +4,8 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta property="og:title" content="Server-side payment initialization" />
-<meta property="og:description" content="Payment initialization on the server-side The server-side payment initialization makes it possible to integrate a Checkout Form into your website or game client using PaySuper API.
-You can use PaySuper JS SDK for the client-side payment initialization to integrate a Checkout Form into your website only on the client-side.
-Step 1. Create a Checkout Order ID on your server Send the POST /api/v1/order to receive an Order ID. Learn more about the full list of parameters that can be used for instance the redirect URLs for successful and failed payments." />
+<meta property="og:description" content="Payment initialization on the server-side The server-side payment initialization makes it possible to integrate a Checkout Form into your website or game client using PaySuper API. It’s easy to get a Checkout Form URL using an Order API request and render a payment form in a browser.
+You can use PaySuper JS SDK for the client-side payment initialization to integrate a Checkout Form into your website only on the client-side." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://docs.stg.pay.super.com/docs/payments/integration/" />
 
@@ -17,7 +16,7 @@ Step 1. Create a Checkout Order ID on your server Send the POST /api/v1/order to
 <link rel="stylesheet" href="/book.min.1b994bd28c6ce2255f069b6bf6837b4d396307637fc48d61dcb2a6caac26e031.css" integrity="sha256-G5lL0oxs4iVfBptr9oN7TTljB2N/xI1h3LKmyqwm4DE=">
 
 
-<script defer src="/search.min.cdcd1e8fefebee0e390e56d123e584463e10e1fffe0bc026339485024d76064f.js" integrity="sha256-zc0ej&#43;/r7g45DlbRI&#43;WERj4Q4f/&#43;C8AmM5SFAk12Bk8="></script>
+<script defer src="/search.min.a8bc0d27415962b283b94ed464ae2460070b58cfad61ed6459ce9b53f2e06ae7.js" integrity="sha256-qLwNJ0FZYrKDuU7UZK4kYAcLWM&#43;tYe1kWc6bU/Lgauc="></script>
 
 <!--
 Made with Book Theme
@@ -102,15 +101,15 @@ https://github.com/alex-shpak/hugo-book
 
 <hr />
 
-<p>The server-side payment initialization makes it possible to integrate a Checkout Form into your website or game client using PaySuper API.</p>
+<p>The server-side payment initialization makes it possible to integrate a Checkout Form into your website or game client using PaySuper API. It’s easy to get a Checkout Form URL using an Order API request and render a payment form in a browser.</p>
 
 <p>You can use PaySuper JS SDK for the <a href="/docs/payments/sdk-integration/">client-side payment initialization</a> to integrate a Checkout Form into your website only on the client-side.</p>
 
 <hr />
 
-<h2 id="step-1-create-a-checkout-order-id-on-your-server"><strong>Step 1.</strong> Create a Checkout Order ID on your server</h2>
+<h2 id="step-1-create-a-checkout-order-on-your-server"><strong>Step 1.</strong> Create a Checkout order on your server</h2>
 
-<p>Send the <a href="ССЫЛКА">POST /api/v1/order</a> to receive an Order ID. Learn more about the <a href="ССЫЛКА">full list of parameters</a> that can be used for instance the redirect URLs for successful and failed payments.</p>
+<p>Send the <a href="/docs/api/#tag/Payment-Order">POST /api/v1/order</a> to receive an Order ID. Learn more about the <a href="/docs/api/#tag/Payment-Order/paths/~1api~1v1~1order/post">full list of parameters</a> that can be used for instance the redirect URLs for successful and failed payments.</p>
 
 <h3 id="simple-checkout"><strong>Simple Checkout</strong></h3>
 
@@ -118,19 +117,22 @@ https://github.com/alex-shpak/hugo-book
 
 <p>Use this sample code to create an Order ID with the required parameters for a simple checkout:</p>
 
-<script src="https://embed.runkit.com" data-element-id=".Get 0"></script>
-
-<div id=".Get 0">
-    
-
+<div>
+    <a class="embedly-card" id="" data-card-controls="0" href="https://runkit.com/misterion/simple-checkout-order-api">RunKit</a>
+    <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
 </div>
 
 <div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -X POST -H <span style="color:#4070a0">&#39;Content-Type: application/json&#39;</span> -d <span style="color:#4070a0">&#39;{
-</span><span style="color:#4070a0">    &#34;project&#34;: &#34;5db16ae811bf0d0001fdfbd1&#34;,
+</span><span style="color:#4070a0">    &#34;project&#34;: &#34;YOUR_PROJECT_ID&#34;,
 </span><span style="color:#4070a0">    &#34;amount&#34;: 10,
 </span><span style="color:#4070a0">    &#34;currency&#34;: &#34;USD&#34;,
 </span><span style="color:#4070a0">    &#34;type&#34;: &#34;simple&#34;
 </span><span style="color:#4070a0">}&#39;</span> <span style="color:#4070a0">&#39;https://p1payapi.tst.protocol.one/api/v1/order&#39;</span></code></pre></div>
+
+<blockquote class="book-hint warning">
+  Remember to use your IDs for the project and products. You can find your IDs in your merchant account on <a href="https://paysupermgmt.tst.protocol.one/projects/">the PaySuper Projects</a>. Open your Project settings page, select the Product tab and click on the Product name. Copy the Project and Product IDs from the page URL.
+</blockquote>
+
 
 <h3 id="products-checkout"><strong>Products Checkout</strong></h3>
 
@@ -147,10 +149,17 @@ https://github.com/alex-shpak/hugo-book
     Game Key
   </label>
   <div class="book-tabs-content markdown-inner">
-    <p>RUNKIT</p>
+    <div>
+    <a class="embedly-card" id="" data-card-controls="0" href="https://runkit.com/misterion/game-key-checkout-order-api">RunKit</a>
+    <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+</div>
 
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"></code></pre></div>
-
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -X POST -H <span style="color:#4070a0">&#39;Content-Type: application/json&#39;</span> -d <span style="color:#4070a0">&#39;{
+</span><span style="color:#4070a0">    &#34;project&#34;: &#34;YOUR_PROJECT_ID&#34;,
+</span><span style="color:#4070a0">    &#34;products&#34;: [&#34;YOUR_GAME_KEY_ID&#34;],
+</span><span style="color:#4070a0">    &#34;platform_id&#34;: &#34;gog&#34;,
+</span><span style="color:#4070a0">    &#34;type&#34;: &#34;key&#34;
+</span><span style="color:#4070a0">}&#39;</span> <span style="color:#4070a0">&#39;https://p1payapi.tst.protocol.one/api/v1/order&#39;</span></code></pre></div>
   </div>
 
   <input type="radio" class="hidden" name="tabs-products_id" id="tabs-products_id-1"  />
@@ -158,10 +167,16 @@ https://github.com/alex-shpak/hugo-book
     Virtual Item
   </label>
   <div class="book-tabs-content markdown-inner">
-    <p>RUNKIT</p>
+    <div>
+    <a class="embedly-card" id="" data-card-controls="0" href="https://runkit.com/misterion/items-checkout-order-api">RunKit</a>
+    <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+</div>
 
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"></code></pre></div>
-
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -X POST -H <span style="color:#4070a0">&#39;Content-Type: application/json&#39;</span> -d <span style="color:#4070a0">&#39;{
+</span><span style="color:#4070a0">    &#34;project&#34;: &#34;YOUR_PROJECT_ID&#34;,
+</span><span style="color:#4070a0">    &#34;products&#34;: [&#34;YOUR_VIRTUAL_ITEM_ID_1&#34;, &#34;YOUR_VIRTUAL_ITEM_ID_2&#34;],
+</span><span style="color:#4070a0">    &#34;type&#34;: &#34;product&#34;
+</span><span style="color:#4070a0">}&#39;</span> <span style="color:#4070a0">&#39;https://p1payapi.tst.protocol.one/api/v1/order&#39;</span></code></pre></div>
   </div>
 
   <input type="radio" class="hidden" name="tabs-products_id" id="tabs-products_id-2"  />
@@ -178,24 +193,63 @@ https://github.com/alex-shpak/hugo-book
 </div>
 
 
-<blockquote class="book-hint warning">
-  Remember to use your IDs for the project and products. You can find your IDs in your merchant account on <a href="https://paysupermgmt.tst.protocol.one/projects/">the PaySuper Projects</a>. Open your Project settings page, select the Product tab and click on the Product name. Copy the Project and Product IDs from the page URL.
-</blockquote>
-
-
 <h2 id="step-2-display-a-checkout-form"><strong>Step 2.</strong> Display a Checkout Form</h2>
 
-<p>Retrieve the response parameter <strong><code>payment_form_url</code></strong> from the previous step - the URL of PaySuper-hosted payment form.</p>
 
-<p>When your customer is ready to start a payment you can use this URL in two ways:</p>
 
-<ul>
-<li><p><strong>Redirect the user to an URL in a new browser window</strong></p></li>
 
-<li><p><strong>Embed Checkout Form as an inline iframe by URL</strong></p></li>
-</ul>
+
+<div class="book-tabs">
+
+  <input type="radio" class="hidden" name="tabs-server_form_id" id="tabs-server_form_id-0" checked="checked" />
+  <label for="tabs-server_form_id-0">
+    New browser window
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <p>Retrieve the response parameter <code>payment_form_url</code> from the previous step. It is the URL of PaySuper-hosted payment form.</p>
+
+<p>When your customer is ready to start a payment you can redirect the user to an URL in a new browser window.</p>
+
+  </div>
+
+  <input type="radio" class="hidden" name="tabs-server_form_id" id="tabs-server_form_id-1"  />
+  <label for="tabs-server_form_id-1">
+    Iframe
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <p>Retrieve the response parameter <code>payment_form_url</code> from the previous step. It is the URL of PaySuper-hosted payment form.</p>
+
+<p>Embed the Checkout Form as an inline iframe by URL:</p>
 
 <div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#062873;font-weight:bold">iframe</span> <span style="color:#4070a0">src</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;{payment_form_url}&#34;</span>&gt;&lt;/<span style="color:#062873;font-weight:bold">iframe</span>&gt;</code></pre></div>
+
+  </div>
+
+  <input type="radio" class="hidden" name="tabs-server_form_id" id="tabs-server_form_id-2"  />
+  <label for="tabs-server_form_id-2">
+    Standalone web-page
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <p>Retrieve the response parameter with <strong><code>id</code></strong> from the previous step. It is the ID of the created order.</p>
+
+<p>Use this code sample to open the Checkout Form as a standalone web-page with <a href="/docs/payments/sdk-integration/#step-1-embed-the-checkout-form">PaySuper JS SDK</a> and replace <code>YOUR_ORDER_ID</code> in the <code>formUrl</code> with <code>id</code> value.:</p>
+
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#062873;font-weight:bold">script</span>&gt;
+<span style="color:#007020;font-weight:bold">function</span> buyItems() {
+    <span style="color:#007020;font-weight:bold">const</span> paySuper <span style="color:#666">=</span> <span style="color:#007020;font-weight:bold">new</span> PaySuper({
+        formUrl<span style="color:#666">:</span> <span style="color:#4070a0">&#39;https://order.pay.super.com/?order_id=YOUR_ORDER_ID&#39;</span>
+    });
+
+    paySuper.renderPage();
+}
+&lt;/<span style="color:#062873;font-weight:bold">script</span>&gt;
+
+&lt;<span style="color:#062873;font-weight:bold">button</span> <span style="color:#4070a0">onclick</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;buyItems()&#34;</span>&gt;BUY&lt;/<span style="color:#062873;font-weight:bold">button</span>&gt;</code></pre></div>
+
+  </div>
+
+</div>
+
 
 <hr />
 
@@ -273,7 +327,7 @@ If you want something very special and crazy custom yet don&rsquo;t have a suita
 <ul>
 <li><a href="#payment-initialization-on-the-server-side">Payment initialization on the server-side</a>
 <ul>
-<li><a href="#step-1-create-a-checkout-order-id-on-your-server"><strong>Step 1.</strong> Create a Checkout Order ID on your server</a>
+<li><a href="#step-1-create-a-checkout-order-on-your-server"><strong>Step 1.</strong> Create a Checkout order on your server</a>
 <ul>
 <li><a href="#simple-checkout"><strong>Simple Checkout</strong></a></li>
 <li><a href="#products-checkout"><strong>Products Checkout</strong></a></li>

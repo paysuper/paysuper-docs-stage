@@ -16,7 +16,7 @@ You can create a token before your customer intents to pay and use it in the fut
 <link rel="stylesheet" href="/book.min.1b994bd28c6ce2255f069b6bf6837b4d396307637fc48d61dcb2a6caac26e031.css" integrity="sha256-G5lL0oxs4iVfBptr9oN7TTljB2N/xI1h3LKmyqwm4DE=">
 
 
-<script defer src="/search.min.cdcd1e8fefebee0e390e56d123e584463e10e1fffe0bc026339485024d76064f.js" integrity="sha256-zc0ej&#43;/r7g45DlbRI&#43;WERj4Q4f/&#43;C8AmM5SFAk12Bk8="></script>
+<script defer src="/search.min.a8bc0d27415962b283b94ed464ae2460070b58cfad61ed6459ce9b53f2e06ae7.js" integrity="sha256-qLwNJ0FZYrKDuU7UZK4kYAcLWM&#43;tYe1kWc6bU/Lgauc="></script>
 
 <!--
 Made with Book Theme
@@ -121,16 +121,14 @@ https://github.com/alex-shpak/hugo-book
 
 <p>Send the <a href="ССЫЛКА">POST /api/v1/tokens</a> to receive an encrypted string. Learn more about the <a href="ССЫЛКА">full list of parameters</a>.</p>
 
-<blockquote class="book-hint info">
-  Setting up the <a href="ССЫЛКА на параметры в апи спеке"><code>type</code> parameter</a> in a token request is required for all of the sales options.
+<blockquote class="book-hint warning">
+  Remember to add a Header <strong>X-API-SIGNATURE</strong> with a <strong>sha512 hash</strong> value that is a concatenation the request body and the Project Secret key found on the Project Webhooks page. Notice, the JSON format of the request body and in the hash must be the same.
 </blockquote>
 
 
-<script src="https://embed.runkit.com" data-element-id=".Get 0"></script>
-
-<div id=".Get 0">
-    
-
+<div>
+    <a class="embedly-card" id="" data-card-controls="0" href="https://runkit.com/misterion/token-simple-checkout">RunKit</a>
+    <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
 </div>
 
 <div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -X POST -H <span style="color:#4070a0">&#39;X-API-SIGNATURE: YOUR_SIGNATURE&#39;</span> -d <span style="color:#4070a0">&#39;{
@@ -155,26 +153,65 @@ https://github.com/alex-shpak/hugo-book
 </span><span style="color:#4070a0"> }
 </span><span style="color:#4070a0">}&#39;</span> <span style="color:#4070a0">&#39;https://p1payapi.tst.protocol.one/api/v1/tokens&#39;</span></code></pre></div>
 
-<blockquote class="book-hint warning">
-  Remember to replace the value <code>YOUR_SIGNATURE</code> in the Header <code>X-API-SIGNATURE</code> with a <a href="ССЫЛКА НА АПИ СПЕКУ как передавать хедер с авторизацией must contain a sha512 hash of concatenation request body and the Project Secret key">sha512 hash</a> and the value <code>YOUR_PROJECT_ID</code> in the <code>project_id</code> parameter with your Project ID.
-</blockquote>
-
-
 <h2 id="step-2-create-a-checkout-form-with-a-token"><strong>Step 2.</strong> Create a Checkout Form with a token</h2>
 
 <h3 id="open-a-checkout-form-by-url"><strong>Open a Checkout Form by URL</strong></h3>
 
-<p>Retrieve the response parameter <strong><code>payment_form_url</code></strong> from the previous step - the URL of PaySuper-hosted payment form.</p>
 
-<p>When your customer is ready to start a payment you can use this URL in two ways:</p>
 
-<ul>
-<li><p><strong>Redirect the user to an URL in a new browser window</strong></p></li>
 
-<li><p><strong>Embed Checkout Form as an inline iframe by URL</strong></p></li>
-</ul>
+
+<div class="book-tabs">
+
+  <input type="radio" class="hidden" name="tabs-token_form_id" id="tabs-token_form_id-0" checked="checked" />
+  <label for="tabs-token_form_id-0">
+    New browser window
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <p>Retrieve the response parameter <code>payment_form_url</code> from the previous step. It is the URL of PaySuper-hosted payment form.</p>
+
+<p>When your customer is ready to start a payment you can redirect the user to an URL in a new browser window.</p>
+
+  </div>
+
+  <input type="radio" class="hidden" name="tabs-token_form_id" id="tabs-token_form_id-1"  />
+  <label for="tabs-token_form_id-1">
+    Iframe
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <p>Retrieve the response parameter <code>payment_form_url</code> from the previous step. It is the URL of PaySuper-hosted payment form.</p>
+
+<p>Embed the Checkout Form as an inline iframe by URL:</p>
 
 <div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#062873;font-weight:bold">iframe</span> <span style="color:#4070a0">src</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;{payment_form_url}&#34;</span>&gt;&lt;/<span style="color:#062873;font-weight:bold">iframe</span>&gt;</code></pre></div>
+
+  </div>
+
+  <input type="radio" class="hidden" name="tabs-token_form_id" id="tabs-token_form_id-2"  />
+  <label for="tabs-token_form_id-2">
+    Standalone web-page
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <p>Retrieve the response parameter with <strong><code>id</code></strong> from the previous step. It is the ID of the created order.</p>
+
+<p>Use this code sample to open the Checkout Form as a standalone web-page with <a href="/docs/payments/sdk-integration/#step-1-embed-the-checkout-form">PaySuper JS SDK</a> and replace <code>YOUR_ORDER_ID</code> in the <code>formUrl</code> with <code>id</code> value.:</p>
+
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#062873;font-weight:bold">script</span>&gt;
+<span style="color:#007020;font-weight:bold">function</span> buyItems() {
+    <span style="color:#007020;font-weight:bold">const</span> paySuper <span style="color:#666">=</span> <span style="color:#007020;font-weight:bold">new</span> PaySuper({
+        formUrl<span style="color:#666">:</span> <span style="color:#4070a0">&#39;https://order.pay.super.com/?order_id=YOUR_ORDER_ID&#39;</span>
+    });
+
+    paySuper.renderPage();
+}
+&lt;/<span style="color:#062873;font-weight:bold">script</span>&gt;
+
+&lt;<span style="color:#062873;font-weight:bold">button</span> <span style="color:#4070a0">onclick</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;buyItems()&#34;</span>&gt;BUY&lt;/<span style="color:#062873;font-weight:bold">button</span>&gt;</code></pre></div>
+
+  </div>
+
+</div>
+
 
 <hr />
 
@@ -187,14 +224,14 @@ https://github.com/alex-shpak/hugo-book
 
 <p>To integrate a Checkout Form you can follow the <a href="/docs/payments/sdk-integration/">client-side payment initialization</a> but instead pass a token parameter when creating a PaySuper object.</p>
 
-<p>If your token contains <a href="ССЫЛКА НА АПИ СПЕКУ параметры tokens">user and order parameters</a> then you can create a Checkout Form instance with just a single parameter:</p>
+<p>If your token contains <a href="/docs/api/#tag/Token">user and order parameters</a> then you can create a Checkout Form instance with just a single parameter:</p>
 
 <div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#007020;font-weight:bold">const</span> paySuper <span style="color:#666">=</span> <span style="color:#007020;font-weight:bold">new</span> PaySuper({
    token<span style="color:#666">:</span> <span style="color:#4070a0">&#39;5cd5620f06ae110001509185&#39;</span>
 });
 </code></pre></div>
 
-<p>If your token encrypts only the <a href="ССЫЛКА НА АПИ СПЕКУ параметры tokens">user data</a> then you can create a Checkout Form instance passing the token and also the order parameters:</p>
+<p>If your token encrypts the <a href="/docs/api/#tag/Token">user data</a> then you can create a Checkout Form instance passing the token and also the order parameters:</p>
 
 <div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#007020;font-weight:bold">const</span> paySuper <span style="color:#666">=</span> <span style="color:#007020;font-weight:bold">new</span> PaySuper({
    token<span style="color:#666">:</span> <span style="color:#4070a0">&#39;5cd5620f06ae110001509185&#39;</span>
@@ -206,55 +243,24 @@ https://github.com/alex-shpak/hugo-book
 
 <h3 id="server-side-payment-initialization"><strong>Server-side payment initialization</strong></h3>
 
-<p>To integrate a Checkout Form you can follow the <a href="/docs/payments/integration/">server-side payment initialization</a> with .</p>
+<p>To integrate a Checkout Form you can follow the <a href="/docs/payments/integration/">server-side payment initialization</a> with the <code>token</code> parameter.</p>
 
-<p>If your token contains <a href="ССЫЛКА НА АПИ СПЕКУ параметры tokens">user and order parameters</a> then you can request a Checkout Form URL with just a single parameter:</p>
+<p>If your token contains the <a href="/docs/api/#tag/Token">user and order parameters</a> then you can request a Checkout Form URL with just a single parameter:</p>
 
-<p>ПРИМЕР CURL и RUNKIT ТОЛЬКО параметр token</p>
+<p><div>
+    <a class="embedly-card" id="" data-card-controls="0" href="https://runkit.com/misterion/">RunKit</a>
+    <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+</div>
+ПРИМЕР CURL и RUNKIT ТОЛЬКО параметр token в /api/v1/order</p>
 
 <p>You can predefine a user and/or an order parameters in a token and pass the other parameters in an order request:</p>
 
-
-
-
-
-<div class="book-tabs">
-
-  <input type="radio" class="hidden" name="tabs-server_token_id" id="tabs-server_token_id-0" checked="checked" />
-  <label for="tabs-server_token_id-0">
-    Adding an order data
-  </label>
-  <div class="book-tabs-content markdown-inner">
-    <p>If the token contains only a user data and type you can add an order data:</p>
-
-<p>ПРИМЕР CURL и RUNKIT параметр token + параметры заказа</p>
-
-  </div>
-
-  <input type="radio" class="hidden" name="tabs-server_token_id" id="tabs-server_token_id-1"  />
-  <label for="tabs-server_token_id-1">
-    Adding a user data
-  </label>
-  <div class="book-tabs-content markdown-inner">
-    <p>The token contains only an order data and type you can add a user data:</p>
-
-<p>ПРИМЕР CURL и RUNKIT параметр token + параметры пользователя</p>
-
-  </div>
-
-  <input type="radio" class="hidden" name="tabs-server_token_id" id="tabs-server_token_id-2"  />
-  <label for="tabs-server_token_id-2">
-    Adding redirect URLs
-  </label>
-  <div class="book-tabs-content markdown-inner">
-    <p>If the token contains a user and order data without redirect urls you can add them:</p>
-
-<p>ПРИМЕР CURL и RUNKIT параметр token + параметры url_fail и url_success</p>
-
-  </div>
-
+<div>
+    <a class="embedly-card" id="" data-card-controls="0" href="https://runkit.com/misterion/">RunKit</a>
+    <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
 </div>
 
+<p>ПРИМЕР CURL и RUNKIT в /api/v1/order какие параметры???</p>
 
 <hr />
 

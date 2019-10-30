@@ -27,7 +27,8 @@
       <guid>https://docs.stg.pay.super.com/docs/payments/sdk-integration/</guid>
       <description>Payment initialization on the client-side The client-side payment initialization makes it possible to integrate a Checkout Form into your website using only frontend code.
 It’s easy to embed PaySuper JS SDK with just a few lines of Javascript code to start a payment process and display a purchase status finally whithout any server-side code.
-If your sales use cases are not filled, use the server-side payment initialization with PaySuper API instead.</description>
+ HOW IT WORKS
+Try out the payment sample or see the code on GitHub.</description>
     </item>
     
     <item>
@@ -67,7 +68,7 @@ You can create a token before your customer intents to pay and use it in the fut
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://docs.stg.pay.super.com/docs/payments/quick-start/</guid>
-      <description>Payments Flow User Flow   Integration Flow   Quick start Step 1. Register a PaySuper Company account  Registration and onboarding     Sign up. Verify your email address with the delivered confirmation email. Follow the steps of a brief Welcome Onboarding. You are required to fill in the Banking info in Company Onboarding to be able create a project.  When you are ready to start selling you will need to fill in all your company details in Company Onboarding and the sign the documents in the License Agreement.</description>
+      <description>Payments Flow User Flow   Integration Flow   Quick start Step 1. Register a PaySuper Company account  Registration and onboarding     Sign up. Verify your email address with the delivered confirmation email. Follow the steps of a brief Welcome Onboarding. You are required to fill in the Banking info in Company Onboarding to be able create a project.  When you are ready to start selling you will need to fill in all your company details in Company Onboarding and sign the documents in the License Agreement.</description>
     </item>
     
     <item>
@@ -76,9 +77,8 @@ You can create a token before your customer intents to pay and use it in the fut
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://docs.stg.pay.super.com/docs/payments/integration/</guid>
-      <description>Payment initialization on the server-side The server-side payment initialization makes it possible to integrate a Checkout Form into your website or game client using PaySuper API.
-You can use PaySuper JS SDK for the client-side payment initialization to integrate a Checkout Form into your website only on the client-side.
-Step 1. Create a Checkout Order ID on your server Send the POST /api/v1/order to receive an Order ID. Learn more about the full list of parameters that can be used for instance the redirect URLs for successful and failed payments.</description>
+      <description>Payment initialization on the server-side The server-side payment initialization makes it possible to integrate a Checkout Form into your website or game client using PaySuper API. It’s easy to get a Checkout Form URL using an Order API request and render a payment form in a browser.
+You can use PaySuper JS SDK for the client-side payment initialization to integrate a Checkout Form into your website only on the client-side.</description>
     </item>
     
     <item>
