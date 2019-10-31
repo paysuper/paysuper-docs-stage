@@ -16,7 +16,7 @@ You can create a token before your customer intents to pay and use it in the fut
 <link rel="stylesheet" href="/book.min.1b994bd28c6ce2255f069b6bf6837b4d396307637fc48d61dcb2a6caac26e031.css" integrity="sha256-G5lL0oxs4iVfBptr9oN7TTljB2N/xI1h3LKmyqwm4DE=">
 
 
-<script defer src="/search.min.69e56c3b0e92943fed628be7d751e604aab7981dda433593418d76a331c4af3c.js" integrity="sha256-aeVsOw6SlD/tYovn11HmBKq3mB3aQzWTQY12ozHErzw="></script>
+<script defer src="/search.min.9994c5d7219959c43017a7ec04bb575fd26a1071f485136c005e5c8e2d262ed2.js" integrity="sha256-mZTF1yGZWcQwF6fsBLtXX9JqEHH0hRNsAF5cji0mLtI="></script>
 
 <!--
 Made with Book Theme
@@ -126,14 +126,30 @@ https://github.com/alex-shpak/hugo-book
 </blockquote>
 
 
-<p>Run the script and view the response data:</p>
+
+
+
+
+<div class="book-tabs">
+
+  <input type="radio" class="hidden" name="tabs-token-simple-checkout" id="tabs-token-simple-checkout-0" checked="checked" />
+  <label for="tabs-token-simple-checkout-0">
+    Runkit
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    Run the script and view the response data:</p>
 
 <div>
-    <a class="embedly-card" id="" data-card-controls="0" href="https://runkit.com/misterion/token-simple-checkout">RunKit</a>
-    <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+    <iframe src="https://runkit.com/e?name=runkit-embed-0&nodeVersion=10.x.x&gutterStyle=inside&base64source=%0aY29uc3QgYXhpb3MgPSByZXF1aXJlKCdheGlvcycpOwoKYXhpb3MucG9zdCgKICAnaHR0cHM6Ly9wMXBheWFwaS50c3QucHJvdG9jb2wub25lL2FwaS92MS90b2tlbnMnLAp7InNldHRpbmdzIjp7InByb2plY3RfaWQiOiI1ZGIxNmFlODExYmYwZDAwMDFmZGZiZDEiLCJhbW91bnQiOjEwLCJjdXJyZW5jeSI6IlVTRCIsInR5cGUiOiJzaW1wbGUifSwidXNlciI6eyJpZCI6IjU4Nzk5ZjJjMjU2NDI5NmJkMmNiIiwiYWRkcmVzcyI6eyJjaXR5IjoiQWxtZXJlIiwiY291bnRyeSI6Ik5MIiwicG9zdGFsX2NvZGUiOiIxMzI2IFBBIiwic3RhdGUiOiJGbGV2b2xhbmQifSwiZW1haWwiOnsidmFsdWUiOiJ1c2VyLmVtYWlsQGV4YW1wbGUuY29tIiwidmVyaWZpZWQiOnRydWV9fX0sCiAgewogICAgaGVhZGVyczogewogICAgICAgICdDb250ZW50LVR5cGUnOiAnYXBwbGljYXRpb24vanNvbicsCiAgICAgICAgJ1gtQVBJLVNJR05BVFVSRSc6ICc1M2I3M2YyMTg1MmI2YjJlZDcxNDFiODQwNWZhOGI4MzhjNTExMTM3ZDJjMDMwMTEzNDAyYzA2YThmOWFhNThhMzIzYzMzMjg2ZWE5MTUxMWRkNWMzYmQxYzJmNjg4NDY4MjIxMjhkNTUxOTA2YzAyMjZmNTNjYjNkN2ZiYmUwNicKICAgIH0KICB9CikKICAudGhlbihmdW5jdGlvbiAocmVzcG9uc2UpIHsKICAgIGNvbnNvbGUubG9nKHJlc3BvbnNlKTsKICB9KQogIC5jYXRjaChmdW5jdGlvbiAoZXJyb3IpIHsKICAgIGNvbnNvbGUubG9nKGVycm9yLnJlc3BvbnNlLmRhdGEpOwogIH0pCg%3d%3d%0a" frameborder="0" name="token-simple-checkout" style="min-height: 550px; width: 100%; padding: 0px; margin: 0px; border: 0px; background-color: transparent;"></iframe>
 </div>
+  </div>
 
-<p>Use cURL to interact with the API over HTTP:</p>
+  <input type="radio" class="hidden" name="tabs-token-simple-checkout" id="tabs-token-simple-checkout-1"  />
+  <label for="tabs-token-simple-checkout-1">
+    cURL
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <p>Use cURL to interact with the API over HTTP:</p>
 
 <div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -X POST -H <span style="color:#4070a0">&#39;X-API-SIGNATURE: YOUR_SIGNATURE&#39;</span> -d <span style="color:#4070a0">&#39;{
 </span><span style="color:#4070a0"> &#34;settings&#34;: {
@@ -156,6 +172,11 @@ https://github.com/alex-shpak/hugo-book
 </span><span style="color:#4070a0">   }
 </span><span style="color:#4070a0"> }
 </span><span style="color:#4070a0">}&#39;</span> <span style="color:#4070a0">&#39;https://p1payapi.tst.protocol.one/api/v1/tokens&#39;</span></code></pre></div>
+
+  </div>
+
+</div>
+
 
 <h2 id="step-2-create-a-checkout-form-with-a-token"><strong>Step 2.</strong> Create a Checkout Form with a token</h2>
 
@@ -235,45 +256,45 @@ https://github.com/alex-shpak/hugo-book
 });
 </code></pre></div>
 
-<p>If your token encrypts the <a href="/docs/api/#tag/Token">user data</a> then you can create a Checkout Form instance passing the token and also the order parameters:</p>
-
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#007020;font-weight:bold">const</span> paySuper <span style="color:#666">=</span> <span style="color:#007020;font-weight:bold">new</span> PaySuper({
-   token<span style="color:#666">:</span> <span style="color:#4070a0">&#39;5cd5620f06ae110001509185&#39;</span>
-   project<span style="color:#666">:</span> <span style="color:#4070a0">&#39;5cd5624a06ae110001509186&#39;</span>,
-   amount<span style="color:#666">:</span> <span style="color:#40a070">10</span>,
-   currency<span style="color:#666">:</span> <span style="color:#4070a0">&#39;USD&#39;</span>
-});
-</code></pre></div>
-
 <h3 id="server-side-payment-initialization"><strong>Server-side payment initialization</strong></h3>
 
 <p>To integrate a Checkout Form you can follow the <a href="/docs/payments/integration/">server-side payment initialization</a> with the <code>token</code> parameter.</p>
 
 <p>If your token contains the <a href="/docs/api/#tag/Token">user and order parameters</a> then you can request a Checkout Form URL with just a single parameter:</p>
 
-<p>Run the script and view the response data:</p>
+
+
+
+
+<div class="book-tabs">
+
+  <input type="radio" class="hidden" name="tabs-token-product-checkout" id="tabs-token-product-checkout-0" checked="checked" />
+  <label for="tabs-token-product-checkout-0">
+    Runkit
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    Run the script and view the response data:</p>
 
 <div>
-    <a class="embedly-card" id="" data-card-controls="0" href="https://runkit.com/misterion/">RunKit</a>
-    <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+    <iframe src="https://runkit.com/e?name=runkit-embed-0&nodeVersion=10.x.x&gutterStyle=inside&base64source=%0aY29uc3QgYXhpb3MgPSByZXF1aXJlKCdheGlvcycpOwoKYXhpb3MucG9zdCgKICAnaHR0cHM6Ly9wMXBheWFwaS50c3QucHJvdG9jb2wub25lL2FwaS92MS9vcmRlcicsCnsKICAgInRva2VuIjogImlEN3FiamhSNmV0bGUwRW9MWFE3VW9lZE5hdENiYTk2Igp9LAogIHsKICAgIGhlYWRlcnM6IHsKICAgICAgICAnQ29udGVudC1UeXBlJzogJ2FwcGxpY2F0aW9uL2pzb24nCiAgICB9CiAgfQopCiAgLnRoZW4oZnVuY3Rpb24gKHJlc3BvbnNlKSB7CiAgICBjb25zb2xlLmxvZyhyZXNwb25zZSk7CiAgfSkKICAuY2F0Y2goZnVuY3Rpb24gKGVycm9yKSB7CiAgICBjb25zb2xlLmxvZyhlcnJvci5yZXNwb25zZS5kYXRhKTsKICB9KQo%0a" frameborder="0" name="order-token-product-checkout" style="min-height: 550px; width: 100%; padding: 0px; margin: 0px; border: 0px; background-color: transparent;"></iframe>
+</div>
+  </div>
+
+  <input type="radio" class="hidden" name="tabs-token-product-checkout" id="tabs-token-product-checkout-1"  />
+  <label for="tabs-token-product-checkout-1">
+    cURL
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <p>Use cURL to interact with the API over HTTP:</p>
+
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -X POST -H <span style="color:#4070a0">&#39;Content-Type: application/json&#39;</span> -d <span style="color:#4070a0">&#39;{
+</span><span style="color:#4070a0">    &#34;token&#34;: &#34;YOUR_TOKEN&#34;
+</span><span style="color:#4070a0">}&#39;</span> <span style="color:#4070a0">&#39;https://p1payapi.tst.protocol.one/api/v1/order&#39;</span></code></pre></div>
+
+  </div>
+
 </div>
 
-<p>Use cURL to interact with the API over HTTP:</p>
-
-<p>ПРИМЕР CURL и RUNKIT ТОЛЬКО параметр token в /api/v1/order</p>
-
-<p>You can predefine a user and/or an order parameters in a token and pass the other parameters in an order request:</p>
-
-<p>Run the script and view the response data:</p>
-
-<div>
-    <a class="embedly-card" id="" data-card-controls="0" href="https://runkit.com/misterion/">RunKit</a>
-    <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
-</div>
-
-<p>Use cURL to interact with the API over HTTP:</p>
-
-<p>ПРИМЕР CURL и RUNKIT в /api/v1/order какие параметры???</p>
 
 <hr />
 
