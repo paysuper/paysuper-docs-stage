@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="/book.min.1b994bd28c6ce2255f069b6bf6837b4d396307637fc48d61dcb2a6caac26e031.css" integrity="sha256-G5lL0oxs4iVfBptr9oN7TTljB2N/xI1h3LKmyqwm4DE=">
 
 
-<script defer src="/search.min.3f244cc483decce06db4d8b7d7a96af7d756d81a6895993b106ca2f367cb60a1.js" integrity="sha256-PyRMxIPezOBttNi316lq99dW2BpolZk7EGyi82fLYKE="></script>
+<script defer src="/search.min.70737661340d8cfeae119a86343e929b097319f38cdb30666fddf92147ec788c.js" integrity="sha256-cHN2YTQNjP6uEZqGND6SmwlzGfOM2zBmb935IUfseIw="></script>
 
 <!--
 Made with Book Theme
@@ -55,9 +55,9 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li><a href="/docs/payments/">Checkout Overview</a></li>
 <li><a href="/docs/payments/quick-start/"class=active>Quick Start</a></li>
-<li><a href="/docs/payments/sdk-integration/">Payments from client-side</a></li>
-<li><a href="/docs/payments/integration/">Payments from server-side</a></li>
 <li><a href="/docs/payments/token/">Payments with token</a></li>
+<li><a href="/docs/payments/integration/">Payments from server-side</a></li>
+<li><a href="/docs/payments/sdk-integration/">Payments from client-side</a></li>
 <li><a href="/docs/payments/fulfillment/">After the payment</a></li>
 <li><a href="/docs/payments/customization/">Customizing Checkout</a></li>
 <li><a href="/docs/payments/testing/">Testing</a></li>
@@ -246,19 +246,19 @@ https://github.com/alex-shpak/hugo-book
 
 <h2 id="step-4-set-up-a-checkout-form"><strong>Step 4.</strong> Set up a Checkout Form</h2>
 
-<p>Use Checkout to collect <a href="/docs/payments/#simple-checkout">one-time payments</a> or to sell <a href="/docs/payments/#typed-checkout">products defined in the Project</a>.</p>
+<p>Use Checkout to collect <a href="/docs/payments/#simple-checkout">one-time payments</a> or to sell <a href="/docs/payments/#products-checkout">products defined in the Project</a>.</p>
 
-<h3 id="client-side-payment-initialization-docs-payments-sdk-integration"><a href="/docs/payments/sdk-integration/">Client-side payment initialization</a></h3>
+<h3 id="payment-initialization-with-token-docs-payments-token"><a href="/docs/payments/token/">Payment initialization with token</a></h3>
 
-<p>The client-side payment initialization lets you accept online payments using only frontend code PaySuper JS SDK. The Checkout Form can be embedded as an <a href="ССЫЛКА на метод renderPage">iframe</a> or <a href="ССЫЛКА на метод renderModal">modal window</a>.</p>
+<p>You can encrypt details of your customer (such as the user ID, email and others), a game and purchase parameters. When your customer wants to pay for something you redirect them to the PaySuper-hosted Checkout Form to instantly complete a purchase.</p>
 
 <h3 id="server-side-payment-initialization-docs-payments-integration"><a href="/docs/payments/integration/">Server-side payment initialization</a></h3>
 
 <p>You can also integrate on a server-side without PaySuper SJ SDK for other reasons. Checkout Form can be embedded as an <a href="ССЫЛКА">iframe</a> or <a href="ССЫЛКА">new window</a>.</p>
 
-<h3 id="payment-initialization-with-token-docs-payments-token"><a href="/docs/payments/token/">Payment initialization with token</a></h3>
+<h3 id="client-side-payment-initialization-docs-payments-sdk-integration"><a href="/docs/payments/sdk-integration/">Client-side payment initialization</a></h3>
 
-<p>You can encrypt details of your customer (such as the user ID, email and others), a game and purchase parameters. When your customer wants to pay for something you redirect them to the PaySuper-hosted Checkout Form to instantly complete a purchase.</p>
+<p>The client-side payment initialization lets you accept online payments using only frontend code PaySuper JS SDK. The Checkout Form can be embedded as an <a href="ССЫЛКА на метод renderPage">iframe</a> or <a href="ССЫЛКА на метод renderModal">modal window</a>.</p>
 
 <h2 id="step-4-after-the-payment"><strong>Step 4.</strong> After the payment</h2>
 
@@ -350,9 +350,9 @@ If you want something very special and crazy custom yet don&rsquo;t have a suita
 <li><a href="#step-3-additional-sales-options"><strong>Step 3.</strong> Additional sales options</a></li>
 <li><a href="#step-4-set-up-a-checkout-form"><strong>Step 4.</strong> Set up a Checkout Form</a>
 <ul>
-<li><a href="#client-side-payment-initialization-docs-payments-sdk-integration"><a href="/docs/payments/sdk-integration/">Client-side payment initialization</a></a></li>
-<li><a href="#server-side-payment-initialization-docs-payments-integration"><a href="/docs/payments/integration/">Server-side payment initialization</a></a></li>
 <li><a href="#payment-initialization-with-token-docs-payments-token"><a href="/docs/payments/token/">Payment initialization with token</a></a></li>
+<li><a href="#server-side-payment-initialization-docs-payments-integration"><a href="/docs/payments/integration/">Server-side payment initialization</a></a></li>
+<li><a href="#client-side-payment-initialization-docs-payments-sdk-integration"><a href="/docs/payments/sdk-integration/">Client-side payment initialization</a></a></li>
 </ul></li>
 <li><a href="#step-4-after-the-payment"><strong>Step 4.</strong> After the payment</a></li>
 <li><a href="#next-steps">Next steps</a></li>

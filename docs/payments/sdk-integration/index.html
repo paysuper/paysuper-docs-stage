@@ -18,7 +18,7 @@ Try out the payment sample or see the code on GitHub." />
 <link rel="stylesheet" href="/book.min.1b994bd28c6ce2255f069b6bf6837b4d396307637fc48d61dcb2a6caac26e031.css" integrity="sha256-G5lL0oxs4iVfBptr9oN7TTljB2N/xI1h3LKmyqwm4DE=">
 
 
-<script defer src="/search.min.3f244cc483decce06db4d8b7d7a96af7d756d81a6895993b106ca2f367cb60a1.js" integrity="sha256-PyRMxIPezOBttNi316lq99dW2BpolZk7EGyi82fLYKE="></script>
+<script defer src="/search.min.70737661340d8cfeae119a86343e929b097319f38cdb30666fddf92147ec788c.js" integrity="sha256-cHN2YTQNjP6uEZqGND6SmwlzGfOM2zBmb935IUfseIw="></script>
 
 <!--
 Made with Book Theme
@@ -58,9 +58,9 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li><a href="/docs/payments/">Checkout Overview</a></li>
 <li><a href="/docs/payments/quick-start/">Quick Start</a></li>
-<li><a href="/docs/payments/sdk-integration/"class=active>Payments from client-side</a></li>
-<li><a href="/docs/payments/integration/">Payments from server-side</a></li>
 <li><a href="/docs/payments/token/">Payments with token</a></li>
+<li><a href="/docs/payments/integration/">Payments from server-side</a></li>
+<li><a href="/docs/payments/sdk-integration/"class=active>Payments from client-side</a></li>
 <li><a href="/docs/payments/fulfillment/">After the payment</a></li>
 <li><a href="/docs/payments/customization/">Customizing Checkout</a></li>
 <li><a href="/docs/payments/testing/">Testing</a></li>
@@ -122,6 +122,11 @@ https://github.com/alex-shpak/hugo-book
 </div>
 
 
+<blockquote class="book-hint warning">
+  Notice that a pure client-side payment initialization is possible yet a special care must be taken. Your project identity could be used from any web-site to initiate payments without any additional checks or verifications from the PaySuper side. At the moment we&rsquo;re working on an option to disable that kind of payment orders in the Project settings.
+</blockquote>
+
+
 <p>If your sales use cases are not filled, use the <a href="/docs/payments/integration/">server-side payment initialization</a> with PaySuper API instead.</p>
 
 <hr />
@@ -165,7 +170,6 @@ https://github.com/alex-shpak/hugo-book
     <div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#007020;font-weight:bold">const</span> paySuper <span style="color:#666">=</span> <span style="color:#007020;font-weight:bold">new</span> PaySuper({
     project<span style="color:#666">:</span> <span style="color:#4070a0">&#39;5cd5624a06ae110001509186&#39;</span>,
     products<span style="color:#666">:</span> [<span style="color:#4070a0">&#39;5d7baee015ff7d0001b986a8&#39;</span>],
-    platform_id<span style="color:#666">:</span> <span style="color:#4070a0">&#39;gog&#39;</span>,
     type<span style="color:#666">:</span> <span style="color:#4070a0">&#39;key&#39;</span>
 });
 </code></pre></div>
