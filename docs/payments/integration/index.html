@@ -16,7 +16,7 @@ You can use PaySuper JS SDK for the client-side payment initialization to integr
 <link rel="stylesheet" href="/book.min.1b994bd28c6ce2255f069b6bf6837b4d396307637fc48d61dcb2a6caac26e031.css" integrity="sha256-G5lL0oxs4iVfBptr9oN7TTljB2N/xI1h3LKmyqwm4DE=">
 
 
-<script defer src="/search.min.a8bc0d27415962b283b94ed464ae2460070b58cfad61ed6459ce9b53f2e06ae7.js" integrity="sha256-qLwNJ0FZYrKDuU7UZK4kYAcLWM&#43;tYe1kWc6bU/Lgauc="></script>
+<script defer src="/search.min.39ba55a1da3ba4464aa9410db4c0643a93b2735ddf26ae661be8fdfcc3a7e066.js" integrity="sha256-ObpVodo7pEZKqUENtMBkOpOyc13fJq5mG&#43;j9/MOn4GY="></script>
 
 <!--
 Made with Book Theme
@@ -113,14 +113,35 @@ https://github.com/alex-shpak/hugo-book
 
 <h3 id="simple-checkout"><strong>Simple Checkout</strong></h3>
 
-<p>To collect one-time payments it&rsquo;s enough to have a <a href="/docs/payments/quick-start/#step-2-set-up-a-project">Project ID</a> and an acceptable amount with currency.</p>
+<p>To initiate simple checkout payments it&rsquo;s enough to create a payment order with your <a href="/docs/payments/quick-start/#step-2-set-up-a-project">Project ID</a> and an acceptable amount and currency.</p>
 
 <p>Use this sample code to create an Order ID with the required parameters for a simple checkout:</p>
+
+
+
+
+
+<div class="book-tabs">
+
+  <input type="radio" class="hidden" name="tabs-order-simple-checkout" id="tabs-order-simple-checkout-0" checked="checked" />
+  <label for="tabs-order-simple-checkout-0">
+    Runkit
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    Run the script and view the response data:</p>
 
 <div>
     <a class="embedly-card" id="" data-card-controls="0" href="https://runkit.com/misterion/simple-checkout-order-api">RunKit</a>
     <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
 </div>
+  </div>
+
+  <input type="radio" class="hidden" name="tabs-order-simple-checkout" id="tabs-order-simple-checkout-1"  />
+  <label for="tabs-order-simple-checkout-1">
+    cURL
+  </label>
+  <div class="book-tabs-content markdown-inner">
+    <p>Use cURL to interact with the API over HTTP:</p>
 
 <div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -X POST -H <span style="color:#4070a0">&#39;Content-Type: application/json&#39;</span> -d <span style="color:#4070a0">&#39;{
 </span><span style="color:#4070a0">    &#34;project&#34;: &#34;YOUR_PROJECT_ID&#34;,
@@ -128,6 +149,11 @@ https://github.com/alex-shpak/hugo-book
 </span><span style="color:#4070a0">    &#34;currency&#34;: &#34;USD&#34;,
 </span><span style="color:#4070a0">    &#34;type&#34;: &#34;simple&#34;
 </span><span style="color:#4070a0">}&#39;</span> <span style="color:#4070a0">&#39;https://p1payapi.tst.protocol.one/api/v1/order&#39;</span></code></pre></div>
+
+  </div>
+
+</div>
+
 
 <blockquote class="book-hint warning">
   Remember to use your IDs for the project and products. You can find your IDs in your merchant account on <a href="https://paysupermgmt.tst.protocol.one/projects/">the PaySuper Projects</a>. Open your Project settings page, select the Product tab and click on the Product name. Copy the Project and Product IDs from the page URL.
@@ -144,15 +170,19 @@ https://github.com/alex-shpak/hugo-book
 
 <div class="book-tabs">
 
-  <input type="radio" class="hidden" name="tabs-products_id" id="tabs-products_id-0" checked="checked" />
-  <label for="tabs-products_id-0">
+  <input type="radio" class="hidden" name="tabs-order-products-checkout" id="tabs-order-products-checkout-0" checked="checked" />
+  <label for="tabs-order-products-checkout-0">
     Game Key
   </label>
   <div class="book-tabs-content markdown-inner">
-    <div>
+    <p>Run the script and view the response data:</p>
+
+<div>
     <a class="embedly-card" id="" data-card-controls="0" href="https://runkit.com/misterion/game-key-checkout-order-api">RunKit</a>
     <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
 </div>
+
+<p>Use cURL to interact with the API over HTTP:</p>
 
 <div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -X POST -H <span style="color:#4070a0">&#39;Content-Type: application/json&#39;</span> -d <span style="color:#4070a0">&#39;{
 </span><span style="color:#4070a0">    &#34;project&#34;: &#34;YOUR_PROJECT_ID&#34;,
@@ -160,31 +190,41 @@ https://github.com/alex-shpak/hugo-book
 </span><span style="color:#4070a0">    &#34;platform_id&#34;: &#34;gog&#34;,
 </span><span style="color:#4070a0">    &#34;type&#34;: &#34;key&#34;
 </span><span style="color:#4070a0">}&#39;</span> <span style="color:#4070a0">&#39;https://p1payapi.tst.protocol.one/api/v1/order&#39;</span></code></pre></div>
+
   </div>
 
-  <input type="radio" class="hidden" name="tabs-products_id" id="tabs-products_id-1"  />
-  <label for="tabs-products_id-1">
+  <input type="radio" class="hidden" name="tabs-order-products-checkout" id="tabs-order-products-checkout-1"  />
+  <label for="tabs-order-products-checkout-1">
     Virtual Item
   </label>
   <div class="book-tabs-content markdown-inner">
-    <div>
+    <p>Run the script and view the response data:</p>
+
+<div>
     <a class="embedly-card" id="" data-card-controls="0" href="https://runkit.com/misterion/items-checkout-order-api">RunKit</a>
     <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
 </div>
+
+<p>Use cURL to interact with the API over HTTP:</p>
 
 <div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -X POST -H <span style="color:#4070a0">&#39;Content-Type: application/json&#39;</span> -d <span style="color:#4070a0">&#39;{
 </span><span style="color:#4070a0">    &#34;project&#34;: &#34;YOUR_PROJECT_ID&#34;,
 </span><span style="color:#4070a0">    &#34;products&#34;: [&#34;YOUR_VIRTUAL_ITEM_ID_1&#34;, &#34;YOUR_VIRTUAL_ITEM_ID_2&#34;],
 </span><span style="color:#4070a0">    &#34;type&#34;: &#34;product&#34;
 </span><span style="color:#4070a0">}&#39;</span> <span style="color:#4070a0">&#39;https://p1payapi.tst.protocol.one/api/v1/order&#39;</span></code></pre></div>
+
   </div>
 
-  <input type="radio" class="hidden" name="tabs-products_id" id="tabs-products_id-2"  />
-  <label for="tabs-products_id-2">
+  <input type="radio" class="hidden" name="tabs-order-products-checkout" id="tabs-order-products-checkout-2"  />
+  <label for="tabs-order-products-checkout-2">
     Virtual Currency
   </label>
   <div class="book-tabs-content markdown-inner">
-    <p>RUNKIT</p>
+    <p>Run the script and view the response data:</p>
+
+<p>RUNKIT</p>
+
+<p>Use cURL to interact with the API over HTTP:</p>
 
 <div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"></code></pre></div>
 
@@ -201,23 +241,23 @@ https://github.com/alex-shpak/hugo-book
 
 <div class="book-tabs">
 
-  <input type="radio" class="hidden" name="tabs-server_form_id" id="tabs-server_form_id-0" checked="checked" />
-  <label for="tabs-server_form_id-0">
+  <input type="radio" class="hidden" name="tabs-server_form" id="tabs-server_form-0" checked="checked" />
+  <label for="tabs-server_form-0">
     New browser window
   </label>
   <div class="book-tabs-content markdown-inner">
-    <p>Retrieve the response parameter <code>payment_form_url</code> from the previous step. It is the URL of PaySuper-hosted payment form.</p>
+    <p>Retrieve the response parameter <code>payment_form_url</code> from the previous step. It is the URL of a PaySuper-hosted payment form.</p>
 
-<p>When your customer is ready to start a payment you can redirect the user to an URL in a new browser window.</p>
+<p>When your customer is ready to start a payment you can redirect the user to the URL in a new browser window.</p>
 
   </div>
 
-  <input type="radio" class="hidden" name="tabs-server_form_id" id="tabs-server_form_id-1"  />
-  <label for="tabs-server_form_id-1">
+  <input type="radio" class="hidden" name="tabs-server_form" id="tabs-server_form-1"  />
+  <label for="tabs-server_form-1">
     Iframe
   </label>
   <div class="book-tabs-content markdown-inner">
-    <p>Retrieve the response parameter <code>payment_form_url</code> from the previous step. It is the URL of PaySuper-hosted payment form.</p>
+    <p>Retrieve the response parameter <code>payment_form_url</code> from the previous step. It is the URL of a PaySuper-hosted payment form.</p>
 
 <p>Embed the Checkout Form as an inline iframe by URL:</p>
 
@@ -225,14 +265,14 @@ https://github.com/alex-shpak/hugo-book
 
   </div>
 
-  <input type="radio" class="hidden" name="tabs-server_form_id" id="tabs-server_form_id-2"  />
-  <label for="tabs-server_form_id-2">
+  <input type="radio" class="hidden" name="tabs-server_form" id="tabs-server_form-2"  />
+  <label for="tabs-server_form-2">
     Standalone web-page
   </label>
   <div class="book-tabs-content markdown-inner">
-    <p>Retrieve the response parameter with <strong><code>id</code></strong> from the previous step. It is the ID of the created order.</p>
+    <p>Retrieve the response parameter with <code>id</code> from the previous step. It is the ID of the created order.</p>
 
-<p>Use this code sample to open the Checkout Form as a standalone web-page with <a href="/docs/payments/sdk-integration/#step-1-embed-the-checkout-form">PaySuper JS SDK</a> and replace <code>YOUR_ORDER_ID</code> in the <code>formUrl</code> with <code>id</code> value.:</p>
+<p>Use this code sample to open the Checkout Form as a standalone web-page with <a href="/docs/payments/sdk-integration/#step-1-embed-the-checkout-form">PaySuper JS SDK</a> and replace <code>YOUR_ORDER_ID</code> in the <code>formUrl</code> with <code>id</code> value:</p>
 
 <div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#062873;font-weight:bold">script</span>&gt;
 <span style="color:#007020;font-weight:bold">function</span> buyItems() {
