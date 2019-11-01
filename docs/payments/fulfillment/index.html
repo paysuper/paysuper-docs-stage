@@ -32,7 +32,7 @@ Fulfilling purchases with the PaySuper Dashboard Every customers&rsquo; payment 
 <link rel="stylesheet" href="/book.min.f1a48455ad5df2f474d8141bcf046ec1f43ecd1d3df6912c52e26813c7ad152f.css" integrity="sha256-8aSEVa1d8vR02BQbzwRuwfQ&#43;zR099pEsUuJoE8etFS8=">
 
 
-<script defer src="/search.min.b33736f77d68bf1afa52a4871d452ccd288c38f25cc88293d820e861143a4744.js" integrity="sha256-szc2931ovxr6UqSHHUUszSiMOPJcyIKT2CDoYRQ6R0Q="></script>
+<script defer src="/search.min.2e241aa000356b7bd6f67895cf0b0f5eaea110966af2b64cc69ea8725c8cef44.js" integrity="sha256-LiQaoAA1a3vW9niVzwsPXq6hEJZq8rZMxp6oclyM70Q="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -176,9 +176,23 @@ https://github.com/alex-shpak/hugo-book
 
 <h2 id="fulfilling-purchases-with-webhooks">Fulfilling purchases with webhooks</h2>
 
-<p>PaySuper can send the <code>payment.success</code> webhook event to your server to notify you when a customer successfully completes the payment. You can configure webhooks on the Project webhooks page.</p>
+<div class="book-columns flex flex-wrap">
+  
+  <div class="flex-even markdown-inner">
+    After the payments, PaySuper can send you webhook events to your server. You can create a handler for the webhook events like a successful payment, refund payment and so on.
+  </div>
+  
+  <div class="flex-even markdown-inner">
+    <p><strong>GETTING STARTED</strong></p>
 
-<p>A webhook handler is a script on your server that handles the PaySuper events such as <code>payment.success</code> or <code>payment.cancel</code>.</p>
+<p><a href="/docs/about/webhooks/">Configure Webhooks</a> for your Project in PaySuper Dashboard and handle them on your server.</p>
+
+  </div>
+  
+</div>
+
+
+<p>Using the handler you can obtain information from the webhook&rsquo;s <code>object</code> parameter in the payload about the customer and payment. With this comprehensive data, you can execute your server side-code and fulfil the payment.</p>
 
 <h2 id="email-receipts">Email receipts</h2>
 
