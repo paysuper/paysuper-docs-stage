@@ -117,15 +117,6 @@ When using PaySuper JS SDK ensure that:
     </item>
     
     <item>
-      <title>Testing currencies</title>
-      <link>https://docs.stg.pay.super.com/docs/payments/currencies/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://docs.stg.pay.super.com/docs/payments/currencies/</guid>
-      <description>Testing currencies    Currency Code Country and Currency     USD United States Dollar   EUR Euro Member Countries   GBP United Kingdom Pound   RUB Russia Ruble   BRL    JPY    IDR    MYR    PHP    SGD    THB    VND    KRW    TRY    MXN    CAD    AUD    NZD    NOK    PLN    CHF    CNY    INR    CLP    PEN    COP    ZAR    HKD    TWD    SAR    AED    ARS    ILS    KZT    QAR    CRC    HRK    CZK    RSD    RON    EGP    DKK    HUF    BHD    SEK     Questions?</description>
-    </item>
-    
-    <item>
       <title>Understanding Declines and Failed Payments</title>
       <link>https://docs.stg.pay.super.com/docs/payments/declines/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
