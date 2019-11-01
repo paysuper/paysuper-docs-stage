@@ -129,7 +129,16 @@ You can use PaySuper JS SDK for the client-side payment initialization to integr
       <description>Testing the Payment Process The Payment Form integration should be tested in the Sandbox before going live.
 The Sandbox provides full functionality but it only emulates processing, no actual bank transactions are made.
 When using PaySuper JS SDK ensure that:
- Handlers for the events are displayed properly. The PaySuper object created with all required parameters or your token contains all desired parameters.  Incase of using the PaySuper API in your server-side code ensure that:</description>
+ Handlers for the events are displayed properly. The PaySuper object is created with all required parameters or token.  Incase of using the PaySuper API in your server-side code ensure that:</description>
+    </item>
+    
+    <item>
+      <title>Testing currencies</title>
+      <link>https://docs.stg.pay.super.com/docs/payments/currencies/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.stg.pay.super.com/docs/payments/currencies/</guid>
+      <description> Testing currencies    Currency Code Country and Currency     USD United States Dollar   EUR Euro Member Countries   GBP United Kingdom Pound   RUB Russia Ruble   BRL    JPY    IDR    MYR    PHP    SGD    THB    VND    KRW    TRY    MXN    CAD    AUD    NZD    NOK    PLN    CHF    CNY    INR    CLP    PEN    COP    ZAR    HKD    TWD    SAR    AED    ARS    ILS    KZT    QAR    CRC    HRK    CZK    RSD    RON    EGP    DKK    HUF    BHD    SEK     </description>
     </item>
     
   </channel>
