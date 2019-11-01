@@ -54,7 +54,7 @@ the Company Onboarding page</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://docs.stg.pay.super.com/docs/payments/fulfillment/</guid>
-      <description>After the payment When your customers successfully complete payments they are redirected to the success URL page that you passed in a request parameter . Typically, this is a page on your website that informs your customer that their payment was successful.
+      <description>After the payment When your customers successfully complete payments they are redirected to the success URL page that you passed in a request parameter. Typically, this is a page on your website that informs your customer that their payment was successful.
 To fulfil the customer’s purchase you can make it in several ways:
 Fulfilling purchases manually with the PaySuper Dashboard
 Fulfilling purchases automatically with webhooks
