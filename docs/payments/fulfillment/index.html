@@ -4,8 +4,12 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta property="og:title" content="After the payment" />
-<meta property="og:description" content="After the payment When your customers successfully complete payments they are redirected to the success URL page that you passed in a request parameter. Typically, this is a page on your website that informs your customer that their payment was successful.
-At a later point, you may want to fulfill the customer’s purchase and deliver the goods or services they paid for. There are a few ways to do this:" />
+<meta property="og:description" content="After the payment When your customers successfully complete payments they are redirected to the success URL page that you passed in a request parameter . Typically, this is a page on your website that informs your customer that their payment was successful.
+To fulfil the customer’s purchase you can make it in several ways:
+Fulfilling purchases manually with the PaySuper Dashboard
+Fulfilling purchases automatically with webhooks
+Email receipts
+Fulfilling purchases with the PaySuper Dashboard You can manually handle actions on the Transactions page after your customer completes their payment." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://docs.stg.pay.super.com/docs/payments/fulfillment/" />
 
@@ -15,8 +19,12 @@ At a later point, you may want to fulfill the customer’s purchase and deliver 
 <meta name="twitter:image" content="https://docs.stg.pay.super.com/products-dark-form.png"/>
 
 <meta name="twitter:title" content="After the payment"/>
-<meta name="twitter:description" content="After the payment When your customers successfully complete payments they are redirected to the success URL page that you passed in a request parameter. Typically, this is a page on your website that informs your customer that their payment was successful.
-At a later point, you may want to fulfill the customer’s purchase and deliver the goods or services they paid for. There are a few ways to do this:"/>
+<meta name="twitter:description" content="After the payment When your customers successfully complete payments they are redirected to the success URL page that you passed in a request parameter . Typically, this is a page on your website that informs your customer that their payment was successful.
+To fulfil the customer’s purchase you can make it in several ways:
+Fulfilling purchases manually with the PaySuper Dashboard
+Fulfilling purchases automatically with webhooks
+Email receipts
+Fulfilling purchases with the PaySuper Dashboard You can manually handle actions on the Transactions page after your customer completes their payment."/>
 <title>After the payment | PaySuper Documentation</title>
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 
@@ -24,7 +32,7 @@ At a later point, you may want to fulfill the customer’s purchase and deliver 
 <link rel="stylesheet" href="/book.min.f1a48455ad5df2f474d8141bcf046ec1f43ecd1d3df6912c52e26813c7ad152f.css" integrity="sha256-8aSEVa1d8vR02BQbzwRuwfQ&#43;zR099pEsUuJoE8etFS8=">
 
 
-<script defer src="/search.min.8733cfcb573533a68c4a9e91d847b4dada3053f4679bfe40d698be01d739c064.js" integrity="sha256-hzPPy1c1M6aMSp6R2Ee02towU/Rnm/5A1pi&#43;Adc5wGQ="></script>
+<script defer src="/search.min.27e4305941c0690e72a5acd899678983e2e114887a3698acabbcb0c9899ca931.js" integrity="sha256-J&#43;QwWUHAaQ5ypazYmWeJg&#43;LhFIh6Npisq7ywyYmcqTE="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -128,17 +136,17 @@ https://github.com/alex-shpak/hugo-book
 
 <hr />
 
-<p>When your customers successfully complete payments they are redirected to the success URL page that you passed in a request parameter. Typically, this is a page on your website that informs your customer that their payment was successful.</p>
+<p>When your customers successfully complete payments they are redirected to the success URL page that you passed in a request parameter . Typically, this is a page on your website that informs your customer that their payment was successful.</p>
 
-<p>At a later point, you may want to fulfill the customer’s purchase and deliver the goods or services they paid for. There are a few ways to do this:</p>
+<p>To fulfil the customer’s purchase you can make it in several ways:</p>
 
-<p><a href="/docs/payments/fulfillment/#fulfilling-purchases-with-the-dashboard"><strong>Fulfilling manually</strong></a></p>
+<p><a href="/docs/payments/fulfillment/#fulfilling-purchases-with-the-dashboard"><strong>Fulfilling purchases manually with the PaySuper Dashboard</strong></a></p>
 
-<p><a href="/docs/payments/fulfillment/#fulfilling-purchases-with-webhooks"><strong>Fulfilling automatically</strong></a></p>
+<p><a href="/docs/payments/fulfillment/#fulfilling-purchases-with-webhooks"><strong>Fulfilling purchases automatically with webhooks</strong></a></p>
 
-<p><a href="/docs/payments/fulfillment/#automatically-send-payment-or-refund-receipts"><strong>Payment or refund receipts</strong></a></p>
+<p><a href="/docs/payments/fulfillment/#payment-or-refund-receipts"><strong>Email receipts</strong></a></p>
 
-<h2 id="fulfilling-purchases-with-the-dashboard">Fulfilling purchases with the Dashboard</h2>
+<h2 id="fulfilling-purchases-with-the-paysuper-dashboard">Fulfilling purchases with the PaySuper Dashboard</h2>
 
 <p>You can manually handle actions on the <a href="https://paysupermgmt.tst.protocol.one/transactions">Transactions page</a> after your customer completes their payment.</p>
 
@@ -147,15 +155,27 @@ https://github.com/alex-shpak/hugo-book
 </figure>
 
 
+<p>You can manually handle actions on the <a href="https://paysupermgmt.tst.protocol.one/transactions">Transactions page</a> after your customer completes their payment.</p>
+
 <h2 id="fulfilling-purchases-with-webhooks">Fulfilling purchases with webhooks</h2>
 
-<p>PaySuper can send the <code>payment.success</code> webhook event to your server to notify you when a customer successfully completes the payment. You can configure webhooks on the Project Webhooks page.</p>
+<p>PaySuper can send the <code>payment.success</code> webhook event to your server to notify you when a customer successfully completes the payment. You can configure webhooks on the Project webhooks page.</p>
 
 <p>A webhook handler is a script on your server that handles the PaySuper events such as <code>payment.success</code> or <code>payment.cancel</code>.</p>
 
-<h2 id="payment-or-refund-receipts">Payment or refund receipts</h2>
+<h2 id="email-receipts">Email receipts</h2>
 
-<p>PaySuper automatically sends email receipts to your customers after successful payments or refunds.</p>
+<p><strong>Payment or refund receipts</strong></p>
+
+<p>PaySuper automatically sends email receipts to your customers whenever they make a successful payment or refunded purchase.</p>
+
+<p>It&rsquo;s required for user to fill in an email field on the Checkout form. Besides, you can pass a customer&rsquo;s email address when making the <a href="/docs/api/#tag/Token">API Tokens</a> or <a href="/docs/api/#tag/Payment-Order">API Order</a> requests for payment initiation.</p>
+
+<p><strong>Key-product receipts</strong></p>
+
+<p>For a <a href="/docs/payments/#products-checkout">key-activated product</a> purchase, your customer gets an email with the receipt and an extra email with a purchased product key.</p>
+
+<p>If your customer has purchased several game keys for different DRM platforms, he gets an email per DRM platform with a game key and instructions on how to activate the key on the target DRM store.</p>
 
 <hr />
 
@@ -225,9 +245,9 @@ If you want something very special and crazy custom yet don&rsquo;t have a suita
 <ul>
 <li><a href="#after-the-payment">After the payment</a>
 <ul>
-<li><a href="#fulfilling-purchases-with-the-dashboard">Fulfilling purchases with the Dashboard</a></li>
+<li><a href="#fulfilling-purchases-with-the-paysuper-dashboard">Fulfilling purchases with the PaySuper Dashboard</a></li>
 <li><a href="#fulfilling-purchases-with-webhooks">Fulfilling purchases with webhooks</a></li>
-<li><a href="#payment-or-refund-receipts">Payment or refund receipts</a></li>
+<li><a href="#email-receipts">Email receipts</a></li>
 <li><a href="#next-steps">Next steps</a></li>
 </ul></li>
 </ul>
