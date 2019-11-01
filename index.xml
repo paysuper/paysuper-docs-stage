@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>PaySuper Documentation on </title>
+    <title>PaySuper Documentation</title>
     <link>https://docs.stg.pay.super.com/</link>
-    <description>Recent content in PaySuper Documentation on </description>
+    <description>Recent content on PaySuper Documentation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
@@ -59,6 +59,15 @@ At a later point, you may want to fulfill the customer’s purchase and deliver 
     </item>
     
     <item>
+      <title>Canceling and refunding payments</title>
+      <link>https://docs.stg.pay.super.com/docs/payments/refunds/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.stg.pay.super.com/docs/payments/refunds/</guid>
+      <description> Canceling and refunding payments </description>
+    </item>
+    
+    <item>
       <title>Client-side payment initialization</title>
       <link>https://docs.stg.pay.super.com/docs/payments/sdk-integration/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -111,6 +120,15 @@ You can create a token before your customer intents to pay and use it in the fut
     </item>
     
     <item>
+      <title>Receiving Payouts</title>
+      <link>https://docs.stg.pay.super.com/docs/payments/payouts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.stg.pay.super.com/docs/payments/payouts/</guid>
+      <description> Receiving Payouts </description>
+    </item>
+    
+    <item>
       <title>Server-side payment initialization</title>
       <link>https://docs.stg.pay.super.com/docs/payments/integration/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -139,6 +157,15 @@ When using PaySuper JS SDK ensure that:
       
       <guid>https://docs.stg.pay.super.com/docs/payments/currencies/</guid>
       <description>Testing currencies    Currency Code Country and Currency     USD United States Dollar   EUR Euro Member Countries   GBP United Kingdom Pound   RUB Russia Ruble   BRL    JPY    IDR    MYR    PHP    SGD    THB    VND    KRW    TRY    MXN    CAD    AUD    NZD    NOK    PLN    CHF    CNY    INR    CLP    PEN    COP    ZAR    HKD    TWD    SAR    AED    ARS    ILS    KZT    QAR    CRC    HRK    CZK    RSD    RON    EGP    DKK    HUF    BHD    SEK     Questions?</description>
+    </item>
+    
+    <item>
+      <title>Understanding Declines and Failed Payments</title>
+      <link>https://docs.stg.pay.super.com/docs/payments/declines/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.stg.pay.super.com/docs/payments/declines/</guid>
+      <description> Understanding Declines and Failed Payments </description>
     </item>
     
     <item>

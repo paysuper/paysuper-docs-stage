@@ -16,6 +16,10 @@
   </url>
   
   <url>
+    <loc>https://docs.stg.pay.super.com/docs/payments/refunds/</loc>
+  </url>
+  
+  <url>
     <loc>https://docs.stg.pay.super.com/docs/payments/</loc>
   </url>
   
@@ -52,6 +56,10 @@
   </url>
   
   <url>
+    <loc>https://docs.stg.pay.super.com/docs/payments/payouts/</loc>
+  </url>
+  
+  <url>
     <loc>https://docs.stg.pay.super.com/docs/payments/integration/</loc>
   </url>
   
@@ -61,6 +69,10 @@
   
   <url>
     <loc>https://docs.stg.pay.super.com/docs/payments/currencies/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.stg.pay.super.com/docs/payments/declines/</loc>
   </url>
   
   <url>
