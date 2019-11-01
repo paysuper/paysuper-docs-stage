@@ -39,14 +39,13 @@ a virtual item
 an in-game currency
 PaySuper Admin pages: the Projects list page
 the Project settings page
+the Project Webhooks page
 Terms in lowercase: a payment
 an order
 a token
 Terms in uppercase: PaySuper Checkout
 Company Onboarding
-PaySuper JS SDK
-PaySuper API
-PaySuper</description>
+PaySuper JS SDK</description>
     </item>
     
     <item>
@@ -138,7 +137,18 @@ When using PaySuper JS SDK ensure that:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://docs.stg.pay.super.com/docs/payments/currencies/</guid>
-      <description> Testing currencies    Currency Code Country and Currency     USD United States Dollar   EUR Euro Member Countries   GBP United Kingdom Pound   RUB Russia Ruble   BRL    JPY    IDR    MYR    PHP    SGD    THB    VND    KRW    TRY    MXN    CAD    AUD    NZD    NOK    PLN    CHF    CNY    INR    CLP    PEN    COP    ZAR    HKD    TWD    SAR    AED    ARS    ILS    KZT    QAR    CRC    HRK    CZK    RSD    RON    EGP    DKK    HUF    BHD    SEK     </description>
+      <description>Testing currencies    Currency Code Country and Currency     USD United States Dollar   EUR Euro Member Countries   GBP United Kingdom Pound   RUB Russia Ruble   BRL    JPY    IDR    MYR    PHP    SGD    THB    VND    KRW    TRY    MXN    CAD    AUD    NZD    NOK    PLN    CHF    CNY    INR    CLP    PEN    COP    ZAR    HKD    TWD    SAR    AED    ARS    ILS    KZT    QAR    CRC    HRK    CZK    RSD    RON    EGP    DKK    HUF    BHD    SEK     Questions?</description>
+    </item>
+    
+    <item>
+      <title>Webhooks</title>
+      <link>https://docs.stg.pay.super.com/docs/about/webhooks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.stg.pay.super.com/docs/about/webhooks/</guid>
+      <description>Webhooks The PaySuper system can send you notifications for a set of events during the flow, such as creating new accounts or transaction flow, making payouts, and so on.
+These notifications are sent as webhooks to the corresponding URLs configured on your Project settings page.
+In most cases, webhooks are triggered by user actions on your website or back-end related events like refund a payment, notification about dispute and other.</description>
     </item>
     
   </channel>
