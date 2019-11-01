@@ -27,25 +27,25 @@ Headings h1 Heading h2 Heading h3 Heading h4 Heading h5 Heading h6 Heading Notes
       
       <guid>https://docs.stg.pay.super.com/docs/glossary/</guid>
       <description>Payment form: a Checkout Form
-PaySuper Admin entities and properties: a Project
+Terms in uppercase: PaySuper Checkout
+PaySuper JS SDK
+PaySuper API
+PaySuper
+PaySuper Dashboard
+PaySuper Dashboard entities and properties: a Project
 a Product
-a Project Secret key
-the Banking info
-Virtual Currency
-Game Keys
-Virtual Items
+a Project&amp;rsquo;s Secret key
+a Virtual currency
+a Game key
+a Virtual item
 a key-activated product
 a virtual item
 an in-game currency
-PaySuper Admin pages: the Projects list page
+PaySuper Dashboard pages: the Projects list page
 the Project settings page
-the Project Webhooks page
+the Project webhooks page
 the Transactions page
-Terms in lowercase: a payment
-an order
-a token
-Terms in uppercase: PaySuper Checkout
-Company Onboarding</description>
+the Company Onboarding page</description>
     </item>
     
     <item>
@@ -55,8 +55,8 @@ Company Onboarding</description>
       
       <guid>https://docs.stg.pay.super.com/docs/about/webhooks/</guid>
       <description>Webhooks The PaySuper system can send you notifications for a set of events during the flow, such as creating new accounts or transaction flow, making payouts, and so on.
-These notifications are sent as webhooks to the corresponding URLs configured on your Project settings page.
-In most cases, webhooks are triggered by user actions on your website or back-end related events like refund a payment, notification about dispute and other.</description>
+These notifications are sent as webhooks to the corresponding URL configured on your Project Webhook page.
+In most cases, webhooks are triggered by user actions on your website or back-end related events like a successful payment, refund a payment and other.</description>
     </item>
     
   </channel>

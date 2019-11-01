@@ -24,7 +24,7 @@ You can create a token before your customer intents to pay and use it in the fut
 <link rel="stylesheet" href="/book.min.f1a48455ad5df2f474d8141bcf046ec1f43ecd1d3df6912c52e26813c7ad152f.css" integrity="sha256-8aSEVa1d8vR02BQbzwRuwfQ&#43;zR099pEsUuJoE8etFS8=">
 
 
-<script defer src="/search.min.9226ae25a5e2e75728443e6a2ff56dc43b0d34160b615f6e04bf8e53da89b6e6.js" integrity="sha256-kiauJaXi51coRD5qL/VtxDsNNBYLYV9uBL&#43;OU9qJtuY="></script>
+<script defer src="/search.min.8733cfcb573533a68c4a9e91d847b4dada3053f4679bfe40d698be01d739c064.js" integrity="sha256-hzPPy1c1M6aMSp6R2Ee02towU/Rnm/5A1pi&#43;Adc5wGQ="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -146,10 +146,13 @@ https://github.com/alex-shpak/hugo-book
 
 <h2 id="step-1-create-a-token-on-your-server"><strong>Step 1.</strong> Create a token on your server</h2>
 
-<p>Send the <a href="ССЫЛКА">POST /api/v1/tokens</a> to receive an encrypted string. Learn more about the <a href="ССЫЛКА">full list of parameters</a>.</p>
+<p>Send the <a href="/docs/api/#tag/Token">POST /api/v1/tokens</a> to receive an encrypted string. Learn more about the <a href="/docs/api/#tag/Token/paths/~1api~1v1~1tokens/post">full list of parameters</a>.</p>
 
 <blockquote class="book-hint warning">
-  Remember to add a Header <strong>X-API-SIGNATURE</strong> with a <strong>sha512 hash</strong> value that is a concatenation the request body and the Project Secret key found on the Project Webhooks page. Notice, the JSON format of the request body and in the hash must be the same.
+  <p>Remember to add a Header <code>X-API-SIGNATURE</code> with the Project&rsquo;s Secret key found on the Project webhooks page.</p>
+
+<p>Your Secret keys carry many privileges, so be sure to keep them secure! Do not share your Secret API keys in publicly accessible areas such as GitHub, client-side code, and so forth.</p>
+
 </blockquote>
 
 
@@ -167,7 +170,7 @@ https://github.com/alex-shpak/hugo-book
     Run the script and view the response data:</p>
 
 <div>
-    <iframe src="https://runkit.com/e?name=runkit-embed-0&nodeVersion=10.x.x&gutterStyle=inside&base64source=%0aY29uc3QgYXhpb3MgPSByZXF1aXJlKCdheGlvcycpOwoKY29uc3QgcmVzcG9uc2UgPSBhd2FpdCBheGlvcy5wb3N0KAogICdodHRwczovL3AxcGF5YXBpLnRzdC5wcm90b2NvbC5vbmUvYXBpL3YxL3Rva2VucycsCnsic2V0dGluZ3MiOnsicHJvamVjdF9pZCI6IjVkYjE2YWU4MTFiZjBkMDAwMWZkZmJkMSIsImFtb3VudCI6MTAsImN1cnJlbmN5IjoiVVNEIiwidHlwZSI6InNpbXBsZSJ9LCJ1c2VyIjp7ImlkIjoiNTg3OTlmMmMyNTY0Mjk2YmQyY2IiLCJhZGRyZXNzIjp7ImNpdHkiOiJBbG1lcmUiLCJjb3VudHJ5IjoiTkwiLCJwb3N0YWxfY29kZSI6IjEzMjYgUEEiLCJzdGF0ZSI6IkZsZXZvbGFuZCJ9LCJlbWFpbCI6eyJ2YWx1ZSI6InVzZXIuZW1haWxAZXhhbXBsZS5jb20iLCJ2ZXJpZmllZCI6dHJ1ZX19fSwKICB7CiAgICBoZWFkZXJzOiB7CiAgICAgICAgJ0NvbnRlbnQtVHlwZSc6ICdhcHBsaWNhdGlvbi9qc29uJywKICAgICAgICAnWC1BUEktU0lHTkFUVVJFJzogJzUzYjczZjIxODUyYjZiMmVkNzE0MWI4NDA1ZmE4YjgzOGM1MTExMzdkMmMwMzAxMTM0MDJjMDZhOGY5YWE1OGEzMjNjMzMyODZlYTkxNTExZGQ1YzNiZDFjMmY2ODg0NjgyMjEyOGQ1NTE5MDZjMDIyNmY1M2NiM2Q3ZmJiZTA2JwogICAgfQogIH0KKQ%3d%3d%0a" frameborder="0" name="simple-checkout-token" style="min-height: 550px; width: 100%; padding: 0px; margin: 0px; border: 0px; background-color: transparent;"></iframe>
+    <iframe src="https://runkit.com/e?name=runkit-embed-0&nodeVersion=10.x.x&gutterStyle=inside&base64source=%0aY29uc3QgYXhpb3MgPSByZXF1aXJlKCdheGlvcycpOwoKY29uc3QgcmVzcG9uc2UgPSBhd2FpdCBheGlvcy5wb3N0KAogICdodHRwczovL3AxcGF5YXBpLnRzdC5wcm90b2NvbC5vbmUvYXBpL3YxL3Rva2VucycsCnsKICAgInNldHRpbmdzIjogewogICAgICAicHJvamVjdF9pZCI6ICI1ZGIxNmFlODExYmYwZDAwMDFmZGZiZDEiLAogICAgICAiYW1vdW50IjogMTAsCiAgICAgICJjdXJyZW5jeSI6ICJVU0QiLAogICAgICAidHlwZSI6ICJzaW1wbGUiCiAgIH0sCiAgICJ1c2VyIjogewogICAgICAiaWQiOiAiNTg3OTlmMmMyNTY0Mjk2YmQyY2IiLAogICAgICAiYWRkcmVzcyI6IHsKICAgICAgICAgImNpdHkiOiAiQWxtZXJlIiwKICAgICAgICAgImNvdW50cnkiOiAiTkwiLAogICAgICAgICAicG9zdGFsX2NvZGUiOiAiMTMyNiBQQSIsCiAgICAgICAgICJzdGF0ZSI6ICJGbGV2b2xhbmQiCiAgICAgIH0sCiAgICAgICJlbWFpbCI6IHsKICAgICAgICAgInZhbHVlIjogInVzZXIuZW1haWxAZXhhbXBsZS5jb20iLAogICAgICAgICAidmVyaWZpZWQiOiB0cnVlCiAgICAgIH0KICAgfQp9LAogIHsKICAgIGhlYWRlcnM6IHsKICAgICAgICAnQ29udGVudC1UeXBlJzogJ2FwcGxpY2F0aW9uL2pzb24nLAogICAgICAgICdYLUFQSS1TSUdOQVRVUkUnOiAnaTVKWXRqbjc7Kj4sPHdtJwogICAgfQogIH0KKQ%3d%3d%0a" frameborder="0" name="simple-checkout-token" style="min-height: 550px; width: 100%; padding: 0px; margin: 0px; border: 0px; background-color: transparent;"></iframe>
 </div>
   </div>
 
@@ -178,7 +181,7 @@ https://github.com/alex-shpak/hugo-book
   <div class="book-tabs-content markdown-inner">
     <p>Or try it with cURL to interact with the API over HTTP from your console:</p>
 
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -X POST -H <span style="color:#4070a0">&#39;X-API-SIGNATURE: YOUR_SIGNATURE&#39;</span> -d <span style="color:#4070a0">&#39;{
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -X POST -H <span style="color:#4070a0">&#39;X-API-SIGNATURE: YOUR_SECRET_KEY&#39;</span> -d <span style="color:#4070a0">&#39;{
 </span><span style="color:#4070a0"> &#34;settings&#34;: {
 </span><span style="color:#4070a0">    &#34;project_id&#34;: &#34;YOUR_PROJECT_ID&#34;,
 </span><span style="color:#4070a0">    &#34;amount&#34;: 10,
@@ -330,7 +333,7 @@ https://github.com/alex-shpak/hugo-book
 <blockquote class="book-hint info">
   <p><a href="/docs/payments/live/"><strong>After the payment</strong></a></p>
 
-<p>After a successful payment, you have to fulfil the customer’s purchase. You can use <a href="ССЫЛКА">webhooks</a> or the <a href="ССЫЛКА">Transaction log</a> to accomplish the purchase.</p>
+<p>After a successful payment, you have to fulfil the customer’s purchase. You can use <a href="/docs/payments/fulfillment/#fulfilling-purchases-with-webhooks">webhooks</a> or the <a href="/docs/payments/fulfillment/#fulfilling-purchases-with-the-dashboard">Transaction log</a> to accomplish the purchase.</p>
 
 </blockquote>
 
