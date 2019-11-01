@@ -59,7 +59,7 @@ To fulfil the customer’s purchase you can make it in several ways:
 Fulfilling purchases manually with the PaySuper Dashboard
 Fulfilling purchases automatically with webhooks
 Email receipts
-Fulfilling purchases with the PaySuper Dashboard You can manually handle actions on the Transactions page after your customer completes their payment.</description>
+Fulfilling purchases with the PaySuper Dashboard Every customers&amp;rsquo; payment is recorded as a new entry in the payments log shown on the Transactions page.</description>
     </item>
     
     <item>
