@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta property="og:title" content="After the payment" />
-<meta property="og:description" content="Your customer gets an email with the receipt and an extra email with the purchased Product or Products as soon as the transaction is complete. If your customer has purchased several game-keys for different DRM platforms, they get an email per DRM platform with a game key and instructions on how to activate the key on the target DRM store. At the same time you see that transaction on the Dashboard in PaySuper Admin." />
+<meta property="og:description" content="After the payment When your customers successfully complete payments they are redirected to the success URL page that you passed in a request parameter. Typically, this is a page on your website that informs your customer that their payment was successful.
+At a later point, you may want to fulfill the customer’s purchase and deliver the goods or services they paid for. There are a few ways to do this:" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://docs.stg.pay.super.com/docs/payments/fulfillment/" />
 
@@ -15,7 +16,7 @@
 <link rel="stylesheet" href="/book.min.f1a48455ad5df2f474d8141bcf046ec1f43ecd1d3df6912c52e26813c7ad152f.css" integrity="sha256-8aSEVa1d8vR02BQbzwRuwfQ&#43;zR099pEsUuJoE8etFS8=">
 
 
-<script defer src="/search.min.56fa505dc2993a51857714adf19977ea9dd7b55094221e2a82679874751bc802.js" integrity="sha256-VvpQXcKZOlGFdxSt8Zl36p3XtVCUIh4qgmeYdHUbyAI="></script>
+<script defer src="/search.min.ecacb0d8414e6a28a8f6c9141b5351dc5acf681c61a1b185bf0d2b95d14ec3e1.js" integrity="sha256-7Kyw2EFOaiio9skUG1NR3FrPaBxhobGFvw0rldFOw&#43;E="></script>
 
 <!--
 Made with Book Theme
@@ -61,9 +62,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="/docs/payments/fulfillment/"class=active>After the payment</a></li>
 <li><a href="/docs/payments/customization/">Customizing Checkout</a></li>
 <li><a href="/docs/payments/testing/">Testing</a></li>
-<li><a href="/docs/payments/live/">Going Live</a></li>
 </ul></li>
-<li><a href="/docs/about/webhooks/"><strong>Webhooks</strong></a></li>
 <li><a href="/docs/api/"><strong>API Reference</strong></a></li>
 </ul>
 
@@ -97,89 +96,92 @@ https://github.com/alex-shpak/hugo-book
       
 <article class="markdown">
 
-<p>Your customer gets an email with the receipt and an extra email with the purchased Product or Products as soon as the transaction is complete. If your customer has purchased several game-keys for different DRM platforms, they get an email per DRM platform with a game key and instructions on how to activate the key on the target DRM store. At the same time you see that transaction on the Dashboard in PaySuper Admin.</p>
+<h1 id="after-the-payment">After the payment</h1>
 
-<p>You can handle actions after your customer completes their payment.</p>
+<hr />
+
+<p>When your customers successfully complete payments they are redirected to the success URL page that you passed in a request parameter. Typically, this is a page on your website that informs your customer that their payment was successful.</p>
+
+<p>At a later point, you may want to fulfill the customer’s purchase and deliver the goods or services they paid for. There are a few ways to do this:</p>
+
+<p><a href="/docs/payments/fulfillment/#fulfilling-purchases-with-the-dashboard"><strong>Fulfilling manually</strong></a></p>
+
+<p><a href="/docs/payments/fulfillment/#fulfilling-purchases-with-webhooks"><strong>Fulfilling automatically</strong></a></p>
+
+<p><a href="/docs/payments/fulfillment/#automatically-send-payment-or-refund-receipts"><strong>Payment or refund receipts</strong></a></p>
+
+<h2 id="fulfilling-purchases-with-the-dashboard">Fulfilling purchases with the Dashboard</h2>
+
+<p>You can manually handle actions on the <a href="https://paysupermgmt.tst.protocol.one/transactions">Transactions page</a> after your customer completes their payment.</p>
+
+<figure>
+    <img src="/images/transactions.png"/> 
+</figure>
+
 
 <h2 id="fulfilling-purchases-with-webhooks">Fulfilling purchases with webhooks</h2>
 
-<p>PaySuper can send the <code>payment.success</code> webhook event to your server to notify you when a customer completes the payment. You can configure webhooks for your Projects in PaySuper Admin and handle them on your server.</p>
+<p>PaySuper can send the <code>payment.success</code> webhook event to your server to notify you when a customer successfully completes the payment. You can configure webhooks on the Project Webhooks page.</p>
 
-<p>A webhook handler is a script on your server that handles the PaySuper events such as <code>payment.success</code> or <code>payment.cancel</code>. See all event types in [PaySuper API reference]().</p>
+<p>A webhook handler is a script on your server that handles the PaySuper events such as <code>payment.success</code> or <code>payment.cancel</code>.</p>
 
-<p>These webhook events are signed to protect you from fraudlent activities. You can validate our signed webhooks by generating a signature and comparing it to the value of the Authorization http header value.</p>
+<h2 id="payment-or-refund-receipts">Payment or refund receipts</h2>
 
-<p>** Webhook object can look like this:
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
-  <span style="color:#062873;font-weight:bold">&#34;id&#34;</span>: <span style="color:#4070a0">&#34;22d6d597-000f-5000-9000-145f6df21d6f&#34;</span>,
-  <span style="color:#062873;font-weight:bold">&#34;type&#34;</span>: <span style="color:#4070a0">&#34;notification&#34;</span>,
-  <span style="color:#062873;font-weight:bold">&#34;event&#34;</span>: <span style="color:#4070a0">&#34;payment.success&#34;</span>,
-  <span style="color:#062873;font-weight:bold">&#34;live&#34;</span>: <span style="color:#007020;font-weight:bold">true</span>,
-  <span style="color:#062873;font-weight:bold">&#34;created_at&#34;</span>: <span style="color:#4070a0">&#34;2018-07-10T14:27:54.691Z&#34;</span>,
-  <span style="color:#062873;font-weight:bold">&#34;expires_at&#34;</span>: <span style="color:#007020;font-weight:bold">null</span>,
-  <span style="color:#062873;font-weight:bold">&#34;delivery_try&#34;</span>: <span style="color:#40a070">1</span>,
-  <span style="color:#062873;font-weight:bold">&#34;object&#34;</span>: {}
-}</code></pre></div></p>
+<p>PaySuper automatically sends email receipts to your customers after successful payments or refunds.</p>
 
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
+<hr />
 
-<tbody>
-<tr>
-<td>id</td>
-<td>string</td>
-<td>Unique identifier for the object.</td>
-</tr>
+<h2 id="next-steps">Next steps</h2>
 
-<tr>
-<td>type</td>
-<td>string</td>
-<td>String representing the web hook’s type.</td>
-</tr>
+<blockquote class="book-hint info">
+  <p><a href="/docs/payments/testing/"><strong>Testing the Checkout</strong></a></p>
 
-<tr>
-<td>event</td>
-<td>string</td>
-<td>String representing the event`s type.</td>
-</tr>
+<p>Verify that your integration with PaySuper Checkout works correctly. Our offered test cards can be used to create payments that produce defined responses for you to test your integration code.</p>
 
-<tr>
-<td>live</td>
-<td>boolean</td>
-<td>True is notification originated from the live environment.</td>
-</tr>
+</blockquote>
 
-<tr>
-<td>created_at</td>
-<td>DateTime</td>
-<td>The date and time in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> when an event has been created.</td>
-</tr>
 
-<tr>
-<td>expires_at</td>
-<td>DateTime</td>
-<td>The date and time in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> when the event stops trying to deliver.</td>
-</tr>
+<blockquote class="book-hint info">
+  <p><a href="/docs/payments/live/"><strong>Going live checklist</strong></a></p>
 
-<tr>
-<td>delivery_try</td>
-<td>integer</td>
-<td>The current delivery try for this event</td>
-</tr>
+<p>You can inspect this checklist before going live to ensure you&rsquo;ve implemented all the significant setup steps.</p>
 
-<tr>
-<td>object</td>
-<td>object</td>
-<td>The object representing payload of event with given type. Objects of the same type share the same value.</td>
-</tr>
-</tbody>
-</table>
+</blockquote>
+
+
+<hr />
+
+<h2 id="questions">Questions?</h2>
+
+<div class="book-columns flex flex-wrap">
+
+<div class="flex-even markdown-inner">
+    <h4 id="sales-https-docs-google-com-forms-d-e-1faipqlscqpu83wkpkjeui-wvxgdoxwldl4vyd8gswnqf9-ccwdg3dew-viewform"><a href="https://docs.google.com/forms/d/e/1FAIpQLScQPU83wKPkJeui_WvxGDoXWLDL4vyD8GsWNqf9-ccwDg3dEw/viewform">Sales</a></h4>
+
+<p>Our salespeople are pleasant and friendly. Leave your contact details, and we&rsquo;ll be back to you in no time.
+</div>
+
+<div class="flex-even markdown-inner">
+    <h4 id="support-https-docs-google-com-forms-d-e-1faipqlscqpu83wkpkjeui-wvxgdoxwldl4vyd8gswnqf9-ccwdg3dew-viewform"><a href="https://docs.google.com/forms/d/e/1FAIpQLScQPU83wKPkJeui_WvxGDoXWLDL4vyD8GsWNqf9-ccwDg3dEw/viewform">Support</a></h4>
+
+<p>We are always happy to help with a code, improve a guide or consider a feature.
+</div>
+
+<div class="flex-even markdown-inner">
+    <h4 id="github-https-github-com-paysuper"><a href="https://github.com/paysuper">GitHub</a></h4>
+
+<p>The PaySuper Checkout Form, the JS SDK and even the server are available as a source code on our GitHub. You&rsquo;re welcome to explore the code and help us make PaySuper even better.
+</div>
+
+</div>
+
+<hr />
+
+<h2 id="not-a-developer">Not a developer?</h2>
+
+Our engineers will help you <a href="https://docs.google.com/forms/d/e/1FAIpQLScQPU83wKPkJeui_WvxGDoXWLDL4vyD8GsWNqf9-ccwDg3dEw/viewform">integrate PaySuper</a> into your existing e-commerce platform, a website or a game in the best possible way.
+
+If you want something very special and crazy custom yet don&rsquo;t have a suitable programmer available nearby - <a href="https://docs.google.com/forms/d/e/1FAIpQLScQPU83wKPkJeui_WvxGDoXWLDL4vyD8GsWNqf9-ccwDg3dEw/viewform">talk to us</a>! We won&rsquo;t let down a PaySuper user. We will try to help you in every possible way. We can even hire a programmer for you!
 </article>
 
       
@@ -193,9 +195,12 @@ https://github.com/alex-shpak/hugo-book
   <aside class="book-toc level-true fixed">
     <nav id="TableOfContents">
 <ul>
-<li>
+<li><a href="#after-the-payment">After the payment</a>
 <ul>
+<li><a href="#fulfilling-purchases-with-the-dashboard">Fulfilling purchases with the Dashboard</a></li>
 <li><a href="#fulfilling-purchases-with-webhooks">Fulfilling purchases with webhooks</a></li>
+<li><a href="#payment-or-refund-receipts">Payment or refund receipts</a></li>
+<li><a href="#next-steps">Next steps</a></li>
 </ul></li>
 </ul>
 </nav>

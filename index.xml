@@ -40,12 +40,12 @@ an in-game currency
 PaySuper Admin pages: the Projects list page
 the Project settings page
 the Project Webhooks page
+the Transactions page
 Terms in lowercase: a payment
 an order
 a token
 Terms in uppercase: PaySuper Checkout
-Company Onboarding
-PaySuper JS SDK</description>
+Company Onboarding</description>
     </item>
     
     <item>
@@ -54,7 +54,8 @@ PaySuper JS SDK</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://docs.stg.pay.super.com/docs/payments/fulfillment/</guid>
-      <description>Your customer gets an email with the receipt and an extra email with the purchased Product or Products as soon as the transaction is complete. If your customer has purchased several game-keys for different DRM platforms, they get an email per DRM platform with a game key and instructions on how to activate the key on the target DRM store. At the same time you see that transaction on the Dashboard in PaySuper Admin.</description>
+      <description>After the payment When your customers successfully complete payments they are redirected to the success URL page that you passed in a request parameter. Typically, this is a page on your website that informs your customer that their payment was successful.
+At a later point, you may want to fulfill the customer’s purchase and deliver the goods or services they paid for. There are a few ways to do this:</description>
     </item>
     
     <item>
@@ -128,7 +129,7 @@ You can use PaySuper JS SDK for the client-side payment initialization to integr
       <description>Testing the Payment Process The Payment Form integration should be tested in the Sandbox before going live.
 The Sandbox provides full functionality but it only emulates processing, no actual bank transactions are made.
 When using PaySuper JS SDK ensure that:
- Handlers for the events are displayed properly. The PaySuper object is created with all required parameters or token.  Incase of using the PaySuper API in your server-side code ensure that:</description>
+ Handlers for the events are displayed properly. The PaySuper object is created with all required parameters or token.  In case of using the PaySuper API in your server-side code ensure that:</description>
     </item>
     
     <item>

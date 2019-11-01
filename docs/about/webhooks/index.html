@@ -17,7 +17,7 @@ In most cases, webhooks are triggered by user actions on your website or back-en
 <link rel="stylesheet" href="/book.min.f1a48455ad5df2f474d8141bcf046ec1f43ecd1d3df6912c52e26813c7ad152f.css" integrity="sha256-8aSEVa1d8vR02BQbzwRuwfQ&#43;zR099pEsUuJoE8etFS8=">
 
 
-<script defer src="/search.min.56fa505dc2993a51857714adf19977ea9dd7b55094221e2a82679874751bc802.js" integrity="sha256-VvpQXcKZOlGFdxSt8Zl36p3XtVCUIh4qgmeYdHUbyAI="></script>
+<script defer src="/search.min.ecacb0d8414e6a28a8f6c9141b5351dc5acf681c61a1b185bf0d2b95d14ec3e1.js" integrity="sha256-7Kyw2EFOaiio9skUG1NR3FrPaBxhobGFvw0rldFOw&#43;E="></script>
 
 <!--
 Made with Book Theme
@@ -63,9 +63,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="/docs/payments/fulfillment/">After the payment</a></li>
 <li><a href="/docs/payments/customization/">Customizing Checkout</a></li>
 <li><a href="/docs/payments/testing/">Testing</a></li>
-<li><a href="/docs/payments/live/">Going Live</a></li>
 </ul></li>
-<li><a href="/docs/about/webhooks/"class=active><strong>Webhooks</strong></a></li>
 <li><a href="/docs/api/"><strong>API Reference</strong></a></li>
 </ul>
 
@@ -132,55 +130,25 @@ https://github.com/alex-shpak/hugo-book
 <tr>
 <td><code>payment.success</code></td>
 <td>Order</td>
-<td>Sent when a user completes a payment.</td>
+<td>Sent when a customer completes a payment.</td>
 </tr>
 
 <tr>
 <td><code>payment.chargeback</code></td>
 <td>Order</td>
-<td>Sent when a payment must be canceled for chargeback.</td>
+<td>Sent when a payment must be cancelled for chargeback.</td>
 </tr>
 
 <tr>
 <td><code>payment.refund</code></td>
 <td>Order</td>
-<td>Sent when a payment must be canceled for refund for any reasons.</td>
-</tr>
-
-<tr>
-<td><code>payment.fraud</code></td>
-<td>Order</td>
-<td>Sent when a payment must be canceled for fraud protection system.</td>
+<td>Sent when a payment must be cancelled for refund for any reasons.</td>
 </tr>
 
 <tr>
 <td><code>payment.cancel</code></td>
 <td>Order</td>
-<td>Sent when a payment must be canceled for cancel for any reasons.</td>
-</tr>
-
-<tr>
-<td><code>item.replace</code></td>
-<td>Order</td>
-<td>Sent when a item of processed order must be replaced for any reasons.</td>
-</tr>
-
-<tr>
-<td><code>user.validation</code></td>
-<td>User</td>
-<td>Check if a user exists in the external system.</td>
-</tr>
-
-<tr>
-<td><code>payout.created</code></td>
-<td>Payout</td>
-<td>Sent when a payout report created by PaySuper.</td>
-</tr>
-
-<tr>
-<td><code>payout.status</code></td>
-<td>Payout</td>
-<td>Sent when a payout request change they status for any reasons.</td>
+<td>Sent when a payment must be cancelled for cancel for any reasons.</td>
 </tr>
 </tbody>
 </table>

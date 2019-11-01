@@ -7,7 +7,7 @@
 <meta property="og:description" content="Testing the Payment Process The Payment Form integration should be tested in the Sandbox before going live.
 The Sandbox provides full functionality but it only emulates processing, no actual bank transactions are made.
 When using PaySuper JS SDK ensure that:
- Handlers for the events are displayed properly. The PaySuper object is created with all required parameters or token.  Incase of using the PaySuper API in your server-side code ensure that:" />
+ Handlers for the events are displayed properly. The PaySuper object is created with all required parameters or token.  In case of using the PaySuper API in your server-side code ensure that:" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://docs.stg.pay.super.com/docs/payments/testing/" />
 
@@ -18,7 +18,7 @@ When using PaySuper JS SDK ensure that:
 <link rel="stylesheet" href="/book.min.f1a48455ad5df2f474d8141bcf046ec1f43ecd1d3df6912c52e26813c7ad152f.css" integrity="sha256-8aSEVa1d8vR02BQbzwRuwfQ&#43;zR099pEsUuJoE8etFS8=">
 
 
-<script defer src="/search.min.56fa505dc2993a51857714adf19977ea9dd7b55094221e2a82679874751bc802.js" integrity="sha256-VvpQXcKZOlGFdxSt8Zl36p3XtVCUIh4qgmeYdHUbyAI="></script>
+<script defer src="/search.min.ecacb0d8414e6a28a8f6c9141b5351dc5acf681c61a1b185bf0d2b95d14ec3e1.js" integrity="sha256-7Kyw2EFOaiio9skUG1NR3FrPaBxhobGFvw0rldFOw&#43;E="></script>
 
 <!--
 Made with Book Theme
@@ -64,9 +64,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="/docs/payments/fulfillment/">After the payment</a></li>
 <li><a href="/docs/payments/customization/">Customizing Checkout</a></li>
 <li><a href="/docs/payments/testing/"class=active>Testing</a></li>
-<li><a href="/docs/payments/live/">Going Live</a></li>
 </ul></li>
-<li><a href="/docs/about/webhooks/"><strong>Webhooks</strong></a></li>
 <li><a href="/docs/api/"><strong>API Reference</strong></a></li>
 </ul>
 
@@ -115,7 +113,7 @@ https://github.com/alex-shpak/hugo-book
 <li>The PaySuper object is created with all required parameters or <a href="/docs/payments/token/">token</a>.</li>
 </ul>
 
-<p>Incase of using the PaySuper API in your server-side code ensure that:</p>
+<p>In case of using the PaySuper API in your server-side code ensure that:</p>
 
 <ul>
 <li><a href="ссылка на апи спеку про авторизацию sha512">Authentication to the API</a> provided with your Project API secret key found on the Project settings.</li>
@@ -125,14 +123,14 @@ https://github.com/alex-shpak/hugo-book
 
 <h2 id="test-card-numbers">Test card numbers</h2>
 
-<p>To test a bank card payment in the Sandbox enter arbitrary expiry date (the format is MM/YY), a Secure code (CVC/CVV, the format is 3 digits) and a cardholder name (the format is firstname lastname).</p>
+<p>To test a bank card payment in the Sandbox enter arbitrary expiry date (the format is MM/YY), a Secure code (CVC/CVV, the format is 3 digits) and a cardholder name (the format is first name last name).</p>
 
 <blockquote class="book-hint warning">
-  You can also specify incorrect details (card number, expiration date, or CVV) in order to generate an error.
+  You can also specify incorrect details (card number, expiration date, or CVV) to generate an error.
 </blockquote>
 
 
-<p>You will be redirected to the Sandbox page to select of the desired results the success or failed. After you click the result button the current page will be closed and you will be redirected to the Checkout Form to view the purchase status.</p>
+<p>You will be redirected to the Sandbox page to select the desired results the success or failure. After you click the result button the current page will be closed and you will be redirected to the Checkout Form to view the purchase status.</p>
 
 <blockquote>
 <p>Note, that when Merchant chooses to fail authentication, payment is always declined, no matter what PAN has been used.</p>
@@ -155,7 +153,7 @@ https://github.com/alex-shpak/hugo-book
     <div class="card-container">
         <div class="card-title">
             <img src="/images/mastercard.png" alt="mastercard">
-            <p style="color: green;">Confirmd</p>
+            <p style="color: green;">Confirmed</p>
         </div>
         <h3>4000 0000 0000 0002</h3>
     </div>
@@ -198,7 +196,7 @@ https://github.com/alex-shpak/hugo-book
     <div class="card-container">
         <div class="card-title">
             <img src="/images/visa.png" alt="visa">
-            <p style="color: green;">Confirmd</p>
+            <p style="color: green;">Confirmed</p>
         </div>
         <h3>4000 0000 0000 0077</h3>
     </div>
@@ -243,13 +241,13 @@ https://github.com/alex-shpak/hugo-book
 <div class="book-columns flex flex-wrap">
   
   <div class="flex-even markdown-inner">
-    After the payments PaySuper can send you webhook events to your server. You can make a successful payment with a test card number and verify the resulting event data and ensure that your webhook&rsquo;s endpoint is working and configured correctly.
+    After the payments, PaySuper can send you webhook events to your server. You can make a successful payment with a test card number and verify the resulting event data and ensure that your webhook&rsquo;s endpoint is working and configured correctly.
   </div>
   
   <div class="flex-even markdown-inner">
     <p><strong>GETTING STARTED</strong></p>
 
-<p><a href="/docs/about/webhooks/">Configure Webhooks</a> for your Project in PaySuper Dashbord and handle them on your server.</p>
+<p><a href="/docs/about/webhooks/">Configure Webhooks</a> for your Project in PaySuper Dashboard and handle them on your server.</p>
 
   </div>
   
