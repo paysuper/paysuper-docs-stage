@@ -125,7 +125,8 @@ When using PaySuper JS SDK ensure that:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://docs.stg.pay.super.com/docs/payments/declines/</guid>
-      <description> Understanding Declines and Failed Payments </description>
+      <description>Understanding Declines and Failed Payments During a payment process, a failure result can happen because of the typical reasons. For example, the customer may not have enough money on a bank card, or PaySuper Checkout may suspect a fraud attempt. If so, the payment status will be cancelled and a PaySuper Checkout notification event will contain an explanatory description.
+But some reasons for the failed payments are unclear and uninformative.</description>
     </item>
     
     <item>
