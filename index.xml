@@ -101,7 +101,10 @@ Prefilling customer data Boost your payment conversion rate with a payment form 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://docs.stg.pay.super.com/docs/payments/live/</guid>
-      <description>Below is a holistic view of the process from the very start to going live:  Complete the onboarding and fill in the info about your Projects and Products Implement PaySuper Checkout on your website Setup the webhooks on your backend Test that everything works fine in our sandbox We verify that you&amp;rsquo;re good to go live and flip the switch You can stop reading this text, instead do navigate to the Dashboard to see the first sales =)  Now let&amp;rsquo;s double check all the important details that you may have missed When you’re done with PaySuper Checkout integration and are thinking about going live, we suggest you refer to the points below to make sure you haven&amp;rsquo;t missed an important detail or two.</description>
+      <description>PaySuper Checkout integration checklist When you’re done with PaySuper Checkout integration and are thinking about going live, we suggest you refer to the points below to check that you&amp;rsquo;ve covered all the significant steps.
+Complete the Company onboarding Dashboard
+When you are ready to start selling you will need to fill in all your company details in Company Onboarding and sign the documents in the License Agreement.
+ Before confirming your application we manually check each new account to ensure that our platform is attended only by companies who are related to the gaming industry.</description>
     </item>
     
     <item>
