@@ -32,7 +32,7 @@ Fulfilling purchases with the PaySuper Dashboard Every customers&rsquo; payment 
 <link rel="stylesheet" href="/book.min.343270af3f7a01683d94762f9b671c6eb940933f3238c66b6bfc99821e7a3131.css" integrity="sha256-NDJwrz96AWg9lHYvm2ccbrlAkz8yOMZra/yZgh56MTE=">
 
 
-<script defer src="/search.min.27f2a5ca8cbad15a9c55809bc181d06787c2784c11d2ec951b2ef91fef6d06a3.js" integrity="sha256-J/Klyoy60VqcVYCbwYHQZ4fCeEwR0uyVGy75H&#43;9tBqM="></script>
+<script defer src="/search.min.f6a479430b59240ec32a515cacb4c2d071ac7a8162f745c1f275418b36dca7a2.js" integrity="sha256-9qR5QwtZJA7DKlFcrLTC0HGseoFi90XB8nVBizbcp6I="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -178,23 +178,50 @@ https://github.com/alex-shpak/hugo-book
 
 <h2 id="fulfilling-purchases-with-webhooks">Fulfilling purchases with webhooks</h2>
 
-<div class="book-columns flex flex-wrap">
-  
-  <div class="flex-even markdown-inner">
-    After the payments, PaySuper can send you webhook events to your server. You can create a handler for the webhook events like a successful payment, refund payment and so on.
-  </div>
-  
-  <div class="flex-even markdown-inner">
-    <p><strong>GETTING STARTED</strong></p>
-
-<p><a href="/docs/about/webhooks/">Configure Webhooks</a> for your Project in PaySuper Dashboard and handle them on your server.</p>
-
-  </div>
-  
-</div>
-
+<p>After the payments, PaySuper can send you webhook events to your server. You can create a handler for the webhook events like a successful payment, refund payment and so on.</p>
 
 <p>Using the handler you can obtain information from the webhook&rsquo;s <code>object</code> parameter in the payload about the customer and payment. With this comprehensive data, you can execute your server-side code and fulfil the payment.</p>
+
+<blockquote class="book-hint warning">
+  <a href="/docs/about/webhooks/">Configure Webhooks</a> for your Project in PaySuper Dashboard and handle them on your server.
+</blockquote>
+
+
+<p>For instance, this is the base object representing the webhook event <code>payment.success</code>:</p>
+
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+   <span style="color:#062873;font-weight:bold">&#34;id&#34;</span>: <span style="color:#4070a0">&#34;b303ec344deca48af01f3412d51af2198207f5bfff549bbdfffac46d971fc725&#34;</span>,
+   <span style="color:#062873;font-weight:bold">&#34;type&#34;</span>: <span style="color:#4070a0">&#34;notification&#34;</span>,
+   <span style="color:#062873;font-weight:bold">&#34;event&#34;</span>: <span style="color:#4070a0">&#34;payment.success&#34;</span>,
+   <span style="color:#062873;font-weight:bold">&#34;created_at&#34;</span>: <span style="color:#4070a0">&#34;2019-10-01T15:10:51Z&#34;</span>,
+   <span style="color:#062873;font-weight:bold">&#34;object&#34;</span>: {
+      <span style="color:#062873;font-weight:bold">&#34;id&#34;</span>: <span style="color:#4070a0">&#34;f29ab03a-c5f0-40db-a798-9deba14a9099&#34;</span>,
+      <span style="color:#062873;font-weight:bold">&#34;transaction&#34;</span>: <span style="color:#4070a0">&#34;302212411&#34;</span>,
+      <span style="color:#062873;font-weight:bold">&#34;object&#34;</span>: <span style="color:#4070a0">&#34;order&#34;</span>,
+      <span style="color:#062873;font-weight:bold">&#34;status&#34;</span>: <span style="color:#4070a0">&#34;created&#34;</span>,
+      <span style="color:#062873;font-weight:bold">&#34;amount&#34;</span>: <span style="color:#40a070">100</span>,
+      <span style="color:#062873;font-weight:bold">&#34;currency&#34;</span>: <span style="color:#4070a0">&#34;USD&#34;</span>,
+      <span style="color:#062873;font-weight:bold">&#34;type&#34;</span>: <span style="color:#4070a0">&#34;simple&#34;</span>,
+      <span style="color:#062873;font-weight:bold">&#34;user&#34;</span>: {
+         <span style="color:#062873;font-weight:bold">&#34;id&#34;</span>: <span style="color:#4070a0">&#34;U3oFCwIOwRnQzfKZn58fnkzx3xnPGYdP&#34;</span>,
+         <span style="color:#062873;font-weight:bold">&#34;object&#34;</span>: <span style="color:#4070a0">&#34;user&#34;</span>,
+         <span style="color:#062873;font-weight:bold">&#34;email&#34;</span>: <span style="color:#4070a0">&#34;user.email@example.com&#34;</span>,
+         <span style="color:#062873;font-weight:bold">&#34;email_verified&#34;</span>: <span style="color:#007020;font-weight:bold">true</span>,
+         <span style="">...</span>
+      },
+      <span style="color:#062873;font-weight:bold">&#34;method&#34;</span>: {
+         <span style="color:#062873;font-weight:bold">&#34;title&#34;</span>: <span style="color:#4070a0">&#34;VISA/MasterCard&#34;</span>,
+         <span style="color:#062873;font-weight:bold">&#34;card&#34;</span>: {
+            <span style="color:#062873;font-weight:bold">&#34;masked&#34;</span>: <span style="color:#4070a0">&#34;414943...2348&#34;</span>,
+            <span style="color:#062873;font-weight:bold">&#34;expiry_month&#34;</span>: <span style="color:#4070a0">&#34;10&#34;</span>,
+            <span style="color:#062873;font-weight:bold">&#34;expiry_year&#34;</span>: <span style="color:#4070a0">&#34;2021&#34;</span>,
+            <span style="color:#062873;font-weight:bold">&#34;brand&#34;</span>: <span style="color:#4070a0">&#34;VISA&#34;</span>,
+            <span style="">...</span>
+         },
+      },
+      <span style="">...</span>
+   }
+}</code></pre></div>
 
 <h2 id="email-receipts">Email receipts</h2>
 
