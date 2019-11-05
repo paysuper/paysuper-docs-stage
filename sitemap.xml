@@ -16,7 +16,7 @@
   </url>
   
   <url>
-    <loc>https://docs.stg.pay.super.com/docs/payments/refunds/</loc>
+    <loc>https://docs.stg.pay.super.com/docs/refunds/</loc>
   </url>
   
   <url>
@@ -56,7 +56,7 @@
   </url>
   
   <url>
-    <loc>https://docs.stg.pay.super.com/docs/payments/payouts/</loc>
+    <loc>https://docs.stg.pay.super.com/docs/payouts/</loc>
   </url>
   
   <url>
@@ -68,11 +68,11 @@
   </url>
   
   <url>
-    <loc>https://docs.stg.pay.super.com/docs/payments/declines/</loc>
+    <loc>https://docs.stg.pay.super.com/docs/declines/</loc>
   </url>
   
   <url>
-    <loc>https://docs.stg.pay.super.com/docs/payments/webhooks/</loc>
+    <loc>https://docs.stg.pay.super.com/docs/webhooks/</loc>
   </url>
   
 </urlset>
