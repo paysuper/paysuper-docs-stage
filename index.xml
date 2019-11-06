@@ -123,7 +123,7 @@ You can create a token before your customer intents to pay and use it in the fut
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://docs.stg.pay.super.com/docs/payments/quick-start/</guid>
-      <description>Payments Flow User Flow   Integration Flow   Quick start Step 1. Register a PaySuper Company account  Registration and onboarding     Sign up. Verify your email address with the delivered confirmation email. Follow the steps of a brief Welcome Onboarding. You are required to fill in the Banking info in the Company Onboarding to be able create a project.  When you are ready to start selling you will need to fill in all your company details in Company Onboarding and sign the documents in the License Agreement.</description>
+      <description>Payments Flow User Flow   Integration Flow   Quick start Step 1. Register a PaySuper Company account  Registration and onboarding     Sign up. Verify your email address with the delivered confirmation email. Follow the steps of a brief Welcome Onboarding. You are required to fill in the Banking info in the Company Onboarding to be able create a project. Note that the currency of the bank account must be the same as the Account Currency for payouts filled in the Banking info.</description>
     </item>
     
     <item>
@@ -132,7 +132,10 @@ You can create a token before your customer intents to pay and use it in the fut
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://docs.stg.pay.super.com/docs/payouts/</guid>
-      <description> Receiving Payouts </description>
+      <description>Receiving Payouts Your customers&amp;rsquo; successful payments are stored on your PaySuper account balance and can be received to your bank account using Payouts.
+Setting up your bank account to receive payouts When you are ready to start selling you will need to fill in all your company details in Company Onboarding.
+Bank account details for payouts are required when filling in Company Onboarding.
+Note that the currency of the bank account must be the same as the Account Currency for payouts filled in the Banking info.</description>
     </item>
     
     <item>
