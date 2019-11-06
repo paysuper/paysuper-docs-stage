@@ -16,10 +16,6 @@
   </url>
   
   <url>
-    <loc>https://docs.stg.pay.super.com/docs/refunds/</loc>
-  </url>
-  
-  <url>
     <loc>https://docs.stg.pay.super.com/docs/payments/</loc>
   </url>
   
@@ -57,6 +53,10 @@
   
   <url>
     <loc>https://docs.stg.pay.super.com/docs/payouts/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.stg.pay.super.com/docs/refunds/</loc>
   </url>
   
   <url>
