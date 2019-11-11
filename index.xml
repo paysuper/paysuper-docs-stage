@@ -81,9 +81,9 @@ Try out the payment sample or see the code on GitHub.</description>
       
       <guid>https://docs.stg.pay.super.com/docs/payments/customization/</guid>
       <description>Customizing Checkout Learn about the different ways you can customize your Checkout.
-Localization The Checkout Form is localized to 2 languages with 10 more translations coming soon.
+Localization The Checkout Form is localized for 24 languages.
 You can choose the complete set of supported languages for the project and products descriptions on the Project Settings page in your PaySuper Dashboard.
-Prefilling customer data Boost your payment conversion rate with a payment form pre-filled with your customer&amp;rsquo;s name and email.</description>
+Prefilling customer data Boost your payment conversion rate with a payment form pre-filled with your customer&amp;rsquo;s name and email. To have the payment form prefilled, you can generate a token to encrypt all required information about your customer&amp;rsquo;s intent to pay.</description>
     </item>
     
     <item>
@@ -147,6 +147,15 @@ The refund can be sent only to the same customer&amp;rsquo;s bank card was used 
       <guid>https://docs.stg.pay.super.com/docs/payments/integration/</guid>
       <description>Payment initialization on the server-side The server-side payment initialization makes it possible to integrate a Checkout Form into your website or game client using PaySuper API. It’s easy to get a Checkout Form URL using an Order API request and render a payment form in a browser.
 You can use PaySuper JS SDK for the client-side payment initialization to integrate a Checkout Form into your website only on the client-side.</description>
+    </item>
+    
+    <item>
+      <title>Supported languages</title>
+      <link>https://docs.stg.pay.super.com/docs/payments/localization/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.stg.pay.super.com/docs/payments/localization/</guid>
+      <description>Supported languages for PaySuper Checkout    Language ISO 639 Code     Arabic ar   Brazilian portuguese pt   Bulgarian bg   Chinese simplified zh   Chinese traditional zh   Czech cs   Danish da   English en   Finnish fi   French fr   German de   Greek el   Hebrew he   Italian it   Japanese ja   Korean ko   Polish pl   Portuguese pt   Russian ru   Spanish es   Swedish sv   Tai th   Turkish tr   Vietnamese vi    Questions?</description>
     </item>
     
     <item>
