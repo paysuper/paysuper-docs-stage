@@ -167,7 +167,7 @@ You can use PaySuper JS SDK for the client-side payment initialization to integr
       <description>Testing the Payment Process The Payment Form integration should be tested in the Sandbox before going live.
 The Sandbox provides full functionality but it only emulates processing, no actual bank transactions are made.
 When using PaySuper JS SDK ensure that:
- Handlers for the events are displayed properly. The PaySuper object is created with all required parameters or token.  In case of using the PaySuper API in your server-side code ensure that:</description>
+ Handlers for the events are displayed properly. The PaySuper object is created with all required parameters or a token.  If you&amp;rsquo;re using the PaySuper API in your server-side code then ensure that:</description>
     </item>
     
     <item>
@@ -188,7 +188,7 @@ But some reasons for the failed payments are unclear and uninformative.</descrip
       <guid>https://docs.stg.pay.super.com/docs/webhooks/</guid>
       <description>Webhooks The PaySuper system can send you notifications for a set of events during the flow, such as creating new accounts or transaction flow, making payouts, and so on.
 These notifications are sent as webhooks to the corresponding URL configured on your Project Webhook page.
-In most cases, webhooks are triggered by user actions on your website or back-end related events like a successful payment, refund payment and other.</description>
+In most cases, webhooks are triggered by user actions on your website or by back-end related events like a successful payment, a refund payment and other.</description>
     </item>
     
   </channel>
