@@ -26,7 +26,7 @@ In most cases, webhooks are triggered by user actions on your website or by back
 <link rel="stylesheet" href="/book.min.343270af3f7a01683d94762f9b671c6eb940933f3238c66b6bfc99821e7a3131.css" integrity="sha256-NDJwrz96AWg9lHYvm2ccbrlAkz8yOMZra/yZgh56MTE=">
 
 
-<script defer src="/search.min.62f8768808d1de4bf660ba18aaa3fb162df4a36daf4edecacfacee9923b20019.js" integrity="sha256-Yvh2iAjR3kv2YLoYqqP7Fi30o22vTt7Kz6zumSOyABk="></script>
+<script defer src="/search.min.64220c085001ba114c46853c712c770cb29d6f5e4242fc3b9dffa5eddb3c5614.js" integrity="sha256-ZCIMCFABuhFMRoU8cSx3DLKdb15CQvw7nf&#43;l7ds8VhQ="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -252,105 +252,120 @@ https://github.com/alex-shpak/hugo-book
 <p>For instance, this is the base object representing the webhook event <code>payment.success</code>:</p>
 
 <div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
-   <span style="color:#062873;font-weight:bold">&#34;id&#34;</span>: <span style="color:#4070a0">&#34;b303ec344deca48af01f3412d51af2198207f5bfff549bbdfffac46d971fc725&#34;</span>,
-   <span style="color:#062873;font-weight:bold">&#34;type&#34;</span>: <span style="color:#4070a0">&#34;notification&#34;</span>,
-   <span style="color:#062873;font-weight:bold">&#34;event&#34;</span>: <span style="color:#4070a0">&#34;payment.success&#34;</span>,
-   <span style="color:#062873;font-weight:bold">&#34;live&#34;</span>: <span style="color:#007020;font-weight:bold">true</span>,
-   <span style="color:#062873;font-weight:bold">&#34;created_at&#34;</span>: <span style="color:#4070a0">&#34;2019-10-31T16:01:41Z&#34;</span>,
-   <span style="color:#062873;font-weight:bold">&#34;expires_at&#34;</span>: <span style="color:#4070a0">&#34;&#34;</span>,
-   <span style="color:#062873;font-weight:bold">&#34;delivery_try&#34;</span>: <span style="color:#40a070">0</span>,
-   <span style="color:#062873;font-weight:bold">&#34;object&#34;</span>: {
-      <span style="color:#062873;font-weight:bold">&#34;id&#34;</span>: <span style="color:#4070a0">&#34;f29ab03a-c5f0-40db-a798-9deba14a9099&#34;</span>,
-      <span style="color:#062873;font-weight:bold">&#34;transaction&#34;</span>: <span style="color:#4070a0">&#34;302212411&#34;</span>,
-      <span style="color:#062873;font-weight:bold">&#34;object&#34;</span>: <span style="color:#4070a0">&#34;order&#34;</span>,
-      <span style="color:#062873;font-weight:bold">&#34;status&#34;</span>: <span style="color:#4070a0">&#34;created&#34;</span>,
-      <span style="color:#062873;font-weight:bold">&#34;description&#34;</span>: <span style="color:#4070a0">&#34;Payment by order # 5dbb050f662d2d0001704b03&#34;</span>,
-      <span style="color:#062873;font-weight:bold">&#34;created_at&#34;</span>: {
-         <span style="color:#062873;font-weight:bold">&#34;seconds&#34;</span>: <span style="color:#40a070">1572537615</span>,
-         <span style="color:#062873;font-weight:bold">&#34;nanos&#34;</span>: <span style="color:#40a070">242000000</span>
+  <span style="color:#062873;font-weight:bold">&#34;id&#34;</span>: <span style="color:#4070a0">&#34;5d23426ab8b1eea163304202653796fa801081e739d506615ddac583019045f3&#34;</span>,
+  <span style="color:#062873;font-weight:bold">&#34;type&#34;</span>: <span style="color:#4070a0">&#34;notification&#34;</span>,
+  <span style="color:#062873;font-weight:bold">&#34;event&#34;</span>: <span style="color:#4070a0">&#34;payment.success&#34;</span>,
+  <span style="color:#062873;font-weight:bold">&#34;live&#34;</span>: <span style="color:#007020;font-weight:bold">false</span>,
+  <span style="color:#062873;font-weight:bold">&#34;created_at&#34;</span>: <span style="color:#4070a0">&#34;2019-11-16T05:41:05Z&#34;</span>,
+  <span style="color:#062873;font-weight:bold">&#34;expires_at&#34;</span>: <span style="color:#4070a0">&#34;&#34;</span>,
+  <span style="color:#062873;font-weight:bold">&#34;delivery_try&#34;</span>: <span style="color:#40a070">0</span>,
+  <span style="color:#062873;font-weight:bold">&#34;object&#34;</span>: {
+    <span style="color:#062873;font-weight:bold">&#34;id&#34;</span>: <span style="color:#4070a0">&#34;726d9e07-1dc8-4159-8d52-f95941066bc8&#34;</span>,
+    <span style="color:#062873;font-weight:bold">&#34;transaction&#34;</span>: <span style="color:#4070a0">&#34;2978077&#34;</span>,
+    <span style="color:#062873;font-weight:bold">&#34;object&#34;</span>: <span style="color:#4070a0">&#34;order&#34;</span>,
+    <span style="color:#062873;font-weight:bold">&#34;status&#34;</span>: <span style="color:#4070a0">&#34;created&#34;</span>,
+    <span style="color:#062873;font-weight:bold">&#34;description&#34;</span>: <span style="color:#4070a0">&#34;A summary for the purchase&#34;</span>,
+    <span style="color:#062873;font-weight:bold">&#34;created_at&#34;</span>: {
+      <span style="color:#062873;font-weight:bold">&#34;seconds&#34;</span>: <span style="color:#40a070">1573882679</span>,
+      <span style="color:#062873;font-weight:bold">&#34;nanos&#34;</span>: <span style="color:#40a070">69000000</span>
+    },
+    <span style="color:#062873;font-weight:bold">&#34;canceled_at&#34;</span>: {
+      <span style="color:#062873;font-weight:bold">&#34;seconds&#34;</span>: <span style="color:#40a070">-62135596800</span>
+    },
+    <span style="color:#062873;font-weight:bold">&#34;canceled&#34;</span>: <span style="color:#007020;font-weight:bold">false</span>,
+    <span style="color:#062873;font-weight:bold">&#34;cancellation&#34;</span>: <span style="color:#007020;font-weight:bold">null</span>,
+    <span style="color:#062873;font-weight:bold">&#34;refunded&#34;</span>: <span style="color:#007020;font-weight:bold">false</span>,
+    <span style="color:#062873;font-weight:bold">&#34;refunded_at&#34;</span>: {
+      <span style="color:#062873;font-weight:bold">&#34;seconds&#34;</span>: <span style="color:#40a070">-62135596800</span>
+    },
+    <span style="color:#062873;font-weight:bold">&#34;receipt_email&#34;</span>: <span style="color:#4070a0">&#34;user.email@example.com&#34;</span>,
+    <span style="color:#062873;font-weight:bold">&#34;receipt_phone&#34;</span>: <span style="color:#4070a0">&#34;&#34;</span>,
+    <span style="color:#062873;font-weight:bold">&#34;receipt_number&#34;</span>: <span style="color:#4070a0">&#34;&#34;</span>,
+    <span style="color:#062873;font-weight:bold">&#34;receipt_url&#34;</span>: <span style="color:#4070a0">&#34;https://dashboard.pay.super.com/receipt/purchase/efefc5d3-c2e2-4157-8789-4bfb7c1eec34/726d9e07-1dc8-4159-8d52-f95941066bc8&#34;</span>,
+    <span style="color:#062873;font-weight:bold">&#34;agreement_version&#34;</span>: <span style="color:#4070a0">&#34;&#34;</span>,
+    <span style="color:#062873;font-weight:bold">&#34;agreement_accepted&#34;</span>: <span style="color:#007020;font-weight:bold">false</span>,
+    <span style="color:#062873;font-weight:bold">&#34;notify_sale&#34;</span>: <span style="color:#007020;font-weight:bold">false</span>,
+    <span style="color:#062873;font-weight:bold">&#34;notify_sale_email&#34;</span>: <span style="color:#4070a0">&#34;&#34;</span>,
+    <span style="color:#062873;font-weight:bold">&#34;issuer&#34;</span>: {
+      <span style="color:#062873;font-weight:bold">&#34;url&#34;</span>: <span style="color:#4070a0">&#34;https://domain.com&#34;</span>,
+      <span style="color:#062873;font-weight:bold">&#34;embedded&#34;</span>: <span style="color:#007020;font-weight:bold">false</span>,
+      <span style="color:#062873;font-weight:bold">&#34;reference&#34;</span>: <span style="color:#4070a0">&#34;&#34;</span>,
+      <span style="color:#062873;font-weight:bold">&#34;reference_type&#34;</span>: <span style="color:#4070a0">&#34;&#34;</span>,
+      <span style="color:#062873;font-weight:bold">&#34;utm_source&#34;</span>: <span style="color:#4070a0">&#34;&#34;</span>,
+      <span style="color:#062873;font-weight:bold">&#34;utm_medium&#34;</span>: <span style="color:#4070a0">&#34;&#34;</span>,
+      <span style="color:#062873;font-weight:bold">&#34;utm_campaign&#34;</span>: <span style="color:#4070a0">&#34;&#34;</span>,
+      <span style="color:#062873;font-weight:bold">&#34;referrer_host&#34;</span>: <span style="color:#4070a0">&#34;domain.com&#34;</span>
+    },
+    <span style="color:#062873;font-weight:bold">&#34;amount&#34;</span>: <span style="color:#40a070">595</span>,
+    <span style="color:#062873;font-weight:bold">&#34;currency&#34;</span>: <span style="color:#4070a0">&#34;RUB&#34;</span>,
+    <span style="color:#062873;font-weight:bold">&#34;user&#34;</span>: {
+      <span style="color:#062873;font-weight:bold">&#34;id&#34;</span>: <span style="color:#4070a0">&#34;5dcf8b24b5a6990001bac2b6&#34;</span>,
+      <span style="color:#062873;font-weight:bold">&#34;object&#34;</span>: <span style="color:#4070a0">&#34;user&#34;</span>,
+      <span style="color:#062873;font-weight:bold">&#34;external_id&#34;</span>: <span style="color:#4070a0">&#34;0000000000001&#34;</span>,
+      <span style="color:#062873;font-weight:bold">&#34;name&#34;</span>: <span style="color:#4070a0">&#34;User Name&#34;</span>,
+      <span style="color:#062873;font-weight:bold">&#34;email&#34;</span>: <span style="color:#4070a0">&#34;user.email@example.com&#34;</span>,
+      <span style="color:#062873;font-weight:bold">&#34;email_verified&#34;</span>: <span style="color:#007020;font-weight:bold">true</span>,
+      <span style="color:#062873;font-weight:bold">&#34;phone&#34;</span>: <span style="color:#4070a0">&#34;0639597531&#34;</span>,
+      <span style="color:#062873;font-weight:bold">&#34;phone_verified&#34;</span>: <span style="color:#007020;font-weight:bold">true</span>,
+      <span style="color:#062873;font-weight:bold">&#34;ip&#34;</span>: <span style="color:#4070a0">&#34;79.137.163.2&#34;</span>,
+      <span style="color:#062873;font-weight:bold">&#34;locale&#34;</span>: <span style="color:#4070a0">&#34;ru-RU&#34;</span>,
+      <span style="color:#062873;font-weight:bold">&#34;address&#34;</span>: {
+        <span style="color:#062873;font-weight:bold">&#34;country&#34;</span>: <span style="color:#4070a0">&#34;RU&#34;</span>,
+        <span style="color:#062873;font-weight:bold">&#34;city&#34;</span>: <span style="color:#4070a0">&#34;Moscow&#34;</span>,
+        <span style="color:#062873;font-weight:bold">&#34;postal_code&#34;</span>: <span style="color:#4070a0">&#34;127221&#34;</span>,
+        <span style="color:#062873;font-weight:bold">&#34;state&#34;</span>: <span style="color:#4070a0">&#34;MOW&#34;</span>
       },
-      <span style="color:#062873;font-weight:bold">&#34;canceled_at&#34;</span>: {
-         <span style="color:#062873;font-weight:bold">&#34;seconds&#34;</span>: <span style="color:#40a070">-62135596800</span>
+      <span style="color:#062873;font-weight:bold">&#34;metadata&#34;</span>: {
+        <span style="color:#062873;font-weight:bold">&#34;user.param1&#34;</span>: <span style="color:#4070a0">&#34;user.val1&#34;</span>,
+        <span style="color:#062873;font-weight:bold">&#34;user.param2&#34;</span>: <span style="color:#4070a0">&#34;user.val2&#34;</span>,
+        <span style="color:#062873;font-weight:bold">&#34;user.param3&#34;</span>: <span style="color:#4070a0">&#34;user.val3&#34;</span>
       },
-      <span style="color:#062873;font-weight:bold">&#34;canceled&#34;</span>: <span style="color:#007020;font-weight:bold">false</span>,
-      <span style="color:#062873;font-weight:bold">&#34;cancellation_reason&#34;</span>: <span style="color:#4070a0">&#34;&#34;</span>,
-      <span style="color:#062873;font-weight:bold">&#34;refunded&#34;</span>: <span style="color:#007020;font-weight:bold">false</span>,
-      <span style="color:#062873;font-weight:bold">&#34;refunded_at&#34;</span>: {
-         <span style="color:#062873;font-weight:bold">&#34;seconds&#34;</span>: <span style="color:#40a070">-62135596800</span>
+      <span style="color:#062873;font-weight:bold">&#34;notify_new_region&#34;</span>: <span style="color:#007020;font-weight:bold">false</span>,
+      <span style="color:#062873;font-weight:bold">&#34;notify_new_region_email&#34;</span>: <span style="color:#4070a0">&#34;&#34;</span>
+    },
+    <span style="color:#062873;font-weight:bold">&#34;billing_address&#34;</span>: {
+      <span style="color:#062873;font-weight:bold">&#34;country&#34;</span>: <span style="color:#4070a0">&#34;DE&#34;</span>
+    },
+    <span style="color:#062873;font-weight:bold">&#34;tax&#34;</span>: {
+      <span style="color:#062873;font-weight:bold">&#34;type&#34;</span>: <span style="color:#4070a0">&#34;vat&#34;</span>,
+      <span style="color:#062873;font-weight:bold">&#34;rate&#34;</span>: <span style="color:#40a070">0.19</span>,
+      <span style="color:#062873;font-weight:bold">&#34;amount&#34;</span>: <span style="color:#40a070">95</span>,
+      <span style="color:#062873;font-weight:bold">&#34;currency&#34;</span>: <span style="color:#4070a0">&#34;RUB&#34;</span>
+    },
+    <span style="color:#062873;font-weight:bold">&#34;method&#34;</span>: {
+      <span style="color:#062873;font-weight:bold">&#34;title&#34;</span>: <span style="color:#4070a0">&#34;Bank card&#34;</span>,
+      <span style="color:#062873;font-weight:bold">&#34;external_id&#34;</span>: <span style="color:#4070a0">&#34;BANKCARD&#34;</span>,
+      <span style="color:#062873;font-weight:bold">&#34;payment_system_id&#34;</span>: <span style="color:#4070a0">&#34;5be2d0b4b0b30d0007383ce5&#34;</span>,
+      <span style="color:#062873;font-weight:bold">&#34;saved&#34;</span>: <span style="color:#007020;font-weight:bold">false</span>,
+      <span style="color:#062873;font-weight:bold">&#34;card&#34;</span>: {
+        <span style="color:#062873;font-weight:bold">&#34;first6&#34;</span>: <span style="color:#4070a0">&#34;400000&#34;</span>,
+        <span style="color:#062873;font-weight:bold">&#34;last4&#34;</span>: <span style="color:#4070a0">&#34;0002&#34;</span>,
+        <span style="color:#062873;font-weight:bold">&#34;masked&#34;</span>: <span style="color:#4070a0">&#34;400000...0002&#34;</span>,
+        <span style="color:#062873;font-weight:bold">&#34;expiry_month&#34;</span>: <span style="color:#4070a0">&#34;11&#34;</span>,
+        <span style="color:#062873;font-weight:bold">&#34;expiry_year&#34;</span>: <span style="color:#4070a0">&#34;2023&#34;</span>,
+        <span style="color:#062873;font-weight:bold">&#34;brand&#34;</span>: <span style="color:#4070a0">&#34;VISA&#34;</span>,
+        <span style="color:#062873;font-weight:bold">&#34;fingerprint&#34;</span>: <span style="color:#4070a0">&#34;$2a$04$9VRouYlBC.qMYQrLpmlXOeGbL2WFZDGGq/KdTeeHSfWkosgJgrWw2&#34;</span>,
+        <span style="color:#062873;font-weight:bold">&#34;secure3d&#34;</span>: <span style="color:#007020;font-weight:bold">true</span>
       },
-      <span style="color:#062873;font-weight:bold">&#34;receipt_email&#34;</span>: <span style="color:#4070a0">&#34;user.email@example.com&#34;</span>,
-      <span style="color:#062873;font-weight:bold">&#34;receipt_phone&#34;</span>: <span style="color:#4070a0">&#34;&#34;</span>,
-      <span style="color:#062873;font-weight:bold">&#34;receipt_number&#34;</span>: <span style="color:#4070a0">&#34;&#34;</span>,
-      <span style="color:#062873;font-weight:bold">&#34;receipt_url&#34;</span>: <span style="color:#4070a0">&#34;&#34;</span>,
-      <span style="color:#062873;font-weight:bold">&#34;agreement_version&#34;</span>: <span style="color:#4070a0">&#34;&#34;</span>,
-      <span style="color:#062873;font-weight:bold">&#34;agreement_accepted&#34;</span>: <span style="color:#007020;font-weight:bold">false</span>,
-      <span style="color:#062873;font-weight:bold">&#34;notify_sale&#34;</span>: <span style="color:#007020;font-weight:bold">false</span>,
-      <span style="color:#062873;font-weight:bold">&#34;notify_sale_email&#34;</span>: <span style="color:#4070a0">&#34;&#34;</span>,
-      <span style="color:#062873;font-weight:bold">&#34;issuer&#34;</span>: {
-         <span style="color:#062873;font-weight:bold">&#34;url&#34;</span>: <span style="color:#4070a0">&#34;&#34;</span>,
-         <span style="color:#062873;font-weight:bold">&#34;embedded&#34;</span>: <span style="color:#007020;font-weight:bold">false</span>
-      },
-      <span style="color:#062873;font-weight:bold">&#34;amount&#34;</span>: <span style="color:#40a070">0.12</span>,
-      <span style="color:#062873;font-weight:bold">&#34;currency&#34;</span>: <span style="color:#4070a0">&#34;USD&#34;</span>,
-      <span style="color:#062873;font-weight:bold">&#34;user&#34;</span>: {
-         <span style="color:#062873;font-weight:bold">&#34;id&#34;</span>: <span style="color:#4070a0">&#34;U3oFCwIOwRnQzfKZn58fnkzx3xnPGYdP&#34;</span>,
-         <span style="color:#062873;font-weight:bold">&#34;object&#34;</span>: <span style="color:#4070a0">&#34;user&#34;</span>,
-         <span style="color:#062873;font-weight:bold">&#34;external_id&#34;</span>: <span style="color:#4070a0">&#34;&#34;</span>,
-         <span style="color:#062873;font-weight:bold">&#34;name&#34;</span>: <span style="color:#4070a0">&#34;&#34;</span>,
-         <span style="color:#062873;font-weight:bold">&#34;email&#34;</span>: <span style="color:#4070a0">&#34;user.email@example.com&#34;</span>,
-         <span style="color:#062873;font-weight:bold">&#34;email_verified&#34;</span>: <span style="color:#007020;font-weight:bold">false</span>,
-         <span style="color:#062873;font-weight:bold">&#34;phone&#34;</span>: <span style="color:#4070a0">&#34;&#34;</span>,
-         <span style="color:#062873;font-weight:bold">&#34;phone_verified&#34;</span>: <span style="color:#007020;font-weight:bold">false</span>,
-         <span style="color:#062873;font-weight:bold">&#34;ip&#34;</span>: <span style="color:#4070a0">&#34;80.91.180.90&#34;</span>,
-         <span style="color:#062873;font-weight:bold">&#34;locale&#34;</span>: <span style="color:#4070a0">&#34;ru&#34;</span>,
-         <span style="color:#062873;font-weight:bold">&#34;address&#34;</span>: {
-            <span style="color:#062873;font-weight:bold">&#34;country&#34;</span>: <span style="color:#4070a0">&#34;UA&#34;</span>,
-            <span style="color:#062873;font-weight:bold">&#34;city&#34;</span>: <span style="color:#4070a0">&#34;Dublin&#34;</span>,
-            <span style="color:#062873;font-weight:bold">&#34;postal_code&#34;</span>: <span style="color:#4070a0">&#34;D02&#34;</span>,
-            <span style="color:#062873;font-weight:bold">&#34;state&#34;</span>: <span style="color:#4070a0">&#34;L&#34;</span>
-         },
-         <span style="color:#062873;font-weight:bold">&#34;metadata&#34;</span>: <span style="color:#007020;font-weight:bold">null</span>,
-         <span style="color:#062873;font-weight:bold">&#34;notify_new_region&#34;</span>: <span style="color:#007020;font-weight:bold">false</span>,
-         <span style="color:#062873;font-weight:bold">&#34;notify_new_region_email&#34;</span>: <span style="color:#4070a0">&#34;&#34;</span>
-      },
-      <span style="color:#062873;font-weight:bold">&#34;billing_address&#34;</span>: {
-         <span style="color:#062873;font-weight:bold">&#34;country&#34;</span>: <span style="color:#4070a0">&#34;AO&#34;</span>
-      },
-      <span style="color:#062873;font-weight:bold">&#34;tax&#34;</span>: {
-         <span style="color:#062873;font-weight:bold">&#34;type&#34;</span>: <span style="color:#4070a0">&#34;vat&#34;</span>,
-         <span style="color:#062873;font-weight:bold">&#34;currency&#34;</span>: <span style="color:#4070a0">&#34;USD&#34;</span>
-      },
-      <span style="color:#062873;font-weight:bold">&#34;method&#34;</span>: {
-         <span style="color:#062873;font-weight:bold">&#34;title&#34;</span>: <span style="color:#4070a0">&#34;VISA/MasterCard&#34;</span>,
-         <span style="color:#062873;font-weight:bold">&#34;external_id&#34;</span>: <span style="color:#4070a0">&#34;BANKCARD&#34;</span>,
-         <span style="color:#062873;font-weight:bold">&#34;params&#34;</span>: {
-            <span style="color:#062873;font-weight:bold">&#34;currency&#34;</span>: <span style="color:#4070a0">&#34;USD&#34;</span>,
-            <span style="color:#062873;font-weight:bold">&#34;terminal_id&#34;</span>: <span style="color:#4070a0">&#34;52195&#34;</span>,
-            <span style="color:#062873;font-weight:bold">&#34;secret&#34;</span>: <span style="color:#4070a0">&#34;167CjmMJY2fl&#34;</span>,
-            <span style="color:#062873;font-weight:bold">&#34;secret_callback&#34;</span>: <span style="color:#4070a0">&#34;wBR54pLIfo19&#34;</span>
-         },
-         <span style="color:#062873;font-weight:bold">&#34;payment_system_id&#34;</span>: <span style="color:#4070a0">&#34;5be2d0b4b0b30d0007383ce5&#34;</span>,
-         <span style="color:#062873;font-weight:bold">&#34;saved&#34;</span>: <span style="color:#007020;font-weight:bold">false</span>,
-         <span style="color:#062873;font-weight:bold">&#34;card&#34;</span>: {
-            <span style="color:#062873;font-weight:bold">&#34;first6&#34;</span>: <span style="color:#4070a0">&#34;414943&#34;</span>,
-            <span style="color:#062873;font-weight:bold">&#34;last4&#34;</span>: <span style="color:#4070a0">&#34;2348&#34;</span>,
-            <span style="color:#062873;font-weight:bold">&#34;masked&#34;</span>: <span style="color:#4070a0">&#34;414943...2348&#34;</span>,
-            <span style="color:#062873;font-weight:bold">&#34;expiry_month&#34;</span>: <span style="color:#4070a0">&#34;10&#34;</span>,
-            <span style="color:#062873;font-weight:bold">&#34;expiry_year&#34;</span>: <span style="color:#4070a0">&#34;2021&#34;</span>,
-            <span style="color:#062873;font-weight:bold">&#34;brand&#34;</span>: <span style="color:#4070a0">&#34;VISA&#34;</span>,
-            <span style="color:#062873;font-weight:bold">&#34;fingerprint&#34;</span>: <span style="color:#4070a0">&#34;$2a$04$O5T96ZeHx27HbLw0eXNUjO1sj4y0nnPKLsXy5Kw49iLC/EXCFfUzq&#34;</span>,
-            <span style="color:#062873;font-weight:bold">&#34;secure3d&#34;</span>: <span style="color:#007020;font-weight:bold">true</span>
-         },
-         <span style="color:#062873;font-weight:bold">&#34;wallet&#34;</span>: <span style="color:#007020;font-weight:bold">null</span>,
-         <span style="color:#062873;font-weight:bold">&#34;crypto_currency&#34;</span>: <span style="color:#007020;font-weight:bold">null</span>
-      },
-      <span style="color:#062873;font-weight:bold">&#34;items&#34;</span>: <span style="color:#007020;font-weight:bold">null</span>,
-      <span style="color:#062873;font-weight:bold">&#34;refund&#34;</span>: <span style="color:#007020;font-weight:bold">null</span>,
-      <span style="color:#062873;font-weight:bold">&#34;metadata&#34;</span>: <span style="color:#007020;font-weight:bold">null</span>,
-      <span style="color:#062873;font-weight:bold">&#34;country&#34;</span>: <span style="color:#4070a0">&#34;AO&#34;</span>,
-      <span style="color:#062873;font-weight:bold">&#34;type&#34;</span>: <span style="color:#4070a0">&#34;simple&#34;</span>,
-      <span style="color:#062873;font-weight:bold">&#34;platform_id&#34;</span>: <span style="color:#4070a0">&#34;&#34;</span>
-   }
+      <span style="color:#062873;font-weight:bold">&#34;wallet&#34;</span>: <span style="color:#007020;font-weight:bold">null</span>,
+      <span style="color:#062873;font-weight:bold">&#34;crypto_currency&#34;</span>: <span style="color:#007020;font-weight:bold">null</span>,
+      <span style="color:#062873;font-weight:bold">&#34;refund_allowed&#34;</span>: <span style="color:#007020;font-weight:bold">true</span>
+    },
+    <span style="color:#062873;font-weight:bold">&#34;items&#34;</span>: <span style="color:#007020;font-weight:bold">null</span>,
+    <span style="color:#062873;font-weight:bold">&#34;refund&#34;</span>: <span style="color:#007020;font-weight:bold">null</span>,
+    <span style="color:#062873;font-weight:bold">&#34;metadata&#34;</span>: {
+      <span style="color:#062873;font-weight:bold">&#34;param1&#34;</span>: <span style="color:#4070a0">&#34;val1&#34;</span>,
+      <span style="color:#062873;font-weight:bold">&#34;param2&#34;</span>: <span style="color:#4070a0">&#34;val2&#34;</span>,
+      <span style="color:#062873;font-weight:bold">&#34;param3&#34;</span>: <span style="color:#4070a0">&#34;val3&#34;</span>
+    },
+    <span style="color:#062873;font-weight:bold">&#34;original_amount&#34;</span>: <span style="color:#40a070">500</span>,
+    <span style="color:#062873;font-weight:bold">&#34;country&#34;</span>: <span style="color:#4070a0">&#34;DE&#34;</span>,
+    <span style="color:#062873;font-weight:bold">&#34;type&#34;</span>: <span style="color:#4070a0">&#34;simple&#34;</span>,
+    <span style="color:#062873;font-weight:bold">&#34;platform_id&#34;</span>: <span style="color:#4070a0">&#34;&#34;</span>,
+    <span style="color:#062873;font-weight:bold">&#34;receipt_id&#34;</span>: <span style="color:#4070a0">&#34;efefc5d3-c2e2-4157-8789-4bfb7c1eec34&#34;</span>,
+    <span style="color:#062873;font-weight:bold">&#34;virtual_currency_amount&#34;</span>: <span style="color:#40a070">0</span>,
+    <span style="color:#062873;font-weight:bold">&#34;is_buy_for_virtual_currency&#34;</span>: <span style="color:#007020;font-weight:bold">false</span>
+  }
 }</code></pre></div>
 
 <h2 id="verifying-a-webhook">Verifying a webhook</h2>
