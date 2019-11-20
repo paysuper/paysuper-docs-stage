@@ -55,6 +55,47 @@
         
         
             <li>
+                <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
+                
+            </li>
+        
+            <li>
+                <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
+                
+            </li>
+        
+            <li>
+                <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
+                
+            </li>
+        
+            <li>
+                <a href="#versioning" class="toc-h1 toc-link" data-title="Versioning">Versioning</a>
+                
+            </li>
+        
+            <li>
+                <a href="#compression" class="toc-h1 toc-link" data-title="Compression">Compression</a>
+                
+            </li>
+        
+            <li>
+                <a href="#pagination" class="toc-h1 toc-link" data-title="Pagination">Pagination</a>
+                
+            </li>
+        
+            <li>
+                <a href="#webhooks" class="toc-h1 toc-link" data-title="Webhooks">Webhooks</a>
+                
+                    <ul class="toc-list-h2">
+                        
+                            <li><a href="#verifying-a-webhook" class="toc-h2 toc-link" data-title="Verifying a webhook">Verifying a webhook</a></li>
+                        
+                    </ul>
+                
+            </li>
+        
+            <li>
                 <a href="#protocol-one-payment-solution-swagger-documentation-v1-0" class="toc-h1 toc-link" data-title="Protocol One payment solution swagger documentation v1.0">Protocol One payment solution swagger documentation v1.0</a>
                 
             </li>
@@ -858,6 +899,464 @@
         <div class="dark-box"></div>
         <div class="content">
             
+    
+        
+
+<h1 id="introduction">Introduction</h1>
+
+<p>The PaySuper API is organized around REST. Our API is designed to have predictable, resource-oriented URLs and to use HTTP response codes to indicate API errors. We use built-in HTTP features, like HTTP verbs, which can be understood by off-the-shelf HTTP clients.
+JSON will be returned in all responses from the API, including errors.</p>
+
+<p>All API requests must be made over <strong>HTTPS</strong>.</p>
+
+<h1 id="authentication">Authentication</h1>
+
+<p>Authentication to the API occurs via Signature-based authentication. You must authenticate for all requests that contain a user data.</p>
+
+<p>Add a Header <strong>X-API-SIGNATURE</strong> with the Project&rsquo;s Secret key found on the Project webhooks page.</p>
+
+<aside class="notice">
+Your API keys carry many privileges, so be sure to keep them secret.
+</aside>
+
+<h1 id="errors">Errors</h1>
+
+<p>PaySuper uses conventional HTTP response codes to indicate success or failure of an API request. In general, codes in the 2xx range indicate success, codes in the 4xx range indicate an error that resulted from the provided information (e.g. a required parameter was missing, a charge failed, etc.), and codes in the 5xx range indicate an error with PaySupers&rsquo;s servers.</p>
+
+<p><strong>HTTP status codes summary:</strong></p>
+
+<p><strong>200 OK</strong> - Everything worked as expected.</p>
+
+<p><strong>201 Created</strong> - Resource has been successfully created</p>
+
+<p><strong>202 Accepted</strong> - Request has been accepted, but requires asynchronous work to be fully performed</p>
+
+<p><strong>400 Bad Request</strong> - Request failed due to a combination of errors</p>
+
+<p><strong>401 Unauthorized</strong> - No valid API credentials provided.</p>
+
+<p><strong>402 Payment Required</strong> - Your request was in livemode while your account is not activated for live requests yet.</p>
+
+<p><strong>403 Forbidden</strong> - You are not authorized to access the requested item.</p>
+
+<p><strong>404 Not Found</strong> - The requested item doesn&rsquo;t exist.</p>
+
+<p><strong>406 Unacceptable</strong> - Your request format was not supported. Use JSON.</p>
+
+<p><strong>409 Conflict</strong> - The data you submitted is in conflict with existing data.</p>
+
+<p><strong>422 Unprocessable Entity</strong> - Often missing a required parameter.</p>
+
+<p><strong>429 Too Many Requests</strong> - You sent us too many API requests in a row. Please retry later.</p>
+
+<p><strong>500, 502, 503, 504 Server errors</strong> - Something went wrong on PaySupers&rsquo;s end.</p>
+
+<h1 id="versioning">Versioning</h1>
+
+<p>PaySuper is developed incrementally. We use <a href="https://semver.org/" target="_blank">semantic versioning</a> and approach to release new versions of the specification.</p>
+
+<p>The content of each release is the result of the work of the project team located on GitHub.
+All changes and additions to each version of this specification are publicly discussed by the PaySuper working group.</p>
+
+<p>While making requests in PaySuper using HTTPS, the version is passed as a special HTTP header, which makes it easier to choose the correct implementation of objects on the receiving and transmitting side.
+The version passed is specified as major and minor of the version using semantic versioning.</p>
+
+<p>For the transmission version must use the header <code>'x-paysuper-api-version': '1.0'</code>.</p>
+
+<h1 id="compression">Compression</h1>
+
+<p>The amount of data transferred with notifications can be huge, and endpoints are required to support data compression to reduce the amount and speed of data transfer over the network.</p>
+
+<p>Endpoints that send HTTP 1.1 messages are required to send gzip-compressed data by specifying the appropriate value in the HTTP <a href="https://tools.ietf.org/html/rfc7231#section-5.3.4" target="_blank">Accept-Encoding header</a>.</p>
+
+<p>Receiving hosts are required to support gzip and respond to requests by passing an HTTP <a href="https://tools.ietf.org/html/rfc7231#section-3.1.2.2" target="_blank">Content-Encoding header</a>.</p>
+
+<h1 id="pagination">Pagination</h1>
+
+<aside class="warning">
+Implemention of the pagination is in progress.
+</aside>
+
+<blockquote>
+<p>Example request</p>
+</blockquote>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ curl https://api.pay.super.com/payouts?limit=<span style="color:#3677a9">3</span> <span style="color:#ed9d13">\
+</span><span style="color:#ed9d13"></span>   -u tkHCYYOUVrYyY5rBFZxNzgtt:</code></pre></div>
+<blockquote>
+<p>Example response</p>
+</blockquote>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#6ab825;font-weight:bold">&#34;object&#34;</span>: <span style="color:#ed9d13">&#34;list&#34;</span>,
+  <span style="color:#6ab825;font-weight:bold">&#34;has_more&#34;</span>: <span style="color:#6ab825;font-weight:bold">true</span>,
+  <span style="color:#6ab825;font-weight:bold">&#34;has_before&#34;</span>: <span style="color:#6ab825;font-weight:bold">false</span>,
+  <span style="color:#6ab825;font-weight:bold">&#34;total_count&#34;</span>: <span style="color:#3677a9">240</span>,
+  <span style="color:#6ab825;font-weight:bold">&#34;data&#34;</span>: [
+    {
+      <span style="color:#6ab825;font-weight:bold">&#34;id&#34;</span>: <span style="color:#ed9d13">&#34;po_1ED765CmSJsu7cy1iQZUkPKz&#34;</span>,
+      <span style="color:#6ab825;font-weight:bold">&#34;object&#34;</span>: <span style="color:#ed9d13">&#34;payout&#34;</span>,
+      <span style="color:#6ab825;font-weight:bold">&#34;type&#34;</span>: <span style="color:#ed9d13">&#34;bank_account&#34;</span>,  
+      <span style="color:#6ab825;font-weight:bold">&#34;status&#34;</span>: <span style="color:#ed9d13">&#34;in_transit&#34;</span>,
+      <span style="color:#6ab825;font-weight:bold">&#34;created_at&#34;</span>: <span style="color:#ed9d13">&#34;2018-07-10T14:27:54.691Z&#34;</span>,
+      <span style="color:#6ab825;font-weight:bold">&#34;arrival_date&#34;</span>: <span style="color:#ed9d13">&#34;2018-07-10T14:27:54.691Z&#34;</span>,
+      <span style="color:#6ab825;font-weight:bold">&#34;amount&#34;</span>: <span style="color:#ed9d13">&#34;2.00&#34;</span>,
+      <span style="color:#6ab825;font-weight:bold">&#34;currency&#34;</span>: <span style="color:#ed9d13">&#34;USD&#34;</span>,
+      <span style="color:#6ab825;font-weight:bold">&#34;payout_url&#34;</span>: <span style="color:#ed9d13">&#34;https://pay.super.com/receipts/long-id-string-for-receipt&#34;</span>,
+      <span style="color:#6ab825;font-weight:bold">&#34;automatic&#34;</span>: <span style="color:#6ab825;font-weight:bold">true</span>,
+      <span style="color:#6ab825;font-weight:bold">&#34;description&#34;</span>: <span style="color:#ed9d13">&#34;PAYSUPER PAYOUT&#34;</span>,
+      <span style="color:#6ab825;font-weight:bold">&#34;destination&#34;</span>: <span style="color:#ed9d13">&#34;ba_1ED765CmSJsu7cy1ZufOeBtW&#34;</span>,
+      <span style="color:#6ab825;font-weight:bold">&#34;failure_balance_transaction&#34;</span>: <span style="color:#6ab825;font-weight:bold">null</span>,
+      <span style="color:#6ab825;font-weight:bold">&#34;failure_code&#34;</span>: <span style="color:#6ab825;font-weight:bold">null</span>,
+      <span style="color:#6ab825;font-weight:bold">&#34;failure_message&#34;</span>: <span style="color:#6ab825;font-weight:bold">null</span>,
+      <span style="color:#6ab825;font-weight:bold">&#34;live&#34;</span>: <span style="color:#6ab825;font-weight:bold">false</span>,
+      <span style="color:#6ab825;font-weight:bold">&#34;metadata&#34;</span>: {}
+    },
+    {<span style="color:#a61717;background-color:#e3d2d2">...</span>},
+    {<span style="color:#a61717;background-color:#e3d2d2">...</span>}
+  ]
+}</code></pre></div>
+<p>All top-level PaySuper API resources have support for bulk fetches &ldquo;list&rdquo; API methods. For instance, you can list users, list orders.
+Like Stripe, PaySuper uses cursor-based pagination using the parameter <code>starting_after</code>. Pass <code>starting_after</code> parameter
+at the previous page last object id value to determine where to start in the list.</p>
+
+<h3 id="attributes">Attributes</h3>
+
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><strong>limit</strong></td>
+<td><strong>integer, optional</strong></td>
+<td>A limit on the number of objects to be returned. Must be included between 1 and 100</td>
+</tr>
+
+<tr>
+<td><strong>starting_after</strong></td>
+<td><strong>string, optional</strong></td>
+<td>A cursor for use in pagination. <code>starting_after</code> is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with <code>obj_foo</code>, your subsequent call can include <code>starting_after=obj_foo</code> in order to fetch the next page of the list.</td>
+</tr>
+
+<tr>
+<td><strong>ending_before</strong></td>
+<td><strong>string, optional</strong></td>
+<td>A cursor for use in pagination. <code>ending_before</code> is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, starting with <code>obj_bar</code>, your subsequent call can include <code>ending_before=obj_bar</code> in order to fetch the previous page of the list.</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="list-response-format">List response format</h3>
+
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><strong>object</strong></td>
+<td><strong>string</strong></td>
+<td>Value is &ldquo;list&rdquo;</td>
+</tr>
+
+<tr>
+<td><strong>data</strong></td>
+<td><strong>array</strong></td>
+<td>An array containing the actual response elements, paginated by any request parameters.</td>
+</tr>
+
+<tr>
+<td><strong>has_more</strong></td>
+<td><strong>boolean</strong></td>
+<td>Whether or not there are more elements available after this page. If <code>false</code>, this page is the end of the list.</td>
+</tr>
+
+<tr>
+<td><strong>has_before</strong></td>
+<td><strong>boolean</strong></td>
+<td>Whether or not there are more elements available before this page. If <code>false</code>, this page is the beginning of the list.</td>
+</tr>
+
+<tr>
+<td><strong>total_count</strong></td>
+<td><strong>boolean</strong></td>
+<td>The total count of all recipients that match your filters, as if there was no pagination.</td>
+</tr>
+</tbody>
+</table>
+
+<h1 id="webhooks">Webhooks</h1>
+
+<p>The PaySuper system can send you notifications for a set of events during the flow, such as creating new accounts or transaction flow, making payouts, and so on.</p>
+
+<p>These notifications are sent as webhooks to the corresponding URL configured on your Project Webhook page.</p>
+
+<p>In most cases, webhooks are triggered by user actions on your website or by back-end related events like a successful payment, a refund payment and other.</p>
+
+<blockquote>
+<p>The Webhook object example</p>
+
+<p>For instance, this is the base object representing the webhook event <code>payment.success</code>:</p>
+</blockquote>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#6ab825;font-weight:bold">&#34;id&#34;</span>: <span style="color:#ed9d13">&#34;5d23426ab8b1eea163304202653796fa801081e739d506615ddac583019045f3&#34;</span>,
+  <span style="color:#6ab825;font-weight:bold">&#34;type&#34;</span>: <span style="color:#ed9d13">&#34;notification&#34;</span>,
+  <span style="color:#6ab825;font-weight:bold">&#34;event&#34;</span>: <span style="color:#ed9d13">&#34;payment.success&#34;</span>,
+  <span style="color:#6ab825;font-weight:bold">&#34;live&#34;</span>: <span style="color:#6ab825;font-weight:bold">false</span>,
+  <span style="color:#6ab825;font-weight:bold">&#34;created_at&#34;</span>: <span style="color:#ed9d13">&#34;2019-11-16T05:41:05Z&#34;</span>,
+  <span style="color:#6ab825;font-weight:bold">&#34;expires_at&#34;</span>: <span style="color:#ed9d13">&#34;&#34;</span>,
+  <span style="color:#6ab825;font-weight:bold">&#34;delivery_try&#34;</span>: <span style="color:#3677a9">0</span>,
+  <span style="color:#6ab825;font-weight:bold">&#34;object&#34;</span>: {
+    <span style="color:#6ab825;font-weight:bold">&#34;id&#34;</span>: <span style="color:#ed9d13">&#34;726d9e07-1dc8-4159-8d52-f95941066bc8&#34;</span>,
+    <span style="color:#6ab825;font-weight:bold">&#34;transaction&#34;</span>: <span style="color:#ed9d13">&#34;2978077&#34;</span>,
+    <span style="color:#6ab825;font-weight:bold">&#34;object&#34;</span>: <span style="color:#ed9d13">&#34;order&#34;</span>,
+    <span style="color:#6ab825;font-weight:bold">&#34;status&#34;</span>: <span style="color:#ed9d13">&#34;created&#34;</span>,
+    <span style="color:#6ab825;font-weight:bold">&#34;description&#34;</span>: <span style="color:#ed9d13">&#34;A summary for the purchase&#34;</span>,
+    <span style="color:#6ab825;font-weight:bold">&#34;created_at&#34;</span>: {
+      <span style="color:#6ab825;font-weight:bold">&#34;seconds&#34;</span>: <span style="color:#3677a9">1573882679</span>,
+      <span style="color:#6ab825;font-weight:bold">&#34;nanos&#34;</span>: <span style="color:#3677a9">69000000</span>
+    },
+    <span style="color:#6ab825;font-weight:bold">&#34;canceled_at&#34;</span>: {
+      <span style="color:#6ab825;font-weight:bold">&#34;seconds&#34;</span>: <span style="color:#3677a9">-62135596800</span>
+    },
+    <span style="color:#6ab825;font-weight:bold">&#34;canceled&#34;</span>: <span style="color:#6ab825;font-weight:bold">false</span>,
+    <span style="color:#6ab825;font-weight:bold">&#34;cancellation&#34;</span>: <span style="color:#6ab825;font-weight:bold">null</span>,
+    <span style="color:#6ab825;font-weight:bold">&#34;refunded&#34;</span>: <span style="color:#6ab825;font-weight:bold">false</span>,
+    <span style="color:#6ab825;font-weight:bold">&#34;refunded_at&#34;</span>: {
+      <span style="color:#6ab825;font-weight:bold">&#34;seconds&#34;</span>: <span style="color:#3677a9">-62135596800</span>
+    },
+    <span style="color:#6ab825;font-weight:bold">&#34;receipt_email&#34;</span>: <span style="color:#ed9d13">&#34;user.email@example.com&#34;</span>,
+    <span style="color:#6ab825;font-weight:bold">&#34;receipt_phone&#34;</span>: <span style="color:#ed9d13">&#34;&#34;</span>,
+    <span style="color:#6ab825;font-weight:bold">&#34;receipt_number&#34;</span>: <span style="color:#ed9d13">&#34;&#34;</span>,
+    <span style="color:#6ab825;font-weight:bold">&#34;receipt_url&#34;</span>: <span style="color:#ed9d13">&#34;https://dashboard.pay.super.com/receipt/purchase/efefc5d3-c2e2-4157-8789-4bfb7c1eec34/726d9e07-1dc8-4159-8d52-f95941066bc8&#34;</span>,
+    <span style="color:#6ab825;font-weight:bold">&#34;agreement_version&#34;</span>: <span style="color:#ed9d13">&#34;&#34;</span>,
+    <span style="color:#6ab825;font-weight:bold">&#34;agreement_accepted&#34;</span>: <span style="color:#6ab825;font-weight:bold">false</span>,
+    <span style="color:#6ab825;font-weight:bold">&#34;notify_sale&#34;</span>: <span style="color:#6ab825;font-weight:bold">false</span>,
+    <span style="color:#6ab825;font-weight:bold">&#34;notify_sale_email&#34;</span>: <span style="color:#ed9d13">&#34;&#34;</span>,
+    <span style="color:#6ab825;font-weight:bold">&#34;issuer&#34;</span>: {
+      <span style="color:#6ab825;font-weight:bold">&#34;url&#34;</span>: <span style="color:#ed9d13">&#34;https://domain.com&#34;</span>,
+      <span style="color:#6ab825;font-weight:bold">&#34;embedded&#34;</span>: <span style="color:#6ab825;font-weight:bold">false</span>,
+      <span style="color:#6ab825;font-weight:bold">&#34;reference&#34;</span>: <span style="color:#ed9d13">&#34;&#34;</span>,
+      <span style="color:#6ab825;font-weight:bold">&#34;reference_type&#34;</span>: <span style="color:#ed9d13">&#34;&#34;</span>,
+      <span style="color:#6ab825;font-weight:bold">&#34;utm_source&#34;</span>: <span style="color:#ed9d13">&#34;&#34;</span>,
+      <span style="color:#6ab825;font-weight:bold">&#34;utm_medium&#34;</span>: <span style="color:#ed9d13">&#34;&#34;</span>,
+      <span style="color:#6ab825;font-weight:bold">&#34;utm_campaign&#34;</span>: <span style="color:#ed9d13">&#34;&#34;</span>,
+      <span style="color:#6ab825;font-weight:bold">&#34;referrer_host&#34;</span>: <span style="color:#ed9d13">&#34;domain.com&#34;</span>
+    },
+    <span style="color:#6ab825;font-weight:bold">&#34;amount&#34;</span>: <span style="color:#3677a9">595</span>,
+    <span style="color:#6ab825;font-weight:bold">&#34;currency&#34;</span>: <span style="color:#ed9d13">&#34;RUB&#34;</span>,
+    <span style="color:#6ab825;font-weight:bold">&#34;user&#34;</span>: {
+      <span style="color:#6ab825;font-weight:bold">&#34;id&#34;</span>: <span style="color:#ed9d13">&#34;5dcf8b24b5a6990001bac2b6&#34;</span>,
+      <span style="color:#6ab825;font-weight:bold">&#34;object&#34;</span>: <span style="color:#ed9d13">&#34;user&#34;</span>,
+      <span style="color:#6ab825;font-weight:bold">&#34;external_id&#34;</span>: <span style="color:#ed9d13">&#34;0000000000001&#34;</span>,
+      <span style="color:#6ab825;font-weight:bold">&#34;name&#34;</span>: <span style="color:#ed9d13">&#34;User Name&#34;</span>,
+      <span style="color:#6ab825;font-weight:bold">&#34;email&#34;</span>: <span style="color:#ed9d13">&#34;user.email@example.com&#34;</span>,
+      <span style="color:#6ab825;font-weight:bold">&#34;email_verified&#34;</span>: <span style="color:#6ab825;font-weight:bold">true</span>,
+      <span style="color:#6ab825;font-weight:bold">&#34;phone&#34;</span>: <span style="color:#ed9d13">&#34;0639597531&#34;</span>,
+      <span style="color:#6ab825;font-weight:bold">&#34;phone_verified&#34;</span>: <span style="color:#6ab825;font-weight:bold">true</span>,
+      <span style="color:#6ab825;font-weight:bold">&#34;ip&#34;</span>: <span style="color:#ed9d13">&#34;79.137.163.2&#34;</span>,
+      <span style="color:#6ab825;font-weight:bold">&#34;locale&#34;</span>: <span style="color:#ed9d13">&#34;ru-RU&#34;</span>,
+      <span style="color:#6ab825;font-weight:bold">&#34;address&#34;</span>: {
+        <span style="color:#6ab825;font-weight:bold">&#34;country&#34;</span>: <span style="color:#ed9d13">&#34;RU&#34;</span>,
+        <span style="color:#6ab825;font-weight:bold">&#34;city&#34;</span>: <span style="color:#ed9d13">&#34;Moscow&#34;</span>,
+        <span style="color:#6ab825;font-weight:bold">&#34;postal_code&#34;</span>: <span style="color:#ed9d13">&#34;127221&#34;</span>,
+        <span style="color:#6ab825;font-weight:bold">&#34;state&#34;</span>: <span style="color:#ed9d13">&#34;MOW&#34;</span>
+      },
+      <span style="color:#6ab825;font-weight:bold">&#34;metadata&#34;</span>: {
+        <span style="color:#6ab825;font-weight:bold">&#34;user.param1&#34;</span>: <span style="color:#ed9d13">&#34;user.val1&#34;</span>,
+        <span style="color:#6ab825;font-weight:bold">&#34;user.param2&#34;</span>: <span style="color:#ed9d13">&#34;user.val2&#34;</span>,
+        <span style="color:#6ab825;font-weight:bold">&#34;user.param3&#34;</span>: <span style="color:#ed9d13">&#34;user.val3&#34;</span>
+      },
+      <span style="color:#6ab825;font-weight:bold">&#34;notify_new_region&#34;</span>: <span style="color:#6ab825;font-weight:bold">false</span>,
+      <span style="color:#6ab825;font-weight:bold">&#34;notify_new_region_email&#34;</span>: <span style="color:#ed9d13">&#34;&#34;</span>
+    },
+    <span style="color:#6ab825;font-weight:bold">&#34;billing_address&#34;</span>: {
+      <span style="color:#6ab825;font-weight:bold">&#34;country&#34;</span>: <span style="color:#ed9d13">&#34;DE&#34;</span>
+    },
+    <span style="color:#6ab825;font-weight:bold">&#34;tax&#34;</span>: {
+      <span style="color:#6ab825;font-weight:bold">&#34;type&#34;</span>: <span style="color:#ed9d13">&#34;vat&#34;</span>,
+      <span style="color:#6ab825;font-weight:bold">&#34;rate&#34;</span>: <span style="color:#3677a9">0.19</span>,
+      <span style="color:#6ab825;font-weight:bold">&#34;amount&#34;</span>: <span style="color:#3677a9">95</span>,
+      <span style="color:#6ab825;font-weight:bold">&#34;currency&#34;</span>: <span style="color:#ed9d13">&#34;RUB&#34;</span>
+    },
+    <span style="color:#6ab825;font-weight:bold">&#34;method&#34;</span>: {
+      <span style="color:#6ab825;font-weight:bold">&#34;title&#34;</span>: <span style="color:#ed9d13">&#34;Bank card&#34;</span>,
+      <span style="color:#6ab825;font-weight:bold">&#34;external_id&#34;</span>: <span style="color:#ed9d13">&#34;BANKCARD&#34;</span>,
+      <span style="color:#6ab825;font-weight:bold">&#34;payment_system_id&#34;</span>: <span style="color:#ed9d13">&#34;5be2d0b4b0b30d0007383ce5&#34;</span>,
+      <span style="color:#6ab825;font-weight:bold">&#34;saved&#34;</span>: <span style="color:#6ab825;font-weight:bold">false</span>,
+      <span style="color:#6ab825;font-weight:bold">&#34;card&#34;</span>: {
+        <span style="color:#6ab825;font-weight:bold">&#34;first6&#34;</span>: <span style="color:#ed9d13">&#34;400000&#34;</span>,
+        <span style="color:#6ab825;font-weight:bold">&#34;last4&#34;</span>: <span style="color:#ed9d13">&#34;0002&#34;</span>,
+        <span style="color:#6ab825;font-weight:bold">&#34;masked&#34;</span>: <span style="color:#ed9d13">&#34;400000...0002&#34;</span>,
+        <span style="color:#6ab825;font-weight:bold">&#34;expiry_month&#34;</span>: <span style="color:#ed9d13">&#34;11&#34;</span>,
+        <span style="color:#6ab825;font-weight:bold">&#34;expiry_year&#34;</span>: <span style="color:#ed9d13">&#34;2023&#34;</span>,
+        <span style="color:#6ab825;font-weight:bold">&#34;brand&#34;</span>: <span style="color:#ed9d13">&#34;VISA&#34;</span>,
+        <span style="color:#6ab825;font-weight:bold">&#34;fingerprint&#34;</span>: <span style="color:#ed9d13">&#34;$2a$04$9VRouYlBC.qMYQrLpmlXOeGbL2WFZDGGq/KdTeeHSfWkosgJgrWw2&#34;</span>,
+        <span style="color:#6ab825;font-weight:bold">&#34;secure3d&#34;</span>: <span style="color:#6ab825;font-weight:bold">true</span>
+      },
+      <span style="color:#6ab825;font-weight:bold">&#34;wallet&#34;</span>: <span style="color:#6ab825;font-weight:bold">null</span>,
+      <span style="color:#6ab825;font-weight:bold">&#34;crypto_currency&#34;</span>: <span style="color:#6ab825;font-weight:bold">null</span>,
+      <span style="color:#6ab825;font-weight:bold">&#34;refund_allowed&#34;</span>: <span style="color:#6ab825;font-weight:bold">true</span>
+    },
+    <span style="color:#6ab825;font-weight:bold">&#34;items&#34;</span>: <span style="color:#6ab825;font-weight:bold">null</span>,
+    <span style="color:#6ab825;font-weight:bold">&#34;refund&#34;</span>: <span style="color:#6ab825;font-weight:bold">null</span>,
+    <span style="color:#6ab825;font-weight:bold">&#34;metadata&#34;</span>: {
+      <span style="color:#6ab825;font-weight:bold">&#34;param1&#34;</span>: <span style="color:#ed9d13">&#34;val1&#34;</span>,
+      <span style="color:#6ab825;font-weight:bold">&#34;param2&#34;</span>: <span style="color:#ed9d13">&#34;val2&#34;</span>,
+      <span style="color:#6ab825;font-weight:bold">&#34;param3&#34;</span>: <span style="color:#ed9d13">&#34;val3&#34;</span>
+    },
+    <span style="color:#6ab825;font-weight:bold">&#34;original_amount&#34;</span>: <span style="color:#3677a9">500</span>,
+    <span style="color:#6ab825;font-weight:bold">&#34;country&#34;</span>: <span style="color:#ed9d13">&#34;DE&#34;</span>,
+    <span style="color:#6ab825;font-weight:bold">&#34;type&#34;</span>: <span style="color:#ed9d13">&#34;simple&#34;</span>,
+    <span style="color:#6ab825;font-weight:bold">&#34;platform_id&#34;</span>: <span style="color:#ed9d13">&#34;&#34;</span>,
+    <span style="color:#6ab825;font-weight:bold">&#34;receipt_id&#34;</span>: <span style="color:#ed9d13">&#34;efefc5d3-c2e2-4157-8789-4bfb7c1eec34&#34;</span>,
+    <span style="color:#6ab825;font-weight:bold">&#34;virtual_currency_amount&#34;</span>: <span style="color:#3677a9">0</span>,
+    <span style="color:#6ab825;font-weight:bold">&#34;is_buy_for_virtual_currency&#34;</span>: <span style="color:#6ab825;font-weight:bold">false</span>
+  }
+}</code></pre></div>
+<h3 id="setting-up-a-webhook">Setting up a webhook</h3>
+
+<p><strong>1.</strong> Add the URL of the server that will receive the webhook requests in the Functional URL section on the Project Webhooks page.</p>
+
+<p><strong>2.</strong> <a href="#verifying-a-webhook">Verify the webhook request</a>.</p>
+
+<p><strong>3.</strong> Respond with HTTP code 200 without a message body to acknowledge the receipt a webhook.</p>
+
+<h3 id="webhook-event-types">Webhook event types</h3>
+
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Payload</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>payment.success</code></td>
+<td>Order</td>
+<td>Sent when a customer successfully completes a payment.</td>
+</tr>
+
+<tr>
+<td><code>payment.chargeback</code></td>
+<td>Order</td>
+<td>Sent when a payment must be cancelled for a chargeback.</td>
+</tr>
+
+<tr>
+<td><code>payment.refund</code></td>
+<td>Order</td>
+<td>Sent when a payment must be cancelled for refund for any reasons.</td>
+</tr>
+
+<tr>
+<td><code>payment.cancel</code></td>
+<td>Order</td>
+<td>Sent when a payment must be cancelled for cancel for any reasons.</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="the-webhook-object">The Webhook object</h3>
+
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>string</td>
+<td>The unique identifier for the object.</td>
+</tr>
+
+<tr>
+<td><code>type</code></td>
+<td>string</td>
+<td>The string representing the webhook&rsquo;s type.</td>
+</tr>
+
+<tr>
+<td><code>event</code></td>
+<td>string</td>
+<td>The string representing the event&rsquo;s type.</td>
+</tr>
+
+<tr>
+<td><code>live</code></td>
+<td>boolean</td>
+<td>Equals to <code>true</code> if notification originated from a live environment.</td>
+</tr>
+
+<tr>
+<td><code>created_at</code></td>
+<td>DateTime</td>
+<td>The date and time in <a href="https://www.iso.org/iso-8601-date-and-time-format.html" target="_blank">ISO 8601</a> when the event has been created.</td>
+</tr>
+
+<tr>
+<td><code>expires_at</code></td>
+<td>DateTime</td>
+<td>The date and time in <a href="https://www.iso.org/iso-8601-date-and-time-format.html" target="_blank">ISO 8601</a> when the event stops trying to deliver.</td>
+</tr>
+
+<tr>
+<td><code>delivery_try</code></td>
+<td>integer</td>
+<td>The current delivery try for the event.</td>
+</tr>
+
+<tr>
+<td><code>object</code></td>
+<td>object</td>
+<td>The object representing the payload of the event with a given type. Objects of the same type share the same value.</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="verifying-a-webhook">Verifying a webhook</h2>
+
+<p>PaySuper signs webhook events that it sends to your endpoint allowing you to validate that they were not sent by a third-party and prevent any unauthorised actions.</p>
+
+<p>The PaySuper API uses a Secret key to check the notification request.</p>
+
+<aside class="notice">
+Your Secret keys carry many privileges, so be sure to keep them secure! Do not share your Secret API keys in any publicly accessible areas such as GitHub, client-side code, and so forth.
+</aside>
+
+<p><strong>To check a digital signature:</strong></p>
+
+<p><strong>1.</strong> Concatenate the request&rsquo;s JSON body with your Project&rsquo;s Secret key found on the Project webhooks page.</p>
+
+<p><strong>2.</strong> Apply SHA-256 hashing to the resulting string.</p>
+
+<p><strong>3.</strong> Compare the digital signature with <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Authorization" target="_blank">Authorization</a> HTTP Header value in the received notification:</p>
+
+<blockquote>
+<p>All API requests must be made over HTTPS. Calls made over a plain HTTP will fail. API requests without the authentication will also fail.</p>
+</blockquote>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#447fcf">POST</span> <span style="color:#447fcf;text-decoration:underline">/your_endpoint</span> <span style="color:#6ab825;font-weight:bold">HTTP</span>/<span style="color:#3677a9">1.1</span>
+Host: your.host
+Accept: application/json
+Content-Type: application/json
+Authorization: Signature sh9b1r69bjqie88n5uizqcrerhee50dypsp195mh</code></pre></div>
     
         
 
