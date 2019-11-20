@@ -148,7 +148,7 @@ https://github.com/alex-shpak/hugo-book
 
 <h2 id="step-1-create-a-token-on-your-server"><strong>Step 1.</strong> Create a token on your server</h2>
 
-<p>Send the <a href="/docs/api/#tag/Token">POST /api/v1/tokens</a> to receive an encrypted string. Learn more about the <a href="/docs/api/#tag/Token/paths/~1api~1v1~1tokens/post">full list of parameters</a>.</p>
+<p>Send the <a href="/api/#create-token">POST /api/v1/tokens</a> to receive an encrypted string. Learn more about the <a href="/api/#create-token">full list of parameters</a>.</p>
 
 <blockquote class="book-hint warning">
   <p>Remember to add a Header <code>X-API-SIGNATURE</code> with the Project&rsquo;s Secret key found on the Project webhooks page.</p>
@@ -281,7 +281,7 @@ https://github.com/alex-shpak/hugo-book
 
 <p>To integrate a Checkout Form you can follow the <a href="/docs/payments/sdk-integration/">client-side payment initialization</a> but instead pass a token parameter when creating a PaySuper object.</p>
 
-<p>If your token contains <a href="/docs/api/#tag/Token">user and order parameters</a> then you can create a Checkout Form instance with just a single parameter:</p>
+<p>If your token contains <a href="/api/#create-token">user and order parameters</a> then you can create a Checkout Form instance with just a single parameter:</p>
 
 <div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#007020;font-weight:bold">const</span> paySuper <span style="color:#666">=</span> <span style="color:#007020;font-weight:bold">new</span> PaySuper({
    token<span style="color:#666">:</span> <span style="color:#4070a0">&#39;5cd5620f06ae110001509185&#39;</span>
@@ -292,7 +292,7 @@ https://github.com/alex-shpak/hugo-book
 
 <p>To integrate a Checkout Form you can follow the <a href="/docs/payments/integration/">server-side payment initialization</a> with the <code>token</code> parameter.</p>
 
-<p>If your token contains the <a href="/docs/api/#tag/Token">user and order parameters</a> then you can request a Checkout Form URL with just a single parameter:</p>
+<p>If your token contains the <a href="/api/#create-token">user and order parameters</a> then you can request a Checkout Form URL with just a single parameter:</p>
 
 
 
