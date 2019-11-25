@@ -16,8 +16,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://docs.stg.pay.super.com/docs/markdown/</guid>
-      <description>Title with a line  Lorem markdownum pavent auras, surgit nunc cingentibus libet Laomedonque que est. Pastor An arbor filia foedat, ne fugit aliter, per. Helicona illas et callida neptem est Oresitrophos caput, dentibus est venit. Tenet reddite famuli praesentem fortibus, quaeque vis foret si frondes gelidos gravidae circumtulit inpulit armenta nativum.
- Headings  h1 Heading h2 Heading h3 Heading h4 Heading h5 Heading h6 Heading Notes   The note with padding example.</description>
+      <description>Title with a line Lorem markdownum pavent auras, surgit nunc cingentibus libet Laomedonque que est. Pastor An arbor filia foedat, ne fugit aliter, per. Helicona illas et callida neptem est Oresitrophos caput, dentibus est venit. Tenet reddite famuli praesentem fortibus, quaeque vis foret si frondes gelidos gravidae circumtulit inpulit armenta nativum.
+Headings h1 Heading h2 Heading h3 Heading h4 Heading h5 Heading h6 Heading Notes  The note with padding example.</description>
     </item>
     
     <item>
@@ -26,24 +26,26 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://docs.stg.pay.super.com/docs/glossary/</guid>
-      <description>Payment form:  a Checkout Form
- Terms in uppercase:  PaySuper Checkout
+      <description>Payment form: a Checkout Form
+Terms in uppercase: PaySuper Checkout
 PaySuper JS SDK
 PaySuper API
 PaySuper
 PaySuper Dashboard
-PaySuper Dashboard entities and properties:  a Project
+PaySuper Dashboard entities and properties: a Project
 a Product
-a Project&#39;s Secret key
+a Project&amp;rsquo;s Secret key
 a Virtual currency
 a Game key
 a Virtual item
 a key-activated product
 a virtual item
 an in-game currency
- PaySuper Dashboard pages:  the Projects list page
+PaySuper Dashboard pages: the Projects list page
 the Project settings page
-the Project webhooks page</description>
+the Project webhooks page
+the Transactions page
+the Company Onboarding page</description>
     </item>
     
     <item>
@@ -52,7 +54,7 @@ the Project webhooks page</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://docs.stg.pay.super.com/docs/payouts/</guid>
-      <description>Receiving Payouts  Your customers&amp;rsquo; successful payments are stored on your PaySuper account balance and can be received to your bank account using Payouts.
+      <description>Receiving Payouts Your customers&amp;rsquo; successful payments are stored on your PaySuper account balance and can be received to your bank account using Payouts.
 Setting up your bank account to receive payouts When you are ready to start selling you will need to fill in all your company details in Company Onboarding.
 Bank account details for payouts are required when filling in Company Onboarding.
 Note that the currency of the bank account must be the same as the Account Currency for payouts filled in the Banking info.</description>
@@ -64,8 +66,8 @@ Note that the currency of the bank account must be the same as the Account Curre
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://docs.stg.pay.super.com/docs/refunds/</guid>
-      <description>Refunding payments  You can request to refund a charge in whole for a processed transaction. After requesting a refund it cannot be cancelled. PaySuper automatically sends email receipt to your customers whenever they have a refunded purchase.
-The refund can be sent only to the same customer&#39;s bank card was used in a payment. If the customer&#39;s card is expired, the refund will be made to the reissued card.  The refund costs Notice that all refund fees are being paid by PaySuper, so they are free of charge for you, but the fees from the original charge are not returned.</description>
+      <description>Refunding payments You can request to refund a charge in whole for a processed transaction. After requesting a refund it cannot be cancelled. PaySuper automatically sends email receipt to your customers whenever they have a refunded purchase.
+The refund can be sent only to the same customer&amp;rsquo;s bank card was used in a payment. If the customer&amp;rsquo;s card is expired, the refund will be made to the reissued card.  The refund costs Notice that all refund fees are being paid by PaySuper, so they are free of charge for you, but the fees from the original charge are not returned.</description>
     </item>
     
     <item>
@@ -74,7 +76,7 @@ The refund can be sent only to the same customer&#39;s bank card was used in a p
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://docs.stg.pay.super.com/docs/declines/</guid>
-      <description>Understanding Declines and Failed Payments  During a payment process, a failure result can happen because of the typical reasons. For example, the customer may not have enough money on a bank card, or PaySuper Checkout may suspect a fraud attempt. If so, the payment status will be cancelled and a PaySuper Checkout notification event will contain an explanatory description.
+      <description>Understanding Declines and Failed Payments During a payment process, a failure result can happen because of the typical reasons. For example, the customer may not have enough money on a bank card, or PaySuper Checkout may suspect a fraud attempt. If so, the payment status will be cancelled and a PaySuper Checkout notification event will contain an explanatory description.
 But some reasons for the failed payments are unclear and uninformative.</description>
     </item>
     
