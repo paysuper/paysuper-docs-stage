@@ -215,67 +215,66 @@ The version passed is specified as major and minor of the version using semantic
 </code></pre></div><p>All top-level PaySuper API resources have support for bulk fetches &ldquo;list&rdquo; API methods. For instance, you can list users, list orders.
 Like Stripe, PaySuper uses cursor-based pagination using the parameter <code>starting_after</code>. Pass <code>starting_after</code> parameter
 at the previous page last object id value to determine where to start in the list.</p>
-<h3 id="attributes">Attributes</h3>
 <table>
 <thead>
 <tr>
-<th>Attribute</th>
-<th>Type</th>
-<th>Description</th>
+<th>PARAMETER</th>
+<th>TYPE</th>
+<th>DESCRIPTION</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>limit</strong></td>
-<td><strong>integer, optional</strong></td>
-<td>A limit on the number of objects to be returned. Must be included between 1 and 100</td>
+<td><code>limit</code>|integer</td>
+<td>A limit on the number of objects to be returned. Must be included between 1 and 100.</td>
+<td></td>
 </tr>
 <tr>
-<td><strong>starting_after</strong></td>
-<td><strong>string, optional</strong></td>
+<td><code>starting_after</code>|string</td>
 <td>A cursor for use in pagination. <code>starting_after</code> is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with <code>obj_foo</code>, your subsequent call can include <code>starting_after=obj_foo</code> in order to fetch the next page of the list.</td>
+<td></td>
 </tr>
 <tr>
-<td><strong>ending_before</strong></td>
-<td><strong>string, optional</strong></td>
+<td><code>ending_before</code>|string</td>
 <td>A cursor for use in pagination. <code>ending_before</code> is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, starting with <code>obj_bar</code>, your subsequent call can include <code>ending_before=obj_bar</code> in order to fetch the previous page of the list.</td>
+<td></td>
 </tr>
 </tbody>
 </table>
-<h3 id="list-response-format">List response format</h3>
+<h3 id="response">Response</h3>
 <table>
 <thead>
 <tr>
-<th>Attribute</th>
-<th>Type</th>
-<th>Description</th>
+<th>PARAMETER</th>
+<th>TYPE</th>
+<th>DESCRIPTION</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>object</strong></td>
-<td><strong>string</strong></td>
-<td>Value is &ldquo;list&rdquo;</td>
+<td><code>object</code>|string</td>
+<td>The string representing the object’s type. Value: <code>list</code>.</td>
+<td></td>
 </tr>
 <tr>
-<td><strong>data</strong></td>
-<td><strong>array</strong></td>
+<td><code>data</code>|array</td>
 <td>An array containing the actual response elements, paginated by any request parameters.</td>
+<td></td>
 </tr>
 <tr>
-<td><strong>has_more</strong></td>
-<td><strong>boolean</strong></td>
+<td><code>has_more</code>|boolean</td>
 <td>Whether or not there are more elements available after this page. If <code>false</code>, this page is the end of the list.</td>
+<td></td>
 </tr>
 <tr>
-<td><strong>has_before</strong></td>
-<td><strong>boolean</strong></td>
+<td><code>has_before</code>|boolean</td>
 <td>Whether or not there are more elements available before this page. If <code>false</code>, this page is the beginning of the list.</td>
+<td></td>
 </tr>
 <tr>
-<td><strong>total_count</strong></td>
-<td><strong>boolean</strong></td>
+<td><code>total_count</code>|boolean</td>
 <td>The total count of all recipients that match your filters, as if there was no pagination.</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -411,9 +410,9 @@ at the previous page last object id value to determine where to start in the lis
 <table>
 <thead>
 <tr>
-<th>Type</th>
-<th>Payload</th>
-<th>Description</th>
+<th>TYPE</th>
+<th>PAYLOAD</th>
+<th>DESCRIPTION</th>
 </tr>
 </thead>
 <tbody>
@@ -443,9 +442,9 @@ at the previous page last object id value to determine where to start in the lis
 <table>
 <thead>
 <tr>
-<th>Attribute</th>
-<th>Type</th>
-<th>Description</th>
+<th>PARAMETER</th>
+<th>TYPE</th>
+<th>DESCRIPTION</th>
 </tr>
 </thead>
 <tbody>
@@ -456,7 +455,7 @@ at the previous page last object id value to determine where to start in the lis
 </tr>
 <tr>
 <td><code>type</code>|string</td>
-<td>The string representing the webhook's type.</td>
+<td>The string representing the webhook's type. Value: <code>notification</code>.</td>
 <td></td>
 </tr>
 <tr>
@@ -466,7 +465,7 @@ at the previous page last object id value to determine where to start in the lis
 </tr>
 <tr>
 <td><code>live</code>|boolean</td>
-<td>Equals to <code>true</code> if notification originated from a live environment.</td>
+<td>Has a value <code>true</code> if notification originated from a live environment.</td>
 <td></td>
 </tr>
 <tr>
@@ -1241,7 +1240,7 @@ Authorization<span style="color:#666">:</span> Signature sh9b1r69bjqie88n5uizqcr
 <tr>
 <td><code>·· external_id</code></td>
 <td>string</td>
-<td>The user unique identifier on the merchant side.</td>
+<td>The user unique identifier in the merchant project.</td>
 </tr>
 <tr>
 <td><code>·· name</code></td>
@@ -1321,7 +1320,7 @@ Authorization<span style="color:#666">:</span> Signature sh9b1r69bjqie88n5uizqcr
   <span style="color:#062873;font-weight:bold">&#34;id&#34;</span>: <span style="color:#4070a0">&#34;string&#34;</span>,
   <span style="color:#062873;font-weight:bold">&#34;payment_form_url&#34;</span>: <span style="color:#4070a0">&#34;string&#34;</span>
 }
-</code></pre></div><h3 id="200-an-object-with-the-identifier-of-the-order-and-a-paysuperhosted-url-of-a-payment-form">200 An object with the identifier of the order and a PaySuper-hosted URL of a payment form.</h3>
+</code></pre></div><h3 id="200-an-object-with-the-unique-identifier-of-the-order-and-a-paysuperhosted-url-of-a-payment-form">200 An object with the unique identifier of the order and a PaySuper-hosted URL of a payment form.</h3>
 <table>
 <thead>
 <tr>
@@ -1365,7 +1364,7 @@ Authorization<span style="color:#666">:</span> Signature sh9b1r69bjqie88n5uizqcr
 </tr>
 </tbody>
 </table>
-<h3 id="401-an-error-message-object-with-unauthorized-reason">401 An error message object with unauthorized reason.</h3>
+<h3 id="401-an-error-message-object-with-an-unauthorized-reason">401 An error message object with an unauthorized reason.</h3>
 <table>
 <thead>
 <tr>
@@ -1387,7 +1386,7 @@ Authorization<span style="color:#666">:</span> Signature sh9b1r69bjqie88n5uizqcr
 </tr>
 </tbody>
 </table>
-<h3 id="500-an-error-message-object-with-a-reason-from-paysuper-server">500 An error message object with a reason from PaySuper server.</h3>
+<h3 id="500-an-error-message-object-with-a-reason-on-the-paysuper-server-side">500 An error message object with a reason on the PaySuper server side.</h3>
 <table>
 <thead>
 <tr>
@@ -1490,7 +1489,7 @@ Authorization<span style="color:#666">:</span> Signature sh9b1r69bjqie88n5uizqcr
 <tr>
 <td><code>·· id</code>  <!-- raw HTML omitted --><!-- raw HTML omitted -->required<!-- raw HTML omitted --></td>
 <td>string</td>
-<td>The user unique identifier on the merchant side.</td>
+<td>The user unique identifier in the merchant project.</td>
 </tr>
 <tr>
 <td><code>·· email</code></td>
@@ -1630,7 +1629,7 @@ Authorization<span style="color:#666">:</span> Signature sh9b1r69bjqie88n5uizqcr
   <span style="color:#062873;font-weight:bold">&#34;token&#34;</span>: <span style="color:#4070a0">&#34;string&#34;</span>,
   <span style="color:#062873;font-weight:bold">&#34;payment_form_url&#34;</span>: <span style="color:#4070a0">&#34;string&#34;</span>
 }
-</code></pre></div><h3 id="200-the-token-is-successfully-generated">200 The Token is successfully generated.</h3>
+</code></pre></div><h3 id="200-an-object-with-a-token-string-and-a-paysuperhosted-url-of-a-payment-form">200 An object with a token string and a PaySuper-hosted URL of a payment form.</h3>
 <table>
 <thead>
 <tr>
@@ -1652,7 +1651,7 @@ Authorization<span style="color:#666">:</span> Signature sh9b1r69bjqie88n5uizqcr
 </tr>
 </tbody>
 </table>
-<h3 id="400-invalid-request-data">400 Invalid request data</h3>
+<h3 id="400-an-error-message-object-with-a-reason1">400 An error message object with a reason.</h3>
 <table>
 <thead>
 <tr>
@@ -1674,29 +1673,7 @@ Authorization<span style="color:#666">:</span> Signature sh9b1r69bjqie88n5uizqcr
 </tr>
 </tbody>
 </table>
-<h3 id="404-object-not-found">404 Object not found</h3>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>· message</code></td>
-<td>string</td>
-<td>A description of the error.</td>
-</tr>
-<tr>
-<td><code>· code</code></td>
-<td>string</td>
-<td>A status code of the error.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="500-some-unknown-error-on-server-side">500 Some unknown error on server side</h3>
+<h3 id="500-an-error-message-object-with-a-reason-on-the-paysuper-server-side1">500 An error message object with a reason on the PaySuper server side.</h3>
 <table>
 <thead>
 <tr>
