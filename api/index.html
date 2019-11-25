@@ -1088,12 +1088,12 @@ Authorization<span style="color:#666">:</span> Signature sh9b1r69bjqie88n5uizqcr
 </tr>
 <tr>
 <td><code>type</code>|string</td>
-<td>The order type. It depends on your sales option (Game Keys, Virtual Items, the simple checkout). For products created as Game Keys use the <code>key</code> type, as Virtual Items - the <code>product</code> type, for a simple checkout - the <code>simple</code> type. Enum values: key, products, simple.</td>
+<td>The order type. It depends on your sales option (Game Keys, Virtual Items, the simple checkout). For products created as Game Keys use the <code>key</code> type, as Virtual Items - the <code>product</code> type, for a simple checkout - the <code>simple</code> type. <strong>Enum values:</strong> key, products, simple.</td>
 <td></td>
 </tr>
 <tr>
 <td><code>platform_id</code>|string</td>
-<td>The default platform identifier for which customer buys the in-game key. This field used only for a payment type <code>key</code>. Enum values: steam, gog, uplay, origin, psn, xbox, nintendo, itch, egs.</td>
+<td>The default platform identifier for which customer buys the in-game key. This field used only for a payment type <code>key</code>. <strong>Enum values:</strong> steam, gog, uplay, origin, psn, xbox, nintendo, itch, egs.</td>
 <td></td>
 </tr>
 <tr>
@@ -1169,142 +1169,142 @@ Authorization<span style="color:#666">:</span> Signature sh9b1r69bjqie88n5uizqcr
 </thead>
 <tbody>
 <tr>
-<td><strong>body</strong>  <!-- raw HTML omitted --><!-- raw HTML omitted -->required<!-- raw HTML omitted --></td>
+<td><code>body</code>  <!-- raw HTML omitted --><!-- raw HTML omitted -->required<!-- raw HTML omitted --></td>
 <td></td>
-<td>Order create data</td>
+<td>Parameters to create a payment order.</td>
 </tr>
 <tr>
-<td>**- account**</td>
+<td><code>· account</code></td>
 <td>string</td>
 <td>The user unique account in the Project.</td>
 </tr>
 <tr>
-<td>**- amount**</td>
+<td><code>· amount</code></td>
 <td>number</td>
 <td>The order amount as a positive number. It is required for a simple checkout payment.</td>
 </tr>
 <tr>
-<td>**- currency**</td>
+<td><code>· currency</code></td>
 <td>string</td>
 <td>The currency of the order. Three-letter Currency Code ISO 4217, in uppercase.  If provided, the amount will be processed in this currency.  It is required for a simple checkout payment.</td>
 </tr>
 <tr>
-<td>**- description**</td>
+<td><code>· description</code></td>
 <td>string</td>
 <td>The arbitrary order description.</td>
 </tr>
 <tr>
-<td>**- order_id**</td>
+<td><code>· order_id</code></td>
 <td>string</td>
 <td>The unique order identifier on the merchant side. This field is not required, but we recommend sending this field always.</td>
 </tr>
 <tr>
-<td>**- project**  <!-- raw HTML omitted --><!-- raw HTML omitted -->required<!-- raw HTML omitted --></td>
+<td><code>· project</code>  <!-- raw HTML omitted --><!-- raw HTML omitted -->required<!-- raw HTML omitted --></td>
 <td>string</td>
 <td>The ID of the Project found in your merchant account in the PaySuper Dashboard.</td>
 </tr>
 <tr>
-<td>**- url_fail**</td>
+<td><code>· url_fail</code></td>
 <td>string</td>
 <td>The redirect URL for the failed payment.  Enable the dynamic notify URLs option in the Project Settings to use this field.</td>
 </tr>
 <tr>
-<td>**- url_success**</td>
+<td><code>· url_success</code></td>
 <td>string</td>
 <td>The redirect URL for the successful payment.  Enable the dynamic notify URLs option in the Project Settings to use this field.</td>
 </tr>
 <tr>
-<td>**- type**  <!-- raw HTML omitted --><!-- raw HTML omitted -->required<!-- raw HTML omitted --></td>
+<td><code>· type</code>  <!-- raw HTML omitted --><!-- raw HTML omitted -->required<!-- raw HTML omitted --></td>
 <td>string</td>
 <td>The order type. It depends on your sales option (Game Keys, Virtual Items, the simple checkout). For products created as Game Keys use the <code>key</code> type,  as Virtual Items - the <code>product</code> type, for a simple checkout - the <code>simple</code> type. <!-- raw HTML omitted --><strong>Enum values:</strong> <!-- raw HTML omitted -->key<!-- raw HTML omitted -->product<!-- raw HTML omitted -->simple</td>
 </tr>
 <tr>
-<td>**- products**</td>
+<td><code>· products</code></td>
 <td>[string]</td>
 <td>The list of unique identifiers of Products being in the Project. It is required if a payment type is equal to &lsquo;product&rsquo; or &lsquo;key&rsquo;.</td>
 </tr>
 <tr>
-<td>**- platform_id**</td>
+<td><code>· platform_id</code></td>
 <td>string</td>
 <td>The default platform identifier for which customer buys the in-game key. This field used only for a payment type &lsquo;key&rsquo;. <!-- raw HTML omitted --><strong>Enum values:</strong> <!-- raw HTML omitted -->steam<!-- raw HTML omitted -->gog<!-- raw HTML omitted -->uplay<!-- raw HTML omitted -->origin<!-- raw HTML omitted -->psn<!-- raw HTML omitted -->xbox<!-- raw HTML omitted -->nintendo<!-- raw HTML omitted -->itch<!-- raw HTML omitted -->egs</td>
 </tr>
 <tr>
-<td>**- token**</td>
+<td><code>· token</code></td>
 <td>string</td>
 <td>An encrypted string that represents certain details of your customer (such as the user ID, email and others), a game and purchase parameters.  The token encrypted parameters override the corresponding parameters in an order object even the required parameters.</td>
 </tr>
 <tr>
-<td>**- user**</td>
+<td><code>· user</code></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td>**&ndash; external_id**</td>
+<td><code>·· external_id</code></td>
 <td>string</td>
 <td>The user unique identifier on the merchant side.</td>
 </tr>
 <tr>
-<td>**&ndash; name**</td>
+<td><code>·· name</code></td>
 <td>string</td>
 <td>The user's name.</td>
 </tr>
 <tr>
-<td>**&ndash; email**</td>
+<td><code>·· email</code></td>
 <td>string</td>
 <td>The user's email address.</td>
 </tr>
 <tr>
-<td>**&ndash; email_verified**</td>
+<td><code>·· email_verified</code></td>
 <td>boolean</td>
 <td>Whether the user's email address has been verified on the merchant side.</td>
 </tr>
 <tr>
-<td>**&ndash; phone**</td>
+<td><code>·· phone</code></td>
 <td>string</td>
 <td>The user's phone number.</td>
 </tr>
 <tr>
-<td>**&ndash; phone_verified**</td>
+<td><code>·· phone_verified</code></td>
 <td>boolean</td>
 <td>Whether the user’s phone number has been verified on the merchant side.</td>
 </tr>
 <tr>
-<td>**&ndash; ip**</td>
+<td><code>·· ip</code></td>
 <td>string</td>
 <td>The user's IP address.</td>
 </tr>
 <tr>
-<td>**&ndash; locale**</td>
+<td><code>·· locale</code></td>
 <td>string</td>
 <td>The user's locale name. Two-letter language code by ISO 639-1, in lowercase.</td>
 </tr>
 <tr>
-<td>**&ndash; address**</td>
+<td><code>·· address</code></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td>**&mdash; country**</td>
+<td><code>··· country</code></td>
 <td>string</td>
 <td>The user's country. Two-letter language code by ISO 3166-1, in lowercase.</td>
 </tr>
 <tr>
-<td>**&mdash; city**</td>
+<td><code>··· city</code></td>
 <td>string</td>
 <td>The user's city.</td>
 </tr>
 <tr>
-<td>**&mdash; postal_code**</td>
+<td><code>··· postal_code</code></td>
 <td>string</td>
 <td>The user's postal code.</td>
 </tr>
 <tr>
-<td>**&mdash; state**</td>
+<td><code>··· state</code></td>
 <td>string</td>
 <td>The user's state code by ISO 3166-2.</td>
 </tr>
 <tr>
-<td>**&ndash; metadata**</td>
+<td><code>·· metadata</code></td>
 <td>object</td>
 <td>A string-value description that you can attach to the user object.  It can be useful for storing additional information about your customer payment.</td>
 </tr>
@@ -1321,7 +1321,7 @@ Authorization<span style="color:#666">:</span> Signature sh9b1r69bjqie88n5uizqcr
   <span style="color:#062873;font-weight:bold">&#34;id&#34;</span>: <span style="color:#4070a0">&#34;string&#34;</span>,
   <span style="color:#062873;font-weight:bold">&#34;payment_form_url&#34;</span>: <span style="color:#4070a0">&#34;string&#34;</span>
 }
-</code></pre></div><h3 id="200-object-which-contain-data-to-render-payment-form">200 Object which contain data to render payment form</h3>
+</code></pre></div><h3 id="200-an-object-with-the-identifier-of-the-order-and-a-paysuperhosted-url-of-a-payment-form">200 An object with the identifier of the order and a PaySuper-hosted URL of a payment form.</h3>
 <table>
 <thead>
 <tr>
@@ -1332,18 +1332,18 @@ Authorization<span style="color:#666">:</span> Signature sh9b1r69bjqie88n5uizqcr
 </thead>
 <tbody>
 <tr>
-<td>- id</td>
+<td><code>· id</code></td>
 <td>string</td>
 <td>The unique identifier for the order.</td>
 </tr>
 <tr>
-<td>- payment_form_url</td>
+<td><code>· payment_form_url</code></td>
 <td>string</td>
 <td>The PaySuper-hosted URL of payment form.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="400-object-with-error-message">400 Object with error message</h3>
+<h3 id="400-an-error-message-object-with-a-reason">400 An error message object with a reason.</h3>
 <table>
 <thead>
 <tr>
@@ -1354,18 +1354,18 @@ Authorization<span style="color:#666">:</span> Signature sh9b1r69bjqie88n5uizqcr
 </thead>
 <tbody>
 <tr>
-<td>- message</td>
+<td><code>· message</code></td>
 <td>string</td>
 <td>A description of the error.</td>
 </tr>
 <tr>
-<td>- code</td>
+<td><code>· code</code></td>
 <td>string</td>
 <td>A status code of the error.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="500-object-with-error-message">500 Object with error message</h3>
+<h3 id="401-an-error-message-object-with-unauthorized-reason">401 An error message object with unauthorized reason.</h3>
 <table>
 <thead>
 <tr>
@@ -1376,12 +1376,34 @@ Authorization<span style="color:#666">:</span> Signature sh9b1r69bjqie88n5uizqcr
 </thead>
 <tbody>
 <tr>
-<td>- message</td>
+<td><code>· message</code></td>
 <td>string</td>
 <td>A description of the error.</td>
 </tr>
 <tr>
-<td>- code</td>
+<td><code>· code</code></td>
+<td>string</td>
+<td>A status code of the error.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="500-an-error-message-object-with-a-reason-from-paysuper-server">500 An error message object with a reason from PaySuper server.</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>· message</code></td>
+<td>string</td>
+<td>A description of the error.</td>
+</tr>
+<tr>
+<td><code>· code</code></td>
 <td>string</td>
 <td>A status code of the error.</td>
 </tr>
@@ -1456,142 +1478,142 @@ Authorization<span style="color:#666">:</span> Signature sh9b1r69bjqie88n5uizqcr
 </thead>
 <tbody>
 <tr>
-<td><strong>body</strong>  <!-- raw HTML omitted --><!-- raw HTML omitted -->required<!-- raw HTML omitted --></td>
+<td><code>body</code>  <!-- raw HTML omitted --><!-- raw HTML omitted -->required<!-- raw HTML omitted --></td>
 <td></td>
 <td>Data to process a payment.</td>
 </tr>
 <tr>
-<td>**- user**  <!-- raw HTML omitted --><!-- raw HTML omitted -->required<!-- raw HTML omitted --></td>
+<td><code>· user</code>  <!-- raw HTML omitted --><!-- raw HTML omitted -->required<!-- raw HTML omitted --></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td>**&ndash; id**  <!-- raw HTML omitted --><!-- raw HTML omitted -->required<!-- raw HTML omitted --></td>
+<td><code>·· id</code>  <!-- raw HTML omitted --><!-- raw HTML omitted -->required<!-- raw HTML omitted --></td>
 <td>string</td>
 <td>The user unique identifier on the merchant side.</td>
 </tr>
 <tr>
-<td>**&ndash; email**</td>
+<td><code>·· email</code></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td>**&mdash; value**  <!-- raw HTML omitted --><!-- raw HTML omitted -->required<!-- raw HTML omitted --></td>
+<td><code>··· value</code>  <!-- raw HTML omitted --><!-- raw HTML omitted -->required<!-- raw HTML omitted --></td>
 <td>string</td>
 <td>The parameter value.</td>
 </tr>
 <tr>
-<td>**&mdash; verified**</td>
+<td><code>··· verified</code></td>
 <td>boolean</td>
 <td>Whether the value has been verified on the merchant side.</td>
 </tr>
 <tr>
-<td>**&ndash; phone**</td>
+<td><code>·· phone</code></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td>**&ndash; name**</td>
+<td><code>·· name</code></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td>**&mdash; value**  <!-- raw HTML omitted --><!-- raw HTML omitted -->required<!-- raw HTML omitted --></td>
+<td><code>··· value</code>  <!-- raw HTML omitted --><!-- raw HTML omitted -->required<!-- raw HTML omitted --></td>
 <td>string</td>
 <td>The parameter value.</td>
 </tr>
 <tr>
-<td>**&ndash; ip**</td>
+<td><code>·· ip</code></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td>**&ndash; locale**</td>
+<td><code>·· locale</code></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td>**&ndash; address**</td>
+<td><code>·· address</code></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td>**&mdash; country**</td>
+<td><code>··· country</code></td>
 <td>string</td>
 <td>The user's country. Two-letter language code by ISO 3166-1, in lowercase.</td>
 </tr>
 <tr>
-<td>**&mdash; city**</td>
+<td><code>··· city</code></td>
 <td>string</td>
 <td>The user's city.</td>
 </tr>
 <tr>
-<td>**&mdash; postal_code**</td>
+<td><code>··· postal_code</code></td>
 <td>string</td>
 <td>The user's postal code.</td>
 </tr>
 <tr>
-<td>**&mdash; state**</td>
+<td><code>··· state</code></td>
 <td>string</td>
 <td>The user's state code by ISO 3166-2.</td>
 </tr>
 <tr>
-<td>**&ndash; metadata**</td>
+<td><code>·· metadata</code></td>
 <td>object</td>
 <td>A string value description that you can attach to the user object.  It can be useful for storing additional information about your customer payment.</td>
 </tr>
 <tr>
-<td>**- settings**  <!-- raw HTML omitted --><!-- raw HTML omitted -->required<!-- raw HTML omitted --></td>
+<td><code>· settings</code>  <!-- raw HTML omitted --><!-- raw HTML omitted -->required<!-- raw HTML omitted --></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td>**&ndash; project_id**  <!-- raw HTML omitted --><!-- raw HTML omitted -->required<!-- raw HTML omitted --></td>
+<td><code>·· project_id</code>  <!-- raw HTML omitted --><!-- raw HTML omitted -->required<!-- raw HTML omitted --></td>
 <td>string</td>
 <td>The ID of the Project found in your merchant account in the PaySuper Dashboard.</td>
 </tr>
 <tr>
-<td>**&ndash; return_url**</td>
+<td><code>·· return_url</code></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td>**&mdash; success**</td>
+<td><code>··· success</code></td>
 <td>string</td>
 <td>The redirect URL for the successful payment.</td>
 </tr>
 <tr>
-<td>**&mdash; fail**</td>
+<td><code>··· fail</code></td>
 <td>string</td>
 <td>The redirect URL for the failed payment.</td>
 </tr>
 <tr>
-<td>**&ndash; currency**</td>
+<td><code>·· currency</code></td>
 <td>string</td>
 <td>The currency of the order. Three-letter Currency Code ISO 4217, in uppercase.  If provided, the amount will be processed in this currency.  It is required for a simple checkout payment.</td>
 </tr>
 <tr>
-<td>**&ndash; amount**</td>
+<td><code>·· amount</code></td>
 <td>number</td>
 <td>The order amount as a positive number. It is required for a simple checkout payment.</td>
 </tr>
 <tr>
-<td>**&ndash; products_ids**</td>
+<td><code>·· products_ids</code></td>
 <td>[string]</td>
 <td>The list of unique identifiers of Products being in the Project. It is required if a payment type is equal to &lsquo;product&rsquo; or &lsquo;key&rsquo;.</td>
 </tr>
 <tr>
-<td>**&ndash; description**</td>
+<td><code>·· description</code></td>
 <td>string</td>
 <td>The arbitrary order description.</td>
 </tr>
 <tr>
-<td>**&ndash; type**  <!-- raw HTML omitted --><!-- raw HTML omitted -->required<!-- raw HTML omitted --></td>
+<td><code>·· type</code>  <!-- raw HTML omitted --><!-- raw HTML omitted -->required<!-- raw HTML omitted --></td>
 <td>string</td>
 <td>The order type. It depends on your sales option (Game Keys, Virtual Items, the simple checkout). For products created as Game Keys use the &lsquo;key&rsquo; type,  as Virtual Items - the &lsquo;product&rsquo; type, for a simple checkout - the &lsquo;simple&rsquo; type. <!-- raw HTML omitted --><strong>Enum values:</strong> <!-- raw HTML omitted -->simple<!-- raw HTML omitted -->product<!-- raw HTML omitted -->key</td>
 </tr>
 <tr>
-<td>**&ndash; metadata**</td>
+<td><code>·· metadata</code></td>
 <td>object</td>
 <td>A string value description that you can attach to the user object.  It can be useful for storing additional information about your customer payment.</td>
 </tr>
@@ -1619,12 +1641,12 @@ Authorization<span style="color:#666">:</span> Signature sh9b1r69bjqie88n5uizqcr
 </thead>
 <tbody>
 <tr>
-<td>- token  <!-- raw HTML omitted --><!-- raw HTML omitted -->required<!-- raw HTML omitted --></td>
+<td><code>· token</code>  <!-- raw HTML omitted --><!-- raw HTML omitted -->required<!-- raw HTML omitted --></td>
 <td>string</td>
 <td>A secure string which contains encrypted information about your customer and sales option data.</td>
 </tr>
 <tr>
-<td>- payment_form_url</td>
+<td><code>· payment_form_url</code></td>
 <td>string</td>
 <td>The PaySuper-hosted URL of payment form.</td>
 </tr>
@@ -1641,12 +1663,12 @@ Authorization<span style="color:#666">:</span> Signature sh9b1r69bjqie88n5uizqcr
 </thead>
 <tbody>
 <tr>
-<td>- message</td>
+<td><code>· message</code></td>
 <td>string</td>
 <td>A description of the error.</td>
 </tr>
 <tr>
-<td>- code</td>
+<td><code>· code</code></td>
 <td>string</td>
 <td>A status code of the error.</td>
 </tr>
@@ -1663,12 +1685,12 @@ Authorization<span style="color:#666">:</span> Signature sh9b1r69bjqie88n5uizqcr
 </thead>
 <tbody>
 <tr>
-<td>- message</td>
+<td><code>· message</code></td>
 <td>string</td>
 <td>A description of the error.</td>
 </tr>
 <tr>
-<td>- code</td>
+<td><code>· code</code></td>
 <td>string</td>
 <td>A status code of the error.</td>
 </tr>
@@ -1685,12 +1707,12 @@ Authorization<span style="color:#666">:</span> Signature sh9b1r69bjqie88n5uizqcr
 </thead>
 <tbody>
 <tr>
-<td>- message</td>
+<td><code>· message</code></td>
 <td>string</td>
 <td>A description of the error.</td>
 </tr>
 <tr>
-<td>- code</td>
+<td><code>· code</code></td>
 <td>string</td>
 <td>A status code of the error.</td>
 </tr>
