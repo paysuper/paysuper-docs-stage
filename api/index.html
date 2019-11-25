@@ -577,22 +577,22 @@ at the previous page last object id value to determine where to start in the lis
 Your Secret keys carry many privileges, so be sure to keep them secure! Do not share your Secret API keys in any publicly accessible areas such as GitHub, client-side code, and so forth.
 </aside>
 
-<p><strong>To check a digital signature:</strong></p>
-
-<p><strong>1.</strong> Concatenate the request&rsquo;s JSON body with your Project&rsquo;s Secret key found on the Project webhooks page.</p>
-
-<p><strong>2.</strong> Apply SHA-256 hashing to the resulting string.</p>
-
-<p><strong>3.</strong> Compare the digital signature with <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Authorization" target="_blank">Authorization</a> HTTP Header value in the received notification:</p>
-
 <blockquote>
-<p>All API requests must be made over HTTPS. Calls made over a plain HTTP will fail. API requests without the authentication will also fail.</p>
+<p>All API requests must be made over HTTPS. Calls made over a plain HTTP will fail.</p>
 </blockquote>
 <div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#06287e">POST</span> <span style="color:#0e84b5;font-weight:bold">/your_endpoint</span> <span style="color:#007020;font-weight:bold">HTTP</span><span style="color:#666">/</span><span style="color:#40a070">1.1</span>
 Host<span style="color:#666">:</span> your.host
 Accept<span style="color:#666">:</span> application/json
 Content-Type<span style="color:#666">:</span> application/json
 Authorization<span style="color:#666">:</span> Signature sh9b1r69bjqie88n5uizqcrerhee50dypsp195mh</code></pre></div>
+<p><strong>To check a digital signature:</strong></p>
+
+<p><strong>1.</strong> Concatenate the request&rsquo;s JSON body with your Project&rsquo;s Secret key found on the Project webhooks page.</p>
+
+<p><strong>2.</strong> Apply SHA-256 hashing to the resulting string.</p>
+
+<p><strong>3.</strong> Compare the digital signature with <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Authorization" target="_blank">Authorization</a> HTTP Header value in the received notification.</p>
+
     
         
 
