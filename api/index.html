@@ -1306,9 +1306,21 @@ Authorization<span style="color:#666">:</span> Signature sh9b1r69bjqie88n5uizqcr
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">curl -X POST /api/v1/order <span style="color:#4070a0;font-weight:bold">\
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">curl -X POST <span style="color:#4070a0;font-weight:bold">\
+</span><span style="color:#4070a0;font-weight:bold"></span>  https://api.pay.super.com/api/v1/order <span style="color:#4070a0;font-weight:bold">\
 </span><span style="color:#4070a0;font-weight:bold"></span>  -H <span style="color:#4070a0">&#39;Content-Type: application/json&#39;</span> <span style="color:#4070a0;font-weight:bold">\
-</span><span style="color:#4070a0;font-weight:bold"></span>  -H <span style="color:#4070a0">&#39;Accept: application/json&#39;</span></code></pre></div>
+</span><span style="color:#4070a0;font-weight:bold"></span>  -H <span style="color:#4070a0">&#39;X-API-SIGNATURE: YOUR_SECRET_KEY \
+</span><span style="color:#4070a0">  -d &#39;</span><span style="color:#666">{</span>
+    <span style="color:#4070a0">&#34;project&#34;</span>: <span style="color:#4070a0">&#34;5db16ae811bf0d0001fdfbd1&#34;</span>,
+    <span style="color:#4070a0">&#34;amount&#34;</span>: <span style="color:#40a070">10</span>,
+    <span style="color:#4070a0">&#34;currency&#34;</span>: <span style="color:#4070a0">&#34;USD&#34;</span>,
+    <span style="color:#4070a0">&#34;type&#34;</span>: <span style="color:#4070a0">&#34;simple&#34;</span>,
+  <span style="color:#4070a0">&#34;user&#34;</span>: <span style="color:#666">{</span>
+      <span style="color:#4070a0">&#34;external_id&#34;</span>: <span style="color:#4070a0">&#34;58799f2c2564296bd2cb&#34;</span>,
+      <span style="color:#4070a0">&#34;email&#34;</span>: <span style="color:#4070a0">&#34;user.email@example.com&#34;</span>,
+      <span style="color:#4070a0">&#34;email_verified&#34;</span>: <span style="color:#007020">true</span>
+    <span style="color:#666">}</span>
+<span style="color:#666">}</span><span style="">&#39;</span></code></pre></div>
 <h3 id="post-api-v1-order">POST /api/v1/order</h3>
 
 <p>Create a payment order with details about your customer and sales option data.</p>
@@ -1434,7 +1446,7 @@ Authorization<span style="color:#666">:</span> Signature sh9b1r69bjqie88n5uizqcr
 <tr>
 <td><code>· token</code></td>
 <td>string</td>
-<td>An encrypted string that represents certain details of your customer (such as the user ID, email and others), a game and purchase parameters.  The token encrypted parameters override the corresponding parameters in an order object even the required parameters.</td>
+<td>An encrypted string that represents certain details of your customer (such as the user ID, email and others), a game and purchase parameters. The token overrides the corresponding parameters in an order object even the required parameters.</td>
 </tr>
 
 <tr>
@@ -1653,9 +1665,31 @@ Authorization<span style="color:#666">:</span> Signature sh9b1r69bjqie88n5uizqcr
 <blockquote>
 <p>Code samples</p>
 </blockquote>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">curl -X POST /api/v1/tokens <span style="color:#4070a0;font-weight:bold">\
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">curl -X POST <span style="color:#4070a0;font-weight:bold">\
+</span><span style="color:#4070a0;font-weight:bold"></span>  https://api.pay.super.com/api/v1/tokens <span style="color:#4070a0;font-weight:bold">\
 </span><span style="color:#4070a0;font-weight:bold"></span>  -H <span style="color:#4070a0">&#39;Content-Type: application/json&#39;</span> <span style="color:#4070a0;font-weight:bold">\
-</span><span style="color:#4070a0;font-weight:bold"></span>  -H <span style="color:#4070a0">&#39;Accept: application/json&#39;</span></code></pre></div>
+</span><span style="color:#4070a0;font-weight:bold"></span>  -H <span style="color:#4070a0">&#39;X-API-SIGNATURE: YOUR_SECRET_KEY \
+</span><span style="color:#4070a0">  -d &#39;</span><span style="color:#666">{</span>
+      <span style="color:#4070a0">&#34;settings&#34;</span>: <span style="color:#666">{</span>
+          <span style="color:#4070a0">&#34;project_id&#34;</span>: <span style="color:#4070a0">&#34;5dcd11bc218dc30001d7098f&#34;</span>,
+          <span style="color:#4070a0">&#34;amount&#34;</span>: <span style="color:#40a070">10</span>,
+          <span style="color:#4070a0">&#34;currency&#34;</span>: <span style="color:#4070a0">&#34;USD&#34;</span>,
+          <span style="color:#4070a0">&#34;type&#34;</span>: <span style="color:#4070a0">&#34;simple&#34;</span>
+      <span style="color:#666">}</span>,
+      <span style="color:#4070a0">&#34;user&#34;</span>: <span style="color:#666">{</span>
+          <span style="color:#4070a0">&#34;id&#34;</span>: <span style="color:#4070a0">&#34;58799f2c2564296bd2cb&#34;</span>,
+          <span style="color:#4070a0">&#34;address&#34;</span>: <span style="color:#666">{</span>
+            <span style="color:#4070a0">&#34;city&#34;</span>: <span style="color:#4070a0">&#34;Almere&#34;</span>,
+            <span style="color:#4070a0">&#34;country&#34;</span>: <span style="color:#4070a0">&#34;NL&#34;</span>,
+            <span style="color:#4070a0">&#34;postal_code&#34;</span>: <span style="color:#4070a0">&#34;1326 PA&#34;</span>,
+            <span style="color:#4070a0">&#34;state&#34;</span>: <span style="color:#4070a0">&#34;Flevoland&#34;</span>
+          <span style="color:#666">}</span>,
+          <span style="color:#4070a0">&#34;email&#34;</span>: <span style="color:#666">{</span>
+            <span style="color:#4070a0">&#34;value&#34;</span>: <span style="color:#4070a0">&#34;user.email@example.com&#34;</span>,
+            <span style="color:#4070a0">&#34;verified&#34;</span>: <span style="color:#007020">true</span>
+          <span style="color:#666">}</span>
+      <span style="color:#666">}</span>
+<span style="color:#666">}</span><span style="">&#39;</span></code></pre></div>
 <h3 id="post-api-v1-tokens">POST /api/v1/tokens</h3>
 
 <p>Create a token that encrypts certain details of your customer, a game and purchase parameters.</p>
