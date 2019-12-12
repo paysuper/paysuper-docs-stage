@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta property="og:title" content="Analytics Integration" />
-<meta property="og:description" content="Analytics Integration It&rsquo;s assumed that you have already integrated PaySuper Checkout via SDK and set up your Google Analytics account.
+<meta property="og:description" content="Analytics Integration It&rsquo;s assumed that you have already integrated PaySuper Checkout via SDK and have set up your Google Analytics account.
 Integrate We&rsquo;ve set up a Google Analytics data collection in a test mode inside PaySuper. After the Beta testing, we&rsquo;ll release the analytics integration to use with a customer&rsquo;s tracking ID.  Google Analytics You can track the following events:
-   Category Action Description     userAction clickCloseCross Closing the form by click on the cross (for a modal window mode)." />
+   Category Action Description     userAction clickCloseCross Close the form by clicking on the cross (for the modal window mode)." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://docs.stg.pay.super.com/docs/analytics-integration/" />
 
@@ -16,9 +16,9 @@ Integrate We&rsquo;ve set up a Google Analytics data collection in a test mode i
 <meta name="twitter:image" content="https://docs.stg.pay.super.com/dark-form.png"/>
 
 <meta name="twitter:title" content="Analytics Integration"/>
-<meta name="twitter:description" content="Analytics Integration It&rsquo;s assumed that you have already integrated PaySuper Checkout via SDK and set up your Google Analytics account.
+<meta name="twitter:description" content="Analytics Integration It&rsquo;s assumed that you have already integrated PaySuper Checkout via SDK and have set up your Google Analytics account.
 Integrate We&rsquo;ve set up a Google Analytics data collection in a test mode inside PaySuper. After the Beta testing, we&rsquo;ll release the analytics integration to use with a customer&rsquo;s tracking ID.  Google Analytics You can track the following events:
-   Category Action Description     userAction clickCloseCross Closing the form by click on the cross (for a modal window mode)."/>
+   Category Action Description     userAction clickCloseCross Close the form by clicking on the cross (for the modal window mode)."/>
 <title>Analytics Integration | PaySuper Documentation</title>
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 
@@ -26,7 +26,7 @@ Integrate We&rsquo;ve set up a Google Analytics data collection in a test mode i
 <link rel="stylesheet" href="/book.min.343270af3f7a01683d94762f9b671c6eb940933f3238c66b6bfc99821e7a3131.css" integrity="sha256-NDJwrz96AWg9lHYvm2ccbrlAkz8yOMZra/yZgh56MTE=">
 
 
-<script defer src="/search.min.36b18bcadc8c0a5e8159e8656c37083b8f096dbb38176c465965838279b10a73.js" integrity="sha256-NrGLytyMCl6BWehlbDcIO48Jbbs4F2xGWWWDgnmxCnM="></script>
+<script defer src="/search.min.d3d52f4aaf6e3b2e06aecd2950b3ff44453b7746c6e238b0a2ef0d8396de2d39.js" integrity="sha256-09UvSq9uOy4Grs0pULP/REU7d0bG4jiwou8Ng5beLTk="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -133,7 +133,7 @@ https://github.com/alex-shpak/hugo-book
 
 <hr />
 
-<p>It&rsquo;s assumed that you have already integrated <a href="/docs/payments/sdk-integration">PaySuper Checkout via SDK</a> and set up your Google Analytics account.</p>
+<p>It&rsquo;s assumed that you have already integrated <a href="/docs/payments/sdk-integration">PaySuper Checkout via SDK</a> and have set up your Google Analytics account.</p>
 
 <h2 id="integrate">Integrate</h2>
 
@@ -159,31 +159,31 @@ https://github.com/alex-shpak/hugo-book
 <tr>
 <td>userAction</td>
 <td>clickCloseCross</td>
-<td>Closing the form by click on the cross (for a modal window mode).</td>
+<td>Close the form by clicking on the cross (for the modal window mode).</td>
 </tr>
 
 <tr>
 <td>general</td>
 <td>formClosed</td>
-<td>The Checkout Form is closed (for a modal window mode).</td>
+<td>The Checkout Form is closed (for the modal window mode).</td>
 </tr>
 
 <tr>
 <td>general</td>
 <td>hasSavedBankCards</td>
-<td>The Checkout Form contains user&rsquo;s saved cards on starting.</td>
+<td>The Checkout Form contains user&rsquo;s saved cards on start.</td>
 </tr>
 
 <tr>
 <td>general</td>
 <td>noSavedBankCards</td>
-<td>The Checkout Form does not contain user&rsquo;s saved cards on starting.</td>
+<td>The Checkout Form does not contain user&rsquo;s saved cards on start.</td>
 </tr>
 
 <tr>
 <td>userAction</td>
 <td>clickSaveUserCountry</td>
-<td>Clicking the <strong>Save</strong> button when select a country on the screen of a manual selection of posibble countries for a payment.</td>
+<td>Clicking the <strong>Save</strong> button after selecting a country on the country selection screen for a payment.</td>
 </tr>
 
 <tr>
@@ -207,7 +207,7 @@ https://github.com/alex-shpak/hugo-book
 <tr>
 <td>general</td>
 <td>submitPaymentForm</td>
-<td>Starting a payment proccessing after a successful card validation.</td>
+<td>Starting the payment proccess after a successful card validation.</td>
 </tr>
 
 <tr>
@@ -243,7 +243,7 @@ https://github.com/alex-shpak/hugo-book
 <tr>
 <td>general</td>
 <td>submitSavedCardRemove</td>
-<td>A request to delete a saved card has been sent (the last 5 seconds before a deletion were passed).</td>
+<td>A request to delete a saved card has been submitted (after the 5 second timeout).</td>
 </tr>
 
 <tr>
@@ -261,7 +261,7 @@ https://github.com/alex-shpak/hugo-book
 <tr>
 <td>userAction</td>
 <td>clickToggleCart</td>
-<td>Clicking the <strong>Collapse/Expand a cart</strong> toggle (mobile view).</td>
+<td>Clicking the <strong>Collapse/Expand a cart</strong> toggle (for the mobile view mode).</td>
 </tr>
 
 <tr>
@@ -285,7 +285,7 @@ https://github.com/alex-shpak/hugo-book
 <tr>
 <td>userAction</td>
 <td>clickIconSupportLink</td>
-<td>Clicking the <strong>Support</strong> icon on the top of the Checkout Form next to the Languages select.</td>
+<td>Clicking the <strong>Support</strong> icon on the top of the Checkout Form next to the Languages selector.</td>
 </tr>
 
 <tr>
@@ -309,55 +309,55 @@ https://github.com/alex-shpak/hugo-book
 <tr>
 <td>userAction</td>
 <td>useManualBankCardsInput</td>
-<td>A user has switched on the manual input of a bank card data.</td>
+<td>A user has switched to the manual input of a bank card data.</td>
 </tr>
 
 <tr>
 <td>general</td>
 <td>showActionProcessing</td>
-<td>A screen with a downloading action process has been shown.</td>
+<td>The loading screen is being shown.</td>
 </tr>
 
 <tr>
 <td>general</td>
 <td>showActionResult</td>
-<td>A screen with a successful or failed result has been shown.</td>
+<td>A screen with a successful or failed result is being shown.</td>
 </tr>
 
 <tr>
 <td>general</td>
 <td>orderPrimaryInitError</td>
-<td>An error has happen on an initialisation of the Checkout Form (a failure of an order creation).</td>
+<td>An error on the Checkout Form initialisation (i.e. a failure to create the order).</td>
 </tr>
 
 <tr>
 <td>general</td>
 <td>orderAlreadyProcessed</td>
-<td>Starting a Checkout Form has been failed because of an order had been purchased yet.</td>
+<td>The Checkout Form has failed to load because the order had already been processed.</td>
 </tr>
 
 <tr>
 <td>userAction</td>
 <td>setPaymentMethod</td>
-<td>A payment method has been selected (for instance a bank card, QIWI etc.).</td>
+<td>A payment method has been selected (a bank card, QIWI etc.).</td>
 </tr>
 
 <tr>
 <td>general</td>
 <td>purchaseFailed</td>
-<td>A payment processing has been failed.</td>
+<td>The payment process has failed.</td>
 </tr>
 
 <tr>
 <td>general</td>
 <td>checkPaymentAccount</td>
-<td>Checking a bank card number has been started.</td>
+<td>Started verifying the bank card number.</td>
 </tr>
 
 <tr>
 <td>general</td>
 <td>customLocale</td>
-<td>The Checkout Form has been started with a selected locale (a token encrypted string has been used).</td>
+<td>The Checkout Form has started with a defined locale (set via a token).</td>
 </tr>
 
 <tr>
@@ -369,13 +369,13 @@ https://github.com/alex-shpak/hugo-book
 <tr>
 <td>ecommerce</td>
 <td>begin_checkout</td>
-<td>Sending a special e-commerce data after starting the Checkout Form.</td>
+<td>Submitting <a href="https://developers.google.com/analytics/devguides/collection/gtagjs/enhanced-ecommerce">e-commerce data</a> after the Checkout Form start.</td>
 </tr>
 
 <tr>
 <td>ecommerce</td>
 <td>purchase</td>
-<td>Sending a special e-commerce data after a successul purchase.</td>
+<td>Submitting <a href="https://developers.google.com/analytics/devguides/collection/gtagjs/enhanced-ecommerce">e-commerce data</a> after a successul purchase.</td>
 </tr>
 </tbody>
 </table>
