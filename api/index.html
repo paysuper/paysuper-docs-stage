@@ -496,17 +496,17 @@ at the previous page last object id value to determine where to start in the lis
 
 <p><strong>2.</strong> Select the Webhooks mode:</p>
 
-<p><strong>Default</strong> is the asynchronous mode for the payment webhook notifications.</p>
+<p><strong>Default</strong> is the asynchronous mode that provides webhook notifications only about a payment.</p>
 
-<p><strong>1.</strong> A customer initiates a request to create a payment from a PaySuper payment form.
-   <strong>2.</strong> If the payment is finished with a successful or failed result PaySuper sends a payment notification to your server.</p>
+<p><strong>a.</strong> A customer sends a payment request using the PaySuper payment form.
+<strong>b.</strong> If the payment is finished with a successful or failed result PaySuper sends a payment notification to your server.</p>
 
-<p><strong>Pre-approval</strong> is the synchronous mode for the user validation and payment webhook notifications.</p>
+<p><strong>Pre-approval</strong> is the mode that provides a synchronous notification for user validation and asynchronous notification about a payment.</p>
 
-<p><strong>1.</strong> A customer initiates a request to create a payment from a PaySuper payment form.
-   <strong>2.</strong> PaySuper sends the user validation request with the customer data to check the details of the user on the project side.
-   <strong>3.</strong> When the project server responds with success or failure, PaySuper continues or cancel the payment respectively for this customer.
-   <strong>2.</strong> If the payment is finished with a successful or failed result PaySuper sends a payment notification to your server.</p>
+<p><strong>a.</strong> A customer sends a payment request using the PaySuper payment form.
+<strong>b.</strong> PaySuper sends the user validation request with the customer data to check the details of the user on the project side.
+<strong>c.</strong> When the project server responds with success or failure, PaySuper continues or cancel the payment respectively for this customer.
+<strong>d.</strong> If the payment is finished with a successful or failed result PaySuper sends a payment notification to your server.</p>
 
 <p><strong>3.</strong> <a href="#verifying-a-webhook">Verify the webhook request</a>.</p>
 
