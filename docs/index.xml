@@ -47,9 +47,7 @@ Integrate We&amp;rsquo;ve set up a Google Analytics data collection in a test mo
       
       <guid>https://docs.stg.pay.super.com/docs/payouts/</guid>
       <description>Receiving Payouts Your customers&amp;rsquo; successful payments are stored on your PaySuper account balance and can be received to your bank account using Payouts.
-Setting up your bank account to receive payouts When you are ready to start selling you will need to fill in all your company details in Company Onboarding.
-Bank account details for payouts are required when filling in Company Onboarding.
-Note that the currency of the bank account must be the same as the Account Currency for payouts filled in the Banking info.</description>
+     Amount available for withdraw - the amount of the merchant balance as the difference between the total amount of all received royalty reports and all paid or pending payouts. Period - the payout period. By default, the Royalty report automatically generates based on the successfully received payments during the last 7 days.</description>
     </item>
     
     <item>
