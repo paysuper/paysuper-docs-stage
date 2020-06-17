@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta property="og:title" content="Receiving Payouts" />
 <meta property="og:description" content="Receiving Payouts Your customers&rsquo; successful payments are stored on your PaySuper account balance and can be received to your bank account using Payouts.
-     Amount available for withdraw - the amount of the merchant balance as the difference between the total amount of all received royalty reports and all paid or pending payouts. Period - the payout period. By default, the Royalty report automatically generates based on the successfully received payments during the last 7 days." />
+     Amount available for withdraw - the amount of the merchant balance as the difference between the total amount of all received royalty reports and all paid or pending payouts. This amount includes the last week income with a confirmed Royalty report (if any)." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://docs.stg.pay.super.com/docs/payouts/" />
 
@@ -16,7 +16,7 @@
 
 <meta name="twitter:title" content="Receiving Payouts"/>
 <meta name="twitter:description" content="Receiving Payouts Your customers&rsquo; successful payments are stored on your PaySuper account balance and can be received to your bank account using Payouts.
-     Amount available for withdraw - the amount of the merchant balance as the difference between the total amount of all received royalty reports and all paid or pending payouts. Period - the payout period. By default, the Royalty report automatically generates based on the successfully received payments during the last 7 days."/>
+     Amount available for withdraw - the amount of the merchant balance as the difference between the total amount of all received royalty reports and all paid or pending payouts. This amount includes the last week income with a confirmed Royalty report (if any)."/>
 <title>Receiving Payouts | PaySuper Documentation</title>
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 
@@ -24,7 +24,7 @@
 <link rel="stylesheet" href="/book.min.343270af3f7a01683d94762f9b671c6eb940933f3238c66b6bfc99821e7a3131.css" integrity="sha256-NDJwrz96AWg9lHYvm2ccbrlAkz8yOMZra/yZgh56MTE=">
 
 
-<script defer src="/search.min.a571ac2ef8d0770de2e282a575c196eb5e88ed2e4913652ad4c2c9d29fbaef78.js" integrity="sha256-pXGsLvjQdw3i4oKldcGW616I7S5JE2Uq1MLJ0p&#43;673g="></script>
+<script defer src="/search.min.d3eb4f8061b267069ccc537db92765778a1e54c96341f710278ff98908d970f4.js" integrity="sha256-0&#43;tPgGGyZwaczFN9uSdld4oeVMljQfcQJ4/5iQjZcPQ="></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -146,7 +146,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 <ul>
-<li><strong>Amount available for withdraw</strong> - the amount of the merchant balance as the difference between the total amount of all received royalty reports and all paid or pending payouts.</li>
+<li><strong>Amount available for withdraw</strong> - the amount of the merchant balance as the difference between the total amount of all received royalty reports and all paid or pending payouts. This amount includes the last week income with a confirmed Royalty report (if any).</li>
 <li><strong>Period</strong> - the payout period. By default, the Royalty report automatically generates based on the successfully received payments during the last 7 days. <a href="/docs/payouts/#confirming-a-royalty-report">Learn more</a></li>
 <li><strong>Report date</strong> - the date of the Royalty report confirmation. By default, your Royalty report will be automatically confirmed.</li>
 <li><strong>Payout ID</strong> - the unique identifier for the payout.</li>
@@ -257,7 +257,7 @@ https://github.com/alex-shpak/hugo-book
 <tbody>
 <tr>
 <td align="left">PENDING</td>
-<td align="left">The payout has been sent to the merchant bank account.</td>
+<td align="left">The payout sent to the merchant bank account.</td>
 </tr>
 
 <tr>
@@ -267,17 +267,17 @@ https://github.com/alex-shpak/hugo-book
 
 <tr>
 <td align="left">SKIP</td>
-<td align="left">The payout amount exceeded the minimum payout threshold limit. This amount will be included in the next payout.</td>
+<td align="left">The payout amount is less than the minimum payout limit. This amount will be included in the next payout.</td>
 </tr>
 
 <tr>
 <td align="left">CANCELED</td>
-<td align="left">The payout has been rejected by the bank.</td>
+<td align="left">The payout manually or automatically rejected.</td>
 </tr>
 
 <tr>
 <td align="left">FAILED</td>
-<td align="left">The payout has been rejected by the bank.</td>
+<td align="left">The payout rejected by the bank.</td>
 </tr>
 </tbody>
 </table>

@@ -116,7 +116,7 @@ Step 2. Set up a Project A single project is enough to start selling.</descripti
       
       <guid>https://docs.stg.pay.super.com/docs/payouts/</guid>
       <description>Receiving Payouts Your customers&amp;rsquo; successful payments are stored on your PaySuper account balance and can be received to your bank account using Payouts.
-     Amount available for withdraw - the amount of the merchant balance as the difference between the total amount of all received royalty reports and all paid or pending payouts. Period - the payout period. By default, the Royalty report automatically generates based on the successfully received payments during the last 7 days.</description>
+     Amount available for withdraw - the amount of the merchant balance as the difference between the total amount of all received royalty reports and all paid or pending payouts. This amount includes the last week income with a confirmed Royalty report (if any).</description>
     </item>
     
     <item>
