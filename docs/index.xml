@@ -47,7 +47,8 @@ Integrate We&amp;rsquo;ve set up a Google Analytics data collection in a test mo
       
       <guid>https://docs.stg.pay.super.com/docs/payouts/</guid>
       <description>Receiving Payouts Your customers&amp;rsquo; successful payments are stored on your PaySuper account balance and can be received to your bank account using Payouts.
-     Amount available for withdraw - the amount of the merchant balance as the difference between the total amount of all received royalty reports and all paid or pending payouts. This amount includes the last week income with a confirmed Royalty report (if any).</description>
+The payout process is pure. Weekly PaySuper automatically generates royalty report documents with detailed information about each transaction during a period. Each royalty report is a self-billed invoice. The amount of revenue available for withdrawal will raise after the royalty report accepted.
+PaySuper payouts can be performed in two modes:</description>
     </item>
     
     <item>
