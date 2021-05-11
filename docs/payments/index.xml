@@ -106,8 +106,8 @@ You can use PaySuper JS SDK for the client-side payment initialization to integr
       <guid>https://docs.stg.gameservices.unlimint.com/docs/payments/testing/</guid>
       <description>Testing the Payment Process The Payment Form integration should be tested in the Sandbox before going live.
 The Sandbox provides full functionality but it only emulates processing, no actual bank transactions are made.
-When using PaySuper JS SDK ensure that:
- Handlers for the events are displayed properly. The PaySuper object is created with all required parameters or a token.  If you&amp;rsquo;re using the PaySuper API in your server-side code then ensure that:</description>
+When using Unlimint Game Services JS SDK ensure that:
+ Handlers for the events are displayed properly. The Unlimint Game Services object is created with all required parameters or a token.  If you&amp;rsquo;re using the Unlimint Game Services API in your server-side code then ensure that:</description>
     </item>
     
   </channel>
